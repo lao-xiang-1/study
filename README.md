@@ -24,7 +24,7 @@
 ---
 
 ## 推荐工具：
-1. [markitdown](https://github.com/microsoft/markitdown)：一个可将其他格式的文件如pdf，word 转成markdown，只是转换出来一般有问题，最好配合ai修改。
+1. [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)：可将其他格式的文件如pdf，word 转成markdown，我感觉是目前最好的一版
 2. [obsidian-sync](https://github.com/pourmand1376/Obsidian-Sync)：基于termux实现安卓端git仓库同步。
 3. [obsidian-skills](https://github.com/kepano/obsidian-skills)：obsidian的ai-skills
 
