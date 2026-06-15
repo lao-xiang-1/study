@@ -28,8 +28,22 @@ Example notebooks live in `<course>/例题/` subfolders.
 
 - **Top-level heading**: `# 第X章 主题名` or `# 第X讲 主题名` (or just `# 主题名` for standalone topics)
 - **Sections**: `## 2.X 节名`, separated by `---`
-- **Subsections**: `### 2.X.X 小节名`
-- **Sub-sub items**: `**（1）标题**` — Chinese parenthesized bold, not `####`
+- **Subsections**: `### 2.X.X 小节名` (main section subheaders)
+- **三级子小节**: `### 2.X.X.X 子小节名` or `### 数字. 标题` (detailed subheaders under subsections)
+- **Sub-sub items**: `**（1）标题**` — Chinese parenthesized bold, not `####` or other heading levels
+
+示例：
+```markdown
+# 2.3 微控制器工作原理
+## 2.3.1 CPU的结构和组成
+### 2.3.1.1 CPU的组成结构
+### 2.3.1.2 控制器（指令部件、时序部件、操作控制部件）
+### 2.3.1.3 运算器
+
+## 2.3.2 微控制器的工作过程
+### 2.3.2.1 程序与指令
+### 2.3.2.2 指令样例
+```
 - **Lists**: `-` with 2-space indent for nesting
 - **Key terms**: `**加粗**`
 - **Code/instructions**: backtick (e.g. `MOV A, #35H`)
