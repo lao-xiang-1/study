@@ -1,12 +1,12 @@
 ---
-sr-due: 2026-06-24
-sr-interval: 3
-sr-ease: 250
+sr-due: 2026-07-05
+sr-interval: 11
+sr-ease: 270
 ---
 #review 
 
 ## 题目
-![486](assets/校正+bode图.png)
+![647](assets/校正+bode图.png)
 ### （1）计算校正前系统的相角裕度 $\gamma_1$
 
 已知校正前系统的开环传递函数为：
@@ -15,17 +15,13 @@ $$G_0(s) = \frac{20}{s(0.1s + 1)}$$
 将其写成频率特性形式（令 $s = j\omega$）：
 $$G_0(j\omega) = \frac{20}{j\omega(1 + j0.1\omega)}$$
 
-系统的相频特性公式为：
+相频特性：
 $$\angle G_0(j\omega) = -90^\circ - \arctan(0.1\omega)$$
 
-题目已知校正前的截止频率为 $\omega_{c1} = 14.14$ rad/s （该值实际上是基于渐近线求得的，即 $\omega = 10\sqrt{2}$）。
-将 $\omega_{c1} = 14.14$ 代入相频公式计算此时的相角：
-$$\angle G_0(j14.14) = -90^\circ - \arctan(0.1 \times 14.14) = -90^\circ - \arctan(1.414)$$
-因为 $\arctan(1.414) \approx \arctan(\sqrt{2}) \approx 54.7^\circ$
-所以：
-$$\angle G_0(j14.14) \approx -90^\circ - 54.7^\circ = -144.7^\circ$$
+校正前截止频率 $\omega_{c1} = 14.14 = 10\sqrt{2}$ rad/s（由渐近线求得），代入得：
+$$\angle G_0(j\omega_{c1}) = -90^\circ - \arctan(1.414) \approx -90^\circ - 54.7^\circ = -144.7^\circ$$
 
-相角裕度 $\gamma_1$ 的计算公式为 $\gamma = 180^\circ + \angle G(j\omega_c)$：
+由 $\gamma = 180^\circ + \angle G(j\omega_c)$：
 $$\gamma_1 = 180^\circ - 144.7^\circ = \mathbf{35.3^\circ}$$
 
 ---
@@ -44,7 +40,7 @@ $$G_{open}(s) = G_c(s)G_0(s) = \frac{2s + 1}{10s + 1} \cdot \frac{20}{s(0.1s + 1
 > 这里不画图
 
 **③ 计算校正后的截止频率 $\omega_{c2}$ 及相角裕度 $\gamma_2$**
-我们需要找到 $L_2(\omega) = 0$ 的位置。观察中频段 ($0.5 < \omega < 10$) 的斜率为 -20 dB/dec，在此频段内，幅频特性的近似表达式为：
+我们需要找到 $L_2(\omega) = 0$ 的位置。观察中频段 ($0.5 < \omega < 10$) 的斜率为 -20 dB/dec，在此频段内，幅频特性的近似表达式为：（有时这里不能用近似）
 $$|G_{open}(j\omega)| \approx \frac{20 \cdot 2\omega}{\omega \cdot 10\omega} = \frac{40\omega}{10\omega^2} = \frac{4}{\omega}$$
 这里参考：[近似幅值求解](#近似幅值求解)
 
