@@ -1,38 +1,22 @@
 # 激活函数
 
-## 已过时 / 几乎不用
+## 1 已过时 / 几乎不用
 
-### Sigmoid
+### 1.1 Sigmoid
 
 $$
 \sigma(x)=\frac{1}{1+e^{-x}}
 $$
 
-**导数：**
-
-$$
-\sigma'(x)=\sigma(x)\bigl(1-\sigma(x)\bigr)
-$$
-
-当输入 $|x|$ 较大时，$\sigma(x)$ 趋近于 0 或 1，导致导数趋近于 0，这是**梯度消失**的根源。
-
 仅在二分类输出层偶尔使用，隐藏层已基本被 ReLU 替代，因为梯度消失严重、收敛慢。
 
 ![](机器学习/神经网络/assets/激活函数-1.png)
 
-### Tanh
+### 1.2 Tanh
 
 $$
 \tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}
 $$
-
-**导数：**
-
-$$
-\tanh'(x)=1-\tanh^2(x)
-$$
-
-当 $|x|$ 较大时，$\tanh(x)\to\pm1$，导数同样趋近于 0，存在梯度消失问题。
 
 隐藏层已很少使用，同样存在梯度消失，已被 ReLU 取代。偶尔在 RNN/LSTM 中仍保留（历史惯性），但非首选。
 
@@ -40,9 +24,9 @@ $$
 
 ---
 
-## 仍在广泛使用
+## 2 仍在广泛使用
 
-### ReLU
+### 2.1 ReLU
 
 $$
 \text{ReLU}(x)=\max(0,x)
@@ -50,40 +34,23 @@ $$
 
 依然是绝大多数前馈网络（CNN、MLP）隐藏层默认首选激活函数。
 
-### Leaky ReLU / PReLU
+### 2.2 Leaky ReLU / PReLU
 
 $$
 f(x)=\max(\alpha x,x)
 $$
-分段函数形式：
-$$
-f(x)=
-\begin{cases}
-x, & x>0 \\[6pt]
-\alpha x, & x\le 0
-\end{cases}
-\quad\text{其中 }0<\alpha\ll 1
-$$
 
 当 ReLU 出现大量死亡神经元时作为替代，用于 GAN、某些深层网络，PReLU 参数可学习。
 
-### GELU
+### 2.3 GELU
 
 $$
 \text{GELU}(x)\approx x\,\Phi(x)
 $$
-- **$\Phi(x)$** —— 标准正态分布（均值为 0，方差为 1）的**累积分布函数（CDF）**
 
-| $x$ 的取值 | $\Phi(x)$ 的行为 | GELU 的行为 |
-|---|---|---|
-| $x \gg 0$（很大的正数） | $\Phi(x) \to 1$ | GELU(x) ≈ $x$，几乎完整保留 |
-| $x \ll 0$（很大的负数） | $\Phi(x) \to 0$ | GELU(x) ≈ 0，几乎完全抑制 |
-| $x \approx 0$ | $\Phi(x) \approx 0.5$ | 平滑过渡，非线性最显著 |
-
-![](assets/激活函数.png)
 在 Transformer 类模型（BERT、GPT、ViT）中几乎是标配，效果优于 ReLU，目前广泛使用。
 
-### Swish / SiLU
+### 2.4 Swish / SiLU
 
 $$
 f(x)=x\cdot\sigma(x)
@@ -91,7 +58,7 @@ $$
 
 在 EfficientNet、某些大模型中使用，性能与 GELU 接近，仍有应用。
 
-### Softmax
+### 2.5 Softmax
 
 $$
 \text{Softmax}(x_i)=\frac{e^{x_i}}{\sum_j e^{x_j}}
@@ -101,9 +68,9 @@ $$
 
 ---
 
-## 特定场景仍使用但不主流
+## 3 特定场景仍使用但不主流
 
-### ELU
+### 3.1 ELU
 
 $$
 f(x)=\begin{cases} x & x>0 \\ \alpha(e^x-1) & x\le 0 \end{cases}
@@ -111,7 +78,7 @@ $$
 
 偶尔在需要负值平滑、自归一化特性的网络中出现，非主流。
 
-### Maxout
+### 3.2 Maxout
 
 $$
 f(x)=\max\left(w_1^{\mathrm{T}}x+b_1,\;w_2^{\mathrm{T}}x+b_2,\;\dots\right)
