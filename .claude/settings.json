@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$inputJson = [Console]::In.ReadToEnd(); $data = $inputJson | ConvertFrom-Json; $filePath = [string]$data.tool_input.file_path; $pages = if ($null -ne $data.tool_input.pages) { [string]$data.tool_input.pages } else { $null }; if ($pages -eq '') { @{hookSpecificOutput=@{hookEventName='PreToolUse'; permissionDecision='deny'; permissionDecisionReason='读取文件前必须先查看/回忆：C:\\Users\\26971\\.claude\\projects\\D--docs-study\\memory\\file_read_protocol.md。Markdown/文本/代码文件不要传空 pages 参数；只有 PDF 且需要页码范围时才传 pages。'}} | ConvertTo-Json -Compress } else { @{hookSpecificOutput=@{hookEventName='PreToolUse'; additionalContext='读取文件前提醒：必须先查看/回忆 C:\\Users\\26971\\.claude\\projects\\D--docs-study\\memory\\file_read_protocol.md。普通 Markdown、文本、代码文件不要传 pages 参数；只有 PDF 且需要页码范围时才传 pages。'}} | ConvertTo-Json -Compress }",
+            "timeout": 10,
+            "statusMessage": "检查文件读取规则"
+          }
+        ]
+      }
+    ]
+  }
+}
