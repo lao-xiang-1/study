@@ -1,45 +1,23 @@
+---
+sr-due: 2026-07-10
+sr-interval: 3
+sr-ease: 250
+---
+#paper
 # Introduction to Predictive Coding Networks for Machine Learning
 [原论文地址](https://arxiv.org/pdf/2506.06332)
 May 29, 2025
 
-## Abstract
-
-Predictive coding networks (PCNs) constitute a biologically inspired framework for understanding hierarchical computation in the brain, and offer an alternative to traditional feedforward neural networks in ML. This note serves as a quick, onboarding introduction to PCNs for machine learning practitioners. We cover the foundational network architecture, inference and learning update rules, and algorithmic implementation. A concrete image-classification task (CIFAR-10) is provided as a benchmark-smashing application, together with an accompanying Python notebook containing the PyTorch implementation.
-
-## Contents
-
-1 Introduction 2    
-2 Network Architecture 3    
-3 Inference and Learning Rules 4    
-3.1 Latent state update rule (inference) 4    
-3.2 Weight update rule (learning) 5    
-3.3 Locality of the updates 6    
-3.4 Motivations beyond biological plausibility 6    
-4 Base Algorithms 7    
-4.1 Unsupervised learning in PCNs 7    
-4.2 Supervised learning extension 8    
-5 Application: Supervised Learning on CIFAR-10 10    
-5.1 Model architecture 10    
-5.2 Training procedure 11    
-5.3 Testing 12    
-5.4 PyTorch implementation 12    
-5.4.1 The PCNLayer class 13    
-5.4.2 The PredictiveCoding Network class 15    
-5.4.3 Training loop 16    
-5.5 Results and observations 18
 
 ## References
 
 ## 1 Introduction
 
-The goal of this document is to present a first introduction to predictive coding networks from both conceptual and algorithmic standpoints, in the context of machine learning. We focus on detailing the structure of PCNs, deriving their inference and learning rules, and demonstrating their usefulness in an experiment. This section provides a brief overview to set the stage.
-
-Predictive coding is a foundational theory in neuroscience proposing that the brain is fundamentally a prediction machine, constantly attempting to anticipate incoming sensory inputs and updating internal representations to minimize the difference between expectations and actual observations. This concept forms the basis of the predictive coding network (PCN), a class of hierarchical generative models designed to mirror these principles in artificial systems.
-
 Already in 1867, Helmholtz proposed that perception is an unconscious inferential process where the brain predicts how planned actions will affect sensory inputs [12]. In the mid-20th century, Barlow's efficient coding hypothesis posited that the brain economizes neural representation by removing predictable redundancies in sensory signals [3], foreshadowing a later focus on unexpected or surprising sensory events. Gregory further argued that perception is a constructive, hypothesis-driven endeavor, with visual illusions highlighting how top-down expectations shape perception [10]. By the 1990s, theoretical models explicitly invoked hierarchical prediction: Mumford proposed a cortical architecture in which higher-level areas send predictions to lower-level areas, with only residual errors fed forward [21]. Such concepts set the stage for the predictive coding model of visual cortex by Rao and Ballard [23], which formalized perception as a hierarchical interplay of top-down predictions and bottom-up error signals.
 **早在1867年，亥姆霍兹（Helmholtz）就提出，感知是一个无意识推理过程，大脑在其中预测计划好的动作将如何影响感觉输入[12]。20世纪中期，巴洛（Barlow）的高效编码假说认为，大脑通过消除感觉信号中可预测的冗余来节约神经表征[3]，这一观点预示了后来对意外或令人惊讶的感觉事件的关注。格雷戈里（Gregory）进一步论证，感知是一种建构性的、假设驱动的心智活动，而视觉错觉则凸显了自上而下的期望如何塑造感知[10]。到了20世纪90年代，理论模型明确引入了层级预测：蒙福德（Mumford）提出了一种皮层结构，其中高层级区域向低层级区域发送预测，只有残差误差向前传递[21]。这些概念为拉奥和巴拉德（Rao and Ballard）[23]的视觉皮层预测编码模型奠定了基础，该模型将感知形式化为自上而下的预测与自下而上的误差信号之间的层级交互作用。**
 
 Originally developed to explain extra-classical receptive field effects in visual cortex [23], predictive coding has since been generalized into a unified framework for cortical processing through the free-energy principle [8, 9]. This principle casts perception and action as inference problems, where organisms minimize a variational bound on surprise or prediction error.
+预测编码最初用于解释视觉皮层的**非经典感受野效应**，后被推广为解释大脑皮层信息处理的统一理论框架——即通过**自由能原理（free-energy principle）**将"感知"和"行动"都归结为**推理问题**：生物体通过最小化"惊讶度"或"预测误差"来理解世界并作出反应。
 
 Neurophysiological plausibility of predictive coding has been further explored in works such as [28], which unify predictive coding with biased competition models of attention, and [4], which describe potential microcircuit implementations in cortical hierarchies. Keller and Mrsic-Flogel [13] offer evidence that predictive processing is a canonical computation across the cortex, with supportive anatomical and functional data reviewed by Shipp [26]. Further empirical neuroscience evidence is presented in [30, 5].
 
@@ -50,9 +28,6 @@ Predictive coding has also inspired innovations in unsupervised and self-supervi
 A broader theoretical and empirical review of predictive coding in both neuroscience and artificial intelligence is provided in [18], which also outlines future research directions.
 
 The references cited here are just a bite-sized sample of the enormous literature on the subject. The interested reader is advised to look into the bibliographies in those for more coverage, and to search the arXiv for the latest developments. There are also many excellent blog posts on the subject, such as [17, 1].
-
-### 1. 理论起源与统一框架
-预测编码最初用于解释视觉皮层的**非经典感受野效应**，后被推广为解释大脑皮层信息处理的统一理论框架——即通过**自由能原理（free-energy principle）**将"感知"和"行动"都归结为**推理问题**：生物体通过最小化"惊讶度"或"预测误差"来理解世界并作出反应。
 
 ### 2. 神经生理学验证
 该理论在大脑中的生物学可行性得到了多方面研究支持：
@@ -75,7 +50,7 @@ The references cited here are just a bite-sized sample of the enormous literatur
 ## 2 Network Architecture
 
 ### Model：参数说明
-A PCN consists of $L \geq 1$ layers of latent variables $\mathbf{x}^{(l)} \in \mathbb{R}^{d_l}$, $1 \leq l \leq L$, and an input layer of variables $\mathbf{x}^{(0)} \in \mathbb{R}^{d_0}$. Each layer attempts to predict the state of the layer below, so the architecture includes the following top-down elements for $0 \leq l \leq L - 1$:
+A PCN consists of $L \geq 1$ layers of latent variables $\mathbf{x}^{(l)} \in \mathbb{R}^{d_l}$, $1 \leq l \leq L$, and an input layer of variables $\mathbf{x}^{(0)} \in \mathbb{R}^{d_0}$. Each layer attempts to predict the state of the layer below.
 - PCN 由 $L$ 层（至少1层）**隐变量（latent variables）**组成。
 - 第 $l$ 层的变量记为 $\mathbf{x}^{(l)}$，是一个 $d_l$ 维的实数向量。
 - 除了 $L$ 层隐变量，还有一个**输入层** $\mathbf{x}^{(0)}$，维度为 $d_0$。
@@ -94,7 +69,7 @@ $$ \hat{\mathbf{x}}^{(l)}=f^{(l)}(\mathbf{a}^{(l)})\in\mathbb{R}^{d_{l}} $$
 
 *where  $f^{(l)}$ is, often a nonlinear, scalar function applied elementwise（**激活函数**）*
 
-• Prediction errors （隐状态 $-$ 上层的预测值）
+• Prediction errors （隐变量 $-$ 上层的预测值）
 $$ \boldsymbol{\varepsilon}^{(l)}=\mathbf{x}^{(l)}-\hat{\mathbf{x}}^{(l)}\in\mathbb{R}^{d_{l}} $$ 
 
 The loss function subject to minimization（**待最小化的损失函数**） is the total square prediction error, or energy:
@@ -131,29 +106,29 @@ In practice, the procedure repeats for a new input $\mathbf{x}^{(0)}$ and reinit
 
 **A word about hybrid predictive coding.** In the algorithms and implementation presented in this document, the initial values of the latent variables are random—both literally and figuratively. Recently, an interesting hybrid predictive coding model has been proposed, where the latents $\mathbf{x}^{(l)}$ are initialized to the values $\boldsymbol{\xi}^{(l)}$ predicted by another network [29]. The predictions of this second network flow in the bottom-up direction, opposite to the PCN hierarchy, via “amortized” functions $\mathbf{g}^{(l)} : \mathbb{R}^{d_{l-1}} \to \mathbb{R}^{d_l}$ in a feedforward fashion: $\boldsymbol{\xi}^{(l)} = \mathbf{g}^{(l)}(\boldsymbol{\xi}^{(l-1)})$, $1 \leq l \leq L$, starting from the input $\boldsymbol{\xi}^{(0)} = \mathbf{x}^{(0)}$. Such a construction reflects the adjustment of the network’s posterior beliefs upon receiving sensory input, before the refining inference process of the vanilla PCN begins. The rest of this note does not involve the hybrid model.
 
-### 1. 双时间尺度动态
+##### 1. 双时间尺度动态
 推理与学习的分工形成了PCN的典型特征：
 - **推理（Inference）**：在**固定的能量景观**中快速下降，寻找最优隐变量
 - **学习（Learning）**：**缓慢地重塑能量景观**，使其更利于未来的推理
 - 核心特征：**快速推理，缓慢学习**（fast inference, slow learning）
 
-### 2. 实际迭代过程
+##### 2. 实际迭代过程
 - 对每个新输入样本，隐变量都**重新初始化**
 - 然后重复"推理→学习"的交替循环
 - 具体实现细节（如训练流程）留到后面的应用章节
 
-### 3. 收敛性保证
+##### 3. 收敛性保证
 - 已有研究从理论和实验上证明：交替优化过程在适当假设下**收敛到局部最小值**
 - 但作者强调：实践者更关心的是**具体任务上的实际性能**，而非理想条件下的理论保证
 - 文末的CIFAR-10应用将展示**快速收敛和良好泛化**的实例
 
-### 4. 生成式层级结构
+##### 4. 生成式层级结构
 - 每层隐变量代表数据的不同**抽象层次**（从原始感官输入到高级特征）
 - **信息流**：预测自上而下，误差自下而上
 - 与大脑的多层级感觉层级类似
 - PCN不是简单的"输入→标签"判别映射，而是显式编码了**生成模型**——即高层原因如何产生低层活动，从而能够根据内部信念**重构感官数据**
 
-### 5. 混合预测编码（补充说明）
+##### 5. 混合预测编码（补充说明）
 - **标准PCN**：隐变量初始值完全随机
 - **混合模型**：用另一个**自底向上**的前馈网络来预测隐变量的初始值，作为推理的起点
 - 这种初始化反映了接收感官输入后**后验信念的快速调整**，在此基础上再进行精细的推理迭代
@@ -162,7 +137,7 @@ In practice, the procedure repeats for a new input $\mathbf{x}^{(0)}$ and reinit
 ## 3 Inference and Learning Rules
 
 > [!tip] Tip
-> 也是用梯度下降的方式，但是不从全局损失计算梯度，而只是利用每层计算出的误差
+> PCN也是用梯度下降的方式，但是不从全局损失计算梯度，而只是利用每层计算出的误差
 
 ### 3.1 Latent state update rule (inference)
 
@@ -173,7 +148,7 @@ $$\mathcal{L} = \frac{1}{2}\sum_{l=0}^{L-1} \|\varepsilon^{(l)}\|^2 = \frac{1}{2
 - 其中 $\varepsilon_j^{(l)} = x_j^{(l)} - \hat{x}_j^{(l)}$。
 
 #### Case $1 \leq l < L$
-The variable $\mathbf{x}^{(l)}$ appears in two places in the loss: in $\varepsilon^{(l)} = \mathbf{x}^{(l)} - \hat{\mathbf{x}}^{(l)}$ explicitly and in $\varepsilon^{(l-1)} = \mathbf{x}^{(l-1)} - \hat{\mathbf{x}}^{(l-1)}$ through $\hat{\mathbf{x}}^{(l-1)} = f^{(l-1)}(\mathbf{W}^{(l-1)}\mathbf{x}^{(l)})$. Hence
+The variable $\mathbf{x}^{(l)}$ appears in two places in the loss:
 
 | 影响路径 | 公式 | 说明 |
 |---------|------|------|
