@@ -1,6 +1,6 @@
 ---
-sr-due: 2026-07-10
-sr-interval: 3
+sr-due: 2026-07-18
+sr-interval: 8
 sr-ease: 250
 ---
 #paper
@@ -211,6 +211,8 @@ During inference, all prediction errors and feedback terms are computed first us
 在推断过程中，首先利用当前网络状态计算所有预测误差和反馈项，然后才对隐变量 $\mathbf{x}^{(l)}$ 进行更新。这确保了每次更新步骤都基于一致的能量景观，并避免在同一次迭代中使用部分更新的状态。从概念上讲，这对应于一种同步更新方案，其中所有神经元都基于同一网络快照计算其下一状态。
 
 ### 3.2 Weight update rule (learning)
+> 更新权重而不是隐变量
+
 损失函数：
 $$\mathcal{L} = \frac{1}{2}\sum_{l}\|\boldsymbol{\varepsilon}^{(l)}\|^2$$
 Each weight matrix  $\mathbf{W}^{(l)}$ is responsible for predicting  $\mathbf{x}^{(l)}$ from  $\mathbf{x}^{(l+1)}$, and appears only in  $\boldsymbol{\varepsilon}^{(l)} = \mathbf{x}^{(l)} - f^{(l)}(\mathbf{W}^{(l)}\mathbf{x}^{(l+1)})$. To minimize the loss, we compute
@@ -274,6 +276,7 @@ In short, predictive coding offers a biologically inspired view of computation w
 ## 4 Base Algorithms
 
 ### 4.1 Unsupervised learning in PCNs
+>？无监督的算法根据什么来优化参数
 
 This algorithm implements unsupervised learning in a predictive coding network with $L$ layers of latent variables $\mathbf{x}^{(1)},\ldots,\mathbf{x}^{(L)}$, with the input variables $\mathbf{x}^{(0)}$ clamped to the input data; recall Figure 1 in Section 1. The latent variables are inferred via iterative updates to minimize the global prediction error energy as discussed earlier, starting from a random initial state. Each inference step uses a consistent snapshot of the network: all prediction errors and gradients are computed before any latent state is updated.
 
@@ -363,351 +366,105 @@ $$\left|\mathbf{W}^{\mathrm{out}}\gets\mathbf{W}^{\mathrm{out}}-\eta_{\mathrm{le
 
 The core network structure remains unchanged from the unsupervised case; the only modification is the supervised error signal applied to the top layer.
 
-*Algorithm 2 Supervised learning in a predictive coding network*
-
-Require: Input $\mathbf{x}^{(0)}$, target label $\mathbf{y}$, generative weights $\{\mathbf{W}^{(l)}\}_{l=0}^{L-1}$, output weights $\mathbf{W}^{\text{out}}$, activation functions and their derivatives $\{f^{(l)}, f^{(l)}\}$, inference steps $T_{\text{infer}}$, learning rate $\eta_{\text{learn}}$, inference rate $\eta_{\text{infer}}$
-$\text{Clamp } \mathbf{x}^{(0)} \leftarrow$ input data
-for layer $l = 1$ to $L$ {
-	Initialize $\mathbf{x}^{(l)} \leftarrow$ small random values
-}
-for step $t = 1$ to $T_{\text{infer}}$ {
-	for layer $l = 0$ to $L - 1$ {
-		$\mathbf{a}^{(l)} \leftarrow \mathbf{W}^{(l)}\mathbf{x}^{(l+1)}$
-		$\hat{\mathbf{x}}^{(l)} \leftarrow f^{(l)}(\mathbf{a}^{(l)})$
-		$\varepsilon^{(l)} \leftarrow \mathbf{x}^{(l)} - \hat{\mathbf{x}}^{(l)}$
-	}
-	$\hat{\mathbf{y}} \leftarrow \mathbf{W}^{\text{out}}\mathbf{x}^{(L)}$
-	$\varepsilon^{\text{sup}} \leftarrow \hat{\mathbf{y}} - \mathbf{y}$
-	$\varepsilon^{(L)} \leftarrow \mathbf{W}^{\text{out}\top} \varepsilon^{\text{sup}}$
-	for layer $l = 1$ to $L$ {
-		$\mathbf{g}_{\mathbf{x}}^{(l)} \leftarrow \varepsilon^{(l)} - \mathbf{W}^{(l-1)\top} \left( f^{(l-1)^{\prime}}(\mathbf{a}^{(l-1)}) \odot \varepsilon^{(l-1)} \right)$
-		$\mathbf{x}^{(l)} \leftarrow \mathbf{x}^{(l)} - \eta_{\text{infer}} \mathbf{g}_{\mathbf{x}}^{(l)}$
-	}
-}
-for layer $l = 0$ to $L - 1$ {
-	$\mathbf{a}^{(l)} \leftarrow \mathbf{W}^{(l)}\mathbf{x}^{(l+1)}$
-	$\hat{\mathbf{x}}^{(l)} \leftarrow f^{(l)}(\mathbf{a}^{(l)})$
-	$\varepsilon^{(l)} \leftarrow \mathbf{x}^{(l)} - \hat{\mathbf{x}}^{(l)}$
-	$\mathbf{g}_{\mathbf{w}}^{(l)} \leftarrow - \left( \varepsilon^{(l)} \odot f^{(l)^{\prime}}(\mathbf{a}^{(l)}) \right) \mathbf{x}^{(l+1)\top}$
-	$\mathbf{W}^{(l)} \leftarrow \mathbf{W}^{(l)} - \eta_{\text{learn}} \mathbf{g}_{\mathbf{w}}^{(l)}$
-}
-$\mathbf{g}_{\mathbf{w}}^{\text{out}} \leftarrow \varepsilon^{\text{sup}} \mathbf{x}^{(L)\top}$
-$\mathbf{W}^{\text{out}} \leftarrow \mathbf{W}^{\text{out}} - \eta_{\text{learn}} \mathbf{g}_{\mathbf{w}}^{\text{out}}$
-
 ## 5 Application: Supervised Learning on CIFAR-10
+代码文件夹（本地）：
+[pcn_cifar10_notebook](file:///D:\code\pcn-intro/)
 
-To demonstrate the practical applicability of predictive coding networks, we evaluate a supervised PCN on the CIFAR-10 image classification task. CIFAR-10 consists of 60,000 color images of size  $32 \times 32 \times 3$, divided evenly across 10 classes, with 50,000 training and 10,000 test samples [14].
-
-### 5.1 Model architecture
-
-Each input image is flattened into a vector $\mathbf{x}^{(0)} \in \mathbb{R}^{3072}$, normalized to the range $[0,1]$. The network is defined with $L = 3$ latent layers, where the topmost latent state $\mathbf{x}^{(L)} \in \mathbb{R}^{10}$ is linearly mapped to an output vector $\hat{\mathbf{y}} \in \mathbb{R}^{10}$ using a readout matrix $\mathbf{W}^{\text{out}} \in \mathbb{R}^{10 \times 10}$. The latent representations are
-
-$$\mathbf{x}^{(1)}\in\mathbb{R}^{1000},\quad\mathbf{x}^{(2)}\in\mathbb{R}^{500},\quad\mathbf{x}^{(3)}\in\mathbb{R}^{10}$$
-
-and the top-down generative weights are
-
-$$\mathbf{W}^{(0)}\in\mathbb{R}^{3072\times1000},\quad\mathbf{W}^{(1)}\in\mathbb{R}^{1000\times500},\quad\mathbf{W}^{(2)}\in\mathbb{R}^{500\times10}$$
-
-with scalar nonlinearity $f^{(l)} = \text{ReLU} = \max(0, \cdot)$ applied elementwise. No bias terms are used. The network structure is quite arbitrary, following just the battle-tested practice that the layer dimensions interpolate between the input and output in a quick progression.
-
-The total number of trainable parameters in the PCN is
-
-$$3,072\times1,000+1,000\times500+500\times10+10\times10=3,577,100.$$
-
-To draw a very loose connection with biology, the PCN comprises roughly $4.6 \times 10^3$ “neurons” (3,072 inputs, 1,000 first-order latents, 500 second-order latents, and 10 outputs) connected by $3.6 \times 10^6$ “synapses.”
-
-### 5.2 Training procedure
-
-All weights are initialized using Xavier initialization, once, at the very beginning.
-
-Each input-label pair $(\mathbf{x}^{(0)}, y)$ undergoes the inference and learning cycle, as described in the supervised learning algorithm, with the latent variables $\mathbf{x}^{(1)}, \ldots, \mathbf{x}^{(L)}$ freshly initialized to small Gaussian noise. The output prediction is computed as $\hat{\mathbf{y}} = \mathbf{W}^{\mathrm{out}}\mathbf{x}^{(L)}$ and the supervised prediction error is given by $\boldsymbol{\varepsilon}^{\mathrm{sup}} = \hat{\mathbf{y}} - \mathbf{y}$ where $\mathbf{y} \in \mathbb{R}^{10}$ is the one-hot encoded target $y$.
-
-Although the base algorithm was formulated in a per-sample manner, mini-batch training improves computational efficiency and learning stability. We process a batch of $B$ samples $\{\mathbf{(x}_b^{(0)},\mathbf{y}_b)\}_{b=1}^B$ in parallel. Each sample maintains its own set of latent variables $\mathbf{x}_b^{(l)}$ and errors $\boldsymbol{\varepsilon}_b^{(l)}$, updated independently using the usual inference rule over $T$ iterations. After inference, the weight gradients $\mathbf{g}_b^{(l)} = -(\boldsymbol{\varepsilon}_b^{(l)} \odot f^{(l)^{\prime}}(\mathbf{a}_b^{(l)}))\mathbf{x}_b^{(l+1)\top}$ and $\mathbf{g}_b^{\text{out}} = \boldsymbol{\varepsilon}_b^{\text{sup}}\mathbf{x}_b^{(L)\top}$ are computed per sample (as in the base algorithm), and averaged over the batch:
-
- $$ \mathbf{W}^{(l)}\leftarrow\mathbf{W}^{(l)}-\eta_{learn}\frac{1}{B}\sum_{b=1}^{B}\mathbf{g}_{b}^{(l)} $$ 
-
-and
-
- $$ \mathbf{W}^{\mathrm{out}}\leftarrow\mathbf{W}^{\mathrm{out}}-\eta_{\mathrm{learn}}\frac{1}{B}\sum_{b=1}^{B}\mathbf{g}_{b}^{\mathrm{out}} $$ 
-
-Since the total number of inference updates per batch is  $ B \times T_{\text{infer}} $, these learning updates are performed  $ B $ times, thus keeping the ratio of inference updates to learning updates at  $ T_{\text{infer}} $. For each learning step the same inputs  $ \mathbf{x}_b^{(0)} $ and inferred latents  $ \mathbf{x}_b^{(l)} $ are used to recompute the gradients  $ \mathbf{g}_b^{(l)} $ and  $ \mathbf{g}_b^{\text{out}} $.
-
-This procedure preserves the sample-wise locality of PCN inference and learning, while leveraging parallel processing on a GPU.
-
-Hyperparameters. For training we set the hyperparameters as follows:
-
-• Batch size: 500 (resulting in 100 train batches, 20 test batches)
-
-• Inference steps per sample:  $ T_{infer} = 50 $
-
-• Inference rate:  $ \eta_{infer} = 0.05 $
-
-• Learning steps per batch:  $ T_{learn} = 500 $ (equals batch size)
-
-• Learning rate:  $ \eta_{learn} = 0.005 $
-
-Such choices are largely guided by the belief, or inductive bias, that there should be a distinct separation of timescales: inference should progress much faster than learning.
-
-### 5.3 Testing
-
-To test the trained network, the weights  $ \mathbf{W}^{(l)} $ and  $ \mathbf{W}^{\text{out}} $ are frozen. For each input-label pair  $ (\mathbf{x}^{(0)}, y) $ from the test set, the latents  $ \mathbf{x}^{(l)} $ are initialized randomly and the inference loop is executed, exactly as in the base algorithm. Once the latents are optimized, the prediction  $ \hat{\mathbf{y}} $ is read from the output layer. Observe that, given an input  $ \mathbf{x}^{(0)} $, the prediction  $ \hat{\mathbf{y}} $ in practice contains some random noise, since the inference loop starts from randomly initialized latents.
-
-Top-1 and top-3 class-prediction accuracies are used as performance metrics: Let  $ \text{top}_k(\hat{\mathbf{y}}) $ be the set of  $ k $ indices corresponding to the largest entries of  $ \hat{\mathbf{y}} $. Then the top- $ k $ accuracy is the average of  $ \mathbf{1}(y \in \text{top}_k(\hat{\mathbf{y}})) $ over the test set. Note that the test accuracies for a well-trained PCN vary slightly from one test round to the next, due to the random initialization.
-
-In the implementation test samples are handled in batches, just like in training.
-
-### 5.4 PyTorch implementation
-
-It is customary in PyTorch to load data as tensors where the batch dimension comes first. In our case the shape of a batch of samples is then  $ (B, d_0) $, corresponding to a matrix  $ \mathbf{X}^{(0)} $ whose  $ \mathbf{rows} $ represent the inputs  $ \mathbf{x}_b^{(0)} \in \mathbb{R}^{1 \times d_0} $,  $ 1 \leq b \leq B $. To adhere to the custom and to allow for efficient batch handling via vectorization, we revise the supervised learning algorithm to its final form. The changes from earlier essentially amount to adding a batch dimension to all vectors and transposing certain products. As explained above, the learning step is furthermore repeated  $ B $ times (by default) instead of just once; this counter-balances the increase in the number of inference steps due to batching prior to any weight updates—from  $ T_{\text{infer}} $ per sample in case of no batching  $ (B = 1) $ to  $ B \times T_{\text{infer}} $ per batch. To make reasoning about dimensions easier, they are listed explicitly on the right side of the algorithm box.
-
-During training we also track the batch-averaged total energy
-
- $$ \mathcal{E}_{\mathrm{b a t c h}}(t)=\frac{1}{B}\sum_{b=1}^{B}\biggl(\frac{1}{2}\sum_{l=0}^{L-1}\|\boldsymbol{\varepsilon}_{b}^{(l)}(t)\|^{2}+\frac{1}{2}\|\boldsymbol{\varepsilon}_{b}^{\mathrm{s u p}}(t)\|^{2}\biggr) $$ 
-
-at every inference and learning step  $ t $. Here the quadratic terms are the per-sample energies. Since there are 100 batches per epoch, we thus generate 100 “energy trajectories” over the time window  $ (0, \ldots, T_{\mathrm{infer}} + T_{\mathrm{learn}}) $ per epoch. Note that for sufficiently small inference and learning rates these trajectories should be strictly decreasing through inference and learning, which can be used as a sanity check that the implementation is correct. In practice, larger rates are required to escape local minima and to facilitate faster convergence.
-
-To support energy-tracking, our implementation reorders a few lines compared to the pseudocode here. Specifically, we compute and log the errors  $ \boldsymbol{\varepsilon}_{b}^{(l)}(t) $ and  $ \boldsymbol{\varepsilon}_{b}^{\operatorname{sup}}(t) $ pre- and post-update at each step, then reuse those same quantities for the next inference or weight update. This ensures that we record the energy both before any updates (at  $ t = 0 $) and immediately after each subsequent update, without redundant recomputation.
-
-Algorithm 3 Supervised learning in a PCN (vectorized row-batch form)
-
-Require: Input batch  $ \mathbf{X}^{(0)} \in \mathbb{R}^{B \times d_0} $, target batch  $ \mathbf{Y} \in \mathbb{R}^{B \times d_{\text{out}}} $, generative weights  $ \{\mathbf{W}^{(l)} \in \mathbb{R}^{d_l \times d_{l+1}}\}_{l=0}^{L-1} $, output weights  $ \mathbf{W}^{\text{out}} \in \mathbb{R}^{d_{\text{out}} \times d_L} $, activation functions and their derivatives  $ \{f^{(l)}, f^{(l)^{\prime}}\} $, inference steps per sample  $ T_{infer} $, learning steps per batch  $ T_{learn} = B $, inference rate  $ \eta_{infer} $, learning rate  $ \eta_{learn} $
-
-1: for layer  $ l = 1 $ to  $ L $ do
-2:     Initialize  $ \mathbf{X}^{(l)} \leftarrow $ small random values  $ \triangleright B \times d_l $
-3: end for
-4: for  $ t = 1 $ to  $ T_{infer} $ do  $ \triangleright $ Inference update loop
-5:     for  $ l = 0 $ to  $ L - 1 $ do
-6:          $ \mathbf{A}^{(l)} \leftarrow \mathbf{X}^{(l+1)} \mathbf{W}^{(l)\top} $  $ \triangleright B \times d_l $
-7:          $ \hat{\mathbf{X}}^{(l)} \leftarrow f^{(l)}(\mathbf{A}^{(l)}) $  $ \triangleright B \times d_l $
-8:          $ \mathbf{E}^{(l)} \leftarrow \mathbf{X}^{(l)} - \hat{\mathbf{X}}^{(l)} $  $ \triangleright B \times d_l $
-9:          $ \mathbf{H}^{(l)} = \mathbf{E}^{(l)} \odot f^{(l)^{\prime}}(\mathbf{A}^{(l)}) $  $ \triangleright B \times d_l $
-10:    end for
-11:  $ \hat{\mathbf{Y}} \leftarrow \mathbf{X}^{(L)} \mathbf{W}^{\text{out}} \top $  $ \triangleright B \times d_{\text{out}} $
-12:  $ \mathbf{E}^{\text{sup}} \leftarrow \hat{\mathbf{Y}} - \mathbf{Y} $  $ \triangleright B \times d_{\text{out}} $
-13:  $ \mathbf{E}^{(L)} \leftarrow \mathbf{E}^{\text{sup}} \mathbf{W}^{\text{out}} $  $ \triangleright B \times d_L $
-14:     for  $ l = 1 $ to  $ L $ do
-15:          $ \mathbf{G}_{\mathbf{X}}^{(l)} \leftarrow \mathbf{E}^{(l)} - \mathbf{H}^{(l-1)} \mathbf{W}^{(l-1)} $  $ \triangleright $ Grads wrt sample latents  $ \mathbf{x}_b^{(l)} $, batched  $ \triangleright B \times d_l $
-16:  $ \mathbf{X}^{(l)} \leftarrow \mathbf{X}^{(l)} - \eta_{infer} \mathbf{G}_{\mathbf{X}}^{(l)} $  $ \triangleright B \times d_l $
-17:     end for
-18: end for
-19: for  $ t = 1 $ to  $ T_{learn} $ do  $ \triangleright $ Weight update loop
-20:     for  $ l = 0 $ to  $ L - 1 $ do
-21:          $ \mathbf{A}^{(l)} \leftarrow \mathbf{X}^{(l+1)} \mathbf{W}^{(l)\top} $  $ \triangleright B \times d_l $
-22:          $ \hat{\mathbf{X}}^{(l)} \leftarrow f^{(l)}(\mathbf{A}^{(l)}) $  $ \triangleright B \times d_l $
-23:          $ \mathbf{E}^{(l)} \leftarrow \mathbf{X}^{(l)} - \hat{\mathbf{X}}^{(l)} $  $ \triangleright B \times d_l $
-24:          $ \mathbf{H}^{(l)} = \mathbf{E}^{(l)} \odot f^{(l)^{\prime}}(\mathbf{A}^{(l)}) $  $ \triangleright B \times d_l $
-25:      $ \mathbf{G}_{\mathbf{W}}^{(l)} \leftarrow -\frac{1}{B} \mathbf{H}^{(l)\top} \mathbf{X}^{(l+1)} $  $ \triangleright $ Batch-averaged grad wrt  $ \mathbf{W}^{(l)} $  $ \triangleright d_l \times d_{l+1} $
-26:      $ \mathbf{W}^{(l)} \leftarrow \mathbf{W}^{(l)} - \eta_{learn} \mathbf{G}_{\mathbf{W}}^{(l)} $  $ \triangleright d_l \times d_{l+1} $
-27:     end for
-28:  $ \hat{\mathbf{Y}} \leftarrow \mathbf{X}^{(L)} \mathbf{W}^{\text{out}} \top $  $ \triangleright B \times d_{\text{out}} $
-29:  $ \mathbf{E}^{\text{sup}} \leftarrow \hat{\mathbf{Y}} - \mathbf{Y} $  $ \triangleright B \times d_{\text{out}} $
-30:  $ \mathbf{G}_{\mathbf{W}}^{\text{out}} \leftarrow \frac{1}{B} \mathbf{E}^{\text{sup}} \top \mathbf{X}^{(L)} $  $ \triangleright $ Batch-averaged grad wrt  $ \mathbf{W}^{\text{out}} $  $ \triangleright d_{\text{out}} \times d_L $
-31:  $ \mathbf{W}^{\text{out}} \leftarrow \mathbf{W}^{\text{out}} - \eta_{learn} \mathbf{G}_{\mathbf{W}}^{\text{out}} $  $ \triangleright d_{\text{out}} \times d_L $
-32: end for
-
-Next, key modules of the Python code will be described. Full implementation details are provided in the accompanying Python notebook, available in a GitHub repository [20].
-
-#### 5.4.1 The PCNLayer class
-
-Each latent layer of the PCN is encapsulated by the PCNLayer class, defined as follows:
-
+### Define latent layer
+```python
 class PCNLayer(nn.Module):
     def __init__(self,
-            in_dim,
-            out_dim,
-            activation_fn=torch.relu,
-            activation_deriv=lambda a: (a > 0).float()
-            ):
-            super().__init__(
-            self.W = nn.Parameter(torch.empty(out_dim, in_dim))
-            nn.init.xavier_uniform_(self.W)
-            self.activation_fn = activation_fn
-            self.activation_deriv = activation_deriv
+                 in_dim,   # d_{l+1}  - dimension of layer above
+                 out_dim,  # d_l      - dimension of current layer
+                 activation_fn=torch.relu, # nonlinearity f^(l)
+                 activation_deriv=lambda a: (a > 0).float() # derivative f^(l)'
+                 ):
+        super().__init__()
+        self.W = nn.Parameter(torch.empty(out_dim, in_dim)) # W^(l)
+        nn.init.xavier_uniform_(self.W)
+        self.activation_fn     = activation_fn
+        self.activation_deriv  = activation_deriv
 
     def forward(self, x_above):
         with autocast(device_type='cuda'):
-            a    = x_above @ self.W.T
-            x_hat = self.activation_fn(a)
+            a     = x_above @ self.W.T      # A^(l) = X^(l+1) @ {W^(l)}^T
+            x_hat = self.activation_fn(a)   # \hat X^(l) = f^(l)(A^(l))
             return x_hat, a
+```
 
-The PCNLayer class inherits from torch.nn.Module, making it a standard building block in the PyTorch ecosystem. Its constructor, __init__, initializes the following components:
-
-- Weights (self.W): The learnable generative weight matrix, corresponding to  $ \mathbf{W}^{(l)} $ in our model, is initialized as a torch.nn.Parameter. This ensures that the weights are recognized by PyTorch's autograd system and can be updated during the learning phase. The dimensions are (out_dim, in_dim), representing  $ d_l \times d_{l+1} $, connecting layer  $ l+1 $ (of in_dim neurons) to layer  $ l $ (of out_dim neurons) in a top-down predictive manner. Xavier uniform initialization (nn.init.xavier_uniform_) is used to set the initial values of these weights. No biases are used.
-
-- Activation function (self.activation_fn): This stores the element-wise nonlinear activation function  $ f^{(l)} $, which defaults to ReLU (torch.relu).
-
-- Activation derivative (self.activation_deriv): This stores the derivative of the activation function,  $ f^{(l)} $, required for calculating the gain-modulated errors  $ \mathbf{H}^{(l)} $ during both inference and learning updates. The default is the derivative of ReLU.
-
-The core computation of a layer—generating a prediction for the layer below—is handled by the forward method. Given an input x_above (representing the state of the layer above,  $ \mathbf{X}^{(l+1)} $ in batch form), this method performs two main operations:
-
-1. It computes the pre-activation  $ \mathbf{A}^{(l)} = \mathbf{X}^{(l+1)} \mathbf{W}^{(l)\top} $ (denoted a in the code). This corresponds to the matrix multiplication  $ \mathbf{x}_{above} \circledast \mathbf{self.W.T} $.
-
-2. It then applies the layer's activation function  $ f^{(l)} $ to the pre-activations a to produce the prediction  $ \hat{\mathbf{X}}^{(l)} $ (denoted x_hat in the code).
-
-The method returns both the prediction x_hat and the pre-activation a, as both are needed for subsequent error calculations and gradient computations as detailed in the vectorized algorithm (Algorithm 3). By encapsulating these operations in a single module, PCNLayer separates the per-layer computations required for both inference (updating latents) and learning (updating weights) in Algorithm 3. The use of autocast(device_type='cuda') is for mixed-precision training, which can improve computational efficiency on compatible hardware.
-
-#### 5.4.2 The PredictiveCodingNetwork class
-
-Building upon the PCNLayer, the PredictiveCodingNetwork class organizes the entire network hierarchy and its operations. This class, also inheriting from torch.nn.Module, manages the collection of layers, the readout mechanism for supervised tasks, and utility functions for initialization and error computation.
-
-PredictiveCodingNetwork class
-
+### Define network structure
+```python
 class PredictiveCodingNetwork(nn.Module):
     def __init__(self,
-        酬
-        dim,
-        output_dim
-        ):
-            super().__init__(
-            self.dims = dim
-            self.L = len(dim) - 1
-            self.layers = nn.ModuleList([
-                PCNLayer(in_dim=dim[1+1],
-                                out_dim=dim[1])
-                for l in range(self.L)
-            ])
-            self.readout = nn.Linear(dim=-1), output_dim, bias=False)
+                 dims,        # [d_0,...,d_L]  - list of layer dimensions
+                 output_dim   # d_out          - readout layer dimension
+                 ):
+        super().__init__()
+        self.dims = dims
+        self.L = len(dims) - 1            # L  - number of latent layers
+        self.layers = nn.ModuleList([     # Build latent layers
+            PCNLayer(in_dim=dims[l+1],    # Layer l reads from layer l+1
+                     out_dim=dims[l])
+            for l in range(self.L)        # l = 0,...,L-1
+        ])
+        # Build readout layer: maps top latent X^(L) to
+        # predicted output \hat Y
+        # Note: nn.Linear applies (batch, in_features) @ weight.T under the hood,
+        # which corresponds exactly to X^(L) @ (W^out)^T
+        self.readout = nn.Linear(dims[-1], output_dim, bias=False)
+
 
     def init_latents(self, batch_size, device):
+        # returns [X^(1),...,X^(L)] as random normals
         return [
-            torch.randn(batch_size, d, device=device,
-                    requires_grad=False)
-        for d in self.dims[1:]
+           torch.randn(batch_size, d, device=device, requires_grad=False)
+           for d in self.dims[1:]
         ]
 
     def compute_errors(self, inputs_latents):
+        # Compute predictions from input and latent variables
+        # Argument: inputs_latents - list of tensors [X^(0), X^(1),...,X^(L)] shaped [(B,d_0),...,(B,d_L)]
+        # Returns: two lists of tensors shaped [(B,d_0),...,(B,d_{L-1})]
         errors, gain_modulated_errors = [], []
-        for l, layer in enumerate(self.layers):
-            x_hat, a = layer(inputs_latents[l + 1])
-            err = inputs_latents[l] - x_hat
-            gm_err = err * layer.activation_deriv(a)
-            errors.append(err)
-            gain_modulated_errors.append(gm_err)
+        for l, layer in enumerate(self.layers):       # l = 0,...,L-1
+            # Call to layer returns:
+            #   a = X^(l+1) @ W^(l).T  (preactivations A^(l))
+            #   x_hat = f^(l)(a)       (predictions \hat X^(l))
+            x_hat, a  = layer(inputs_latents[l + 1])
+            err       = inputs_latents[l] - x_hat # 隐藏变量 - 上层传下来的预测值
+            gm_err    = err * layer.activation_deriv(a)
+            errors.append(err)                               # E^(l) - prediction errors
+            gain_modulated_errors.append(gm_err)             # H^(l) - gain-modulated errors
         return errors, gain_modulated_errors
+```
+### 计算误差
+```python
+# 从每个隐藏层计算
+errors, gain_modulated_errors = model.compute_errors(inputs_latents)。
+# 输出层单独计算
+y_hat           = model.readout(inputs_latents[-1]) # X^(L) @ W^out.T
+eps_sup         = y_hat - y_batch
+eps_L           = eps_sup @ weights[-1]
+errors_extended = errors + [eps_L]
+```
 
-The __init__ constructor takes
+### 更新隐变量(inference)：
+```python
+for l in range(1, model.L + 1):  # l=1,...,L
+	# 计算梯度
+	grad_Xl = errors_extended[l] - gain_modulated_errors[l-1] @ weights[l-1]
+	# 更新参数
+	inputs_latents[l] -= eta_infer * grad_Xl
+```
 
- $$ \mathrm{d i m s}=[d_{0},d_{1},\ldots,d_{L}]\quad\mathrm{a n d}\quad\mathrm{o u t p u t\_{d} i m}=d_{\mathrm{o u t}} $$ 
-
-specifying the dimensions of each layer in the network (from the input's  $ d_{0} $ to the topmost latent's  $ d_{L} $ and readout's  $ d_{out} $) and performs the following:
-
-• Dimensions (self.dims, self.L): The dims list and self.L = len(dims) - 1 = L are stored.
-
-- Generative layers (self.layers): A torch.nn.ModuleList is created to hold the stack of PCNLayer instances representing the  $ L $ latent layers. Each PCNLayer maps  $ \mathbb{R}^{d_{l+1}} \to \mathbb{R}^{d_{l}} $ as in the generative model. The dimensions are drawn from dims.
-
-- Readout layer (self.readout): For supervised learning, a torch.nn.Linear layer is defined as self.readout. As with the latent layers, the learnable weight matrix self.readout.weight corresponding to  $ W^{out} $ is initialized as Xavier uniform. This layer
-
-maps the topmost latent state  $ \mathbf{X}^{(L)} $ (with dimension  $ \text{dim}s[-1] = d_L $) to the output prediction  $ \hat{\mathbf{Y}} $ (with dimension  $ \text{output}_{\text{dim}} = d_{\text{out}} $). In alignment with the supervised extension described, the layer implements  $ \hat{\mathbf{Y}} = \mathbf{X}^{(L)} \mathbf{W}^{\text{out}} \top $ without a bias term.
-
-The class includes two methods to facilitate the PCN's operation:
-
-- init_latents(self, batch_size, device): This method initializes the latent variables as in lines 1–3 in Algorithm 3. For a given batch_size, it creates a list of tensors  $ [\mathbf{X}^{(1)}, \ldots, \mathbf{X}^{(L)}] $ with values drawn independently from  $ \mathcal{N}(0,1) $, ensuring they are on the specified device. The flag requires_grad=False ensures PyTorch's autograd engine does not compute or store gradients for these latent variables, as they are updated via the explicit inference rule instead of automatic differentiation of a loss function.
-
-- compute_errors(self, inputs_latents): This method calculates the prediction errors  $ \mathbf{E}^{(l)} $ and the gain-modulated errors  $ \mathbf{H}^{(l)} $ for all layers  $ 0 \leq l < L $. It takes a list inputs_latents =  $ [\mathbf{X}^{(0)}, \mathbf{X}^{(1)}, \ldots, \mathbf{X}^{(L)}] $ (containing the current input batch and all current latent states) as input. It iterates through each PCNLayer in self.layers, using the layer's forward method to get the prediction  $ \hat{\mathbf{X}}^{(l)} $ and pre-activation  $ \mathbf{A}^{(l)} $. It then computes  $ \mathbf{E}^{(l)} = \mathbf{X}^{(l)} - \hat{\mathbf{X}}^{(l)} $ and  $ \mathbf{H}^{(l)} = \mathbf{E}^{(l)} \odot f^{(l)}'(\mathbf{A}^{(l)}) $. These computations are central to both the inference and learning phases, as seen in lines 6-9 and 21-24 of Algorithm 3. The method returns two lists: one containing all  $ \mathbf{E}^{(l)} $ and another containing all  $ \mathbf{H}^{(l)} $.
-
-Together, these components and methods provide a modular PyTorch representation of the predictive coding network, suitable for the supervised learning task described.
-
-#### 5.4.3 Training loop
-
-Finally, to show the operational aspects of the model, a minimal training loop is presented next. Focusing on essential update mechanisms, it differs slightly from the accompanying Python notebook, which also implements the energy-tracking features discussed earlier.
-
-The function train_pcn takes the PCN model, a PyTorch data_loader for batching, the number of training num_epochs, rates eta_infer and eta_learn, and the number of steps for inference (T_infer) per sample and learning (T_learn) per batch, along with the target device.
-
-The training process begins by setting the model to training mode and moving it to the specified device. It then iterates for a given number of num_epochs. Within each epoch, mini-batches of data (x_batch, y_batch) are processed. Input features x_batch are flattened and, along with the one-hot encoded targets y_batch, moved to the target device. The list inputs_latents is initialized to hold the input batch  $ \mathbf{X}^{(0)} $ followed by the randomly initialized latent variables  $ \mathbf{X}^{(1)} $, ...,  $ \mathbf{X}^{(L)} $ obtained from model.init_latents(). Notably, a list named weights is created containing direct references to the model's weight tensors (layer.W for generative layers and model.readout.weight for the readout layer). Updates to elements of this weights list will therefore modify the model's parameters in place.
-
-def train_pcn(model, data_loader, num_epochs, eta_infer, eta_learn,
-T_infer, T_learn, device='cuda'):
-    model.to(device).train()
-
-for epoch in range(num_epochs):
-    for x_batch, y_batch in data_loader:
-        B = x_batch.size(0)
-        d_0 = model.dims[0]
-        x_batch = x_batch.view(B, d_0).to(device)
-        y_batch = F.one_hot(y_batch, num_classes=model.readout.out_features) \
-            .float().to(device)
-        inputs_latents = [x_batch] + model.init_latents(B, device)
-        weights = [layer.W for layer in model.layers] + [model.readout.weight]
-
-    # INFERENCE - T_infer steps
-    with torch.no_grad(), autocast(device_type='cuda'):
-        for t in range(1, T_infer + 1):
-            errors, gain_modulated_errors = model.compute_errors(inputs_latents)
-            y_hat = model.readout(inputs_latents[-1])
-            eps_sup = y_hat - y_batch
-            eps_L = eps_sup @ weights[-1]
-            errors_extended = errors + [eps_L]
-
-        # Latent gradients and updates
-        for l in range(1, model.L + 1):
-            grad_Xl = errors_extended[1] - \
-                    gain_modulated_errors[1-1] @ weights[1-1]
-            inputs_latents[l] -= eta_infer * grad_Xl
-
-    # LEARNING - T_learn steps
-    with torch.no_grad():
-        for t in range(T_infer + 1, T_learn + T_infer + 1):
-            errors, gain_modulated_errors = model.compute_errors(inputs_latents)
-            y_hat = model.readout(inputs_latents[-1])
-            eps_sup = y_hat - y_batch
-
-        # Weight gradients and updates
-        for l in range(model.L):
-            grad_Wl = -(gain_modulated_errors[1].T @ inputs_latents[1+1]) / B
-            weights[1] -= eta_learn * grad_Wl
-            grad_Wout = eps_sup.T @ inputs_latents[-1] / B
-            weights[-1] -= eta_learn * grad_Wout
-
-For each batch, the inference phase is executed for  $ T\_infer $ steps. This phase operates under torch.no_grad() context, as latent variable updates are performed manually according to the PCN rules, not via PyTorch's autograd. The autocast context manager is also used here, enabling mixed-precision computations on compatible CUDA hardware. In each inference step:
-
-1. The model.compute_errors method is called to calculate the current prediction errors  $ \mathbf{E}^{(l)} $ and gain-modulated errors  $ \mathbf{H}^{(l)} $ for the generative layers ( $ 0 \leq l < L $).
-
-2. The supervised prediction  $ \tilde{Y} $ and error  $ E^{\text{sup}} $ are computed.
-
-3. The error signal for the top latent layer,  $ \mathbf{E}^{(L)} = \mathbf{E}^{\text{sup}}\mathbf{W}^{\text{out}} $, is calculated. This notation aligns with how  $ \boldsymbol{\varepsilon}^{(L)} $ was defined for the supervised algorithm to use the general latent update rule. The full list of errors  $ [\mathbf{E}^{(0)}, \ldots, \mathbf{E}^{(L)}] $ is assembled in errors_extended.
-
-4. Each latent variable  $ \mathbf{X}^{(l)} $ (for  $ 1 \leq l \leq L $) is updated using the formula  $ \mathbf{X}^{(l)} \leftarrow \mathbf{X}^{(l)} - \eta_{\mathrm{infer}}(\mathbf{E}^{(l)} - \mathbf{H}^{(l-1)}\mathbf{W}^{(l-1)} $), which corresponds to line 15–16 of Algorithm 3.
-
-Following inference, the learning phase adjusts the model weights for T_learn steps, also under torch.no_grad(). The latent variables inputs_latents remain fixed at their values from the end of the inference phase. In each of these T_learn steps:
-
-1. The generative errors  $ \mathbf{E}^{(l)} $, gain-modulated errors  $ \mathbf{H}^{(l)} $, and the supervised error  $ \mathbf{E}^{\text{sup}} $ are recomputed. This is essential because the model weights (elements of the weights list) are updated within this loop, and thus the predictions and errors change accordingly.
-
-2. The generative weight matrices  $ \mathbf{W}^{(l)} $ (for  $ 0 \leq l < L $) are updated. The gradient  $ \mathbf{G}_{\mathbf{W}}^{(l)} = -\frac{1}{B}\mathbf{H}^{(l)\top}\mathbf{X}^{(l+1)} $ is computed, and the weights are adjusted:  $ \mathbf{W}^{(l)} \leftarrow \mathbf{W}^{(l)} - \eta_{\text{learn}} \mathbf{G}_{\mathbf{W}}^{(l)} $. This corresponds to lines 25–26 of Algorithm 3.
-
-3. Similarly, the readout weights  $ \mathbf{W}^{\text{out}} $ are updated using their gradient  $ \mathbf{G}_{\mathbf{W}}^{\text{out}} = \frac{1}{B} \mathbf{E}^{\text{sup}} \top \mathbf{X}^{(L)} $, as per lines 30–31 of Algorithm 3.
-
-### 5.5 Results and observations
-
-The model was trained in Google Colab on an NVIDIA L4 GPU, running the accompanying Python notebook [20]. Training for just 4 epochs took 4 minutes. Yet the test performance scores in Table 1 are phenomenal. In fact, the top-1 accuracy (percentage correct) comfortably tops the leaderboard on Papers With Code at the time of writing (May 29, 2025)—the previous record of 99.5% having been set by the vision transformer ViT-H/14 in 2020.
-
-
-
-<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Top-1 accuracy</td><td style='text-align: center; word-wrap: break-word;'>99.92%</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>Top-3 accuracy</td><td style='text-align: center; word-wrap: break-word;'>99.99%</td></tr></table>
-
-<div style="text-align: center;"><div style="text-align: center;">Table 1: PCN test accuracies after 4 epochs of training</div> </div>
-
-
-The batch-averaged energy trajectories recorded during training are depicted in Figure 3.
-
-Disclosure. The experiment was virtually one-shot. The rates were initially set to  $ \eta_{infer} = 0.1 $ and  $ \eta_{learn} = 0.001 $ for the very first run. Monitoring the batch-averaged energy trajectories during training, some batches displayed unstable inference while learning was generally slow. Consequently, the inference rate was cut in half to  $ \eta_{infer} = 0.05 $ and the learning rate was quintupled to  $ \eta_{learn} = 0.005 $ for the second run, which stabilized training and led to the test performance above on the first try. Neither the model architecture nor the hyperparameters were tuned for performance in any way or at any point. In order to prevent data-leakage from the test set to validation, the experiment terminated here. (Observe that CIFAR-10 does not include a separate validation set.) The trained weights are publicly available [20].
-
-This little experiment demonstrates once more that predictive coding networks can be trained end-to-end on a basic vision task using local, biologically plausible update rules. While generally not yet competitive with state-of-the-art deep learning methods in terms of scope and, depending on task, raw accuracy, PCNs offer an intriguing model of computation with sound theoretical and practical motivations.
-
-In view of the disclosure above, the author has no idea whether a much smaller architecture (or different hyperparameters) might achieve similar performance. We leave it to the curious reader to tune the model and its training for that perfect 100% score. Happy hunting! ☺
-
-<div style="text-align: center;"><div style="text-align: center;">Batch-Averaged Energy Trajectories (Mean  $ \pm $ 1-std)</div> </div>
-
-
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//067f2d4f-a04a-4b70-ad20-e6301afc484e/markdown_3/imgs/img_in_chart_box_124_413_1112_739.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-06-15T03%3A32%3A54Z%2F-1%2F%2F548a807e5a4eec9c208f439db550b7b43e2513024d6e1534cb18cbab9cb02f09" alt="Image" width="82%" /></div>
-
-
-<div style="text-align: center;"><div style="text-align: center;">Batch-averaged Energy Trajectories</div> </div>
-
-
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//067f2d4f-a04a-4b70-ad20-e6301afc484e/markdown_3/imgs/img_in_chart_box_121_841_1016_1154.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-06-15T03%3A32%3A54Z%2F-1%2F%2F2b85673bd667997268912c949564808d57b5dce9cbf0ec97f0073924f7b99f48" alt="Image" width="75%" /></div>
-
-
-<div style="text-align: center;"><div style="text-align: center;">Figure 3: Partial zoom-in views of the batch-averaged energy trajectories recorded during training. The first plot shows the mean trajectories over all batches (equivalently, all samples) for each epoch, as well as the shaded areas of one standard deviation. The second plot shows the trajectories for individual batches. Coloring is by epoch. The full, interactive plots can be found in the Python notebook.</div> </div>
+### 更新权重(learning)：
+```python
+for l in range(model.L): # l=0,...,L-1
+	# 计算梯度
+	grad_Wl = -(gain_modulated_errors[l].T @ inputs_latents[l+1]) / B
+	# 更新参数
+	weights[l] -= eta_learn * grad_Wl
+```
 
 
 ## References
