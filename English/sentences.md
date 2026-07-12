@@ -22,3 +22,8 @@ A Chinese researcher told me the trick to getting big research funding in China:
 I said the trick in the U.S. is to say China is already ahead and we're falling behind. **Apparently** this keeps money flowing on both sides. Whether it keeps the science flowing is another question
 
 nick land speaks of this in his writings
+
+
+
+one of the original motivations behind predivtive coding is its potential biological plausibility
+预测编码最初的动机之一在于其潜在的生物学合理性。
