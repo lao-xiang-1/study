@@ -3,7 +3,7 @@ sr-due: 2026-08-18
 sr-interval: 38
 sr-ease: 270
 ---
-#review 
+#course 
 
 ## 题目
 ![611](assets/校正+bode图.png)
