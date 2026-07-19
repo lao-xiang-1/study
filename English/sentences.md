@@ -20,7 +20,7 @@ we often leverage model failures to assess per-sample hardness
 This practice drives RL with verifiable rewards
 ?
 这种做法推动了基于可验证奖励的强化学习
-<!--SR:!2026-07-14,1,230-->
+<!--SR:!2026-07-17,2,230-->
 
 #en
 we found that a non-trivial fraction of failed questions are, in fact, solvable if you give your model a slight perturbation and apply greedy decoding
@@ -84,3 +84,6 @@ it seems almost inevitable that North African economies will still be primarily 
 
 the reforms owe a great deal to the revolution of one man.
 这些改革主要归功于一个人的坚定决心。
+
+return a proxy object that delegates method calls to a parent or sibling class of `type`.
+返回一个代理对象，该对象会将方法调用委托给 指定类型（type）的父类或兄弟类。

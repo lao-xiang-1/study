@@ -6,8 +6,11 @@ sr-ease: 250
 #paper
 # Introduction to Predictive Coding Networks for Machine Learning
 [原论文地址](https://arxiv.org/pdf/2506.06332)
-May 29, 2025
 
+代码文件夹（本地）：
+[pcn_cifar10_notebook](file:///D:\code\pcn-intro/)
+
+May 29, 2025
 
 ## References
 
@@ -77,9 +80,10 @@ $$ \mathcal{L}=\frac{1}{2}\sum_{l=0}^{L-1}\left\|\varepsilon^{(l)}\right\|^{2}. 
 
 The network can be viewed as a directed acyclic graph; see Figure 1. The “hanging” root nodes without incoming edges are the input and latent variables; the leaves (end nodes) are the prediction errors. Observe that the generative hierarchy flows from top to bottom, towards the input; more on this will be discussed shortly.
 该网络可被视为一个**有向无环图**；参见图 1。没有入边的"悬挂"根节点是**输入变量和隐变量**；叶节点（末端节点）则是**预测误差**。注意，生成式层级结构是**自上而下**流动的，指向输入层；关于这一点将在稍后进一步讨论。
-<div style="text-align: center;"><img src=assets/2506.06332v1.pdf_by_PaddleOCR-VL-1.6.png alt="Image" width="100%" /></div>
 
 <div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6999a80c-1f77-4042-951c-2c12ce7ebd2d/markdown_3/imgs/img_in_image_box_456_316_738_579.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-06-15T03%3A39%3A23Z%2F-1%2F%2Fe3df08118ef25b030ebbd2aedd4e699a137dcf7c621f531cc8ef299d5e2a7384" alt="Image" width="23%" /></div>
+
+<div style="text-align: center;"><img src=assets/2506.06332v1.pdf_by_PaddleOCR-VL-1.6.png alt="Image" width="100%" /></div>
 
 <div style="text-align: center;color: #2ecc71;"><div style="text-align: center;">Figure 2: A supervised extension of the PCN with three latent layers in Figure 1 is obtained by stacking a readout layer on top of the highest latent layer, together with a new root node for the target label.</div> </div>
 
