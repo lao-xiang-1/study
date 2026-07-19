@@ -1,10 +1,3 @@
----
-sr-due: 2026-08-18
-sr-interval: 38
-sr-ease: 270
----
-#course 
-
 ## 题目
 ![611](assets/校正+bode图.png)
 ### （1）计算校正前系统的相角裕度 $\gamma_1$
