@@ -1,6 +1,6 @@
 ---
-sr-due: 2026-07-08
-sr-interval: 1
+sr-due: 2026-08-03
+sr-interval: 15
 sr-ease: 230
 ---
 #ml 
@@ -31,25 +31,25 @@ $$\Sigma = \frac{1}{N} \sum_{i=1}^N x_i x_i^T$$
 ### 2. 投影与方差表示
 >这一段是证明 变换后数据的方差 可用协方差矩阵表示
 
-1. 定义投影
-	假设我们要将数据投影到一维空间。设投影方向的单位向量为 $w \in \mathbb{R}^D$，满足：$w^T w = 1$
-	- $w$的形状：$D \times 1$（列向量）
+##### 1. 定义投影
+*假设我们要将数据投影到一维空间*。设投影方向的单位向量为 $w \in \mathbb{R}^D$，满足：$w^T w = 1$
+- $w$的形状：$D \times 1$（列向量）
 	
-	那么对于任意一个样本点 $x_i$，它在方向 $w$ 上的投影大小为：
+那么对于任意一个样本点 $x_i$，它在方向 $w$ 上的投影大小为：
 $$z_i = w^T x_i$$
-	- $z_i$的形状：$(1 \times D) \times (D \times 1) = 1 \times 1$   (**标量**)
+- $z_i$的形状：$(1 \times D) \times (D \times 1) = 1 \times 1$   (**标量**)
 
-2. 投影后数据的**方差**（Variance）：*方差也是标量*
-$$D(w) = \frac{1}{N} \sum_{i=1}^N (z_i - \bar{z})^2 = \frac{1}{N} \sum_{i=1}^N (w^T x_i)^2$$
-	- *由于原始数据已经过中心化，投影后数据的均值依然为 0*：
+##### 2. 投影后数据的**方差**（Variance）：
+$$D(w) = \frac{1}{N} \sum_{i=1}^N (z_i - \bar{z})^2$$
+- *由于原始数据已经过中心化，投影后数据的均值依然为 0*：
 $$\bar{z} = \frac{1}{N} \sum_{i=1}^N w^T x_i = w^T \left( \frac{1}{N} \sum_{i=1}^N x_i \right) = 0$$
-	所以方差可以化为：
+所以方差可以化为：
 $$D(w) = \frac{1}{N} \sum_{i=1}^N (z_i)^2 = \frac{1}{N} \sum_{i=1}^N (w^T x_i)^2$$
-	
-	由于 $(w^T x_i)^2 = (w^T x_i)(w^T x_i)^T = w^T x_i x_i^T w$，我们可以将方差写成矩阵形式：
+
+由于 $(w^T x_i)^2 = (w^T x_i)(w^T x_i)^T = w^T x_i x_i^T w$，我们可以将方差写成矩阵形式：
 $$D(w) = \frac{1}{N} \sum_{i=1}^N w^T x_i x_i^T w = w^T \left( \frac{1}{N} \sum_{i=1}^N x_i x_i^T \right) w$$
-	
-	注意到括号中的部分正是协方差矩阵 $\Sigma$，因此方差可以简化为：
+
+注意到括号中的部分正是协方差矩阵 $\Sigma$，因此方差可以简化为：
 $$D(w) = w^T \Sigma w$$
 
 ### 3. 构建优化问题
@@ -60,19 +60,20 @@ $$\max_{w} \quad w^T \Sigma w$$
 $$\text{s.t.} \quad w^T w = 1$$
 
 ### 4. 求解优化问题（拉格朗日乘子法）
-?
->证明 投影向量$w$ 就是协方差矩阵 $\Sigma$ 的 特征向量
+>这段证明 投影向量$w$ 就是协方差矩阵 $\Sigma$ 的 特征向量
 
 引入拉格朗日乘子 $\lambda$，构建拉格朗日函数：
 $$L(w, \lambda) = w^T \Sigma w - \lambda (w^T w - 1)$$
 
 对 $w$ 求偏导数，并令其等于 0：
 $$\frac{\partial L}{\partial w} = 2 \Sigma w - 2 \lambda w = 0$$
+注：$\frac{\partial}{\partial x} (x^T A x) = (A + A^T)x$，而 $\Sigma = \Sigma^T$,  $w^T w=w^T Iw$
+$\therefore \frac{\partial}{\partial w} (w^T \Sigma w) = 2\Sigma w \quad \frac{\partial}{\partial w} (w^T w) = 2 w$
 
 化简后得到：
 $$\Sigma w = \lambda w$$
 
-这正是线性代数中经典的**特征值与特征向量**定义式！
+这正是线性代数中经典的**特征值与特征向量**定义式！[特征值与特征向量](../线性代数/特征值与特征向量.md)
 * $w$ 是协方差矩阵 $\Sigma$ 的特征向量。
 * $\lambda$ 是对应的特征值。
 
@@ -85,7 +86,6 @@ $$D(w) = w^T \Sigma w = w^T (\lambda w) = \lambda (w^T w) = \lambda$$
 
 为了使方差 $D(w)$ 最大化，我们应该选择**最大**的特征值 $\lambda_1$，其对应的特征向量 $w_1$ 即为**第一主成分（First Principal Component）**。
 
----
 
 ### 6. 推广到多维（后续主成分）
 
@@ -108,7 +108,7 @@ $$w_1^T \Sigma w_2 = (w_2^T \Sigma w_1)^T = (w_2^T \lambda_1 w_1)^T = \lambda_1 
 又因为 $w_1^T w_2 = 0$ 且 $w_1^T w_1 = 1$，代入上式可得：
 $$0 - 0 - \phi = 0 \implies \phi = 0$$
 
-因此，方程简化为：
+因此，方程 $2 \Sigma w_2 - 2 \lambda w_2 - \phi w_1 = 0$ 简化为：
 $$\Sigma w_2 = \lambda w_2$$
 
 这说明 $w_2$ 同样是 $\Sigma$ 的特征向量。为了使方差 $w_2^T \Sigma w_2$ 最大且与 $w_1$ 不同，我们应当选择**第二大**特征值对应的特征向量作为第二主成分。
