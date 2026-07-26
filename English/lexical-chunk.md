@@ -1,13 +1,14 @@
 # 词块整理
 
-#en 
-## 一、intent / intense / intensity 词族
+#en
+## 一、intent / intense / intensely / intensive / intensity
 ?
 ### 1. intent
 - **释义**：n. 意图，目的；adj. 专心的，专注的
 - **例句**：
   - She was **intent** on finishing the project before the deadline.（她专心致志要在截止日期前完成项目。）
   - The original **intent** of the law was to protect consumers.（该法律的初衷是保护消费者。）
+<!--SR:!2026-07-29,3,250-->
 
 ### 2. intense
 - **释义**：adj. 强烈的，剧烈的；紧张的，认真的
@@ -35,14 +36,15 @@
 
 ---
 
-#en 
-## 二、stimulus / stimulate 词族
+#en
+## 二、stimulus / stimuli / stimulate / stimulation
 ?
 ### 1. stimulus
 - **释义**：n. 刺激（物）；激励因素
 - **例句**：
   - Light is a **stimulus** that causes the pupil to contract.（光线是引起瞳孔收缩的刺激物。）
   - The tax cut was designed as an economic **stimulus**.（减税政策旨在作为经济刺激手段。）
+<!--SR:!2026-07-30,4,270-->
 
 ### 2. stimuli
 - **释义**：n. stimulus 的复数形式
@@ -65,14 +67,15 @@
 
 ---
 
-#en 
-## 三、slight / slightly 词族
+#en
+## 三、slight / slightly / slighted
 ?
 ### 1. slight
 - **释义**：adj. 轻微的，微小的；纤细的
 - **例句**：
   - There is a **slight** chance of rain this afternoon.（今天下午有轻微的可能下雨。）
   - She has a **slight** build but is very strong.（她身材纤细但非常强壮。）
+<!--SR:!2026-07-29,3,250-->
 
 ### 2. slightly
 - **释义**：adv. 轻微地，稍微

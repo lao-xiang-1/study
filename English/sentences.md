@@ -90,13 +90,13 @@ it seems almost inevitable that North African economies will still be primarily 
 the reforms owe a great deal to the revolution of one man.
 ?
 这些改革主要归功于一个人的坚定决心。
-<!--SR:!2026-07-26,3,250-->
+<!--SR:!2026-08-05,10,270-->
 
 #en
 return a proxy object that delegates method calls to a parent or sibling class of `type`.
 ?
 返回一个代理对象，该对象会将方法调用委托给 指定类型（type）的父类或兄弟类。
-<!--SR:!2026-07-26,3,250-->
+<!--SR:!2026-08-06,11,270-->
 
 #en
 yet it is this privileged sliver of activity that we rely on to reason delibrately
@@ -114,19 +114,19 @@ in this file only stateless layers are implemented as they don't need any partic
 This information is typically reportable, in the sense that it can be put into words on request.
 ?
 这类信息通常是可报告的，即可应要求用语言表达出来
-<!--SR:!2026-07-26,3,250-->
+<!--SR:!2026-08-07,12,270-->
 
 #en
 Several functional properties are commonly held to distinguish consciously accessible information from unconscious processing.
 ?
 通常认为，有若干功能特性可将意识上可通达的信息与无意识加工区分开来
-<!--SR:!2026-07-26,2,230-->
+<!--SR:!2026-07-31,5,230-->
 
 #en
 Indeed, verbal report has often served as a primary empirical signature of conscious access
 ?
 事实上，言语报告常常被用作意识通达的主要经验指标
-<!--SR:!2026-07-26,2,230-->
+<!--SR:!2026-07-31,5,230-->
 
 #en
 It is subject to top-down control.
@@ -138,15 +138,18 @@ It is subject to top-down control.
 where $\odot$ denotes the elementwise (Hadamard) product, and the convention used for stacking the entries is that the vectors $\mathbf{x}^{(l)}$ and $\nabla_{\mathbf{x}^{(l)}}\mathcal{L}$ have the same shape.
 ?
 其中 $\odot$ 表示逐元素（Hadamard）乘积，向量堆叠的约定是：$\mathbf{x}^{(l)}$ 与 $\nabla_{\mathbf{x}^{(l)}}\mathcal{L}$ 具有相同的形状。
-<!--SR:!2026-07-26,2,230-->
+<!--SR:!2026-07-31,5,230-->
 
 #en
 During inference, all prediction errors and feedback terms are computed first using the current network state, and only then are the latent variables $x^{(l)}$ updated.
 ?
 在推断过程中，首先利用当前网络状态计算所有预测误差和反馈项，然后才对隐变量 $\mathbf{x}^{(l)}$ 进行更新。
-<!--SR:!2026-07-26,3,250-->
+<!--SR:!2026-08-05,10,270-->
 
-#en 
+#en
 utility function that create a fast cache set, which keeps track of the orders in which the elements are seen.
 ?
 工具函数，用于创建一个快速缓存集合，可以跟踪元素被看到的顺序。
+<!--SR:!2026-07-29,3,250-->
+
+this is used to reduce the overhead of injecting the new values back into the 

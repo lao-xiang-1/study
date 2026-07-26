@@ -17,7 +17,7 @@ meant to be a general purpose tree-like data structure handling library.
 1. 本模块提供了一小组用于处理树状数据结构（tree-like data structures）的实用函数，这些数据结构包括嵌套元组、列表和字典。我们将这些结构称为 pytree。它们是树，因为它们是递归定义的（任何非 pytree 都是 pytree，即叶子节点；任何 pytree 的 pytree 也是 pytree），并且可以递归操作（映射操作不保留对象标识等价性，且这些结构不能包含引用循环）。
 2. 被视为 pytree 节点（即可以被映射遍历，而非当作叶子节点处理）的 Python 类型集合是可扩展的。存在一个模块级别的类型注册表，且类继承层次结构被忽略。通过注册一个新的 pytree 节点类型，该类型实际上对本文件中的实用函数变为透明的。
 3. 本模块的主要目的是实现用户自定义数据结构与 JAX 变换（如 `jit`）之间的互操作性。它并非一个通用的树状数据结构处理库。
-<!--SR:!2026-07-26,3,250-->
+<!--SR:!2026-08-05,10,270-->
 
 #en/Passage
 If checked, and you or the deck author altered the schema of a note type, Anki will merge the two versions instead of keeping both.
@@ -39,7 +39,7 @@ During inference, all prediction errors and feedback terms are computed first us
 One of the original motivations behind predictive coding is its potential biological plausibility: that the brain could implement something akin to deep hierarchical learning using local computations. Locality typically refers to whether a computation depends only on information from a given layer and its immediate neighbors. This concept is important both for computational efficiency and biological plausibility.
 ?
 预测编码最初的动机之一是其潜在的生物学合理性（biological plausibility）：即大脑可以利用局部计算实现类似于深层层级学习的功能。**局部性**（locality）通常指一个计算是否仅依赖于来自给定层及其直接相邻层的信息。这一概念对于计算效率和生物学合理性都很重要。
-<!--SR:!2026-07-26,3,250-->
+<!--SR:!2026-08-06,11,270-->
 
 #en/Passage
 Remark. The model can also support **anytime inference**（**随时推断**）, where well-predicted inputs converge in fewer steps, and additional inference steps are taken to improve predictions in ambiguous cases. This adaptivity offers potential energy savings in embedded or neuromorphic deployments.
@@ -47,4 +47,4 @@ The algorithm can be modified in this spirit by choosing a sufficiently large ma
 ?
 **备注。** 该模型还支持**随时推断（anytime inference）**：对于容易预测的输入，只需更少的步骤即可收敛；而对于模糊或不确定的情况，则可以执行额外的推断步骤来改善预测结果。这种自适应特性为嵌入式或神经形态硬件部署提供了潜在的节能空间。
 按照这一思路，可以对算法进行修改：设置一个足够大的最大步数 ，然后运行推断循环，直到执行了  步或检测到收敛为止。这里的收敛可以定义为，例如，所有隐变量的最新更新（或更长耐心窗口内的更新）的范数低于某个预设阈值。用机器学习的术语来说，这可以表述为**带样本级早停的推断（sample-wise early stopping）**。
-<!--SR:!2026-07-26,2,230-->
+<!--SR:!2026-08-02,7,250-->
