@@ -32,7 +32,6 @@
 - **例句**：
   - The storm is expected to increase in **intensity** overnight.（预计暴风雨夜间强度将增大。）
   - She spoke with great **intensity** about her passion for music.（她满怀激情地谈论对音乐的热爱。）
-<!--SR:!2026-08-06,8,250-->
 
 ---
 
@@ -44,7 +43,6 @@
 - **例句**：
   - Light is a **stimulus** that causes the pupil to contract.（光线是引起瞳孔收缩的刺激物。）
   - The tax cut was designed as an economic **stimulus**.（减税政策旨在作为经济刺激手段。）
-<!--SR:!2026-07-30,4,270-->
 
 ### 2. stimuli
 - **释义**：n. stimulus 的复数形式
@@ -64,7 +62,6 @@
   - Babies need sensory **stimulation** for healthy development.（婴儿需要感官刺激来健康成长。）
   - The drug causes **stimulation** of the central nervous system.（该药物引起中枢神经系统的兴奋。）
 
-
 ---
 
 #en
@@ -75,7 +72,6 @@
 - **例句**：
   - There is a **slight** chance of rain this afternoon.（今天下午有轻微的可能下雨。）
   - She has a **slight** build but is very strong.（她身材纤细但非常强壮。）
-
 
 ### 2. slightly
 - **释义**：adv. 轻微地，稍微
