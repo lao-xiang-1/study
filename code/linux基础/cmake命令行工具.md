@@ -2,13 +2,14 @@
 
 CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类。
 
+#code/cmake
 ### ⚙️ 项目配置阶段
-
+?
 这个阶段的核心是读取 `CMakeLists.txt`，生成特定构建系统的文件（如 Makefile 或 Visual Studio 解决方案）。
 
 **核心参数**
 
-*   **`-D <var>=<value>`**：用于在命令行定义或覆盖 CMake 缓存变量。
+*   **`-D<var>=<value>`**：用于在命令行定义或覆盖 CMake 缓存变量。
     *   **常见变量**：
         *   `CMAKE_BUILD_TYPE`：指定构建类型，如 `Debug`、`Release`。
         *   `CMAKE_INSTALL_PREFIX`：指定`make install`的安装路径。
@@ -19,6 +20,9 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
     *   **示例**：`cmake -G "Ninja" ..`
 *   **`-S <path-to-source>` 和 `-B <path-to-build>`**：显式指定**源码目录**和**构建目录**。
     *   **示例**：`cmake -S /path/to/source -B /path/to/build`
+<!--SR:!2026-07-30,3,250-->
+
+---
 
 **其他有用的参数**
 
@@ -51,8 +55,9 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
     *   **示例**：`cmake -P MyScript.cmake`
 *   **`--find-package`**：**查找包模式**，模仿 `pkg-config` 查找库。
 
+#code/cmake
 ### 💎 示例
-
+?
 `cmake` 命令的核心用法可以概括为：
 
 ```bash
@@ -65,3 +70,8 @@ cmake --build build --parallel 4
 # 3. (可选) 安装项目
 cmake --install build --prefix /path/to/install
 ```
+<!--SR:!2026-07-30,3,250-->
+
+---
+
+

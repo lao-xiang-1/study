@@ -119,6 +119,25 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 - `~/.ssh/id_ed25519` — 私钥（Private Key），**绝不能泄露**
 - `~/.ssh/id_ed25519.pub` — 公钥（Public Key），放到远程服务器上
 
+#### 生成文件示例
+私钥：
+```
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACBkewKV4iS4iLMwtOLOkTk21vAc6gMOzFgAAAJhIJptVSCab
+VQAAAAtzc2gtZWQyNTUxOQAAA9RgZrWewKV4iS4iLMwtOLOkTk21vAc6gMOzFg
+AAAEDCOM3gh73iJVnId/80a3Y7d7tctvXg2B2lSEQcG71GBmtZ7ApXiJLiIs
+zC04s6ROTbW8BzqAw7MWAAAAEWF0cmlfc3VraUB4aWFuZ2h5AQIDBA==
+-----END OPENSSH PRIVATE KEY-----
+```
+
+公钥：
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGSEQcG71GBmtZJLiIszC04s6ROTbW8BzqAw7MW atri_suki@xianghy
+# 实际文件没有换行
+```
+
+
 ### 将公钥复制到远程服务器
 
 ```bash
