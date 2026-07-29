@@ -1,0 +1,153 @@
+# 词块筛选（from words.txt）
+
+> 括号内单词不在 words.txt 中
+
+## 一、多词固定表达（本身即词块）
+
+- big picture
+- gas station
+- in the sense that
+- in effect
+- i.e.
+- e.g.
+- bonus points
+- ad hoc
+- spaced repetition
+- drop-in replacement
+- action potential
+- time slot
+- first brush
+- file descriptor
+- release candidate
+- Pomodoro Technique
+- splash screen
+- long-horizon
+- platform-agnostic
+- penalty factor
+- latency time
+- catch-all term
+- against all odds
+- case closed
+- checkmate
+- Your highness
+- eat crow
+- Grim Reaper
+
+## 二、动词短语 / 短语动词
+
+- break loose
+- start out
+- slack off
+- leech off
+- look off
+- put in place
+- tag along
+- strive for
+- top up
+- gasp at
+
+## 三、动词 + 介词搭配
+
+- derive from
+- forge ahead
+- resort to
+- stem from
+- cope with
+- spring from
+- tamper with
+- interfere with
+- specialize in
+- immerse in
+- coincide with
+- converge on
+- diverge from
+- correspond to
+- consent to
+- linger on
+- descend from
+- differentiate between
+- grapple with
+
+## 四、形容词 / 分词 + 介词搭配
+
+- subject to
+- consistent with
+- compatible with
+- akin to
+- oriented toward
+- derived from
+- correlated with
+- (deprived) of
+- entitled to
+- equivalent to
+
+## 五、介词短语 / 连接短语
+
+- in light of
+- across the board
+
+## 六、复合名词模式
+
+### 形容词 + 名词
+- (latent) space
+- (neural) network
+- (brute) force
+- (deep) dive
+
+### 名词 + 名词
+- (data) harvest
+- (domain) expertise
+- time interval
+- (web) crawler
+- (training) pipeline
+
+## 七、名词 + 介词搭配
+
+- (substitute) for
+- (barrier) to
+- (complement) to
+- (alternative) to
+
+## 八、高频动词 + 名词搭配
+
+- grant (permission / access)
+- compile (code)
+- leverage (resources)
+- impose (constraint / penalty)
+- trigger (event)
+- seize (opportunity)
+- spawn (process)
+- inherit (trait / property)
+- harvest (data)
+- forge (ahead / path)
+- negate (effect)
+- drain (energy / resources)
+- render (output / result)
+- assign (task / value)
+- align (goals)
+- standardize (process)
+- incorporate (into)
+- reinforce (behavior)
+- advocate (for)
+- propose (solution)
+- override (default)
+- declare (variable)
+- offload (work)
+- compress (data)
+- synchronize (with)
+- demonstrate (ability)
+
+## 九、高频形容词 + 名词搭配
+
+- stark contrast
+- futile effort
+- empirical evidence
+- brutal truth
+- massive scale
+- trivial solution
+- inherent property
+- genuine concern
+- progressive enhancement
+- conventional approach
+- robust (system / method)
+- scalable (architecture)
