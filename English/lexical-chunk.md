@@ -8,7 +8,7 @@
 - **例句**：
   - She was **intent** on finishing the project before the deadline.（她专心致志要在截止日期前完成项目。）
   - The original **intent** of the law was to protect consumers.（该法律的初衷是保护消费者。）
-<!--SR:!2026-07-29,3,250-->
+
 
 ### 2. intense
 - **释义**：adj. 强烈的，剧烈的；紧张的，认真的
@@ -33,6 +33,7 @@
 - **例句**：
   - The storm is expected to increase in **intensity** overnight.（预计暴风雨夜间强度将增大。）
   - She spoke with great **intensity** about her passion for music.（她满怀激情地谈论对音乐的热爱。）
+<!--SR:!2026-08-06,8,250-->
 
 ---
 
@@ -75,7 +76,7 @@
 - **例句**：
   - There is a **slight** chance of rain this afternoon.（今天下午有轻微的可能下雨。）
   - She has a **slight** build but is very strong.（她身材纤细但非常强壮。）
-<!--SR:!2026-07-29,3,250-->
+
 
 ### 2. slightly
 - **释义**：adv. 轻微地，稍微
@@ -88,3 +89,4 @@
 - **例句**：
   - She felt **slighted** when she wasn't invited to the meeting.（没被邀请参加会议，她感到受了冷落。）
   - He **slighted** her contributions to the project.（他轻视了她对项目的贡献。）
+<!--SR:!2026-08-05,7,250-->
