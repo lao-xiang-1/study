@@ -171,3 +171,5 @@ a set of rules can be specified as a tuple of either input or output rules.
 the output can be customised by setting the 'output' parameter to the desired value.
 ?
 可以将 “output” 参数设置为所需值，从而自定义输出。
+
+A typical ICLR paper involves significantly more work than goes into a course project, or than can be producted autonomously by any current AI agent. 

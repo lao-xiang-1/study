@@ -9,18 +9,18 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
 
 **核心参数**
 
-*   **`-D<var>=<value>`**：用于在命令行定义或覆盖 CMake 缓存变量。
+1.  `-D<var>=<value>`：用于在命令行定义或覆盖 CMake 缓存变量。
     *   **常见变量**：
         *   `CMAKE_BUILD_TYPE`：指定构建类型，如 `Debug`、`Release`。
         *   `CMAKE_INSTALL_PREFIX`：指定`make install`的安装路径。
         *   `BUILD_SHARED_LIBS`：控制是构建动态库(`ON`)还是静态库(`OFF`)。
     *   **示例**：`cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON ..`
-*   **`-G <generator-name>`**：指定构建系统生成器。
+2.  **`-G <generator-name>`**：指定构建系统生成器。
     *   **常见生成器**：`Unix Makefiles`, `Ninja`, `Visual Studio 17 2022`, `Xcode` 等。
     *   **示例**：`cmake -G "Ninja" ..`
-*   **`-S <path-to-source>` 和 `-B <path-to-build>`**：显式指定**源码目录**和**构建目录**。
+3.  **`-S <path-to-source>` 和 `-B <path-to-build>`**：显式指定**源码目录**和**构建目录**。
     *   **示例**：`cmake -S /path/to/source -B /path/to/build`
-<!--SR:!2026-07-30,3,250-->
+<!--SR:!2026-08-10,11,270-->
 
 ---
 
@@ -38,11 +38,11 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
 
 在构建目录生成构建文件后，使用此模式执行实际的编译和链接。
 
-*   **`--build <dir>`**：**核心命令**，用于构建项目。
+*   **`--build <dir>`**：**核心命令**，用于构建项目（使用**配置阶段选择的编译器**来编译）
     *   **常用选项**：
         *   `--target <tgt>`：指定要构建的目标。
         *   `--config <cfg>`：对多配置生成器指定构建类型。
-        *   `--parallel [<jobs>]`：并行构建。
+        *   `--parallel [<jobs>]`：并行构建（让多个源文件共同编译），后面不带数字时默认使用全部cpu核心
         *   `--clean-first`：构建前先执行 `clean`。
     *   **示例**：`cmake --build build --target install --config Release --parallel 4`
 
@@ -70,7 +70,7 @@ cmake --build build --parallel 4
 # 3. (可选) 安装项目
 cmake --install build --prefix /path/to/install
 ```
-<!--SR:!2026-07-30,3,250-->
+<!--SR:!2026-08-09,10,270-->
 
 ---
 

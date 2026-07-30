@@ -675,3 +675,7 @@
 - **例句**：
   - Please select an available **time slot** for your appointment next week.（请选择下周预约的可用时间段。）
   - The conference schedule has a 15-minute **time slot** for each presenter.（会议日程为每位演讲者安排了 15 分钟的时间段。）
+
+---
+
+descent / ascend

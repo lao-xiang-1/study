@@ -29,6 +29,7 @@ ssh-keygen -t ed25519 -C "your@email.com"
 ```
 
 > 默认保存在 `~/.ssh/id_ed25519`，`id_ed25519.pub` 为公钥。
+<!--SR:!2026-08-03,4,270-->
 
 ---
 
@@ -60,6 +61,7 @@ git remote set-url origin git@github.com:username/repo.git
 # 删除远程仓库关联
 git remote remove origin
 ```
+<!--SR:!2026-08-03,4,270-->
 
 ---
 
@@ -107,6 +109,7 @@ git merge <分支名>
 # 变基合并（线性历史，更整洁）
 git rebase <分支名>
 ```
+<!--SR:!2026-08-02,3,250-->
 
 ---
 
@@ -160,7 +163,7 @@ git restore --staged <文件>
 # 撤销工作区修改
 git restore <文件>
 ```
-<!--SR:!2026-07-30,1,230-->
+<!--SR:!2026-08-02,3,250-->
 
 ---
 
@@ -192,6 +195,7 @@ git fetch origin
 # 拉取指定远程分支
 git pull origin <分支名>
 ```
+<!--SR:!2026-08-03,4,270-->
 
 ---
 
@@ -225,6 +229,7 @@ git diff --staged
 # 两个提交之间的差异
 git diff <commit1> <commit2>
 ```
+<!--SR:!2026-08-03,4,270-->
 
 ---
 
@@ -293,3 +298,4 @@ git reset --soft HEAD~1
 ```
 
 > `--soft` 保留暂存区和工作区，`--mixed`（默认）保留工作区，`--hard` 全部丢弃。谨慎使用 `--hard`。
+<!--SR:!2026-07-31,1,230-->
