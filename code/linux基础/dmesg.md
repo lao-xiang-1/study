@@ -1,6 +1,6 @@
 ---
-sr-due: 2026-07-28
-sr-interval: 1
+sr-due: 2026-08-06
+sr-interval: 6
 sr-ease: 230
 ---
 #code 

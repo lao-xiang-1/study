@@ -1,6 +1,6 @@
 ---
-sr-due: 2026-07-29
-sr-interval: 3
+sr-due: 2026-08-09
+sr-interval: 9
 sr-ease: 250
 ---
 #code 
@@ -35,8 +35,8 @@ ssh user@host "ls -la /var/log"
 
 SSH 密钥认证基于**非对称加密**——密钥是**成对**生成的：
 
-- **私钥（Private Key）**：只有你自己持有，必须保密。用于**签名**（证明"我是我"）。
-- **公钥（Public Key）**：可以公开分发给任何人。用于**验证签名**（确认"你确实是你"）。
+- **私钥（Private Key）**：只有你自己持有，必须保密。用于**签名**。
+- **公钥（Public Key）**：可以公开分发给任何人。用于**验证签名**。
 
 核心特性：
 
@@ -98,7 +98,7 @@ SSH 密钥认证采用**质询-应答**（Challenge-Response）机制，整个�
 
 **Q: 服务器有多个公钥，怎么知道用哪个？**
 
-> `authorized_keys` 是一个**文本文件**，每行一个公钥。客户端在发送请求时中会**主动把自己的公钥发给服务器**，服务器拿它和 `authorized_keys` 逐行比对（字符串匹配），找到匹配的那一行就用它来加密质询。所以服务器不需要"猜"——是客户端先告诉它"用这把"。
+> 服务器中的 `authorized_keys` 存储所有已记录的公钥。客户端在发送请求时中会**主动把自己的公钥发给服务器**，服务器拿它和 `authorized_keys` 逐行比对（字符串匹配），找到匹配的那一行就用它来加密质询。所以服务器不需要"猜"——是客户端先告诉它"用这把"。
 
 **Q: 客户端有多个私钥呢？**
 
@@ -120,6 +120,8 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 - `~/.ssh/id_ed25519.pub` — 公钥（Public Key），放到远程服务器上
 
 #### 生成文件示例
+>不是真实文件
+
 私钥：
 ```
 -----BEGIN OPENSSH PRIVATE KEY-----
@@ -136,7 +138,6 @@ zC04s6ROTbW8BzqAw7MWAAAAEWF0cmlfc3VraUB4aWFuZ2h5AQIDBA==
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGSEQcG71GBmtZJLiIszC04s6ROTbW8BzqAw7MW atri_suki@xianghy
 # 实际文件没有换行
 ```
-
 
 ### 将公钥复制到远程服务器
 
@@ -268,6 +269,8 @@ ssh -D 1080 user@host
 ## ssh-agent 管理密钥
 
 `ssh-agent` 在后台缓存解密后的私钥，避免反复输入密钥密码。
+> 这里管理的是本地的私钥密码（查看私钥通常需要输入密码。当然也可以在生成密钥对时，选择不设置密码）
+> 而不是服务器上的登录密码
 
 ```bash
 # 启动 agent（通常系统已自动启动）

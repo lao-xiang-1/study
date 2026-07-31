@@ -1,9 +1,3 @@
----
-sr-due: 2026-07-27
-sr-interval: 1
-sr-ease: 230
----
-#code 
 
 # 基本操作
 
