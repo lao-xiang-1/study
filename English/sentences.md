@@ -26,7 +26,7 @@ we often leverage model failures to assess per-sample hardness
 This practice drives RL with verifiable rewards
 ?
 这种做法推动了基于可验证奖励的强化学习
-<!--SR:!2026-07-30,7,250-->
+<!--SR:!2026-08-04,4,230-->
 
 ---
 
@@ -140,7 +140,7 @@ yet it is this privileged sliver of activity that we rely on to reason delibrate
 in this file only stateless layers are implemented as they don't need any particular ad-hoc adaptation
 ?
 在这个文件中，只实现了无状态层，因为它们不需要任何特别的临时适配。
-<!--SR:!2026-07-27,3,250-->
+<!--SR:!2026-08-12,12,270-->
 
 ---
 
@@ -156,7 +156,7 @@ This information is typically reportable, in the sense that it can be put into w
 Several functional properties are commonly held to distinguish consciously accessible information from unconscious processing.
 ?
 通常认为，有若干功能特性可将意识上可通达的信息与无意识加工区分开来
-<!--SR:!2026-07-31,5,230-->
+<!--SR:!2026-08-13,13,230-->
 
 ---
 
@@ -164,7 +164,7 @@ Several functional properties are commonly held to distinguish consciously acces
 Indeed, verbal report has often served as a primary empirical signature of conscious access
 ?
 事实上，言语报告常常被用作意识通达的主要经验指标
-<!--SR:!2026-07-31,5,230-->
+<!--SR:!2026-08-03,3,210-->
 
 ---
 
@@ -172,7 +172,7 @@ Indeed, verbal report has often served as a primary empirical signature of consc
 It is subject to top-down control.
 ?
 它受自上而下的控制
-<!--SR:!2026-07-27,3,250-->
+<!--SR:!2026-08-11,11,270-->
 
 ---
 
@@ -196,48 +196,54 @@ During inference, all prediction errors and feedback terms are computed first us
 utility function that create a fast cache set, which keeps track of the orders in which the elements are seen.
 ?
 工具函数，用于创建一个快速缓存集合，可以跟踪元素被看到的顺序。
-<!--SR:!2026-07-29,3,250-->
+<!--SR:!2026-08-08,8,250-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 this is used to reduce the overhead of injecting the new values back into the original kwargs outside of the 'jit barrier'
 ?
 这样做是为了减少在"JIT 屏障"之外，将新值重新注入原始 kwargs 所带来的开销。
+<!--SR:!2026-08-01,1,230-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 set the value of the parameter corresponding to the given key, after being processed of the Vode ruleset
 ?
 设置与给定 key 对应的参数的值，该值会先经过 Vode 的 ruleset（规则集）处理。
+<!--SR:!2026-08-04,4,270-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 a set of rules can be specified as a tuple of either input or output rules.
 ?
 一组规则可以指定为一个元组，其中包含输入规则或输出规则
+<!--SR:!2026-08-04,4,270-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 the output can be customised by setting the 'output' parameter to the desired value.
 ?
 可以将 “output” 参数设置为所需值，从而自定义输出。
+<!--SR:!2026-08-04,4,270-->
 
 ---
 
-#en/Sentence 
-A typical ICLR paper involves significantly more work than goes into a course project, or than can be produced autonomously by any current AI agent. 
+#en/Sentence
+A typical ICLR paper involves significantly more work than goes into a course project, or than can be produced autonomously by any current AI agent.
 ?
 一篇典型的 ICLR 论文所涉及的工作量，远超课程项目所需的工作量，也远超当前任何 AI agent 能自主完成的工作量。
+<!--SR:!2026-08-03,3,250-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 This, however, implies that if a duplicate reference is present in the pytree, the function will be applied to each occurrence of the reference (so multiple times on the same node), which must be taken into account when designing the function.
 ?
 然而，这意味着如果 pytree 中存在重复引用，该函数会被应用到该引用的每一次出现（因此可能在同一节点上被多次调用），在设计该函数时必须考虑到这一点。
+<!--SR:!2026-08-03,3,250-->
 
 ---

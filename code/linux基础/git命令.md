@@ -236,6 +236,11 @@ git diff <commit1> <commit2>
 #code/git
 ## 7. 其他实用命令
 ?
+
+```bash
+git reflog # 查看git所有的操作历史
+```
+
 ### 7.1 cherry-pick
 
 将指定提交应用到当前分支（跨分支摘取提交）：
@@ -287,15 +292,21 @@ git push origin --tags
 ### 7.4 撤销与回退
 
 ```bash
-# 回退到指定提交（保留工作区修改）
+# 不加参数时，默认使用--mixed
 git reset --mixed <commit>
-
-# 回退到指定提交（丢弃所有修改）
-git reset --hard <commit>
 
 # 回退最近一次提交（保留修改在暂存区）
 git reset --soft HEAD~1
+
+# 回退到指定提交（丢弃所有修改）
+git reset --hard <commit>
 ```
 
-> `--soft` 保留暂存区和工作区，`--mixed`（默认）保留工作区，`--hard` 全部丢弃。谨慎使用 `--hard`。
-<!--SR:!2026-07-31,1,230-->
+`--mixed`和`--soft` 的异同：
+- 两者都切换HEAD，保留工作区（当前写好的代码不变）
+- `mixed`重置暂存区，相当于没有多余的操作，当前代码 所有相对于HEAD的修改 都是unstaged
+- `soft`保留暂存区，比如说：你现在的暂存区里有删除1.txt的操作，但实际上回退的HEAD中根本没有1.txt。而回退后这个“删除1.txt的操作”仍然保留在暂存区。
+> 在这讲不清楚，建议自己试试
+<!--SR:!2026-08-02,2,230-->
+
+---
