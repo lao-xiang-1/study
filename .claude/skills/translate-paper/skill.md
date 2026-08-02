@@ -1,6 +1,7 @@
 ---
 name: translate-paper
 description: 逐段翻译 OCR 论文文件，译文直接插入原文件的原文下方，每次只翻译一段
+disable-model-invocation: true
 ---
 
 # 论文逐段翻译 Skill
