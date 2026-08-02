@@ -1,3 +1,5 @@
+## 句子 1–10
+
 #en/Sentence
 the fact of comparing two or more things in order to show the differences between them
 ?
@@ -80,6 +82,8 @@ dependency sources add support fot common patterns that are not supported by the
 
 ---
 
+## 句子 11–20
+
 #en/Sentence
 the project.dependencies table represents the dependencies that are used when uploading to PyPI or building a wheel.
 ?
@@ -160,6 +164,8 @@ Several functional properties are commonly held to distinguish consciously acces
 
 ---
 
+## 句子 21–30
+
 #en/Sentence
 Indeed, verbal report has often served as a primary empirical signature of conscious access
 ?
@@ -204,7 +210,7 @@ utility function that create a fast cache set, which keeps track of the orders i
 this is used to reduce the overhead of injecting the new values back into the original kwargs outside of the 'jit barrier'
 ?
 这样做是为了减少在"JIT 屏障"之外，将新值重新注入原始 kwargs 所带来的开销。
-<!--SR:!2026-08-01,1,230-->
+<!--SR:!2026-08-03,2,230-->
 
 ---
 
@@ -240,10 +246,58 @@ A typical ICLR paper involves significantly more work than goes into a course pr
 
 ---
 
+## 句子 31–35
+
 #en/Sentence
 This, however, implies that if a duplicate reference is present in the pytree, the function will be applied to each occurrence of the reference (so multiple times on the same node), which must be taken into account when designing the function.
 ?
 然而，这意味着如果 pytree 中存在重复引用，该函数会被应用到该引用的每一次出现（因此可能在同一节点上被多次调用），在设计该函数时必须考虑到这一点。
 <!--SR:!2026-08-03,3,250-->
+
+---
+
+#en/Sentence
+ICLR 2027 decided to have the full paper deadline on Sep 16
+?
+ICLR 2027 决定把全文截止日期定在 9 月 16 日
+<!--SR:!2026-08-05,4,270-->
+
+---
+
+#en/Sentence
+The stage transition nightmare reveals the next floor's boss fight and Treasure Room item
+?
+层间过渡噩梦会揭示下一层的Boss战和宝物房道具
+<!--SR:!2026-08-05,4,270-->
+
+---
+
+#en/Sentence
+Immune to creep and floor spikes
+?
+免疫水迹和尖刺
+<!--SR:!2026-08-05,4,270-->
+
+---
+
+#en/Sentence 
+Instead of moving quickly to **assume useful roles** in the overall problem solution, the hidden units **engage in** a complex dance with much wasted motion.
+?
+隐藏单元不会迅速地在求解整体问题中承担有用的角色，而是陷入一场复杂的舞蹈，做出大量徒劳的动作。
+
+---
+
+#en/Sentence 
+For each new hidden unit, we attempt to maximize the magnitude of the correlation between the new unit's output and the residual error signal we are trying to eliminate.
+?
+对于每一个新的隐层单元，我们尝试最大化该单元输出与待消除的残余误差信号（residual error signal）之间相关性的幅值。
+
+---
+
+#en/Sentence 
+Class used to replace multiple references to the same BaseParam with a static index
+to the unique BaseParam.
+?
+用于将同一个 BaseParam 的多个引用替换为对唯一 BaseParam 的静态索引。
 
 ---

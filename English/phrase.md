@@ -1,5 +1,5 @@
 #en/Phrase learning progress::学习进度
-<!--SR:!2026-08-01,3,250-->
+<!--SR:!2026-08-13,12,270-->
 
 #en/Phrase  the loss function subject to minimization::待最小化的损失函数
 <!--SR:!2026-08-03,8,250-->
