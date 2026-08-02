@@ -71,12 +71,12 @@ class Vector:
 
 ### 描述器协议（Descriptor Protocol）
 
-| 方法 | 签名 | 用途 | 返回值 |
-|------|------|------|--------|
-| `__get__` | `__get__(self, instance, owner=None)` | 获取属性。`owner` 为所有者类，`instance` 为实例（类访问时为 `None`） | 属性值 |
-| `__set__` | `__set__(self, instance, value)` | 设置属性。**定义此方法会变为"数据描述器"** | 无 |
-| `__delete__` | `__delete__(self, instance)` | 删除属性。**定义此方法也变为"数据描述器"** | 无 |
-| `__set_name__` | `__set_name__(self, owner, name)` | 所有者类创建时自动调用，告知被赋值的属性名 | 无 |
+| 方法             | 签名                                    | 用途                                              | 返回值 |
+| -------------- | ------------------------------------- | ----------------------------------------------- | --- |
+| `__get__`      | `__get__(self, instance, owner=None)` | 获取属性。`owner` 为所有者类，`instance` 为实例（类访问时为 `None`） | 属性值 |
+| `__set__`      | `__set__(self, instance, value)`      | 设置属性。**定义此方法会变为"数据描述器"**                        | 无   |
+| `__delete__`   | `__delete__(self, instance)`          | 删除属性。**定义此方法也变为"数据描述器"**                        | 无   |
+| `__set_name__` | `__set_name__(self, owner, name)`     | 所有者类创建时自动调用，告知被赋值的属性名                           | 无   |
 
 > **核心规则**：数据描述器（有 `__set__` 或 `__delete__`）总是优先于实例字典 `__dict__`；非数据描述器（仅有 `__get__`）会被实例字典覆盖。`property` 就是数据描述器的典型实现。
 
