@@ -25,12 +25,17 @@ TIMUR ASH
 
 冻结方法的优点是引入新元素时所需的重新训练工作量相对较小。然而，这种方法通常找不到期望的解。当引入额外的自由度时（例如，通过向网络添加一个新权重），保持现有网络值不变只允许在权重空间的一个仿射子集中找到解（见图1）。可以引入额外的自由度（额外的节点或权重）来允许这个仿射子集通过全局最小点（实际上，移动一些先前固定的坐标）。但由于涉及部分重复工作（即，需要两个或更多权重来确定单个维度的值），这样的网络不可能在规模上是最小的。
 
-剩下的替代方案允许在添加新元素后重新训练整个网络。动态节点创建（DNC）方法就是为了在网络训练期间向隐藏层添加节点而开发的。用此过程生长一个新节点后，进行常规的BP训练，直到学习完期望的映射，或需要添加另一个节点。
+剩下的替代方案允许在添加新元素后重新训练整个网络。动态节点创建（DNC）方法就是为了在网络训练期间***向隐藏层添加节点***而开发的。用此过程生长一个新节点后，进行常规的BP训练，直到学习完期望的映射，或需要添加另一个节点。
 
+#flashpaper
+##### 新增节点后，原来已有的节点还要继续训练
+?
 <div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b37f1ac6-1b89-4f22-b9e0-f41bccafecaf/markdown_3/imgs/img_in_image_box_338_224_785_558.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A18%3A09Z%2F-1%2F%2Fd2fd2d7ee7eb431458f21d28b45bbf928dda9c1e3c8ce4882044ac81d20bcbd2" alt="Image" width="36%" /></div>
 
 *图1. $P_{1}$ 表示由 $W_{1} \times W_{2}$ 定义的平面中误差最低的点。如果引入另一个维度（$W_{3}$），全局最优变为 $P_{2}$。但是冻结 $W_{1}$ 和 $W_{2}$ 的值只允许找到通过 $P_{1}$ 的直线上的解。推广到更高维度；只能在权重空间的特定仿射子集中找到解。*
+<!--SR:!2026-08-05,3,250-->
 
+---
 
 <div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b37f1ac6-1b89-4f22-b9e0-f41bccafecaf/markdown_3/imgs/img_in_chart_box_342_730_797_1076.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A18%3A09Z%2F-1%2F%2F83fc7aa5c7d97eaf8d510783effb8f059b301f1b5d8a35225ceb5140b75f612a" alt="Image" width="37%" /></div>
 
@@ -38,13 +43,10 @@ TIMUR ASH
 <div style="text-align: center;"><div style="text-align: center;">图2. 当检测到平均平方误差曲线趋于平缓时，触发添加单个新隐藏节点。</div> </div>
 
 
-#### 模型
+## 模型
 
-所研究的网络有一个隐藏层，层与层之间完全前馈互连。输入层和输出层之间没有直接连接。在输入层之上的所有层都使用逻辑激活函数（Rumelhart et al., 1985）：
-
- $$ \mathrm{Output}\ (I)=\frac{1}{1+\mathrm{e}^{-I}} $$ 
-
-<div style="text-align: center;"><div style="text-align: center;">表 I. DNC中涉及的变量</div> </div>
+所研究的网络***只有一个***隐藏层，层与层之间完全前馈互连。输入层和输出层之间没有直接连接。在输入层之上的所有层都使用逻辑激活函数（Rumelhart et al., 1985）：
+$$ \mathrm{Output}\ (I)=\frac{1}{1+\mathrm{e}^{-I}} $$
 
 | 名称 | 定义 |
 | :--- | :--- |
@@ -56,6 +58,7 @@ TIMUR ASH
 | $C_{a}$ | 平均平方误差的期望截止值 |
 | $C_{m}$ | 最大平方误差的期望截止值 |
 | $\Delta_{T}$ | 触发斜率——误差曲线平坦度的度量，低于此值应添加新节点 |
+<div style="text-align: center;"><div style="text-align: center;color: lightgreen">表 I. DNC中涉及的变量</div> </div>
 
 这种架构并不限制网络可以找到的映射类别。事实上，最近的结果（Hecht-Neilsen, 1988; Hornik et al., 1988）表明，具有三层的前馈网络可以用隐藏层中有限数量的节点以任意选定的精度建模任何感兴趣的函数。然而，这些有力的理论结果并未回答一个特定问题需要多少个节点，以及BP过程能否学习该映射的问题。关于多隐藏层架构的优势也存在一个悬而未决的问题。尽管这种拓扑结构在理论上并不更强大，但在实践中它们常常产生更小（且更稀疏）的网络，这些网络能很快收敛到解。
 
@@ -63,13 +66,11 @@ TIMUR ASH
 
 数学上表达，如果满足以下两个条件，则应添加一个新节点（术语定义见表I）：
 
- $$ \frac{a_{t}-a_{t-w}}{a_{to}}<\Delta_{T} $$ 
-
-和
-
- $$ t-w\ge t_{0} $$ 
-
-方程(2)检测误差曲线何时已平缓到不可接受的水平。方程(3)保证方程(2)中的所有误差项都针对相同的拓扑结构。另一个结果是，新节点只能在至少 $w$ 次试验之后添加。新节点接收来自输入的完整连接，并连接到所有输出。
+1. 误差曲线已经相当平缓
+$$ \frac{a_{t}-a_{t-w}}{a_{to}}<\Delta_{T} $$
+2. 保证上面式子中的所有误差项都针对相同的拓扑结构
+$$ t-w\ge t_{0} $$ 
+另一个结果是，新节点只能在至少 $w$ 次试验之后添加。新节点接收来自输入的完整连接，并连接到所有输出。
 
 当映射学习到用户指定的精度时，节点增长被关闭。如果不禁用节点增长，算法将继续添加节点，只是为了在输出上获得稍微更高的精度。禁用节点增长后，仍可进行正常的BP微调以提高精度。以下关系决定何时停止添加节点。注意：$C_{a}$ 和 $C_{m}$ 都是用户指定的。
 
@@ -77,12 +78,13 @@ TIMUR ASH
 
 这两个常数允许为整体误差和最坏情况误差分别设置期望的精度水平。
 
-<div style="text-align: center;"><div style="text-align: center;">表 II. 测试问题及隐藏层单元数量的经验上界</div> </div>
-
-
-
-
-<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>名称</td><td style='text-align: center; word-wrap: break-word;'>输入</td><td style='text-align: center; word-wrap: break-word;'>输出</td><td style='text-align: center; word-wrap: break-word;'>已知解（隐藏单元数量）</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>编码器问题 (ENC)</td><td style='text-align: center; word-wrap: break-word;'>N位二进制向量，1位为1</td><td style='text-align: center; word-wrap: break-word;'>与输入相同</td><td style='text-align: center; word-wrap: break-word;'>$\log_2 N$</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>对称性 (SYM)</td><td style='text-align: center; word-wrap: break-word;'>N位二进制向量</td><td style='text-align: center; word-wrap: break-word;'>对称则为1，不对称则为0</td><td style='text-align: center; word-wrap: break-word;'>2</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>奇偶校验 (PAR)</td><td style='text-align: center; word-wrap: break-word;'>N位二进制向量</td><td style='text-align: center; word-wrap: break-word;'>1的个数为奇数则为1，否则为0</td><td style='text-align: center; word-wrap: break-word;'>N</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>二进制加法 (ADD)</td><td style='text-align: center; word-wrap: break-word;'>2N位二进制向量</td><td style='text-align: center; word-wrap: break-word;'>N位结果和1位进位</td><td style='text-align: center; word-wrap: break-word;'>单层隐藏层无已知解</td></tr></table>
+| 名称 | 输入 | 输出 | 已知解（隐藏单元数量） |
+| :--- | :--- | :--- | :--- |
+| 编码器问题 (ENC) | N位二进制向量，1位为1 | 与输入相同 | $\log_2 N$ |
+| 对称性 (SYM) | N位二进制向量 | 对称则为1，不对称则为0 | 2 |
+| 奇偶校验 (PAR) | N位二进制向量 | 1的个数为奇数则为1，否则为0 | N |
+| 二进制加法 (ADD) | 2N位二进制向量 | N位结果和1位进位 | 单层隐藏层无已知解 |
+<div style="text-align: center;"><div style="text-align: center;color: lightgreen">表 II. 测试问题及隐藏层单元数量的经验上界</div> </div>
 
 ## 实现与测试问题
 
@@ -112,7 +114,7 @@ TIMUR ASH
 <div style="text-align: center;"><div style="text-align: center;">图4. ADD3的最佳情况平方误差图。虚线竖线表示新节点的创建。节点增长不受 $a_t$ 曲线中尖峰的影响（见节点4）。</div> </div>
 
 
-向网络添加新节点并未降低其性能。当添加新节点时，它连接到网络其余部分的权重很小。现有网络中的活跃权重通常至少大一个数量级。新节点最初既不帮助也不妨碍现有网络的活动。它随着权重的变化慢慢成长为新功能，并降低平均误差。
+**向网络添加新节点并未降低其性能。当添加新节点时，它连接到网络其余部分的权重很小。现有网络中的活跃权重通常至少大一个数量级。新节点最初既不帮助也不妨碍现有网络的活动。它随着权重的变化慢慢成长为新功能，并降低平均误差。**
 
 ## 讨论
 
