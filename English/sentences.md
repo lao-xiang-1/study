@@ -12,7 +12,7 @@ the fact of comparing two or more things in order to show the differences betwee
 this wasn't Koch Industories' first brush with **complaints of improper competition**
 ?
 这不是 Koch公司 对不正当竞争的第一场官司了
-<!--SR:!2026-08-02,10,270-->
+<!--SR:!2026-09-08,37,290-->
 
 ---
 
@@ -70,7 +70,7 @@ Nick Land 在他的著作中谈到了这一点
 light mode is cool though, it helps me not triggering my migraine compared to dark mode funnily enough
 ?
 “不过浅色模式也挺好的，说来有趣，跟深色模式相比，它反而不会触发我的偏头痛。”
-<!--SR:!2026-08-02,10,270-->
+<!--SR:!2026-09-09,38,290-->
 
 ---
 
@@ -88,7 +88,7 @@ dependency sources add support fot common patterns that are not supported by the
 the project.dependencies table represents the dependencies that are used when uploading to PyPI or building a wheel.
 ?
 `project.dependencies` 表格表示上传到 PyPI 或构建 wheel 时所使用的依赖项。
-<!--SR:!2026-08-02,10,270-->
+<!--SR:!2026-09-09,38,290-->
 
 ---
 
@@ -280,24 +280,46 @@ Immune to creep and floor spikes
 
 ---
 
-#en/Sentence 
+#en/Sentence
 Instead of moving quickly to **assume useful roles** in the overall problem solution, the hidden units **engage in** a complex dance with much wasted motion.
 ?
 隐藏单元不会迅速地在求解整体问题中承担有用的角色，而是陷入一场复杂的舞蹈，做出大量徒劳的动作。
+<!--SR:!2026-08-03,1,230-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 For each new hidden unit, we attempt to maximize the magnitude of the correlation between the new unit's output and the residual error signal we are trying to eliminate.
 ?
 对于每一个新的隐层单元，我们尝试最大化该单元输出与待消除的残余误差信号（residual error signal）之间相关性的幅值。
+<!--SR:!2026-08-03,1,230-->
 
 ---
 
-#en/Sentence 
+#en/Sentence
 Class used to replace multiple references to the same BaseParam with a static index
 to the unique BaseParam.
 ?
 用于将同一个 BaseParam 的多个引用替换为对唯一 BaseParam 的静态索引。
+<!--SR:!2026-08-03,1,230-->
 
 ---
+
+#en/Sentence 
+the code blocks are identical to what you would expect with numpy, aside from replacing `np` with `jnp`, and the results are the same
+?
+代码块和 numpy 中的用法基本一致，只需将 `np` 换成 `jnp`，运行结果也相同。
+
+---
+
+#en/Sentence 
+For example, consider this function that normalizes the rows of a 2D matrix, expressed in terms of jax.numpy operations:
+?
+例如，考虑这个用 jax.numpy 操作表达的、对二维矩阵的行进行归一化的函数：
+
+---
+
+#en/Sentence 
+The function returns the same results as the original, up to standard floating-point accuracy.
+?
+该函数返回的结果与原始函数一致，误差在标准浮点精度范围内
