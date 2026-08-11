@@ -332,7 +332,7 @@
 - **例句**：
   - Her **obsessive** attention to detail made her an excellent editor.（她对细节的执着追求使她成为一名出色的编辑。）
   - He has an **obsessive** interest in collecting vintage watches.（他对收集古董手表有着近乎痴迷的兴趣。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-21,16,290-->
 
 ---
 
@@ -554,7 +554,7 @@
 - **例句**：
   - It seems **paradoxical** that drinking too much water can actually dehydrate you.（喝太多水实际上会让你脱水，这似乎很矛盾。）
   - The study revealed a **paradoxical** result: stricter regulations led to faster innovation.（该研究揭示了一个矛盾的结果：更严格的法规反而促进了更快的创新。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-20,15,290-->
 
 ---
 

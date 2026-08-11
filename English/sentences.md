@@ -323,3 +323,17 @@ For example, consider this function that normalizes the rows of a 2D matrix, exp
 The function returns the same results as the original, up to standard floating-point accuracy.
 ?
 该函数返回的结果与原始函数一致，误差在标准浮点精度范围内
+
+---
+
+#en/Sentence 
+The anime Guilty Crown may have a 50/50 ratio of like and dislike in the fandom BUT 100% loves the OST
+?
+动画《罪恶王冠》在粉丝群体中或许褒贬参半，但100%的人都爱它的原声带。
+
+---
+
+#en/Sentence 
+A local stdio server is a program Claude Code starts as a subprocess on your machine, rather than a service it reaches over a URL. Use one for tools that need access to local resources like a browser, your filesystem, or a database socket.
+?
+本地 stdio 服务器是 Claude Code 在您的机器上作为子进程启动的程序，而非通过 URL 访问的服务。对于需要访问本地资源（如浏览器、文件系统或数据库套接字）的工具，应使用此类服务器。
