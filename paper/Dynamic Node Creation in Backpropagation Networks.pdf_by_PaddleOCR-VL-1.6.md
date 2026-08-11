@@ -33,7 +33,7 @@ TIMUR ASH
 <div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b37f1ac6-1b89-4f22-b9e0-f41bccafecaf/markdown_3/imgs/img_in_image_box_338_224_785_558.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A18%3A09Z%2F-1%2F%2Fd2fd2d7ee7eb431458f21d28b45bbf928dda9c1e3c8ce4882044ac81d20bcbd2" alt="Image" width="36%" /></div>
 
 *图1. $P_{1}$ 表示由 $W_{1} \times W_{2}$ 定义的平面中误差最低的点。如果引入另一个维度（$W_{3}$），全局最优变为 $P_{2}$。但是冻结 $W_{1}$ 和 $W_{2}$ 的值只允许找到通过 $P_{1}$ 的直线上的解。推广到更高维度；只能在权重空间的特定仿射子集中找到解。*
-<!--SR:!2026-08-05,3,250-->
+<!--SR:!2026-08-19,7,250-->
 
 ---
 
