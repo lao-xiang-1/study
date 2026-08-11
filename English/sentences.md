@@ -10,9 +10,7 @@ the fact of comparing two or more things in order to show the differences betwee
 
 #en/Sentence
 this wasn't Koch Industories' first brush with **complaints of improper competition**
-?
 这不是 Koch公司 对不正当竞争的第一场官司了
-<!--SR:!2026-09-08,37,290-->
 
 ---
 
@@ -68,9 +66,7 @@ Nick Land 在他的著作中谈到了这一点
 
 #en/Sentence
 light mode is cool though, it helps me not triggering my migraine compared to dark mode funnily enough
-?
 “不过浅色模式也挺好的，说来有趣，跟深色模式相比，它反而不会触发我的偏头痛。”
-<!--SR:!2026-09-09,38,290-->
 
 ---
 
@@ -86,9 +82,7 @@ dependency sources add support fot common patterns that are not supported by the
 
 #en/Sentence
 the project.dependencies table represents the dependencies that are used when uploading to PyPI or building a wheel.
-?
 `project.dependencies` 表格表示上传到 PyPI 或构建 wheel 时所使用的依赖项。
-<!--SR:!2026-09-09,38,290-->
 
 ---
 

@@ -4,7 +4,6 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
 
 #code/cmake
 ### ⚙️ 项目配置阶段
-?
 这个阶段的核心是读取 `CMakeLists.txt`，生成特定构建系统的文件（如 Makefile 或 Visual Studio 解决方案）。
 
 **核心参数**
@@ -20,7 +19,6 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
     *   **示例**：`cmake -G "Ninja" ..`
 3.  **`-S <path-to-source>` 和 `-B <path-to-build>`**：显式指定**源码目录**和**构建目录**。
     *   **示例**：`cmake -S /path/to/source -B /path/to/build`
-<!--SR:!2026-09-11,30,270-->
 
 ---
 
@@ -57,7 +55,6 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
 
 #code/cmake
 ### 💎 示例
-?
 `cmake` 命令的核心用法可以概括为：
 
 ```bash
@@ -70,7 +67,6 @@ cmake --build build --parallel 4
 # 3. (可选) 安装项目
 cmake --install build --prefix /path/to/install
 ```
-<!--SR:!2026-09-19,38,290-->
 
 ---
 
