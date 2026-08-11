@@ -20,7 +20,7 @@ CMake 的命令行参数主要分为**项目配置**和**构建执行**两大类
     *   **示例**：`cmake -G "Ninja" ..`
 3.  **`-S <path-to-source>` 和 `-B <path-to-build>`**：显式指定**源码目录**和**构建目录**。
     *   **示例**：`cmake -S /path/to/source -B /path/to/build`
-<!--SR:!2026-08-10,11,270-->
+<!--SR:!2026-09-11,30,270-->
 
 ---
 
@@ -70,7 +70,7 @@ cmake --build build --parallel 4
 # 3. (可选) 安装项目
 cmake --install build --prefix /path/to/install
 ```
-<!--SR:!2026-08-09,10,270-->
+<!--SR:!2026-09-19,38,290-->
 
 ---
 

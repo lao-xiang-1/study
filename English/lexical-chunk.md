@@ -182,7 +182,7 @@
 - **例句**：
   - The advertisement was found to be **deceptive** and was pulled from television.（该广告被认定具有欺骗性，已从电视上撤下。）
   - The calm surface of the lake is **deceptive** — the currents below are dangerous.（湖面看似平静，实则暗流涌动。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -518,7 +518,7 @@
 - **例句**：
   - An **introvert** may find prolonged social interaction draining and need time alone to recover.（内向的人可能觉得长时间的社交令人疲惫，需要独处的时间来恢复。）
   - Being an **introvert** does not mean you are shy; it simply means you prefer quieter environments.（内向并不意味着害羞，只是你更喜欢安静的环境。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -536,7 +536,7 @@
 - **例句**：
   - The final **assignment** is due at the end of the semester.（期末作业在学期末截止。）
   - Her first **assignment** as a journalist was to cover the city council election.（她作为记者的第一个任务是报道市议会选举。）
-<!--SR:!2026-08-03,3,250-->
+<!--SR:!2026-08-24,12,270-->
 
 ---
 
