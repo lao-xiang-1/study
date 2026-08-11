@@ -29,7 +29,7 @@ ssh-keygen -t ed25519 -C "your@email.com"
 ```
 
 > 默认保存在 `~/.ssh/id_ed25519`，`id_ed25519.pub` 为公钥。
-<!--SR:!2026-08-03,4,270-->
+<!--SR:!2026-08-20,15,290-->
 
 ---
 
@@ -61,7 +61,7 @@ git remote set-url origin git@github.com:username/repo.git
 # 删除远程仓库关联
 git remote remove origin
 ```
-<!--SR:!2026-08-03,4,270-->
+<!--SR:!2026-08-19,14,290-->
 
 ---
 
@@ -86,6 +86,8 @@ git switch -c <分支名> origin/<分支名>
 
 ### 3.2 查看与删除
 
+？本地分支与远程分支不同，但可以共享提交
+
 ```bash
 # 查看本地分支
 git branch
@@ -93,12 +95,42 @@ git branch
 # 查看所有分支（含远程）
 git branch -a
 
+# 查看分支的最新提交的哈希值和message
+git branch -vv
+
 # 删除已合并的分支
 git branch -d <分支名>
 
 # 强制删除分支（未合并也可删）
 git branch -D <分支名>
 ```
+
+### 3.4 高级引用查看（for-each-ref）
+
+灵活列出分支、标签等引用，支持自定义格式输出：
+
+```bash
+# 列出所有本地分支
+git for-each-ref --format='%(refname:short)' refs/heads/
+
+# 按最近提交时间排序，显示分支名和最后提交日期（refs/remotes/表示远程提交）
+git for-each-ref --sort=-committerdate refs/remotes/ \
+  --format='%(align:30)%(refname:short)%(end) %(committerdate:short) %(subject)'
+
+# 查看所有标签及其指向的提交信息
+git for-each-ref refs/tags/ \
+  --format='%(refname:short) -> %(objectname:short) %(subject)'
+
+# 查看所有远程分支
+git for-each-ref --format='%(refname:short)' refs/remotes/
+```
+
+> 常用 `format` 占位符：
+> - `%(refname:short)` — 简称（如 `main`、`v1.0`）
+> - `%(objectname:short)` — 提交哈希缩写
+> - `%(committerdate:short)` / `%(authordate:short)` — 日期
+> - `%(subject)` — 提交标题
+> - `%(authorname)` / `%(committername)` — 作者/提交者名
 
 ### 3.3 合并分支
 
@@ -109,7 +141,7 @@ git merge <分支名>
 # 变基合并（线性历史，更整洁）
 git rebase <分支名>
 ```
-<!--SR:!2026-08-02,3,250-->
+<!--SR:!2026-08-16,11,270-->
 
 ---
 
@@ -154,7 +186,7 @@ git ls-files --deleted
 ### 4.3 修改提交
 
 ```bash
-# 修改最近一次提交信息
+# 修改最近一次提交message
 git commit --amend -m "新的提交信息"
 
 # 撤销暂存（保留工作区修改）
@@ -163,7 +195,7 @@ git restore --staged <文件>
 # 撤销工作区修改
 git restore <文件>
 ```
-<!--SR:!2026-08-02,3,250-->
+<!--SR:!2026-08-15,10,270-->
 
 ---
 
@@ -195,7 +227,7 @@ git fetch origin
 # 拉取指定远程分支
 git pull origin <分支名>
 ```
-<!--SR:!2026-08-03,4,270-->
+<!--SR:!2026-08-19,14,290-->
 
 ---
 
@@ -229,7 +261,7 @@ git diff --staged
 # 两个提交之间的差异
 git diff <commit1> <commit2>
 ```
-<!--SR:!2026-08-03,4,270-->
+<!--SR:!2026-08-20,15,290-->
 
 ---
 
@@ -304,9 +336,100 @@ git reset --hard <commit>
 
 `--mixed`和`--soft` 的异同：
 - 两者都切换HEAD，保留工作区（当前写好的代码不变）
-- `mixed`重置暂存区，相当于没有多余的操作，当前代码 所有相对于HEAD的修改 都是unstaged
-- `soft`保留暂存区，比如说：你现在的暂存区里有删除1.txt的操作，但实际上回退的HEAD中根本没有1.txt。而回退后这个“删除1.txt的操作”仍然保留在暂存区。
+- `mixed`重置暂存区（staged）
+- `soft`保留暂存区
 > 在这讲不清楚，建议自己试试
-<!--SR:!2026-08-02,2,230-->
+<!--SR:!2026-08-12,7,250-->
 
 ---
+
+#code/git
+## 8. .gitignore 与 .gitattributes
+?
+
+### 8.1 .gitignore 作用
+
+`.gitignore` 用于告诉 Git **忽略哪些文件或目录**，使其不进入工作区追踪列表，也不会被意外提交。
+>已经被追踪的文件不会忽略，需要先 `git rm --cached <filename>`
+
+常见需要忽略的内容：
+- 编辑器/IDE 配置（如 `.vscode/`、`.idea/`）
+- 依赖目录（如 `node_modules/`、`venv/`）
+- 编译产物（如 `dist/`、`build/`、`__pycache__/`）
+- 临时文件、日志、密钥（如 `.env`、`*.log`）
+- Obsidian 工作区文件（如 `.obsidian/`、`.trash/`）
+
+### 8.2 .gitignore 语法规则
+
+```gitignore
+# 井号开头为注释
+
+# 忽略所有 .log 文件
+*.log
+
+# 忽略某个目录（任何路径下）
+build/
+
+# 忽略根目录下的 temp 文件（/ 开头）
+/temp.md
+
+# 忽略任意层级的 target 目录
+**/target/
+
+# 取反：不忽略某个文件（! 开头）
+!important.log
+```
+
+> 规则优先级：**当前目录**中定义规则的优先级 高于**上级路径**定义规则的优先级; 后面定义规则的优先级 高于前面的规则；`.gitignore` 本身需要被 Git 追踪才会生效。
+
+### 8.3 常用 .gitignore 模板示例
+
+```gitignore
+# --- Obsidian ---
+.obsidian/
+.trash/
+temp.md
+整理笔记.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# --- Node.js ---
+node_modules/
+dist/
+build/
+.env
+```
+
+GitHub 提供了大量官方模板，可直接搜索 `github/gitignore` 获取对应语言/框架的模板。
+
+### 8.4 .gitattributes 作用
+
+`.gitattributes` 用于为不同文件设置 **Git 处理规则**，例如换行符、合并策略、diff 方式、二进制标记等。
+
+### 8.5 常用 .gitattributes 示例
+
+```gitattributes
+# 自动处理换行符（提交时转 LF，检出时按平台）
+* text=auto
+
+# 强制所有文本文件使用 LF 换行符
+* text eol=lf
+
+# 指定某些文件为二进制，Git 不会进行换行符转换
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# 对特定文件使用自定义合并策略（如锁定文件）
+*.lock merge=ours
+
+# 对 Markdown 文件禁用 diff（减少噪音）
+*.md -diff
+```
+
+> `.gitattributes` 对已经提交的文件不会立即生效，通常需要配合 `git add --renormalize .` 重新规范化。
+
