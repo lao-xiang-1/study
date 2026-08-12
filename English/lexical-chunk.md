@@ -32,7 +32,7 @@
 - **例句**：
   - The storm is expected to increase in **intensity** overnight.（预计暴风雨夜间强度将增大。）
   - She spoke with great **intensity** about her passion for music.（她满怀激情地谈论对音乐的热爱。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -62,7 +62,7 @@
 - **例句**：
   - Babies need sensory **stimulation** for healthy development.（婴儿需要感官刺激来健康成长。）
   - The drug causes **stimulation** of the central nervous system.（该药物引起中枢神经系统的兴奋。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -86,7 +86,7 @@
 - **例句**：
   - She felt **slighted** when she wasn't invited to the meeting.（没被邀请参加会议，她感到受了冷落。）
   - He **slighted** her contributions to the project.（他轻视了她对项目的贡献。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -110,7 +110,7 @@
 - **例句**：
   - The **derivative** of x² is 2x.（x² 的导数是 2x。）
   - Critics called the film **derivative** and uninspired.（评论家称这部电影缺乏原创性，毫无新意。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -134,7 +134,7 @@
 - **例句**：
   - The pandemic caused **unprecedented** disruption to the global economy.（疫情对全球经济造成了前所未有的冲击。）
   - The team achieved an **unprecedented** level of success this season.（该团队本赛季取得了史无前例的成就。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -158,7 +158,7 @@
 - **例句**：
   - The contract **specifies** that payment is due within 30 days.（合同明确规定付款须在30天内完成。）
   - Please **specify** your preferred delivery address when ordering.（订购时请明确您的收货地址。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -206,7 +206,7 @@
 - **例句**：
   - The audience was very **receptive** to the speaker's ideas.（听众非常乐于接受演讲者的观点。）
   - Children are generally more **receptive** to learning new languages.（儿童通常更善于学习新语言。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -224,7 +224,7 @@
 - **例句**：
   - **Emerging** technologies like AI are transforming every industry.（人工智能等新兴技术正在改变各行各业。）
   - The fund focuses on investing in **emerging** markets.（该基金专注于投资新兴市场。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -242,7 +242,7 @@
 - **例句**：
   - Model **interpretability** is crucial in medical AI applications.（模型的可解释性在医疗AI应用中至关重要。）
   - Researchers are working to improve the **interpretability** of deep learning systems.（研究人员正致力于提高深度学习系统的可解释性。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -260,7 +260,7 @@
 - **例句**：
   - The **equivalence** of mass and energy is expressed by E=mc².（质能等价关系由 E=mc² 表达。）
   - The two qualifications are recognized as having **equivalence**.（这两种资格被认定为具有同等效力。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -278,7 +278,7 @@
 - **例句**：
   - As a chronic **procrastinator**, she always leaves assignments until the last minute.（作为一个习惯性拖延者，她总是把作业拖到最后一刻才做。）
   - The app is designed to help **procrastinators** stay on track.（这款应用旨在帮助拖延者保持进度。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-23,11,270-->
 
 ---
 
@@ -296,7 +296,7 @@
 - **例句**：
   - **Recursion** is a fundamental concept in computer science and mathematics.（递归是计算机科学和数学中的一个基本概念。）
   - The algorithm uses **recursion** to traverse the tree data structure.（该算法使用递归来遍历树形数据结构。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -314,7 +314,7 @@
 - **例句**：
   - A high **variance** indicates that the data points are spread far from the mean.（高方差表明数据点远离均值分布。）
   - There is considerable **variance** in opinion among the committee members.（委员会成员之间意见分歧很大。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -350,7 +350,7 @@
 - **例句**：
   - The company received over 200 **complaints** about the defective product.（公司收到了200多起关于该缺陷产品的投诉。）
   - She filed a formal **complaint** with the human resources department.（她向人力资源部门提交了正式投诉。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -368,7 +368,7 @@
 - **例句**：
   - Make sure your calendar is in **sync** with your team's schedule.（确保你的日历与团队的日程保持同步。）
   - The audio and video are out of **sync** — the lips don't match the words.（音视频不同步——口型对不上台词。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -386,7 +386,7 @@
 - **例句**：
   - In Python, lists and tuples are **iterable** objects that can be used in for loops.（在 Python 中，列表和元组是可用于 for 循环的可迭代对象。）
   - Any object that implements the `__iter__` method is considered **iterable**.（任何实现了 `__iter__` 方法的对象都被视为可迭代的。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -404,7 +404,7 @@
 - **例句**：
   - The **invocation** of the remote API takes less than 50 milliseconds.（远程 API 的调用耗时不到 50 毫秒。）
   - The priest's **invocation** blessed the congregation before the ceremony.（牧师的祈祷在仪式前祝福了会众。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -422,7 +422,7 @@
 - **例句**：
   - Public transport is a viable **alternative** to driving in the city.（公共交通是在城市中驾车出行的可行替代方案。）
   - The committee proposed an **alternative** plan to reduce costs.（委员会提出了一项降低成本的替代方案。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -446,7 +446,7 @@
 - **例句**：
   - The **surgeon** explained the risks of the operation before asking for consent.（外科医生在征求同意前解释了手术风险。）
   - She dreams of becoming a cardiac **surgeon** after medical school.（她梦想在医学院毕业后成为一名心脏外科医生。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -464,7 +464,7 @@
 - **例句**：
   - SQL is a **declarative** language — you specify what result you want, not how to compute it.（SQL 是一种声明式语言——你指定想要的结果，而非如何计算它。）
   - A **declarative** sentence simply states a fact and ends with a period.（陈述句只是陈述一个事实，以句号结尾。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -482,7 +482,7 @@
 - **例句**：
   - **Conventional** farming methods rely heavily on chemical fertilizers.（传统农业方法严重依赖化学肥料。）
   - She chose a **conventional** approach to solving the problem rather than experimenting.（她选择了常规的方法来解决问题，而非进行实验。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -500,7 +500,7 @@
 - **例句**：
   - The Olympic 100-metre **race** is one of the most watched events in the world.（奥运会百米赛跑是世界上最受关注的项目之一。）
   - People of every **race** deserve equal rights and opportunities.（每个种族的人都应享有平等的权利和机会。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -572,7 +572,7 @@
 - **例句**：
   - The player's **stats** this season include 25 goals and 12 assists.（该球员本赛季的数据包括 25 个进球和 12 次助攻。）
   - I need to study for my **stats** exam next Monday.（我需要为下周一的统计学考试复习。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-26,14,290-->
 
 ---
 
@@ -590,7 +590,7 @@
 - **例句**：
   - **Cortical** thickness can be measured using high-resolution MRI scans.（皮层厚度可以通过高分辨率 MRI 扫描来测量。）
   - The study found that **cortical** neurons fire in distinct patterns during sleep.（研究发现皮层神经元在睡眠期间以不同的模式放电。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -608,7 +608,7 @@
 - **例句**：
   - You should **defragment** your mechanical hard drive periodically to improve performance.（你应该定期整理机械硬盘的碎片以提高性能。）
   - Modern operating systems **defragment** drives automatically in the background.（现代操作系统会在后台自动整理磁盘碎片。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -626,7 +626,7 @@
 - **例句**：
   - It is **sensible** to wear a helmet when riding a bicycle.（骑自行车时戴头盔是明智的。）
   - She made a **sensible** decision to save money instead of spending it on luxuries.（她做了一个明智的决定，把钱存起来而不是花在奢侈品上。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
@@ -644,7 +644,7 @@
 - **例句**：
   - We often take clean drinking water for **granted**, but billions of people lack access to it.（我们常常把清洁饮用水视为理所当然，但数十亿人无法获得它。）
   - **Granted**, the new system is more expensive, but it is also far more reliable.（诚然，新系统更昂贵，但它也可靠得多。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -662,7 +662,7 @@
 - **例句**：
   - In the sentence "She reads books," the verb "reads" is **transitive** because it takes a direct object.（在句子"She reads books"中，动词"reads"是及物的，因为它带有直接宾语。）
   - Equality is a **transitive** relation: if A equals B and B equals C, then A equals C.（等价是一种传递关系：如果 A 等于 B 且 B 等于 C，那么 A 等于 C。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-28,16,290-->
 
 ---
 
@@ -680,7 +680,7 @@
 - **例句**：
   - Please select an available **time slot** for your appointment next week.（请选择下周预约的可用时间段。）
   - The conference schedule has a 15-minute **time slot** for each presenter.（会议日程为每位演讲者安排了 15 分钟的时间段。）
-<!--SR:!2026-08-04,4,270-->
+<!--SR:!2026-08-27,15,290-->
 
 ---
 
