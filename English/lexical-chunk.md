@@ -301,7 +301,7 @@
 ---
 
 #en
-## 十四、variable / variance
+## 十四、variable / variance / covariance
 ?
 ### 1. variable
 - **释义**：n. 变量；adj. 可变的，易变的
@@ -314,6 +314,12 @@
 - **例句**：
   - A high **variance** indicates that the data points are spread far from the mean.（高方差表明数据点远离均值分布。）
   - There is considerable **variance** in opinion among the committee members.（委员会成员之间意见分歧很大。）
+
+### 3. covariance
+- **释义**：n. 协方差，共变差
+- **例句**：
+  - **Covariance** measures how two variables change together in a dataset.（协方差衡量数据集中两个变量如何共同变化。）
+  - A positive **covariance** indicates that the two stocks tend to move in the same direction.（正协方差表明两只股票倾向于同向变动。）
 <!--SR:!2026-08-26,14,290-->
 
 ---
@@ -355,7 +361,7 @@
 ---
 
 #en
-## 十七、synchronize / sync
+## 十七、synchronize / sync / synchronous
 ?
 ### 1. synchronize
 - **释义**：v. 使同步，使协调；校准（时间）
@@ -368,6 +374,12 @@
 - **例句**：
   - Make sure your calendar is in **sync** with your team's schedule.（确保你的日历与团队的日程保持同步。）
   - The audio and video are out of **sync** — the lips don't match the words.（音视频不同步——口型对不上台词。）
+
+### 3. synchronous
+- **释义**：adj. 同步的；同时的
+- **例句**：
+  - The two clocks are **synchronous** and always show the same time.（这两座钟是同步的，总是显示相同的时间。）
+  - **Synchronous** communication requires all participants to be present at the same time.（同步通信要求所有参与者同时在场。）
 <!--SR:!2026-08-27,15,290-->
 
 ---
@@ -684,4 +696,104 @@
 
 ---
 
-descent / ascend
+#en
+## 三十七、increment / increase / decrease / decrement
+?
+### 1. increment
+- **释义**：n. 增量，增长量；v.（计算机）使递增
+- **例句**：
+  - The annual salary **increment** is applied automatically each April.（年度薪资增长于每年四月自动执行。）
+  - In the loop, the counter **increments** by one with each iteration.（循环中，计数器每次迭代递增一。）
+
+### 2. increase
+- **释义**：v. 增加，增大；n. 增加，增长量
+- **例句**：
+  - The company saw a significant **increase** in revenue this quarter.（公司本季度收入显著增长。）
+  - Regular exercise can **increase** your stamina over time.（经常锻炼可以逐渐增强你的耐力。）
+
+### 3. decrease
+- **释义**：v. 减少，减小；n. 减少，减小量
+- **例句**：
+  - The city's population began to **decrease** after the factory closed.（工厂关闭后，城市人口开始减少。）
+  - There has been a noticeable **decrease** in air pollution since the new policy took effect.（新政策生效以来，空气污染明显减少。）
+
+### 4. decrement
+- **释义**：n. 减少量，递减量；v. 使递减
+- **例句**：
+  - In a countdown timer, the value **decrements** by one each second.（在倒计时器中，数值每秒递减一。）
+  - The **decrement** in temperature overnight caused frost to form on the windows.（夜间气温骤降，窗户上结了霜。）
+
+---
+
+#en
+## 三十八、compose / compound
+?
+### 1. compose
+- **释义**：v. 组成，构成；作曲；撰写；使镇静
+- **例句**：
+  - The committee is **composed** of experts from various fields.（委员会由来自各领域的专家组成。）
+  - She sat down to **compose** a letter of resignation.（她坐下来撰写一封辞职信。）
+
+### 2. compound
+- **释义**：n. 混合物，化合物；adj. 复合的；v. 使加重，使恶化
+- **例句**：
+  - Water is a chemical **compound** of hydrogen and oxygen.（水是氢和氧化合而成的化合物。）
+  - His mistakes were **compounded** by his refusal to ask for help.（他拒绝求助使错误更加严重。）
+
+---
+
+#en
+## 三十九、trim / crop / prune
+?
+### 1. trim
+- **释义**：v. 修剪，修整；削减；n. 修剪；adj. 整齐的，苗条的
+- **例句**：
+  - She asked the hairdresser to **trim** the ends of her hair.（她让理发师修剪一下发梢。）
+  - The company decided to **trim** its budget by cutting unnecessary expenses.（公司决定削减预算，去除不必要的开支。）
+
+### 2. crop
+- **释义**：n. 庄稼，收成；v. 裁剪（照片）；种植；收获
+- **例句**：
+  - The farmer expects a good **crop** of wheat this year.（农民预计今年小麦有个好收成。）
+  - You can **crop** the photo to remove the distracting background.（你可以裁剪照片以去除干扰的背景。）
+
+### 3. prune
+- **释义**：v. 修剪（树枝、灌木）；削减，精简；n. 西梅干
+- **例句**：
+  - You should **prune** the rose bushes in early spring to encourage new growth.（你应该在早春修剪玫瑰丛以促进新枝生长。）
+  - The editor **pruned** the article to fit the word limit.（编辑删减了文章以符合字数限制。）
+
+---
+
+#en
+## 四十、descent / descend / ascent / ascend
+?
+### 1. descent
+- **释义**：n. 下降，下沉；血统，世系；突袭
+- **例句**：
+  - The plane began its **descent** through heavy clouds.（飞机穿过浓云开始下降。）
+  - She is of Irish **descent**, though she was born in Canada.（她出生于加拿大，但有爱尔兰血统。）
+
+### 2. descend
+- **释义**：v. 下降，下来；降临；传下，遗传
+- **例句**：
+  - The fog **descended** on the valley, reducing visibility to almost zero.（雾气笼罩山谷，能见度几乎降到零。）
+  - This tradition has **descended** from generation to generation.（这一传统世代相传。）
+
+### 3. ascent
+- **释义**：n. 上升，攀登；上坡路；晋升
+- **例句**：
+  - The **ascent** to the summit took the team nearly eight hours.（登顶的攀登花了队伍将近八个小时。）
+  - Her rapid **ascent** through the corporate ranks surprised everyone.（她在公司里的快速晋升令所有人惊讶。）
+
+### 4. ascend
+- **释义**：v. 上升，攀登；升迁，晋升
+- **例句**：
+  - The hikers **ascended** the mountain before dawn to catch the sunrise.（登山者在黎明前攀登山顶以赶上日出。）
+  - She **ascended** to the position of CEO after twenty years at the company.（在公司工作二十年后，她晋升为首席执行官。）
+
+---
+
+digest / ingest
+
+obviously / apparently
