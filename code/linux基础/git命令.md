@@ -190,6 +190,7 @@ git ls-files --deleted
 1. **`.gitignore`** — 工作目录中的忽略文件
 2. **`.git/info/exclude`** — 仓库级别的本地忽略（不提交到版本库）
 3. **全局 `core.excludesFile`** — 用户级别的全局忽略配置
+<!--SR:!2026-08-19,4,270-->
 
 ---
 

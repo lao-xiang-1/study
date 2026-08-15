@@ -154,7 +154,7 @@ This information is typically reportable, in the sense that it can be put into w
 Several functional properties are commonly held to distinguish consciously accessible information from unconscious processing.
 ?
 通常认为，有若干功能特性可将意识上可通达的信息与无意识加工区分开来
-<!--SR:!2026-08-13,13,230-->
+<!--SR:!2026-09-25,42,250-->
 
 ---
 
@@ -164,7 +164,7 @@ Several functional properties are commonly held to distinguish consciously acces
 Indeed, verbal report has often served as a primary empirical signature of conscious access
 ?
 事实上，言语报告常常被用作意识通达的主要经验指标
-<!--SR:!2026-08-14,2,190-->
+<!--SR:!2026-08-18,4,190-->
 
 ---
 
@@ -173,14 +173,6 @@ It is subject to top-down control.
 ?
 它受自上而下的控制
 <!--SR:!2026-09-11,30,270-->
-
----
-
-#en/Sentence
-where $\odot$ denotes the elementwise (Hadamard) product, and the convention used for stacking the entries is that the vectors $\mathbf{x}^{(l)}$ and $\nabla_{\mathbf{x}^{(l)}}\mathcal{L}$ have the same shape.
-?
-其中 $\odot$ 表示逐元素（Hadamard）乘积，向量堆叠的约定是：$\mathbf{x}^{(l)}$ 与 $\nabla_{\mathbf{x}^{(l)}}\mathcal{L}$ 具有相同的形状。
-<!--SR:!2026-08-15,15,250-->
 
 ---
 
@@ -278,7 +270,7 @@ Immune to creep and floor spikes
 Instead of moving quickly to **assume useful roles** in the overall problem solution, the hidden units **engage in** a complex dance with much wasted motion.
 ?
 隐藏单元不会迅速地在求解整体问题中承担有用的角色，而是陷入一场复杂的舞蹈，做出大量徒劳的动作。
-<!--SR:!2026-08-15,3,250-->
+<!--SR:!2026-08-25,10,270-->
 
 ---
 
@@ -286,7 +278,7 @@ Instead of moving quickly to **assume useful roles** in the overall problem solu
 For each new hidden unit, we attempt to maximize the magnitude of the correlation between the new unit's output and the residual error signal we are trying to eliminate.
 ?
 对于每一个新的隐层单元，我们尝试最大化该单元输出与待消除的残余误差信号（residual error signal）之间相关性的幅值。
-<!--SR:!2026-08-13,1,210-->
+<!--SR:!2026-08-18,3,210-->
 
 ---
 
@@ -295,7 +287,7 @@ Class used to replace multiple references to the same BaseParam with a static in
 to the unique BaseParam.
 ?
 一个类，用于将同一个 BaseParam 的多个引用替换为对唯一 BaseParam 的静态索引。
-<!--SR:!2026-08-15,3,250-->
+<!--SR:!2026-08-23,8,250-->
 
 ---
 
@@ -303,7 +295,7 @@ to the unique BaseParam.
 the code blocks are identical to what you would expect with numpy, aside from replacing `np` with `jnp`, and the results are the same
 ?
 代码块和 numpy 中的用法基本一致，只需将 `np` 换成 `jnp`，运行结果也相同。
-<!--SR:!2026-08-15,3,250-->
+<!--SR:!2026-08-25,10,270-->
 
 ---
 
@@ -311,7 +303,7 @@ the code blocks are identical to what you would expect with numpy, aside from re
 For example, consider this function that normalizes the rows of a 2D matrix, expressed in terms of jax.numpy operations:
 ?
 例如，考虑这个用 jax.numpy 操作表达的、对二维矩阵的行进行归一化的函数：
-<!--SR:!2026-08-15,3,250-->
+<!--SR:!2026-08-25,10,270-->
 
 ---
 
@@ -319,7 +311,7 @@ For example, consider this function that normalizes the rows of a 2D matrix, exp
 The function returns the same results as the original, up to standard floating-point accuracy.
 ?
 该函数返回的结果与原始函数一致，误差在标准浮点精度范围内
-<!--SR:!2026-08-13,1,230-->
+<!--SR:!2026-08-16,2,230-->
 
 ---
 
@@ -335,4 +327,4 @@ The anime Guilty Crown may have a 50/50 ratio of like and dislike in the fandom 
 A local stdio server is a program Claude Code starts as a subprocess on your machine, rather than a service it reaches over a URL. Use one for tools that need access to local resources like a browser, your filesystem, or a database socket.
 ?
 本地 stdio 服务器是 Claude Code 在您的机器上作为子进程启动的程序，而非通过 URL 访问的服务。对于需要访问本地资源（如浏览器、文件系统或数据库套接字）的工具，应使用此类服务器。
-<!--SR:!2026-08-15,3,250-->
+<!--SR:!2026-08-25,10,270-->

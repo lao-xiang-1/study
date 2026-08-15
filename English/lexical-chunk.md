@@ -722,6 +722,7 @@
 - **例句**：
   - In a countdown timer, the value **decrements** by one each second.（在倒计时器中，数值每秒递减一。）
   - The **decrement** in temperature overnight caused frost to form on the windows.（夜间气温骤降，窗户上结了霜。）
+<!--SR:!2026-08-18,4,270-->
 
 ---
 
@@ -739,6 +740,7 @@
 - **例句**：
   - Water is a chemical **compound** of hydrogen and oxygen.（水是氢和氧化合而成的化合物。）
   - His mistakes were **compounded** by his refusal to ask for help.（他拒绝求助使错误更加严重。）
+<!--SR:!2026-08-17,3,250-->
 
 ---
 
@@ -762,6 +764,7 @@
 - **例句**：
   - You should **prune** the rose bushes in early spring to encourage new growth.（你应该在早春修剪玫瑰丛以促进新枝生长。）
   - The editor **pruned** the article to fit the word limit.（编辑删减了文章以符合字数限制。）
+<!--SR:!2026-08-18,4,270-->
 
 ---
 
@@ -791,6 +794,7 @@
 - **例句**：
   - The hikers **ascended** the mountain before dawn to catch the sunrise.（登山者在黎明前攀登山顶以赶上日出。）
   - She **ascended** to the position of CEO after twenty years at the company.（在公司工作二十年后，她晋升为首席执行官。）
+<!--SR:!2026-08-18,4,270-->
 
 ---
 
