@@ -56,6 +56,22 @@ f"{1000:,}"         # "1,000"  — 千位分隔
 f"{42:08b}"         # "00101010" — 二进制补零
 ```
 
+### pcx示例：`str.rsplit` / `str.split` —— 字符串分割
+
+```python
+# pcx/predictive_coding/_vode.py:122 —— 从右分割（递归处理链式变换）
+tform, _t = tform.rsplit(":", 1)
+# "u:se:zero"  rsplit(":", 1)  →  ("u:se", "zero")
+# "u:se"       rsplit(":", 1)  →  ("u", "se")
+
+# pcx/predictive_coding/_vode.py:265 —— 逗号分割目标
+for _target in _targets.split(","):
+    _target = _target.strip()      # 去掉空格
+```
+
+**`rsplit` vs `split`**：`rsplit(":", 1)` 从**右边**割一刀，`split(":", 1)` 从**左边**割一刀。链式变换 "u:se:zero" 需要从右向左处理（先算出 `u:se` 的结果，再传给 `zero`），所以用 `rsplit`。
+
+
 ---
 
 ## 2. 列表（list）
@@ -181,6 +197,15 @@ print(p.x, p.y)    # 3 4
 字典是**键值对**的哈希映射，键必须可哈希，查找、插入、删除平均 O(1)。
 
 ### 4.1 常用方法
+
+| 方法                              | 说明                            |
+| ------------------------------- | ----------------------------- |
+| `dict.items()`                  | 返回 (key, value) 对迭代器          |
+| `dict.keys()`                   | 返回所有键                         |
+| `dict.values()`                 | 返回所有值                         |
+| `dict.get(key, default)`        | 安全取值，不存在时返回默认值                |
+| `dict.copy(x)`                  | 浅拷贝字典                         |
+| `dict.setdefault(key, default)` | 获取指定key的值（如果键不存在则设置默认值，返回最终值） |
 
 | 方法 | 说明 |
 |------|------|

@@ -183,6 +183,29 @@ git ls-files --modified
 git ls-files --deleted
 ```
 
+`--exclude-standard` 是 `git ls-files` 的一个选项，作用是**让 Git 在列出文件时应用标准的忽略规则**。
+
+具体来说，它会让 Git 读取以下三个来源的忽略规则：
+
+1. **`.gitignore`** — 工作目录中的忽略文件
+2. **`.git/info/exclude`** — 仓库级别的本地忽略（不提交到版本库）
+3. **全局 `core.excludesFile`** — 用户级别的全局忽略配置
+
+---
+
+在这条命令中：
+
+```bash
+git ls-files --others --exclude-standard
+```
+
+- `--others`：列出**未追踪（untracked）** 的文件
+- `--exclude-standard`：排除掉被 `.gitignore` 等规则忽略的文件
+
+**效果**：只显示那些真正"新增的、Git 还不知道的、且没有被忽略"的文件。
+
+如果不加 `--exclude-standard`，`git ls-files --others` 会把所有未追踪文件都列出来，包括 `node_modules/`、`.DS_Store` 等本应被忽略的文件，输出会非常嘈杂。加了之后，结果就和 `git status` 中 "Untracked files" 部分一致了。
+
 ### 4.3 修改提交
 
 ```bash
@@ -432,5 +455,5 @@ GitHub 提供了大量官方模板，可直接搜索 `github/gitignore` 获取�
 ```
 
 > `.gitattributes` 对已经提交的文件不会立即生效，通常需要配合 `git add --renormalize .` 重新规范化。
-<!--SR:!2026-08-15,3,250-->
+<!--SR:!2026-08-24,9,250-->
 
