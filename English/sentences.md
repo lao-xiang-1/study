@@ -315,6 +315,9 @@ The function returns the same results as the original, up to standard floating-p
 
 ---
 
+## 句子 41-50
+
+
 #en/Sentence
 The anime Guilty Crown may have a 50/50 ratio of like and dislike in the fandom BUT 100% loves the OST
 ?
@@ -328,3 +331,12 @@ A local stdio server is a program Claude Code starts as a subprocess on your mac
 ?
 本地 stdio 服务器是 Claude Code 在您的机器上作为子进程启动的程序，而非通过 URL 访问的服务。对于需要访问本地资源（如浏览器、文件系统或数据库套接字）的工具，应使用此类服务器。
 <!--SR:!2026-08-25,10,270-->
+
+---
+
+#en/Sentence 
+fetch content from one or more web pages, following links recursively.
+?
+从一个或多个网页获取内容，并递归地跟随链接。
+
+---
