@@ -1,3 +1,5 @@
+
+
 这是一个关于**神经网络结构动态增长**（Dynamic Network Growth / Constructive Neural Networks）的问题。结合你正在学习的 **Predictive Coding Networks (PCN)**，我来系统地梳理几种"自动添加节点"的策略。
 
 ---
