@@ -59,3 +59,8 @@ The algorithm can be modified in this spirit by choosing a sufficiently large ma
 
 ---
 
+#en/Passage
+To catalyze progress in this field, we've introduced the WBE Challenge — a series of standardized data sets and challenges aimed at improving neural circuit reconstruction methods. Drawing inspiration from successful AI challenges like ImageNet, the WBE Challenge provides a structured framework for researchers to develop and test their algorithms against controlled conditions before applying them to real-world data.翻译
+?
+为了推动该领域的发展，我们推出了WBE挑战赛——一系列标准化的数据集和挑战任务，旨在改进神经回路重建方法。借鉴ImageNet等成功的人工智能挑战赛的经验，WBE挑战赛为研究人员提供了一个结构化框架，使其能够在受控条件下开发和测试算法，然后再将其应用于真实数据。
+<!--SR:!2026-08-20,3,250-->

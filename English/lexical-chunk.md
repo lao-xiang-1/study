@@ -740,7 +740,7 @@
 - **例句**：
   - Water is a chemical **compound** of hydrogen and oxygen.（水是氢和氧化合而成的化合物。）
   - His mistakes were **compounded** by his refusal to ask for help.（他拒绝求助使错误更加严重。）
-<!--SR:!2026-08-17,3,250-->
+<!--SR:!2026-08-29,12,270-->
 
 ---
 

@@ -196,7 +196,7 @@ utility function that create a fast cache set, which keeps track of the orders i
 this is used to reduce the overhead of injecting the new values back into the original kwargs outside of the 'jit barrier'
 ?
 这样做是为了减少在"JIT 屏障"之外，将新值重新注入原始 kwargs 所带来的开销。
-<!--SR:!2026-08-17,5,230-->
+<!--SR:!2026-09-02,16,250-->
 
 ---
 
@@ -232,7 +232,7 @@ A typical ICLR paper involves significantly more work than goes into a course pr
 
 ---
 
-## 句子 31–35
+## 句子 31–40
 
 #en/Sentence
 This, however, implies that if a duplicate reference is present in the pytree, the function will be applied to each occurrence of the reference (so multiple times on the same node), which must be taken into account when designing the function.
@@ -311,18 +311,17 @@ For example, consider this function that normalizes the rows of a 2D matrix, exp
 The function returns the same results as the original, up to standard floating-point accuracy.
 ?
 该函数返回的结果与原始函数一致，误差在标准浮点精度范围内
-<!--SR:!2026-08-16,2,230-->
+<!--SR:!2026-08-24,7,250-->
 
 ---
 
 ## 句子 41-50
 
-
 #en/Sentence
 The anime Guilty Crown may have a 50/50 ratio of like and dislike in the fandom BUT 100% loves the OST
 ?
 动画《罪恶王冠》在粉丝群体中或许褒贬参半，但100%的人都爱它的原声带。
-<!--SR:!2026-08-16,4,270-->
+<!--SR:!2026-08-31,14,290-->
 
 ---
 
@@ -340,3 +339,32 @@ fetch content from one or more web pages, following links recursively.
 从一个或多个网页获取内容，并递归地跟随链接。
 
 ---
+
+#en/Sentence 
+It bore witness to her efforts
+?
+它见证了她的努力。
+
+---
+
+#en/Sentence 
+I still made it through the next three years of college, even without the book. And it wasn’t, ultimately, the dictionary that got me there — not really.
+?
+即便没有那本书，我仍然顺利读完了大学接下来的三年。而且，说到底，带我走到那一步的并不是那本字典——真的不是。
+
+---
+
+#en/Sentence 
+In line with longstanding initiatives to expand its green spaces, New York City is planting tens of thousands of trees each year.
+?
+为了配合长期以来的扩大绿地计划，纽约市每年种植数万棵树。
+
+---
+
+#en/Sentence 
+We gratefully acknowledge IBM, which—through the MIT-IBM Watson AI Lab—contributed the computational resources necessary to conduct the experiments in this paper.
+?
+我们衷心感谢 IBM——通过 MIT-IBM Watson AI Lab——为本论文中的实验提供了必要的计算资源。
+
+---
+
