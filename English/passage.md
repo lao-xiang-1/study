@@ -54,13 +54,13 @@ Remark. The model can also support **anytime inference**（**随时推断**）, 
 The algorithm can be modified in this spirit by choosing a sufficiently large maximum step count $T_{infer}$, and running the inference loop until either $T_{infer}$ steps have been performed or convergence has been detected. Here convergence means, for instance, that the norm of the latest update (or updates over a longer patience window) across all latent variables falls below a preset threshold. In machine learning terminology, this could be phrased as inference with sample-wise early stopping.
 ?
 **备注。** 该模型还支持**随时推断（anytime inference）**：对于容易预测的输入，只需更少的步骤即可收敛；而对于模糊或不确定的情况，则可以执行额外的推断步骤来改善预测结果。这种自适应特性为嵌入式或神经形态硬件部署提供了潜在的节能空间。
-按照这一思路，可以对算法进行修改：设置一个足够大的最大步数 ，然后运行推断循环，直到执行了  步或检测到收敛为止。这里的收敛可以定义为，例如，所有隐变量的最新更新（或更长耐心窗口内的更新）的范数低于某个预设阈值。用机器学习的术语来说，这可以表述为**带样本级早停的推断（sample-wise early stopping）**。
-<!--SR:!2026-08-19,17,250-->
+按照这一思路，可以对算法进行修改：设置一个足够大的最大步数 ，然后运行推断循环，直到执行了 $T_{infer}$ 步或检测到收敛为止。这里的收敛可以定义为，例如，所有隐变量的最新更新（或更长耐心窗口内的更新）的范数低于某个预设阈值。用机器学习的术语来说，这可以表述为**样本级早停的推断（sample-wise early stopping）**。
+<!--SR:!2026-10-27,61,270-->
 
 ---
 
 #en/Passage
-To catalyze progress in this field, we've introduced the WBE Challenge — a series of standardized data sets and challenges aimed at improving neural circuit reconstruction methods. Drawing inspiration from successful AI challenges like ImageNet, the WBE Challenge provides a structured framework for researchers to develop and test their algorithms against controlled conditions before applying them to real-world data.翻译
+To catalyze progress in this field, we've introduced the WBE Challenge — a series of standardized data sets and challenges aimed at improving neural circuit reconstruction methods. Drawing inspiration from successful AI challenges like ImageNet, the WBE Challenge provides a structured framework for researchers to develop and test their algorithms against controlled conditions before applying them to real-world data.
 ?
 为了推动该领域的发展，我们推出了WBE挑战赛——一系列标准化的数据集和挑战任务，旨在改进神经回路重建方法。借鉴ImageNet等成功的人工智能挑战赛的经验，WBE挑战赛为研究人员提供了一个结构化框架，使其能够在受控条件下开发和测试算法，然后再将其应用于真实数据。
-<!--SR:!2026-08-20,3,250-->
+<!--SR:!2026-09-03,7,250-->

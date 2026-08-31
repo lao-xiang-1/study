@@ -204,7 +204,7 @@ this is used to reduce the overhead of injecting the new values back into the or
 set the value of the parameter corresponding to the given key, after being processed of the Vode ruleset
 ?
 设置与给定 key 对应的参数的值，该值会先经过 Vode 的 ruleset（规则集）处理。
-<!--SR:!2026-08-23,11,270-->
+<!--SR:!2026-10-06,40,290-->
 
 ---
 
@@ -367,4 +367,17 @@ We gratefully acknowledge IBM, which—through the MIT-IBM Watson AI Lab—contr
 我们衷心感谢 IBM——通过 MIT-IBM Watson AI Lab——为本论文中的实验提供了必要的计算资源。
 
 ---
+
+#en/Sentence 
+Fill the bracketed placeholders; keep the headings and table columns as shown.
+?
+填充方括号里的占位符；保持标题和表格列的格式与示例完全一致。
+
+---
+
+#en/Sentence 
+a better mental model is to think of the column index as  
+coming last and the row index as second to last.
+?
+一个更好的心智模型是：把**列索引看作最后一位**，把**行索引看作倒数第二位**。
 

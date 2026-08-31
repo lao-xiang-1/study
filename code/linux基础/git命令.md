@@ -29,13 +29,12 @@ ssh-keygen -t ed25519 -C "your@email.com"
 ```
 
 > 默认保存在 `~/.ssh/id_ed25519`，`id_ed25519.pub` 为公钥。
-<!--SR:!2026-08-20,15,290-->
+<!--SR:!2026-10-26,60,310-->
 
 ---
 
-#code/git
 ## 2. 仓库操作
-?
+
 ### 2.1 初始化与克隆
 
 ```bash
@@ -46,8 +45,9 @@ git init
 git clone <url> <目录名>
 ```
 
+#code/git
 ### 2.2 关联远程仓库
-
+?
 ```bash
 # 查看已关联的远程仓库
 git remote -v
@@ -61,7 +61,7 @@ git remote set-url origin git@github.com:username/repo.git
 # 删除远程仓库关联
 git remote remove origin
 ```
-<!--SR:!2026-08-19,14,290-->
+<!--SR:!2026-10-22,56,310-->
 
 ---
 
@@ -104,9 +104,23 @@ git branch -d <分支名>
 # 强制删除分支（未合并也可删）
 git branch -D <分支名>
 ```
+<!--SR:!2026-10-05,39,290-->
 
+---
+
+### 3.3 合并分支
+
+```bash
+# 将指定分支合并到当前分支
+git merge <分支名>
+
+# 变基合并（线性历史，更整洁）
+git rebase <分支名>
+```
+
+#code/git
 ### 3.4 高级引用查看（for-each-ref）
-
+?
 灵活列出分支、标签等引用，支持自定义格式输出：
 
 ```bash
@@ -131,23 +145,20 @@ git for-each-ref --format='%(refname:short)' refs/remotes/
 > - `%(committerdate:short)` / `%(authordate:short)` — 日期
 > - `%(subject)` — 提交标题
 > - `%(authorname)` / `%(committername)` — 作者/提交者名
+<!--SR:!2026-08-28,1,230-->
 
-### 3.3 合并分支
-
-```bash
-# 将指定分支合并到当前分支
-git merge <分支名>
-
-# 变基合并（线性历史，更整洁）
-git rebase <分支名>
+#### 创建引用
+```toml
+# ~/.gitconfig
+[alias]
+        bv = for-each-ref --sort=-committerdate refs/remotes/ --format=\"%(committerdate:short) %(align:width=20)%(refname:short)%(end) %(subject)\"
 ```
-<!--SR:!2026-08-16,11,270-->
+使用 `git bv` 查看远程提交中的最新提交
 
 ---
 
-#code/git
 ## 4. 暂存与提交
-?
+
 ### 4.1 基本流程
 
 ```bash
@@ -167,8 +178,9 @@ git commit -m "提交信息"
 git commit -am "提交信息"
 ```
 
+#code/git
 ### 4.2 查看已追踪文件
-
+?
 ```bash
 # 列出所有已追踪的文件
 git ls-files
@@ -190,25 +202,13 @@ git ls-files --deleted
 1. **`.gitignore`** — 工作目录中的忽略文件
 2. **`.git/info/exclude`** — 仓库级别的本地忽略（不提交到版本库）
 3. **全局 `core.excludesFile`** — 用户级别的全局忽略配置
-<!--SR:!2026-08-19,4,270-->
+<!--SR:!2026-09-12,16,290-->
 
 ---
 
-在这条命令中：
-
-```bash
-git ls-files --others --exclude-standard
-```
-
-- `--others`：列出**未追踪（untracked）** 的文件
-- `--exclude-standard`：排除掉被 `.gitignore` 等规则忽略的文件
-
-**效果**：只显示那些真正"新增的、Git 还不知道的、且没有被忽略"的文件。
-
-如果不加 `--exclude-standard`，`git ls-files --others` 会把所有未追踪文件都列出来，包括 `node_modules/`、`.DS_Store` 等本应被忽略的文件，输出会非常嘈杂。加了之后，结果就和 `git status` 中 "Untracked files" 部分一致了。
-
+#code/git
 ### 4.3 修改提交
-
+?
 ```bash
 # 修改最近一次提交message
 git commit --amend -m "新的提交信息"
@@ -216,18 +216,18 @@ git commit --amend -m "新的提交信息"
 # 撤销暂存（保留工作区修改）
 git restore --staged <文件>
 
-# 撤销工作区修改
+# 撤销工作区修改（相当于dicard）
 git restore <文件>
 ```
-<!--SR:!2026-08-15,10,270-->
+<!--SR:!2026-10-04,38,290-->
 
 ---
 
-#code/git
 ## 5. 推送与拉取
-?
-### 5.1 推送
 
+#code/git
+### 5.1 推送
+?
 ```bash
 # 推送到远程仓库
 git push origin main
@@ -238,6 +238,9 @@ git push --set-upstream origin <分支名>
 # 推送并建立上游追踪（简写）
 git push -u origin <分支名>
 ```
+<!--SR:!2026-10-09,43,290-->
+
+---
 
 ### 5.2 拉取与获取
 
@@ -251,9 +254,7 @@ git fetch origin
 # 拉取指定远程分支
 git pull origin <分支名>
 ```
-<!--SR:!2026-08-19,14,290-->
 
----
 
 #code/git
 ## 6. 查看历史
@@ -285,7 +286,7 @@ git diff --staged
 # 两个提交之间的差异
 git diff <commit1> <commit2>
 ```
-<!--SR:!2026-08-20,15,290-->
+<!--SR:!2026-10-25,59,310-->
 
 ---
 
@@ -373,15 +374,8 @@ git reset --hard <commit>
 
 ### 8.1 .gitignore 作用
 
-`.gitignore` 用于告诉 Git **忽略哪些文件或目录**，使其不进入工作区追踪列表，也不会被意外提交。
+`.gitignore` 用于告诉 Git **忽略哪些文件或目录**，使其不进入工作区追踪列表。
 >已经被追踪的文件不会忽略，需要先 `git rm --cached <filename>`
-
-常见需要忽略的内容：
-- 编辑器/IDE 配置（如 `.vscode/`、`.idea/`）
-- 依赖目录（如 `node_modules/`、`venv/`）
-- 编译产物（如 `dist/`、`build/`、`__pycache__/`）
-- 临时文件、日志、密钥（如 `.env`、`*.log`）
-- Obsidian 工作区文件（如 `.obsidian/`、`.trash/`）
 
 ### 8.2 .gitignore 语法规则
 
@@ -456,5 +450,5 @@ GitHub 提供了大量官方模板，可直接搜索 `github/gitignore` 获取�
 ```
 
 > `.gitattributes` 对已经提交的文件不会立即生效，通常需要配合 `git add --renormalize .` 重新规范化。
-<!--SR:!2026-08-24,9,250-->
+<!--SR:!2026-09-19,23,250-->
 

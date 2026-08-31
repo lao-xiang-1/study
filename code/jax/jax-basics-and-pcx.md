@@ -3,7 +3,7 @@ sr-due: 2026-08-04
 sr-interval: 1
 sr-ease: 230
 ---
-#review
+#code 
 
 官方文档：[Quickstart: How to think in JAX](https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html)
 

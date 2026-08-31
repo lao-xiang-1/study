@@ -1,6 +1,6 @@
 ---
-sr-due: 2026-08-15
-sr-interval: 10
+sr-due: 2026-10-19
+sr-interval: 49
 sr-ease: 270
 ---
 #code
@@ -173,33 +173,6 @@ type(MODE.TRAIN)                # <enum 'MODE'>
 isinstance(MODE.TRAIN, MODE)    # True
 ```
 
-**对类型标注的影响**：正因如此，`Module.MODE.TRAIN` 的类型就是 `MODE`，能匹配 `value: MODE | None` 标注：
-
-```python
-# pcx/core/_module.py:157,178
-def mode(self, value: MODE | None) -> MODE | None: ...
-
-self.mode(Module.MODE.TRAIN)   # 传入的值类型是 MODE，匹配标注 ✓
-```
-
-**对比普通类**：普通类的类属性只是赋值时那个对象，不会变成该类的实例：
-
-```python
-class PlainInt:
-    TRAIN = 1
-
-type(PlainInt.TRAIN)                  # int
-isinstance(PlainInt.TRAIN, PlainInt)  # False -- 与 PlainInt 无关
-```
-
-| 写法                            | `类.属性` 的类型 | 是该类的实例？ |
-| ------------------------------- | ---------------- | -------------- |
-| `class Mode(IntEnum): TRAIN=1`  | `Mode`           | ✅             |
-| `class Color(Enum): RED=1`      | `Color`          | ✅             |
-| `class PlainInt: TRAIN=1`       | `int`            | ❌             |
-
-所以 `Module.MODE.TRAIN` 能符合 `MODE | None` 标注，**同时依赖**两点：标注描述的是值的类型（与访问路径无关，通用原则）+ Enum 的元类把成员做成了实例（Enum 特有）。换个普通类，同样的 `类.属性` 访问形式就不再成立。
-
 ---
 
 ## 5. `types.UnionType`
@@ -209,14 +182,11 @@ Python 3.10+ 支持用 `|` 写联合类型（如 `int | str`），运行时它�
 ```python
 from types import UnionType
 
-# 用户传入的可能是单个类型，也可能是联合类型
 def check_type(value, expected):
-    # expected 可能是 int，也可能是 int | str | float
     if isinstance(expected, type | UnionType):
         return isinstance(value, expected)
     else:
         raise TypeError("expected 必须是类型或类型联合")
-
 
 # 使用
 check_type(42, int)           # True
@@ -225,5 +195,3 @@ check_type(3.14, int | str)   # False
 ```
 
 > `int` 和 `str` 都是 `type`类型，而 `int | str` 是 `UnionType` 类型
-
-**关键点**：`isinstance(obj, int | str)` 在 Python 3.10+ 是合法的，等价于 `isinstance(obj, (int, str))`
