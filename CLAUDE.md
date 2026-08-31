@@ -13,9 +13,7 @@ Remote: `git@github.com:lao-xiang-1/study.git`
 Each top-level folder is a separate course:
 
 - `自动控制原理/` — Automatic Control Theory
-- `微机原理与接口技术/` — Microcomputer Principles & Interface Technology
 - `信号与系统/` — Signals and Systems
-- `电路与电子学/` — Circuit and Electronics
 - `机器学习/` — Machine Learning
 - `复变函数基础/` — Complex Analysis Basics
 - `高等数学/` — Advanced Mathematics
@@ -26,24 +24,6 @@ Example notebooks live in `<course>/例题/` subfolders.
 
 ## Note formatting conventions
 
-- **Top-level heading**: `# 第X章 主题名` or `# 第X讲 主题名` (or just `# 主题名` for standalone topics)
-- **Sections**: `## 2.X 节名`, separated by `---`
-- **Subsections**: `### 2.X.X 小节名` (main section subheaders)
-- **三级子小节**: `### 2.X.X.X 子小节名` or `### 数字. 标题` (detailed subheaders under subsections)
-- **Sub-sub items**: `**（1）标题**` — Chinese parenthesized bold, not `####` or other heading levels
-
-示例：
-```markdown
-# 2.3 微控制器工作原理
-## 2.3.1 CPU的结构和组成
-### 2.3.1.1 CPU的组成结构
-### 2.3.1.2 控制器（指令部件、时序部件、操作控制部件）
-### 2.3.1.3 运算器
-
-## 2.3.2 微控制器的工作过程
-### 2.3.2.1 程序与指令
-### 2.3.2.2 指令样例
-```
 - **Lists**: `-` with 2-space indent for nesting
 - **Key terms**: `**加粗**`
 - **Code/instructions**: backtick (e.g. `MOV A, #35H`)
@@ -53,21 +33,12 @@ Example notebooks live in `<course>/例题/` subfolders.
 - **Tables**: standard Markdown with `:---` or `---` alignment
 - No stray slide numbers, no duplicate headings
 
-## Note layering pattern
-
-Courses follow a three-tier structure — preserve it when adding content:
-
-1. **Roadmap/overview** — macro map of the course (e.g. `课程学习路线.md`, `概览：8051单片机硬件结构.md`)
-2. **Quick-reference** — compact formula/definition recall sheet (e.g. `易忘知识点.md`, `常见指令速查.md`, `速查知识点.md`)
-3. **Deep-dive topics** — detailed single-topic expansions (e.g. `二阶系统的时域分析法.md`, `IO接口扩展及应用.md`)
-
 ## Symbol consistency
 
-Reuse canonical symbols and terminology consistently within each course so that quick-reference and deep-dive notes stay aligned. Examples:
+Reuse canonical symbols and terminology consistently within each course so that notes stay aligned. Examples:
 
 - 自动控制原理: `G(s)`, `C(s)`, `R(s)`, `\omega_n`, `\zeta`, `\Phi(s)`
 - 信号与系统: `\omega_0`, `f(t)`, `F(j\omega)`, `a_n`, `b_n`
-- 微机原理: register names `A`, `Rn`, `DPTR`, `PSW`, instruction mnemonics in backticks
 
 ## Language
 
@@ -76,4 +47,4 @@ Content is in Chinese with English term annotations in parentheses where useful 
 ## Git
 
 - Commit messages: short Chinese or English descriptions
-- `.gitignore` excludes `.obsidian/`, `.github/`, `.trash/`, `copilot/`, `temp.md`, `整理笔记.md`
+- `.gitignore` excludes `.obsidian/`, `.github/`, `.trash/`, `copilot/`, `temp.md`
