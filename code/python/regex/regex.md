@@ -50,6 +50,39 @@ m.start()    # 0  匹配起始位置
 m.end()      # 4  匹配结束位置
 ```
 
+### 1.4 `re.escape()` — 转义特殊字符
+
+**作用**：把字符串中所有**正则特殊字符**（`.` `*` `+` `?` `(` `)` `[` `]` `{` `}` `^` `$` `|` `\`）前面加上反斜杠 `\`，让这段字符串被当作**字面文本**匹配，而不是被解析成正则语法。
+
+```python
+import re
+
+print(re.escape("a.b"))    # a\.b    点号被转义
+print(re.escape("1+1=2"))  # 1\+1=2  加号被转义
+print(re.escape("hello"))  # hello   普通字符不变
+```
+
+**为什么要转义**：`.` `*` `+` 等在正则里有特殊含义；如果直接把用户输入拼进 pattern，就可能匹配错：
+
+```python
+# 想搜字面 "a.b"，但 . 被当成「任意字符」
+re.match(r"a.b", "aXb")               # 匹配成功（错！）
+
+# 用 re.escape 转义后，才真正匹配字面 "a.b"
+re.match(re.escape("a.b"), "a.b")     # 匹配成功
+re.match(re.escape("a.b"), "aXb")     # None（对）
+```
+
+**典型用法**：把动态变量 / 用户输入安全地嵌入正则：
+
+```python
+keyword = input("要搜索的关键词：")       # 用户可能输入 "C++" 或 "a.b"
+pattern = re.compile(re.escape(keyword))  # 把 keyword 当纯文本搜索
+re.search(pattern, text)
+```
+
+> 💡 Python 3.7+ 的 `re.escape` **只转义真正的特殊字符**，字母、数字、下划线保持原样（所以 `re.escape("hello")` 返回 `"hello"`）。
+
 #code/regex
 ## 2. pattern的基本语法
 ?
