@@ -18,7 +18,7 @@ rate  $\langle r \rangle$
 <div style="text-align: center;"><div style="text-align: center;">A</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//570f5fc9-ffc4-429f-953a-0e87d75658fe/markdown_1/imgs/img_in_chart_box_289_217_858_759.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-12T16%3A54%3A22Z%2F-1%2F%2Fdd1a887574737097037fbc845c7042e03912b82e53360cc75ba4958452f28724" alt="Image" width="47%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_289_217_858_759.jpg" alt="Image" width="47%" /></div>
 
 
 Figure 1.4 Firing rates approximated by different procedures. (A) A spike train from a neuron in the inferotemporal cortex of a monkey recorded while that animal watched a video on a monitor under free viewing conditions. (B) Discretetime firing rate obtained by binning time and counting spikes with  $\Delta t = 100$ ms. (C) Approximate firing rate determined by sliding a rectangular window function along the spike train with  $\Delta t = 100$ ms. (D) Approximate firing rate computed using a Gaussian window function with  $\sigma_{t} = 100$ ms. (E) Approximate firing rate using the window function of equation 1.12 with  $1/\alpha = 100$ ms. (Data from Baddeley et al., 1997.)
@@ -67,13 +67,13 @@ Figure 1.5A shows extracellular recordings of a neuron in the primary visual cor
 <div style="text-align: center;"><div style="text-align: center;">A</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//50f062e4-04a0-432b-817d-cd7c02e7645b/markdown_0/imgs/img_in_image_box_292_204_475_480.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-12T16%3A54%3A21Z%2F-1%2F%2F1f3867f24f8a718b6193c6d8509e048a963420e163f81f137f7cbe52552557bc" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_292_204_475_480.jpg" alt="Image" width="15%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">B</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//50f062e4-04a0-432b-817d-cd7c02e7645b/markdown_0/imgs/img_in_chart_box_488_221_866_500.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-12T16%3A54%3A21Z%2F-1%2F%2F00263c299d8cc73a0dac26e205952868cb24fd2b385d42ddfbce45049b021af3" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_488_221_866_500.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 1.5 (A) Recordings from a neuron in the primary visual cortex of a monkey. A bar of light was moved across the receptive field of the cell at different angles. The diagrams to the left of each trace show the receptive field as a dashed square and the light source as a black bar. The bidirectional motion of the light bar is indicated by the arrows. The angle of the bar indicates the orientation of the light bar for the corresponding trace. (B) Average firing rate of a cat V1 neuron plotted as a function of the orientation angle of the light bar stimulus. The curve is a fit using the function 1.14 with parameters  $r_{max} = 52.14$ Hz,  $s_{max} = 0^{\circ}$, and  $\sigma_{f} = 14.73^{\circ}$. (A adapted from Wandell, 1995, based on an original figure from Hubel and Wiesel, 1968; B data points from Henry et al., 1974.)</div> </div>

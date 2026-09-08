@@ -58,7 +58,7 @@ $$ \mathcal{L}=\frac{1}{2}\sum_{l=0}^{L-1}\left\|\varepsilon^{(l)}\right\|^{2}. 
 5. $\varepsilon$：误差
 6. 模型最终的预测值：$\hat y$
 7. 标签：$y$
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6999a80c-1f77-4042-951c-2c12ce7ebd2d/markdown_3/imgs/img_in_image_box_456_316_738_579.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-06-15T03%3A39%3A23Z%2F-1%2F%2Fe3df08118ef25b030ebbd2aedd4e699a137dcf7c621f531cc8ef299d5e2a7384" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_456_316_738_579.jpg" alt="Image" width="23%" /></div>
 <div style="text-align: center;color: limegreen; font-style: italic;">输出层</div>
 
 <div style="text-align: center;"><img src=assets/2506.06332v1.pdf_by_PaddleOCR-VL-1.6.png alt="Image" width="100%" /></div>
@@ -287,7 +287,7 @@ $$\mathcal{L}+\mathcal{L}_{\mathrm{sup}}$$
 
 where $\mathcal{L}_{\mathrm{sup}} = \frac{1}{2} \|\boldsymbol{\varepsilon}^{\mathrm{sup}}\|^2$ is the supervised energy.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6999a80c-1f77-4042-951c-2c12ce7ebd2d/markdown_3/imgs/img_in_image_box_456_316_738_579.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-06-15T03%3A39%3A23Z%2F-1%2F%2Fe3df08118ef25b030ebbd2aedd4e699a137dcf7c621f531cc8ef299d5e2a7384" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_456_316_738_579.jpg" alt="Image" width="23%" /></div>
 
 <div style="text-align: center;color: #2ecc71;"><div style="text-align: center;">Figure 2: A supervised extension of the PCN with three latent layers in Figure 1 is obtained by stacking a readout layer on top of the highest latent layer, together with a new root node for the target label.</div> </div>
 

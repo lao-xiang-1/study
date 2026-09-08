@@ -1,7 +1,7 @@
 
 #### 前课回顾——贝叶斯分类器
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9cfff1dc-ced4-4595-a314-678f647d8f55/markdown_1/imgs/img_in_image_box_260_203_1079_631.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2Ff462f462275c5454f097c58e2792c35a74e7a2bb2cf94e85992b4e7669a4c2d7" alt="Image" width="56%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_260_203_1079_631.jpg" alt="Image" width="56%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 2.3 错误率</div> </div>
@@ -21,7 +21,7 @@
 
 □ Fisher准则的描述：用投影后数据的统计性质——均值和离散度的函数作为判别优劣的标准。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9cfff1dc-ced4-4595-a314-678f647d8f55/markdown_2/imgs/img_in_image_box_849_726_1194_957.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2F9b99b2041c9abb5e3473a375d350fd561f5ecc4414c50ffac6e4945aa1720cb0" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_849_726_1194_957.jpg" alt="Image" width="23%" /></div>
 
 
 #### 前课回顾——分段线性分类器
@@ -36,7 +36,7 @@
 
  $$ \underset{(i=1,...,c)}{j=\operatorname*{a r g m i n}g_{i}(\mathbf{x})} $$ 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9cfff1dc-ced4-4595-a314-678f647d8f55/markdown_3/imgs/img_in_image_box_744_343_1379_884.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2F193e729e803925573ffca603bf6008adf6b67c721185191f7300c10a556691fa" alt="Image" width="44%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_744_343_1379_884.jpg" alt="Image" width="44%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">I: 线性距离判别</div> </div>
@@ -45,7 +45,7 @@
 <div style="text-align: center;"><div style="text-align: center;">Ⅱ：分段线性距离判别</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9cfff1dc-ced4-4595-a314-678f647d8f55/markdown_3/imgs/img_in_image_box_1307_958_1427_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2Ff3448c80cca0a752c4046bb34dd468faf0d785dc79441a8f6df86c96e27a084c" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1307_958_1427_1079.jpg" alt="Image" width="8%" /></div>
 
 
 #### 前课回顾——感知器
@@ -68,10 +68,10 @@ Neuron Model: 多输入，单输出，带偏置
 
 神经元模型
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8d3dd093-8a35-4634-a9e1-4de4538631b3/markdown_0/imgs/img_in_image_box_801_261_1317_709.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A17%3A59Z%2F-1%2F%2Facb13f60b2c639113809ba460dd62923122a9e5be788a6d5b33155495e345b03" alt="Image" width="35%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_801_261_1317_709.jpg" alt="Image" width="35%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8d3dd093-8a35-4634-a9e1-4de4538631b3/markdown_0/imgs/img_in_image_box_798_704_1288_968.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2Fbfc8463e11d268c51a16cfe50e5c2485c307b60de22853b334106986ba6be4bf" alt="Image" width="34%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_798_704_1288_968.jpg" alt="Image" width="34%" /></div>
 
 
 McCulloch-Pitts模型
@@ -80,7 +80,7 @@ McCulloch-Pitts模型
 
 前馈型网络：节点按照一定的层次排列，信号按单一方向从一层节点传递到下一层节点，网络是单向的。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8d3dd093-8a35-4634-a9e1-4de4538631b3/markdown_1/imgs/img_in_image_box_232_362_1217_927.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2Fe9c93fa5d47002ec782983a8bf4a5055710c9f706d819e9ff1fc7def38033c65" alt="Image" width="68%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_232_362_1217_927.jpg" alt="Image" width="68%" /></div>
 
 
 输入层
@@ -91,39 +91,39 @@ McCulloch-Pitts模型
 
 在精度要求不高的情况下，我们可以采用上述核函数来作为支持向量机的核函数，但是，在某些特殊的情况下，我们为了提高支持向量机的分类精度，我们可以采用将更加高端的核函数与向量机结合来进行数学分类，比如小波核函数。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8d3dd093-8a35-4634-a9e1-4de4538631b3/markdown_2/imgs/img_in_image_box_226_549_1210_949.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F20191971b37f727c504f63dc06ab2ce0b51aa34c1448452a3ba348db588a3da1" alt="Image" width="68%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_226_549_1210_949.jpg" alt="Image" width="68%" /></div>
 
 
 #### 前课回顾——最近邻法
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8d3dd093-8a35-4634-a9e1-4de4538631b3/markdown_3/imgs/img_in_image_box_417_196_1028_758.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Fece7dc047ba8f11acfb8d929da60d7ad5844899ed7f3b900a4ccd0ec5f6774e1" alt="Image" width="42%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_417_196_1028_758.jpg" alt="Image" width="42%" /></div>
 
 
 在二维情况下，最近邻规则算法使得二维空间被分割成了许多Voronoi网格，每一个网格代表的类别就是它所包含的训练样本点所属的类别。
 
 #### 前课回顾——K近邻法
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a4eff1a8-fc8f-4160-a1b7-2d0165887b50/markdown_0/imgs/img_in_image_box_464_216_975_711.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2F0cd4cf45033d0ce993c9fed70051ad06765c0577df9491d13b6191ce4fd9ea72" alt="Image" width="35%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_464_216_975_711.jpg" alt="Image" width="35%" /></div>
 
 
 从样本点x开始生长，不断扩大区域，直到包含进k个训练样本点为止，并且把测试样本点x的类别归为这最近的k个训练样本点中出现频率最大的类别。
 
 #### 前课回顾——决策树
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a4eff1a8-fc8f-4160-a1b7-2d0165887b50/markdown_1/imgs/img_in_image_box_67_186_868_992.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F0d9f75ef824a0834a36f955c486b99d5cfb84f69e92f856b301755d189b9c320" alt="Image" width="55%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_67_186_868_992.jpg" alt="Image" width="55%" /></div>
 
 
 女孩决定是否见一个约会对象的策略，其中绿色节点表示判断条件，橙色节点表示决策结果，箭头表示在一个判断条件在不同情况下的决策路径，图中红色箭头表示了上面例子中女孩的决策过程。
 
 #### 前课回顾——随机森林
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a4eff1a8-fc8f-4160-a1b7-2d0165887b50/markdown_2/imgs/img_in_image_box_90_160_1328_995.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2F8792aadba746a2c0a76bbfbc90cc6e1bd453bfac52a8fbacf55a1a06f3aa3fac" alt="Image" width="85%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_90_160_1328_995.jpg" alt="Image" width="85%" /></div>
 
 
 #### 第7章 特征选择
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e627d79c-2f04-43a1-a45e-0c5652067fac/markdown_0/imgs/img_in_image_box_125_206_1316_553.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A17%3A59Z%2F-1%2F%2Fb18fb384f89af41f66b407006e9963799409a50c5151f104ab1c393ecb961473" alt="Image" width="82%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_125_206_1316_553.jpg" alt="Image" width="82%" /></div>
 
 
 
@@ -145,7 +145,7 @@ McCulloch-Pitts模型
 
 高维原始特征不利于分类器设计：计算量大，冗余，样本分布十分稀疏
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8dd299e0-bda6-4a3f-985b-bfdb2e566bf8/markdown_1/imgs/img_in_image_box_866_336_1429_673.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2F2906f9b66e01d6234b427c1b7eac9799e2e5fd75c7a33974e56fa48c307acd23" alt="Image" width="39%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_866_336_1429_673.jpg" alt="Image" width="39%" /></div>
 
 
 特征空间过大导致计算量大，推广性差
@@ -254,7 +254,7 @@ i 表示点集的序号，一共有  $ N_{i} $ 个点
 
 连线的平均平方和
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e38a0f38-885f-4110-8328-44d2a4bc318f/markdown_3/imgs/img_in_image_box_562_544_653_646.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2Fddc44888ed7fc6dc0a8a32605817e7b6f0c3275c1e65c4ed67a12e7822d32846" alt="Image" width="6%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_562_544_653_646.jpg" alt="Image" width="6%" /></div>
 
 
 类内均方欧氏距离 $ \overline{d}^{2}(\omega_{i})=\frac{1}{N_{i}}\sum_{k=1}^{N_{i}}(\overrightarrow{x}_{k}^{(i)}-\overrightarrow{m}^{(i)})^{\mathrm{T}}(\overrightarrow{x}_{k}^{(i)}-\overrightarrow{m}^{(i)}) $
@@ -309,7 +309,7 @@ i 表示点集的序号，一共有  $ N_{i} $ 个点
 
  $ S_{\omega_i} = \frac{1}{N_i} \sum_{k=1}^{N_i} (\vec{x}_k^{(i)} - \vec{m}^{(i)}) (\vec{x}_k^{(i)} - \vec{m}^{(i)})^{\mathrm{T}} $
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//0bc57506-6d4b-4563-8b3d-13d6d82fd92f/markdown_2/imgs/img_in_image_box_1128_493_1297_666.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Fa536e84e04f9000dfa878669ef2b77a199ffb18511a666292b55734662e25986" alt="Image" width="11%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1128_493_1297_666.jpg" alt="Image" width="11%" /></div>
 
 
 总的类间离差矩阵
@@ -328,7 +328,7 @@ i 表示点集的序号，一共有  $ N_{i} $ 个点
 
  $$ \begin{aligned}S_{W}+S_{B}=&\sum_{i=1}^{c}P_{i}\left\lfloor\frac{1}{N_{i}}\sum_{k=1}^{N_{i}}\Big(\overrightarrow{x}_{k}^{(i)}\overrightarrow{x}_{k}^{(i)\mathrm{T}}-\overrightarrow{x}_{k}^{(i)}\overrightarrow{m}^{(i)\mathrm{T}}-\overrightarrow{m}^{(i)}\overrightarrow{x}_{k}^{(i)\mathrm{T}}+\overrightarrow{m}^{(i)}\overrightarrow{m}^{(i)\mathrm{T}}\Big)\right\rfloor\\+&\sum_{i=1}^{c}P_{i}\Big[\overrightarrow{m}^{(i)}\overrightarrow{m}^{(i)\mathrm{T}}-\overrightarrow{m}^{(i)}\overrightarrow{m}^{\mathrm{T}}-\overrightarrow{m}\overrightarrow{m}^{(i)\mathrm{T}}+\overrightarrow{m}\overrightarrow{m}^{\mathrm{T}}\Big]\end{aligned} $$ 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//0bc57506-6d4b-4563-8b3d-13d6d82fd92f/markdown_3/imgs/img_in_image_box_1306_956_1431_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Fb770b2132dcec51acecdd34340ec863f96c56995fe1dbe81beb2bd0322c439a3" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1306_956_1431_1079.jpg" alt="Image" width="8%" /></div>
 
 
 (八) 多类情况下总的类内、类间及总体离差矩阵（续
@@ -355,7 +355,7 @@ i 表示点集的序号，一共有  $ N_{i} $ 个点
 
  $$ S_{W}+S_{B}=\sum_{i=1}^{c}P_{i}\left[\frac{1}{N_{i}}\sum_{k=1}^{N_{i}}(\vec{x}_{k}^{(i)}-\vec{m})(\vec{x}_{k}^{(i)}-\vec{m})^{\mathrm{T}}\right]=\frac{1}{N}\sum_{l=1}^{N}(\vec{x}_{l}-\vec{m})(\vec{x}_{l}-\vec{m})^{\mathrm{T}}=S_{T} $$ 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3ff71d66-912f-4902-a77c-a67ff46c97f0/markdown_1/imgs/img_in_seal_box_1310_956_1428_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Fa049be6e90c16fcd6f23c77e53b877262acb85d1cf951a06763007852f0b9d37" alt="Image" width="8%" />  <div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3ff71d66-912f-4902-a77c-a67ff46c97f0/markdown_1/imgs/img_in_seal_box_1310_956_1428_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Fa049be6e90c16fcd6f23c77e53b877262acb85d1cf951a06763007852f0b9d37" alt="Image" width="8%" />  生命信息与仪器工程学院 L.I.S.I.E.  </div>   </div>
+<div style="text-align: center;"><img src="assets/img_in_seal_box_1310_956_1428_1079.jpg" alt="Image" width="8%" />  <div style="text-align: center;"><img src="assets/img_in_seal_box_1310_956_1428_1079.jpg" alt="Image" width="8%" />  生命信息与仪器工程学院 L.I.S.I.E.  </div>   </div>
 
 
 # 基于距离的可分性度量
@@ -378,7 +378,7 @@ i 表示点集的序号，一共有  $ N_{i} $ 个点
 
 可以证明  $ J_{1} $、 $ J_{2} $ 和  $ J_{4} $ 在任何非奇异线性变换下是不变的， $ J_{3} $ 与坐标系有关。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3ff71d66-912f-4902-a77c-a67ff46c97f0/markdown_2/imgs/img_in_image_box_1307_956_1429_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A04Z%2F-1%2F%2Fbb0052bb73d3300ff57bfb2654301b37864b5442f3296f617311748c63496411" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1307_956_1429_1079.jpg" alt="Image" width="8%" /></div>
 
 
 ##### 马氏距离
@@ -403,7 +403,7 @@ T = Indicates vector should be transposed
 
 If we calculate Mahalanobis distances for each of these points and shade them according to their distance value, we see clear elliptical patterns emerge:
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//59fef1a3-f59c-4bc3-84f8-d8f91e0892e1/markdown_0/imgs/img_in_chart_box_461_446_979_959.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2Ff5062628daad818c98031a1368419e93b34f61ea70d46a8f96c1c6e9f963c666" alt="Image" width="35%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_461_446_979_959.jpg" alt="Image" width="35%" /></div>
 
 
 ### 7.2.2 基于概率分布的可分性判据
@@ -414,7 +414,7 @@ If we calculate Mahalanobis distances for each of these points and shade them ac
 
 □ 考虑样本在特征空间的分布，用两类概密函数的重叠程度来度量可分性，距离越大越可分。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//59fef1a3-f59c-4bc3-84f8-d8f91e0892e1/markdown_1/imgs/img_in_image_box_168_532_670_945.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F7b9aa70e19a4109fe50913464e70d37cf7a8fd1602dfdd1c8a1aadc642fbb9c8" alt="Image" width="34%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_168_532_670_945.jpg" alt="Image" width="34%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(a)</div> </div>
@@ -422,13 +422,13 @@ If we calculate Mahalanobis distances for each of these points and shade them ac
 
  $$ p(\vec{\pi}|\varpi_{1})=p(\vec{\pi}|\varpi_{2}) $$ 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//59fef1a3-f59c-4bc3-84f8-d8f91e0892e1/markdown_1/imgs/img_in_image_box_869_592_1277_942.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F38031e6e31a9c788421b1632738d496e7502e98a86269a38571266f6a7751d1b" alt="Image" width="28%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_869_592_1277_942.jpg" alt="Image" width="28%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(B)</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//59fef1a3-f59c-4bc3-84f8-d8f91e0892e1/markdown_1/imgs/img_in_image_box_1307_955_1430_1078.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F615694a423048957fc7447ad3e73449fb4a0491f0a2577e6b6a3e5f2c7b7f219" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1307_955_1430_1078.jpg" alt="Image" width="8%" /></div>
 
 
 ##### 基于类的概率密度函数的可分性判据
@@ -559,10 +559,10 @@ An severe outbreak of wheat rust happened in Henan Province, China in 2013
 
 The feasibility of using high-resolution image (ZY-3) to map wheat rust
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//0e4c5b0d-b6b6-4dcf-8933-e20a0842552a/markdown_0/imgs/img_in_image_box_104_390_491_956.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F5c577d5ad6200076e4c74e306e0213dcba578231c8e21829e6fcbd74697e5a19" alt="Image" width="26%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_104_390_491_956.jpg" alt="Image" width="26%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//0e4c5b0d-b6b6-4dcf-8933-e20a0842552a/markdown_0/imgs/img_in_image_box_514_393_1335_1002.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2Fd8be22a820091fa679a712d2971b44c9414cc7035bf4e24473e7434d17ed12e4" alt="Image" width="57%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_514_393_1335_1002.jpg" alt="Image" width="57%" /></div>
 
 
 #### 不同特征选择策略在作物病害监测上的应用
@@ -575,12 +575,12 @@ wrapper feature selection with SVM 93%
 
 wrapper feature selection with RF 92.5%
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//0e4c5b0d-b6b6-4dcf-8933-e20a0842552a/markdown_1/imgs/img_in_image_box_1309_956_1429_1078.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2F7a8f323826335aa210abed1bdaa9aa18f0deda28cdc72aeb1509fb4cc0dbf8bf" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1309_956_1429_1078.jpg" alt="Image" width="8%" /></div>
 
 
 ##### 不同特征选择策略在作物病害监测上的应用
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//0e4c5b0d-b6b6-4dcf-8933-e20a0842552a/markdown_2/imgs/img_in_image_box_57_185_1032_993.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A04Z%2F-1%2F%2Ff1f04f15922a983c5d6105fb0ef9d6ea542540b7b90cae4bb46a9e10e8a7dc41" alt="Image" width="67%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_57_185_1032_993.jpg" alt="Image" width="67%" /></div>
 
 
 ## 7.3 特征选择的最优算法
@@ -637,13 +637,13 @@ wrapper feature selection with RF 92.5%
 
 □ 分支限界法则以广度优先或以最小耗费优先的方式搜索解空间树。分支限界法的搜索策略是：在扩展结点处，首先生成其所有的儿子结点（分支），然后再从当前的结点表中选择下一个扩展结点。为了有效地选择下一扩展结点，加速搜索进程，在每一结点处，计算一个函数值（限界），并根据函数值，从当前结点表中选择一个最有利的结点作为扩展结点，使搜索朝着解空间树上有最优解的分支推进，以便尽快地找出一个最优解。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9cee4028-6357-4e5c-b64e-c369471ead6d/markdown_3/imgs/img_in_image_box_114_292_783_758.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A05Z%2F-1%2F%2F133485f798c840afee1cf2ad8fb3cb7a3b1e6c5745f0895c65a759471d0bf0a7" alt="Image" width="46%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_114_292_783_758.jpg" alt="Image" width="46%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(a)</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9cee4028-6357-4e5c-b64e-c369471ead6d/markdown_3/imgs/img_in_image_box_812_296_1321_752.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A05Z%2F-1%2F%2Fe8ab330e7f3a2efc692a44ebe7ac5118383bb767d65d528515c28a54c3cf5fa8" alt="Image" width="35%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_812_296_1321_752.jpg" alt="Image" width="35%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(b)</div> </div>
@@ -744,7 +744,7 @@ wrapper feature selection with RF 92.5%
 
 克服初值依赖性。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//c1aa9c9e-7f46-4727-952a-12eef984c33a/markdown_2/imgs/img_in_image_box_944_525_1221_937.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2F718a46747c94ec49a8f46a3ca12d379c89a5bc34966b7ed0aca6c48de2ef61a0" alt="Image" width="19%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_944_525_1221_937.jpg" alt="Image" width="19%" /></div>
 
 
 Nick Metropolis
@@ -759,7 +759,7 @@ Nick Metropolis
 
 退火是指将固体加热到足够高的温度，使分子呈随机排列状态，然后逐步降温使之冷却，最后分子以低能状态排列，固体达到某种稳定状态。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//09d7efc4-4101-44f5-a137-cd0e443877d7/markdown_0/imgs/img_in_image_box_764_586_1318_975.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A00Z%2F-1%2F%2F9c86952e28e9637136203f116379dd8a95a5187bd6f9844b3d4c24a9d0473aa8" alt="Image" width="38%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_764_586_1318_975.jpg" alt="Image" width="38%" /></div>
 
 
 ##### 模拟退火
@@ -788,7 +788,7 @@ Nick Metropolis
 
 缓缓降温，使得物体分子在每一温度时，能够有足够时间找到安顿位置，则逐渐地，到最后可得到最低能态，系统最稳定。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//09d7efc4-4101-44f5-a137-cd0e443877d7/markdown_3/imgs/img_in_image_box_363_737_1275_981.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2F0f12003d8f731a2d7b29c205b75ed6ff47bba54d2b7e8ce880f97d6089775066" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_363_737_1275_981.jpg" alt="Image" width="63%" /></div>
 
 
 ##### 模拟退火
@@ -857,10 +857,10 @@ Metropolis准则（1953）——以概率接受新状态
 
 在高温下，可接受与当前状态能量差较大的新状态；在低温下，只接受与当前状态能量差较小的新状态。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4628091f-9125-463a-b483-c9e285a0c7d3/markdown_1/imgs/img_in_image_box_744_685_1357_971.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2Fa9f663b1078f46e68174813ae71dd7aef41a7c56bdef6fed9f9644d3f4bb213a" alt="Image" width="42%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_744_685_1357_971.jpg" alt="Image" width="42%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4628091f-9125-463a-b483-c9e285a0c7d3/markdown_1/imgs/img_in_image_box_1307_947_1430_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2F13f2b00c3380e1327c05ea6f1e6abfdbdd50c79fb1137604b1c2dd2f76ec7752" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1307_947_1430_1079.jpg" alt="Image" width="8%" /></div>
 
 
 #### 爬山算法
@@ -871,14 +871,14 @@ Metropolis准则（1953）——以概率接受新状态
 
 假设C点为当前解，爬山算法搜索到A点这个局部最优解就会停止搜索，因为在A点无论向那个方向小幅度移动都不能得到更优的解
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4628091f-9125-463a-b483-c9e285a0c7d3/markdown_2/imgs/img_in_image_box_395_816_1016_952.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Fc615329cc3200a4ef6eafbe61269c65157eee923204cbfa9315fd842de826baf" alt="Image" width="43%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_395_816_1016_952.jpg" alt="Image" width="43%" /></div>
 
 
 ##### 模拟退火
 
 要从局部最优逃出，必须上行（up-step）
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4628091f-9125-463a-b483-c9e285a0c7d3/markdown_3/imgs/img_in_image_box_97_265_1431_633.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2F3018d6a6dc42923ec714e8b361ef717d2451db39a50c03ff6ab3156401a1352b" alt="Image" width="92%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_97_265_1431_633.jpg" alt="Image" width="92%" /></div>
 
 
 SA的上行机制：  $ \exp(\Delta/T) > \text{random}[0,1] $
@@ -893,7 +893,7 @@ T为温度，即SA的控制参数
 
 □ 模拟退火算法是一种随机算法，并不一定能找到全局的最优解，可以比较快的找到问题的近似最优解。如果参数设置得当，模拟退火算法搜索效率比穷举法要高。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//c039d364-5b74-448e-b9bf-399b78d2e5ef/markdown_0/imgs/img_in_image_box_1307_957_1428_1079.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2Ff8b90c6155895619623108b8a6787711950baa22bed21293c656272574b38a39" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1307_957_1428_1079.jpg" alt="Image" width="8%" /></div>
 
 
 ##### 模拟退火
@@ -1187,27 +1187,27 @@ N:某一温度下达到平衡的搜索次数
 
 ##### TSP寻优过程
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//69d6b321-63b7-487b-b55d-e7f29ad6e6ad/markdown_3/imgs/img_in_chart_box_406_261_1111_848.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2Fc2e11fa6fd0e66d570a44df17e48e927310c181ccc595fe4516d931098c0e851" alt="Image" width="48%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_406_261_1111_848.jpg" alt="Image" width="48%" /></div>
 
 
 ##### TSP寻优过程
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6f7c8759-d591-433e-a903-c409a2c7dcbe/markdown_0/imgs/img_in_chart_box_406_262_1111_848.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A01Z%2F-1%2F%2Fb94256fe52c8738d5d68b91c58c5f748b51a4b6e0e784514f725a39042cd958e" alt="Image" width="48%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_406_262_1111_848.jpg" alt="Image" width="48%" /></div>
 
 
 ##### TSP寻优过程
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6f7c8759-d591-433e-a903-c409a2c7dcbe/markdown_1/imgs/img_in_chart_box_416_262_1118_849.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2Fe428fdf92ccd403852ad27b39c6c9f6397a19b136e899f26db9d9112b6444c3f" alt="Image" width="48%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_416_262_1118_849.jpg" alt="Image" width="48%" /></div>
 
 
 ##### TSP寻优过程
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6f7c8759-d591-433e-a903-c409a2c7dcbe/markdown_2/imgs/img_in_chart_box_406_262_1110_848.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A04Z%2F-1%2F%2Fa7d364ba66233f338badc62c79aaa7b896365e3dd975d935e05b9b7fde1ed7c0" alt="Image" width="48%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_406_262_1110_848.jpg" alt="Image" width="48%" /></div>
 
 
 ##### TSP寻优过程
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//6f7c8759-d591-433e-a903-c409a2c7dcbe/markdown_3/imgs/img_in_chart_box_406_262_1110_848.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A06Z%2F-1%2F%2F5609e89b3aeefc3488772126c0e0cecc899dead50549f18bd73db3f2174a38c3" alt="Image" width="48%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_406_262_1110_848.jpg" alt="Image" width="48%" /></div>
 
 
 ### 遗传算法
@@ -1256,7 +1256,7 @@ Solution：编码 有3个决策变量共有 $ 2^{3}=8 $种方案
 
  $ a_{3} $ 表示速度 0——慢 1——快
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b58b6f31-cfe6-4481-85ad-682d9ceffdc8/markdown_0/imgs/img_in_image_box_1273_956_1430_1078.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2Ff00939ad3395abec833aed6edc36990ffebbfce444d4d513ec416cf5d1cd5ea5" alt="Image" width="10%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1273_956_1430_1078.jpg" alt="Image" width="10%" /></div>
 
 
 ##### 遗传算法
@@ -1283,10 +1283,10 @@ Solution：编码 有3个决策变量共有 $ 2^{3}=8 $种方案
 
 由选择算子产生的新群体（可能有重复）称为种群，其规模仍为N.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b58b6f31-cfe6-4481-85ad-682d9ceffdc8/markdown_2/imgs/img_in_image_box_1105_693_1417_1061.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2Fc2fae760b23c6381cf3a27ff5518f09ef10d01dd7011ea2c962035bb655defdb" alt="Image" width="21%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1105_693_1417_1061.jpg" alt="Image" width="21%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b58b6f31-cfe6-4481-85ad-682d9ceffdc8/markdown_2/imgs/img_in_image_box_759_970_1428_1075.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2Fb2b7242d4fcd8474bb6324ce18bc3088a6b24724da922eaa9ff67c621c7bbffe" alt="Image" width="46%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_759_970_1428_1075.jpg" alt="Image" width="46%" /></div>
 
 
 ##### 遗传算法
@@ -1303,7 +1303,7 @@ Solution：编码 有3个决策变量共有 $ 2^{3}=8 $种方案
 
 ##### 交叉（杂交）算子
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//624cd3b0-0c74-44e5-8e70-5474710a6d1a/markdown_0/imgs/img_in_image_box_87_264_976_438.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A02Z%2F-1%2F%2F2132501b34b9215ac63e9ec4e957e3aaec163e172c146c6489f8187a034a7659" alt="Image" width="61%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_87_264_976_438.jpg" alt="Image" width="61%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">总和 17 最小值 2 平均值 4.25 最大值 7</div> </div>
@@ -1319,7 +1319,7 @@ Solution：编码 有3个决策变量共有 $ 2^{3}=8 $种方案
 
 随机选择  $ N \times P_{c} $ 个个体进行交叉，其余不变.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//624cd3b0-0c74-44e5-8e70-5474710a6d1a/markdown_0/imgs/img_in_image_box_1304_955_1428_1078.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-02T13%3A18%3A03Z%2F-1%2F%2F0d5dc9040fb3c4aa5925151fbcc53c3a512efad72846d9248ea631a3734f837f" alt="Image" width="8%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_1304_955_1428_1078.jpg" alt="Image" width="8%" /></div>
 
 
 ##### 遗传算法

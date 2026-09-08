@@ -16,10 +16,10 @@ Yong Guo $^{1}$ Peilin Zhao $^{3}$ Peng Wang $^{5}$ Mingkui Tan $^{16}$
 
 在实际应用中，数据通常以增长的方式到来。例如，智能边缘设备（如数十亿部手机和监控摄像头）和医学成像设备每天都在持续收集新数据（Grantz et al., 2020; Liang et al., 2019）。具体来说，新收集的数据有以下两种类型：1）数据量增加：新数据的标签已在之前的数据中出现，增长不改变数据的标签空间；2）类别数增加：新到达的数据具有与之前数据不同的标签，因此数据的标签空间在增长。在这两种场景下，数据分布都可能动态变化。由于最优网络架构在不同的数据分布下可能不同（Zoph & Le, 2017），在将DNN应用于增长数据时，可以（也应该）动态调整架构以获得更好的性能（见图1）。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4ab30407-501c-46a3-af34-55a63f92d4b7/markdown_0/imgs/img_in_chart_box_627_372_837_539.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A45Z%2F-1%2F%2Fb6a765ab290d885937ccf94a166ea76a347cdb037c1cfc11c2ee54265ded7999" alt="Image" width="17%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_627_372_837_539.jpg" alt="Image" width="17%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4ab30407-501c-46a3-af34-55a63f92d4b7/markdown_0/imgs/img_in_image_box_874_374_1053_534.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A45Z%2F-1%2F%2Fe232c61f5d1409d13feb89cf1bc7f013001454018e3b902ba2d7773b64876197" alt="Image" width="14%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_874_374_1053_534.jpg" alt="Image" width="14%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图1. 架构自适应的动机。左图：在不同大小CIFAR100子集上训练的ResNet性能比较。最优架构在不同子集大小之间有所不同。右图：由于数据以增长方式到来且数据分布可能动态变化，应根据数据分布的偏移来调整模型架构。</div> </div>
@@ -47,7 +47,7 @@ Yong Guo $^{1}$ Peilin Zhao $^{3}$ Peng Wang $^{5}$ Mingkui Tan $^{16}$
 
 渐进式神经网络。为了提高模型容量，CL方法（Rusu et al., 2016; Xu & Zhu, 2018; Rosenfeld & Tsotsos, 2020）提出动态扩展其网络架构。这些方法固定之前任务的层并为新任务生长分支。此外，DEN（Yoon et al., 2018）首先为新任务将架构扩展到较大尺寸，然后使用剪枝方法移除不重要的权重。最近，Gao et al., 2020和Li et al., 2019结合NAS技术为每个任务设计架构以实现CL的目标。然而，这些方法忽略了当前数据与之前数据之间的分布差异，因此难以确定调整后架构的合适模型大小。在本工作中，我们基于之前的架构和增长数据的特性来动态调整架构。此外，除了扩展之外，我们的调整还可能移除冗余层或添加新层。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4ab30407-501c-46a3-af34-55a63f92d4b7/markdown_2/imgs/img_in_image_box_114_139_1074_364.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A48Z%2F-1%2F%2Fbfc16245636cead34fad311557f2f3ddbd3862e325387d47f20acf24e670ad67" alt="Image" width="78%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_114_139_1074_364.jpg" alt="Image" width="78%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图2. 我们提出的AdaXpert示意图。(a) 在时间步 $t$，给定新输入数据 $\mathcal{D}_t^{new}$ 和之前的模型 $\alpha_{t-1}$，我们首先判断是否需要调整架构。如果需要，将 $\alpha_{t-1}$ 输入NAA模块进行架构自适应。(b) 我们的控制器以 $\alpha_{t-1}$ 的架构以及当前数据 $\mathcal{D}_{t-1} \cup \mathcal{D}_t^{new}$ 与之前数据 $\mathcal{D}_{t-1}$ 之间的分布距离作为输入，输出调整后的架构。控制器随后获得一个奖励，因此可以通过策略梯度方法进行训练。最后，我们采用训练好的NAA生成最终调整后的架构 $\alpha_t$。</div> </div>
@@ -238,7 +238,7 @@ NAA的训练细节总结在算法2中。
 
 与从头搜索的比较。为了进一步验证AdaXpert的优越性，我们还将其与"每次数据增长从头搜索（即NAS-for-Each，NFE）"进行比较。从表4可以看出，我们的AdaXpert实现了更好的效率。在100%数据快照处，AdaXpert获得的架构性能优于NFE，这主要得益于以下两个方面：1）AdaXpert利用之前学到的知识来指导当前的学习。GAN中类似的思想（如Progressive GAN（Karras et al., 2018））和NAS中（如PNAS（Karras et al., 2018）和CNAS（Guo et al., 2020b））已被证明非常有效。2）AdaXpert考虑了当前数据与之前数据之间的差异程度，从而自适应地控制调整后模型的计算成本。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//54d4b105-ae3b-41ac-a9fc-7a76ee6347b5/markdown_2/imgs/img_in_chart_box_614_516_1074_856.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A46Z%2F-1%2F%2F0289cdf3b6a3cfbed329242bfe12448276e786a80230eab276a6eda876d75edb" alt="Image" width="37%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_614_516_1074_856.jpg" alt="Image" width="37%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图3. AdaXpert与最先进NAS方法在ImageNet上的比较。'AdaXpert-#'表示在ImageNet-#上搜索到的架构。</div> </div>
@@ -255,7 +255,7 @@ NAA的训练细节总结在算法2中。
 
 <table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan="2">架构</td><td colspan="2">测试准确率 (%)</td><td rowspan="2">MAdds (M)</td><td rowspan="2">搜索时间 (GPU天)</td><td rowspan="2">搜索方法</td><td rowspan="2">搜索空间</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>Top-1</td><td style='text-align: center; word-wrap: break-word;'>Top-5</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>ResNet-18 (He et al., 2016)</td><td style='text-align: center; word-wrap: break-word;'>69.8</td><td style='text-align: center; word-wrap: break-word;'>89.1</td><td style='text-align: center; word-wrap: break-word;'>1,814</td><td style='text-align: center; word-wrap: break-word;'>-</td><td rowspan="3">手动设计</td><td rowspan="3">-</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>MobileNetV2 $1.4\times$ (Sandler et al., 2018)</td><td style='text-align: center; word-wrap: break-word;'>74.7</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>585</td><td style='text-align: center; word-wrap: break-word;'>-</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>ShuffleNetV2 $2\times$ (Ma et al., 2018)</td><td style='text-align: center; word-wrap: break-word;'>73.7</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>524</td><td style='text-align: center; word-wrap: break-word;'>-</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>NASNet-A (Zoph et al., 2018)</td><td style='text-align: center; word-wrap: break-word;'>74.0</td><td style='text-align: center; word-wrap: break-word;'>91.6</td><td style='text-align: center; word-wrap: break-word;'>564</td><td style='text-align: center; word-wrap: break-word;'>1,800</td><td rowspan="2">基于RL的进化</td><td rowspan="2">NASNet</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>AmoebaNet-A (Real et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>74.5</td><td style='text-align: center; word-wrap: break-word;'>92.0</td><td style='text-align: center; word-wrap: break-word;'>555</td><td style='text-align: center; word-wrap: break-word;'>3,150</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>DARTS (Liu et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>73.1</td><td style='text-align: center; word-wrap: break-word;'>91.0</td><td style='text-align: center; word-wrap: break-word;'>595</td><td style='text-align: center; word-wrap: break-word;'>4</td><td rowspan="2">基于梯度</td><td rowspan="2">DARTS</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>P-DARTS (Chen et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>75.6</td><td style='text-align: center; word-wrap: break-word;'>92.6</td><td style='text-align: center; word-wrap: break-word;'>577</td><td style='text-align: center; word-wrap: break-word;'>0.3</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>PC-DARTS (Xu et al., 2020)</td><td style='text-align: center; word-wrap: break-word;'>75.8</td><td style='text-align: center; word-wrap: break-word;'>92.7</td><td style='text-align: center; word-wrap: break-word;'>597</td><td style='text-align: center; word-wrap: break-word;'>3.8</td><td style='text-align: center; word-wrap: break-word;'>基于梯度</td><td style='text-align: center; word-wrap: break-word;'>DARTS</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>MobileNetV3-Large (Howard et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>75.2</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>219</td><td style='text-align: center; word-wrap: break-word;'>-</td><td rowspan="2">基于RL/梯度</td><td rowspan="4">Mobile Block</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>FBNet-C (Wu et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>74.9</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>375</td><td style='text-align: center; word-wrap: break-word;'>9</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>MnasNet-A3 (Tan et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>76.7</td><td style='text-align: center; word-wrap: break-word;'>93.3</td><td style='text-align: center; word-wrap: break-word;'>403</td><td style='text-align: center; word-wrap: break-word;'>~3,791</td><td rowspan="2">基于RL/梯度</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>ProxylessNAS (Cai et al., 2019)</td><td style='text-align: center; word-wrap: break-word;'>75.1</td><td style='text-align: center; word-wrap: break-word;'>92.3</td><td style='text-align: center; word-wrap: break-word;'>465</td><td style='text-align: center; word-wrap: break-word;'>8.3</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>SPOS (Guo et al., 2020c)</td><td style='text-align: center; word-wrap: break-word;'>74.4</td><td style='text-align: center; word-wrap: break-word;'>91.8</td><td style='text-align: center; word-wrap: break-word;'>323</td><td style='text-align: center; word-wrap: break-word;'>12</td><td style='text-align: center; word-wrap: break-word;'>进化</td><td rowspan="3">Mobile Block</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>OFA-GPU (Cai et al., 2020)</td><td style='text-align: center; word-wrap: break-word;'>76.4</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>397</td><td style='text-align: center; word-wrap: break-word;'>51.7</td><td style='text-align: center; word-wrap: break-word;'>进化</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>OFA-CPU (Cai et al., 2020)</td><td style='text-align: center; word-wrap: break-word;'>78.7</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>356</td><td style='text-align: center; word-wrap: break-word;'>51.7</td><td style='text-align: center; word-wrap: break-word;'>进化</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>AtomNAS (Mei et al., 2020)</td><td style='text-align: center; word-wrap: break-word;'>75.9</td><td style='text-align: center; word-wrap: break-word;'>92.0</td><td style='text-align: center; word-wrap: break-word;'>367</td><td style='text-align: center; word-wrap: break-word;'>-</td><td style='text-align: center; word-wrap: break-word;'>基于梯度</td><td rowspan="3">Mobile Block</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>DNA-c (Li et al., 2020)</td><td style='text-align: center; word-wrap: break-word;'>77.8</td><td style='text-align: center; word-wrap: break-word;'>93.7</td><td style='text-align: center; word-wrap: break-word;'>466</td><td style='text-align: center; word-wrap: break-word;'>25</td><td style='text-align: center; word-wrap: break-word;'>贪心搜索</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>GreedyNAS-A (You et al., 2020)</td><td style='text-align: center; word-wrap: break-word;'>77.1</td><td style='text-align: center; word-wrap: break-word;'>93.3</td><td style='text-align: center; word-wrap: break-word;'>366</td><td style='text-align: center; word-wrap: break-word;'>8</td><td style='text-align: center; word-wrap: break-word;'>贪心搜索</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>AdaXpert-100 (ours)</td><td style='text-align: center; word-wrap: break-word;'>76.1</td><td style='text-align: center; word-wrap: break-word;'>92.7</td><td style='text-align: center; word-wrap: break-word;'>257</td><td style='text-align: center; word-wrap: break-word;'>2.5</td><td rowspan="3">基于RL</td><td rowspan="3">Mobile Block</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>AdaXpert-200 (ours)</td><td style='text-align: center; word-wrap: break-word;'>77.1</td><td style='text-align: center; word-wrap: break-word;'>93.3</td><td style='text-align: center; word-wrap: break-word;'>293</td><td style='text-align: center; word-wrap: break-word;'>3.5</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>AdaXpert-1000 (ours)</td><td style='text-align: center; word-wrap: break-word;'>78.1</td><td style='text-align: center; word-wrap: break-word;'>93.7</td><td style='text-align: center; word-wrap: break-word;'>395</td><td style='text-align: center; word-wrap: break-word;'>7</td></tr></table>
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//54d4b105-ae3b-41ac-a9fc-7a76ee6347b5/markdown_3/imgs/img_in_image_box_113_727_580_1022.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A47Z%2F-1%2F%2Fd6011234d425a70d8a48fd4e405093e7012756b883cf9b9dcfd14a04f04e69da" alt="Image" width="100%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_113_727_580_1022.jpg" alt="Image" width="100%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图4. AdaXpert调整后架构的示意图。K和E分别表示卷积核大小和扩展比。</div> </div>
@@ -437,10 +437,10 @@ Yong Guo $^{1}$ Peilin Zhao $^{3}$ Peng Wang $^{5}$ Mingkui Tan $^{16}$
 
 值得一提的是，对于标签空间增加的场景II，模型性能必然会下降。但在这种情况下，用户仍然需要这个自适应条件来度量性能下降是否超过给定阈值 $\epsilon$（公式4中），然后决定是否进行调整。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_0/imgs/img_in_chart_box_305_1113_584_1330.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A44Z%2F-1%2F%2F0f290b1ff6e6ab3b39cb994ac617b914b20cea1437de64f939d922b8d46a57b3" alt="Image" width="22%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_305_1113_584_1330.jpg" alt="Image" width="22%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_0/imgs/img_in_chart_box_603_1117_881_1330.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A44Z%2F-1%2F%2F07ccdcd91f1e948e302cdd36eb3a7cc4c3ffecf229e4acd50297fa84cbd0092f" alt="Image" width="22%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_603_1117_881_1330.jpg" alt="Image" width="22%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图I. 不同增长数据的准确率差异 $H_{t}$（公式(4)中）示意图。左图和右图分别表示数据量增加和类别数增加。</div> </div>
@@ -462,10 +462,10 @@ JS散度（Fuglede & Topsoe, 2004）计算如下：
 
 WD和JS的比较。如图II所示，WD和JS都能够识别当前数据与之前数据之间的差异。一般来说，当前数据与之前数据的差异越大，WD和JS就越大。对于标签空间增长的场景II，WD表现出比JS更强的区分能力（见图II（右图））。具体来说，ImageNet-20和ImageNet-{100, 200}之间的JS接近1，因此无法很好地识别它们之间的差异。相比之下，WD仍然能够识别ImageNet-100和ImageNet-200之间的差异。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_1/imgs/img_in_chart_box_257_994_593_1223.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A46Z%2F-1%2F%2Fe47d6a969b62184fec5bb256785f6c0009b637d4fb25c2fbf77a61bcccf543e6" alt="Image" width="27%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_257_994_593_1223.jpg" alt="Image" width="27%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_1/imgs/img_in_chart_box_613_996_952_1222.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A46Z%2F-1%2F%2F581de7caac35a79ac16032dcd9863344f08ce6a930ab4ccc65f4c53e506bf4bf" alt="Image" width="27%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_613_996_952_1222.jpg" alt="Image" width="27%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图II. WD和JS散度的比较。</div> </div>
@@ -482,22 +482,22 @@ Wasserstein距离在AdaXpert中的有效性。在我们的方法中，我们根�
 
 高斯假设的讨论。在本文中，我们通过假设当前数据和之前的数据来自两个多元高斯分布来计算它们之间的WD。这里，我们从经验上证明这一假设的合理性。基于在ImageNet-20上训练好的AdaXpert-20，我们计算ImageNet-40的样本矩阵（如第3.2节所述），并随机采样6个维度来可视化其统计直方图。如图III所示，每个维度的样本特征近似满足高斯分布。为了实现更精确的WD计算，也可以使用第3.2节中描述的非参数估计方法（Sriperumbudur et al., 2010）。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_2/imgs/img_in_chart_box_166_598_460_792.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A48Z%2F-1%2F%2F9f64a66c4e57ede60281dc25f8a562c9e410e15098c9ab56695d19fef1aaf5f2" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_166_598_460_792.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_2/imgs/img_in_chart_box_472_599_769_791.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A48Z%2F-1%2F%2F263f187f7c7e38f2378ff5bd98db10f5224fbcca777298a199133869e8d184c1" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_472_599_769_791.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_2/imgs/img_in_chart_box_781_598_1075_792.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A48Z%2F-1%2F%2Fe158fc6d93d93b15e68d36ba8def7fee225af38febb0cf71a62bd3c8a075281f" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_781_598_1075_792.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_2/imgs/img_in_chart_box_165_799_460_992.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A49Z%2F-1%2F%2Fd66350af93eb062621bd2c7db50f30d9c1cef5cb7c283b24f26bc74e971de914" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_165_799_460_992.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_2/imgs/img_in_chart_box_471_800_769_992.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A49Z%2F-1%2F%2Fa55b3b3aa730c4076d3f64c2d9242344d74033ecaa86feffc295a01669c465d9" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_471_800_769_992.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_2/imgs/img_in_chart_box_783_801_1071_992.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A49Z%2F-1%2F%2F9158ea416f0354977369b3498fc6ae788f190dc78b1996b9f19f0a5268e39859" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_783_801_1071_992.jpg" alt="Image" width="23%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图III. 在6个随机采样维度上数据矩阵的统计直方图。</div> </div>
@@ -509,10 +509,10 @@ Wasserstein距离在AdaXpert中的有效性。在我们的方法中，我们根�
 
 从结果来看，随着 $\lambda$ 的增加，我们的AdaXpert倾向于找到MAdds更少的架构。然而，搜索准确率（即验证准确率）在 $\lambda = 2.5e^{-4}$ 时达到最优。与 $\lambda = 2e^{-4}$ 相比，$\lambda = 2.5e^{-4}$ 在MAdds更少的情况下实现了更好的搜索性能。这个结果进一步证明，在特定数据集上，小模型能够比大模型取得更好的准确率。从这个意义上说，可以设计性能良好的架构，同时尽可能减少模型的MAdds。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_3/imgs/img_in_chart_box_291_136_586_367.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A51Z%2F-1%2F%2Fd7b03832b3190491395b2bbef35190dd01f51a409643ba62c688e4050f760e56" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_291_136_586_367.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a3a8274-6944-483e-be8a-40b63ca9fd14/markdown_3/imgs/img_in_chart_box_604_134_908_370.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-11T08%3A45%3A51Z%2F-1%2F%2Fe0fc4f016a4dd677bc203411b9ff3259bd005879b061ebaef9c252ba75f52c8f" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_604_134_908_370.jpg" alt="Image" width="24%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图IV. 不同权衡参数 $\lambda$ 下AdaXpert的训练曲线。</div> </div>

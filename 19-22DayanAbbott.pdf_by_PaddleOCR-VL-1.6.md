@@ -26,7 +26,7 @@ If a neuron is depolarized sufficiently to raise the membrane potential above a 
 如果神经元被充分去极化，使膜电位升高至超过阈值水平，就会启动一个正反馈过程，神经元随即产生**动作电位（action potential）**。动作电位是跨细胞膜电位约100 mV的波动，持续约1毫秒（图1.2A）。动作电位的产生还取决于细胞近期的放电历史。在动作电位发放后的最初几毫秒内，几乎不可能引发另一个锋电位（spike），这称为**绝对不应期（absolute refractory period）**。在随后更长的一段时间内，即**相对不应期（relative refractory period）**，可在一次锋电位后持续长达数十毫秒，此时诱发动作电位变得更加困难。
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a1863c0-ee37-43ec-bcdd-3f788557224f/markdown_2/imgs/img_in_image_box_302_244_848_859.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-11T14%3A02%3A29Z%2F-1%2F%2F6e9e0565c3fd4f1b2c260fb4e09d59745615df9551808f279a6f1e8c52082979" alt="Image" width="45%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_302_244_848_859.jpg" alt="Image" width="45%" /></div>
 
 
 
@@ -42,7 +42,7 @@ synapse
 <div style="text-align: center;"><div style="text-align: center;">A</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a1863c0-ee37-43ec-bcdd-3f788557224f/markdown_3/imgs/img_in_image_box_285_212_534_568.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-11T14%3A02%3A30Z%2F-1%2F%2F9c9038c6e58bb9ae74e64262c9e4c98c7741c17ad7a1061164e17e8a5e851021" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_285_212_534_568.jpg" alt="Image" width="20%" /></div>
 
 
 sharp and patch
@@ -51,7 +51,7 @@ electrodes
 <div style="text-align: center;"><div style="text-align: center;">B</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9a1863c0-ee37-43ec-bcdd-3f788557224f/markdown_3/imgs/img_in_image_box_539_214_843_566.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-11T14%3A02%3A30Z%2F-1%2F%2F3972efb5978a0864d4f690727b88a79aeef1f3663fc76eefa31daa6edd4622cf" alt="Image" width="25%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_539_214_843_566.jpg" alt="Image" width="25%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 1.2 (A) An action potential recorded intracellularly from a cultured rat neocortical pyramidal cell. (B) Diagram of a synapse. The axon terminal or bouton is at the end of the axonal branch seen entering from the top of the figure. It is filled with synaptic vesicles containing the neurotransmitter that is released when an action potential arrives from the presynaptic neuron. Transmitter crosses the synaptic cleft and binds to receptors on the dendritic spine, a process roughly 1  $ \mu $m long that extends from the dendrite of the postsynaptic neuron. Excitatory synapses onto cortical pyramidal cells form on dendritic spines as shown here. Other synapses form directly on the dendrites, axon, or soma of the postsynaptic neuron. (A recorded by L. Rutherford in the laboratory of G. Turrigiano; B adapted from Kandel et al., 1991.)</div> </div>

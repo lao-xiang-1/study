@@ -26,7 +26,7 @@ Scott E. Fahlman 与 Christian Lebiere
 
 级联相关学习算法正是为了尝试解决这一问题而开发的。在我们所考察的问题中，它的学习速度远快于反向传播，同时还解决了其他一些问题。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//902c6735-8d56-4f1d-9753-9890197b2bf8/markdown_1/imgs/img_in_image_box_167_126_997_540.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-01T10%3A56%3A49Z%2F-1%2F%2F68e6de92b54c9089bb5fb720735fe2c7d98bc2f62f645d1071675bbeccfef80e" alt="Image" width="67%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_167_126_997_540.jpg" alt="Image" width="67%" /></div>
 
 <div style="text-align: center;"><div style="text-align: center;">图 1：级联架构（Cascade architecture），在已添加两个隐层单元之后的状态。垂直线表示对所有输入激活值求和。方框标记的连接为冻结（frozen）连接，X 标记的连接为反复训练的连接。</div> </div>
 
@@ -82,7 +82,7 @@ $$ \partial S/\partial w_{i}=\sum_{p,o}\sigma_{o}(E_{p,o}-\overline{{E_{o}}})f_{
 
 关于该算法实现的最后一点说明：当输出层的权重被训练时，活跃网络中的其他权重是被冻结的。当候选权重被训练时，活跃网络中的任何权重都不会改变。在内存充足的机器上，可以记录整个 epoch 的单元值和输出误差，然后在训练期间反复使用这些缓存值，而不是为每个训练样本反复重新计算。当活跃网络变得很大时，这可以带来巨大的速度提升。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b717ce63-2445-4ef0-961c-b0c1bb662d2d/markdown_0/imgs/img_in_image_box_243_117_1058_479.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-01T10%3A56%3A48Z%2F-1%2F%2F5ac1821cec2d7f35081526149877092da9e05a8710f95c2787229e11a9fb5c29" alt="Image" width="66%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_243_117_1058_479.jpg" alt="Image" width="66%" /></div>
 
 <div style="text-align: center;"><div style="text-align: center;">图 2：双螺旋问题（two-spirals problem）的训练点，以及使用级联相关训练的一个网络的输出模式。</div> </div>
 

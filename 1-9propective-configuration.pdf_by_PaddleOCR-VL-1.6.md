@@ -35,7 +35,7 @@ It is useful to highlight that target alignment is affected little by the learni
 <div style="text-align: center;"><div style="text-align: center;">a</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_96_113_508_336.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2F861700c52a9e512f2629e21ccd27ee33a57be47f3a8d70b0aacb40db0c5372e4" alt="Image" width="70%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_96_113_508_336.jpg" alt="Image" width="70%" /></div>
 
 
 | 元素         | 含义                                   |
@@ -47,22 +47,22 @@ It is useful to highlight that target alignment is affected little by the learni
 
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_523_107_776_336.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2Fa7e93a97b8d8de41e82d7a00748baec0cfe62b90b7a1c11a918257f6275abd0f" alt="Image" width="21%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_523_107_776_336.jpg" alt="Image" width="21%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_801_104_1117_332.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2Fc4dbe4c228bb15d533c7dd76060cbfac5e70fa809f2299a8029acb9ab3007a85" alt="Image" width="26%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_801_104_1117_332.jpg" alt="Image" width="26%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">e</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_81_358_428_575.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2Ff5deef1e0849e30d0675be67aa984cbb7fdb44699da3fa8168528b9bcab7b9fa" alt="Image" width="29%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_81_358_428_575.jpg" alt="Image" width="29%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">f</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_446_360_671_575.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2F891849703774f529322aab669e1cf2924b38ff7dbca035fab9c62434470417cd" alt="Image" width="18%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_446_360_671_575.jpg" alt="Image" width="18%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">h</div> </div>
@@ -74,10 +74,10 @@ It is useful to highlight that target alignment is affected little by the learni
 <div style="text-align: center;"><div style="text-align: center;">Fig. 3 | Learning with prospective configuration changes the activity of output neurons in a direction more aligned toward the target. a, Simulation of the network from Fig. 1 showing changes in the correct and incorrect output neurons during training ('Iteration') trained with both learning rules. Here, learning with prospective configuration (purple solid vector) aligns better with the target (red vector) than learning with backpropagation (purple dashed vector). b, Interference can be quantified by 'target alignment', the cosine similarity of the direction of the target (red vector) and the direction of learning (purple vector). c, Higher target alignment indicates less interference and vice versa. d, The same experiment as in a repeated with a learning rate ranging from 0.005 to 0.5 represented by the size of the markers, where it is shown that the choice of learning rate changes the trajectories for both methods slightly, but the conclusion holds irrespective of the learning rate. e, Target alignment of randomly generated networks trained with both learning rules as a function</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_694_357_907_573.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2F7628ed4ac9992086855ac34d81788975511328707ba69e5a5a3e04e91e3e0844" alt="Image" width="17%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_694_357_907_573.jpg" alt="Image" width="17%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_0/imgs/img_in_chart_box_918_365_1121_575.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2F1aa61dd0aff760c3410ec30c3a8677b4092f07b11f503bd3767d404b3dfc42d4" alt="Image" width="17%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_918_365_1121_575.jpg" alt="Image" width="17%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">of depth of the network. Each symbol shows target alignment resulting from training on a single randomly generated pattern. f, Test error during training on the FashionMNIST $^{60}$ dataset containing images of clothing belonging to different categories for both learning rules with a deep neural network of 15 layers. Here, 'test error' refers to the ratio of incorrectly classified samples among all samples in the test set. g, Mean of the test error over training epochs (reflecting how fast test error drops) as a function of learning rate. Results in f and h are for the learning rates giving the minima of the corresponding curves in g, h, Mean of test error of other network depths. Each point is from a learning rate independently optimized for each learning rule in the corresponding setup of network depth. In e–h, prospective configuration demonstrates a notable advantage as the structure gets deeper. Each experiment in f–h was repeated with n = 3 random seeds. Error bars and bands represent the 68% confidence interval.</div> </div>
@@ -110,19 +110,19 @@ Inspired by these advantages, we show empirically that prospective configuration
 
 Online learning
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_image_box_89_116_266_308.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2F999e9e5381202404e372bd4f5fda62d638ded04f7647b28092f8e9b7bdbc7f2b" alt="Image" width="14%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_89_116_266_308.jpg" alt="Image" width="14%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_276_122_442_319.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A32Z%2F-1%2F%2F6af21b97ab2573eb525c062d59fe0f3f60e68eb9bd3ea2cfe9fbd96d1585d4ec" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_276_122_442_319.jpg" alt="Image" width="13%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_447_119_601_319.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F3cff45e0e4d215758e10312ab7524d199456d85ff44cd93fe9f291ece87e6b2c" alt="Image" width="12%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_447_119_601_319.jpg" alt="Image" width="12%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_616_105_944_318.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F229644bb6a9b03a2b8a207832611cfa3f2c66925d6d9fee0cfac38c505552bd3" alt="Image" width="27%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_616_105_944_318.jpg" alt="Image" width="27%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_959_124_1119_320.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F75e86b4c0418b07427832636a247bdc27f6f945c2fda635ed2f46619a931f331" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_959_124_1119_320.jpg" alt="Image" width="13%" /></div>
 
 
 Learning in changing environments (concept drifting)
@@ -130,31 +130,31 @@ Learning in changing environments (concept drifting)
 <div style="text-align: center;"><div style="text-align: center;">f</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_image_box_91_360_417_544.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F81d03af8cf91de9c4ae25cb3998ae3bca4ff394e8be5a60e09d885188d78082b" alt="Image" width="27%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_91_360_417_544.jpg" alt="Image" width="27%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_416_359_704_550.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2Fd0925c035c1a3750f05f5cf7b15b4e809ce48bc503f6bd1167c0a02fad1155ad" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_416_359_704_550.jpg" alt="Image" width="24%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_720_342_901_550.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F6bd6b35f21d8db1087b74e951b4ddecd90afd516ff712d510f578f11f2ee3640" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_720_342_901_550.jpg" alt="Image" width="15%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_916_334_1111_552.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2Ffd95ae33d58f5ea1553e2c7bd1e27cf9c966cac997b0f6b355bc6d20c224d697" alt="Image" width="16%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_916_334_1111_552.jpg" alt="Image" width="16%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_88_576_294_779.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2Fe405b03d4186cfd7841db400f9f2e7821d2ba37afa994eae0dd113eb3020298c" alt="Image" width="17%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_88_576_294_779.jpg" alt="Image" width="17%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_image_box_84_567_705_778.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2Fb2bf49f67b8de7b403d6797286d245c0d6875cfec516fb8e746245b1597cbb40" alt="Image" width="52%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_84_567_705_778.jpg" alt="Image" width="52%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_305_562_704_774.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F019d9f8c89f75d75e630fa8300af0a90799ce61458bac254648763347e325414" alt="Image" width="33%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_305_562_704_774.jpg" alt="Image" width="33%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Fig. 4 | Prospective configuration achieves a superior performance over backpropagation in various learning situations faced by biological systems. a–k, Learning situations include online learning $^{29}$ (a–c), continual learning of multiple tasks $^{30}$ (d–e), learning in changing environments $^{31}$ (f–g), learning with a limited amount of training examples (h) and reinforcement learning $^{4}$ (k). Graphs corresponding to each situation are grouped together with the same background color. Simulations of each situation differ from the ‘default setup’ described in the Methods in a single aspect unique to this task. For example, the default setup involves training with minibatches, so the batch size was only set to 1 in a–c for investigating online learning, whereas it was set to a larger default value in rest of the groups. In supervised learning setups, fully connected networks (a–h) were evaluated on the FashionMNIST $^{50}$ dataset, and convolutional neural networks $^{35}$ (i and j) were evaluated on the CIFAR-10 (ref. 36) dataset. In the reinforcement learning setup (k), fully connected networks were evaluated on three classic control problems. If the learning rate was not presented, each point (a setup of an experiment) in the plot corresponds to the best learning rate optimized independently for each rule under that setup. a, Difference in training setup between computers that can average weight modifications for individual</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_1/imgs/img_in_chart_box_719_569_1117_779.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2Ff27855f9cc080804dc09a8f0437800274b0f4b5d5e4d88b40a7b5879a25aede3" alt="Image" width="33%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_719_569_1117_779.jpg" alt="Image" width="33%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">examples to get a 'statistically good' value and biological systems that must apply one modification before computing another. b, Mean of the test errors during training as a function of batch size. c, Minimum of test error during training as a function of learning rate. d, Test error during continual learning of two tasks. e, Mean of test error of both tasks during training as a function of learning rate. f, Test error during training when learning with concept drifting.</div> </div>
@@ -170,19 +170,19 @@ First, based on the example in Fig. 1, we expect prospective configuration to re
 
 【译文】首先，基于图1中的例子，我们预期前瞻性配置需要比反向传播更少的学习轮次。在呈现比较之前，我们先描述反向传播如何用于训练ANN。通常，权重只在经过一批训练样本后才被修改，基于从单个样本推导出的更新的平均值（图4a）。事实上，反向传播严重依赖于对多次经验的平均才能达到人类水平的性能$^{32}$，因为它需要稳定训练$^{33}$。相比之下，生物系统必须在每次经验后更新权重，我们在这种设置下比较学习性能。采样效率可以通过训练期间的测试误差均值来量化，如图4b所示，它是批量大小（更新所平均的经验数量）的函数。对于反向传播，效率严重依赖于批量大小，因为它需要批量训练来平均掉不稳定的权重更新，而这种依赖性对于前瞻性配置则较弱，因为前瞻性配置的权重变化本质上不太不稳定，对批量平均的需求也更小（补充图7）。重要的是，前瞻性配置在较小的批量大小下学习更快，正如
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_2/imgs/img_in_chart_box_78_104_291_246.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2Fba2bbc8121d415fb5e25db778cb0f454e29cd2351fbd629679192fdb7963cb51" alt="Image" width="17%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_78_104_291_246.jpg" alt="Image" width="17%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_2/imgs/img_in_image_box_80_103_629_357.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F2d6dd9d75a6072c9c17bc5510578e2b8ecb163925fb4074cc09814098d162eb5" alt="Image" width="46%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_80_103_629_357.jpg" alt="Image" width="46%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_2/imgs/img_in_image_box_646_128_1125_294.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F1c42521bcbb7478f23128aed4420b2dcd5022b0aa6ffcba5e7c3c894aae1d6c4" alt="Image" width="40%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_646_128_1125_294.jpg" alt="Image" width="40%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_2/imgs/img_in_chart_box_98_369_629_559.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F5a277d8afb6564e0469975fc8cd9f02acb3ea1a10738cd6e0e14053e7ca51451" alt="Image" width="44%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_98_369_629_559.jpg" alt="Image" width="44%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_2/imgs/img_in_chart_box_658_302_1110_558.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A33Z%2F-1%2F%2F7c96012d577019719662fc834202bdcdb92accabe2c98a4ec7f754b50f485e11" alt="Image" width="37%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_658_302_1110_558.jpg" alt="Image" width="37%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Fig. 5 | Prospective configuration explains contextual inference in human sensorimotor learning. a, Structure of an experimental trial where participants were asked to move a stick from the starting point to the target point while experiencing perturbations. b, The minimal network for the task, including six connections encoding the associations from the backgrounds (B and R) to the belief of contexts ([B] and [R]) and from the belief of contexts to the prediction of perturbations (+ and -). c–e, Sequence of sessions the participants experienced, including training (c), washout (d) and testing (e). Darker gray boxes show the</div> </div>
@@ -225,13 +225,13 @@ Prospective configuration is related to theories proposing that before learning,
 
 【译文】前瞻性配置与一些理论有关，这些理论提出在学习之前，大脑首先从反馈中推断环境的潜在状态$^{38-40}$。在此，我们提出这种推断可以通过前瞻性配置在神经回路中实现，即在接受反馈后，"隐藏层"中的神经元收敛到一个编码该潜在状态的前瞻性活动模式。我们证明，来自各种先前研究的数据——这些研究涉及对
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_3/imgs/img_in_image_box_77_108_579_271.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A34Z%2F-1%2F%2F53fdc91799e6acc89da67975338efc5d494446674ccb0dc5b99e713d80ed0a94" alt="Image" width="42%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_77_108_579_271.jpg" alt="Image" width="42%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Fig. 6 | Prospective configuration can discover the underlying task structure during reinforcement learning. a, Reinforcement learning task. Human participants were required to choose between two options, leading to either reward (gaining coins) or punishment (losing coins) with different probabilities. The probability of reward was occasionally reversed between the two options. b, The minimal network encoding the essential elements of the task. c, Activity of the output neuron corresponding to the selected option from networks trained</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//acb60c44-58a8-4520-be69-f62f556e17a7/markdown_3/imgs/img_in_chart_box_603_116_1126_276.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-07-14T02%3A59%3A34Z%2F-1%2F%2Fbd77902e4a44d62188ebdf6866db5d79d9ada45351f5d1c6b3646500ed158d57" alt="Image" width="43%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_603_116_1126_276.jpg" alt="Image" width="43%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">with prospective configuration and backpropagation compared with fMRI data measured in human participants (that is, peak blood oxygenation level-dependent (%BOLD) signal in the mPFC). Prospective configuration reproduces the key finding that the expected value (encoded in %BOLD signal in the mPFC) increases if the next choice after a punishing trial is to switch to the other option. The number of trials is not mentioned in the original paper, so we simulated for n = 128 trials for both learning rules. Error bars represent the 68% confidence interval.</div> </div>

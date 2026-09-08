@@ -30,14 +30,14 @@ TIMUR ASH
 #flashpaper
 ##### 新增节点后，原来已有的节点还要继续训练
 ?
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b37f1ac6-1b89-4f22-b9e0-f41bccafecaf/markdown_3/imgs/img_in_image_box_338_224_785_558.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A18%3A09Z%2F-1%2F%2Fd2fd2d7ee7eb431458f21d28b45bbf928dda9c1e3c8ce4882044ac81d20bcbd2" alt="Image" width="36%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_338_224_785_558.jpg" alt="Image" width="36%" /></div>
 
 *图1. $P_{1}$ 表示由 $W_{1} \times W_{2}$ 定义的平面中误差最低的点。如果引入另一个维度（$W_{3}$），全局最优变为 $P_{2}$。但是冻结 $W_{1}$ 和 $W_{2}$ 的值只允许找到通过 $P_{1}$ 的直线上的解。推广到更高维度；只能在权重空间的特定仿射子集中找到解。*
 <!--SR:!2026-08-19,7,250-->
 
 ---
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b37f1ac6-1b89-4f22-b9e0-f41bccafecaf/markdown_3/imgs/img_in_chart_box_342_730_797_1076.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A18%3A09Z%2F-1%2F%2F83fc7aa5c7d97eaf8d510783effb8f059b301f1b5d8a35225ceb5140b75f612a" alt="Image" width="37%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_342_730_797_1076.jpg" alt="Image" width="37%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图2. 当检测到平均平方误差曲线趋于平缓时，触发添加单个新隐藏节点。</div> </div>
@@ -102,13 +102,13 @@ $$ t-w\ge t_{0} $$
 
 单调递减平均误差的基本假设对大多数测试问题都成立。当它不成立时，误差曲线中的尖峰并未引起触发新节点增长的问题（见图4中的节点4）。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8ea367ce-0415-4e9b-afc1-bbdafdd4446a/markdown_2/imgs/img_in_chart_box_401_224_877_563.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A17%3A16Z%2F-1%2F%2F031915f17a4a1ee77ddfc33d576b9a38b1af68e45be440fff175feb9ed615c29" alt="Image" width="38%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_401_224_877_563.jpg" alt="Image" width="38%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图3. 使用DNC和普通BP学习映射所需的计算工作量（以浮点乘法次数计）。显示的结果是DNC找到的最小拓扑结构。浅色条代表DNC，深色条代表BP。注意：SYM4、PAR5和PAR6的BP解在50,000次试验后未找到。</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8ea367ce-0415-4e9b-afc1-bbdafdd4446a/markdown_2/imgs/img_in_chart_box_404_762_892_1129.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A17%3A16Z%2F-1%2F%2F05bbd36b840be813a8d12ed29468476f0fd65aa465d2a985715179583eb23620" alt="Image" width="39%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_404_762_892_1129.jpg" alt="Image" width="39%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图4. ADD3的最佳情况平方误差图。虚线竖线表示新节点的创建。节点增长不受 $a_t$ 曲线中尖峰的影响（见节点4）。</div> </div>
@@ -120,7 +120,7 @@ $$ t-w\ge t_{0} $$
 
 理解训练较小网络对找到更大解的影响很重要。这可以通过考虑DNC网络在学习映射之前以其最大架构花费了多少次试验（完整的数据集呈现）来评估。如果低维训练使它偏离了实际解，这个数字预计会比训练具有相同拓扑结构的常规BP网络的时间更长。如果训练没有效果（导致权重的本质上随机分布），该数字应该与BP训练时间大致相同。事实上，在测试的每种情况下，DNC网络在最大规模上花费的训练时间都比其BP对应物少（见图5）。这表明在低维空间中的初始训练实际上有助于找到解。这也得到了以下事实的支持：SYM4、PAR5和PAR6的最小解是通过增长网络找到的，但在使用正常BP学习的反复尝试中未能找到。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8ea367ce-0415-4e9b-afc1-bbdafdd4446a/markdown_3/imgs/img_in_chart_box_349_833_820_1168.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-02T08%3A17%3A18Z%2F-1%2F%2F84555f473640c2165983fbf279d66a0c09b2163be168a44df6a2dd1b7d013074" alt="Image" width="38%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_349_833_820_1168.jpg" alt="Image" width="38%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图5. 在学习映射之前，以最终架构进行的试验次数。浅色条代表DNC，深色条代表BP。在所有情况下，低维DNC训练都有助于找到解。注意：SYM4、PAR5、PAR6的BP解在50,000次试验后未找到。</div> </div>

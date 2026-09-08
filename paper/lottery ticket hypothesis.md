@@ -39,7 +39,7 @@ We present an algorithm to identify winning tickets and a series of experiments 
 
  $^{2}$作为网络学习速度的代理指标，我们使用早停（early-stopping）准则会结束训练的那个迭代。本文通篇采用的特定早停准则是训练过程中验证损失最低的那个迭代。关于这一选择的更多细节见附录 C。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//5c3339b9-fb04-4b1b-849f-3e72c9ab0b04/markdown_1/imgs/img_in_chart_box_219_178_1000_335.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F218b7ff84e6c6c6bab484a575ae7cced72c91e7acac9e23da832c4175e57b86b" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_178_1000_335.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;color: lightgreen"><div style="text-align: center;">图 1：用于 MNIST 的 Lenet 架构与用于 CIFAR10 的 Conv-2、Conv-4、Conv-6 架构（见图 2）在不同初始规模下训练时，早停发生的迭代（左）与该迭代处的测试精度（右）。虚线为随机采样的稀疏网络（十次试验的平均）；实线为中奖彩票（五次试验的平均）。</div> </div>
@@ -98,7 +98,7 @@ We present an algorithm to identify winning tickets and a series of experiments 
 
 在本节中，我们评估彩票假说在 MNIST 上训练的全连接网络上的适用性。我们使用图 2 中描述的 Lenet-300-100 架构（LeCun et al., 1998）。我们遵循第 1 节的流程：随机初始化并训练一个网络后，对网络进行剪枝，并把剩余连接重置回其原始初始值。我们采用一种简单的逐层剪枝启发式：在每层内移除一定比例幅度最小的权重（同 Han et al. (2015)）。通向输出的连接按网络其余部分一半的速率剪枝。我们在附录 G 中探索了其他超参数，包括学习率、优化策略（SGD、momentum）、初始化方案和网络规模。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//5c3339b9-fb04-4b1b-849f-3e72c9ab0b04/markdown_3/imgs/img_in_chart_box_226_176_995_416.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2Fa586d46de7eb732b20b8a9689576c6e1b4eb87b2bf5a41d7f1473df963bc139a" alt="Image" width="62%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_226_176_995_416.jpg" alt="Image" width="62%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 3：训练过程中 Lenet（迭代剪枝）的测试精度。每条曲线为五次试验的平均。标签  $P_{m}$ 表示剪枝后网络中剩余权重的比例。误差线为任意试验的最小值与最大值。</div> </div>
@@ -118,28 +118,28 @@ We present an algorithm to identify winning tickets and a series of experiments 
 
 这一实验更广泛的结果是图 4a 中的橙色线。与中奖彩票不同，被重新初始化的网络学得比原网络越来越慢，且仅在少量剪枝后就损失测试精度。重新初始化的迭代中奖彩票的平均测试精度在  $P_m = 21.1\%$ 时从原始精度开始下降，而中奖彩票要到 2.9% 时才下降。当  $P_m = 21\%$ 时，中奖彩票达到最小验证损失的速度比重初始化时快 2.51 倍，且精度高出半个百分点。所有网络在  $P_m \geq 5\%$ 时都达到 100% 训练精度；图
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_0/imgs/img_in_chart_box_218_179_474_372.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F01aee799e261a6c030ab929fcc3751697546e2adaa189c55850add8144dcb451" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_218_179_474_372.jpg" alt="Image" width="20%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_0/imgs/img_in_chart_box_478_180_738_372.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Ff5ce0124c538f8534b199e5c78048dc980fba6627a2ecd90cd53dbbb093b9311" alt="Image" width="21%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_478_180_738_372.jpg" alt="Image" width="21%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_0/imgs/img_in_chart_box_744_183_992_372.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F45261261df277da85bc578f8e1d346900720b211a858b2ff59a767522514785a" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_744_183_992_372.jpg" alt="Image" width="20%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(a) 所有剪枝方法下的早停迭代与精度。</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_0/imgs/img_in_chart_box_224_407_473_588.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F4c6ad9bb505227ded3bb91c40865f5114efdb187e53e68a4314b79f2b5fb3254" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_224_407_473_588.jpg" alt="Image" width="20%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(b) 训练结束时的精度。</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_0/imgs/img_in_chart_box_484_408_734_587.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F217bf43c368fc625132cdc413b70d345aab11c0e50f8ed74ff3d6c450eb9b1c6" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_484_408_734_587.jpg" alt="Image" width="20%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_0/imgs/img_in_chart_box_746_412_994_587.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Fcebd7ff520ac9fab1796598cc77cee94492cf72f79eb331e2e623312053b7bee" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_746_412_994_587.jpg" alt="Image" width="20%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(c) 一次性剪枝下的早停迭代与精度。</div> </div>
@@ -160,7 +160,7 @@ We present an algorithm to identify winning tickets and a series of experiments 
 
  $^{3}$附录 H 探索了其他超参数，包括学习率、优化策略（SGD、momentum）以及剪枝卷积层与全连接层的相对速率。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_1/imgs/img_in_chart_box_222_179_996_560.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F6c441d9ae4cfe385f3a20c7bc79cc3e339ddd655eac75571d99e91b482f8b15c" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_222_179_996_560.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 5：迭代剪枝与随机重新初始化时 Conv-2/4/6 架构的早停迭代以及测试、训练精度。每条实线为五次试验的平均；每条虚线为十五次重新初始化（每次试验三次）的平均。右下方的图描绘了在原网络训练最后一次迭代对应的迭代处（Conv-2 为 20,000、Conv-4 为 25,000、Conv-6 为 30,000）中奖彩票的测试精度；在该迭代处，中奖彩票在  $P_m \geq 2\%$ 时训练精度  $\approx 100\%$（见附录 D）。</div> </div>
@@ -178,19 +178,19 @@ Dropout。Dropout（Srivastava et al., 2014; Hinton et al., 2012）通过在每�
 
  $^{4}$我们为使用 dropout 训练的网络选择了新的学习率——见附录 H.5。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_2/imgs/img_in_chart_box_219_178_998_378.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Fc2aef846ef54fd04c17360dde5764613dac85393dfe6bd49086b8203e74bda87" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_178_998_378.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 6：迭代剪枝并用 dropout 训练时 Conv-2/4/6 的早停迭代与早停处的测试精度。虚线为不使用 dropout 训练的相同网络（即图 5 中的实线）。学习率：Conv-2 为 0.0003，Conv-4 和 Conv-6 为 0.0002。</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_2/imgs/img_in_chart_box_222_486_478_700.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F0157481f9b74c09f97b28b73eb00fd94bee5d9f5e4a2bcf8791b87d7ae3721b9" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_222_486_478_700.jpg" alt="Image" width="20%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_2/imgs/img_in_chart_box_481_488_738_699.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F2931feb021caf80e21a50d35c06a7ffde01b41468b1d77ded7304399aa9834b1" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_481_488_738_699.jpg" alt="Image" width="20%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_2/imgs/img_in_chart_box_744_490_996_698.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F8150b6bd976a30ec6f7b9c90a4d4e26dab678a1b768d5f2f76b5fc10d15d38d7" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_744_490_996_698.jpg" alt="Image" width="20%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 7：迭代剪枝时 VGG-19 的测试精度（在 30K、60K、112K 次迭代处）。</div> </div>
@@ -208,7 +208,7 @@ VGG-19。我们研究由 Liu et al. (2019) 为 CIFAR10 改编的 VGG-19 变体�
 
  $^{5}$关于网络、超参数和训练方案的细节见图 2 和附录 I。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//93e6c083-175f-4d78-b0df-211eb02fb071/markdown_3/imgs/img_in_chart_box_224_167_996_382.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F7e596d2f380d530e30cd44fb1bfb179a6355bf3c0c93884d9f3c0b9a2a4d996b" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_224_167_996_382.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 8：迭代剪枝时 Resnet-18 的测试精度（在 10K、20K、30K 次迭代处）。</div> </div>
@@ -412,25 +412,25 @@ Throughout this paper, we are interested in measuring the speed at which network
 
 Validation and test loss follow a pattern where they decrease early in the training process, reach a minimum, and then begin to increase as the model overfits to the training data. Figure 11 shows an example of the validation loss as training progresses; these graphs use Lenet, iterative pruning, and Adam with a learning rate of 0.0012 (the learning rate we will select in the following subsection). This Figure shows the validation loss corresponding to the test accuracies in Figure 3.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//609b08c5-1b30-4116-a454-f704005ecebd/markdown_2/imgs/img_in_chart_box_219_201_1000_445.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A18Z%2F-1%2F%2F11014a18bd814ace2856c68cd68b590757e7db91a0e78ec364a9f0b0a327fa53" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_201_1000_445.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 9: The early-stopping iteration and accuracy at early-stopping of the iterative lottery ticket experiment on the Lenet architecture when iteratively pruned using the resetting and continued training strategies.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//609b08c5-1b30-4116-a454-f704005ecebd/markdown_2/imgs/img_in_chart_box_217_598_1000_840.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2Fbc1e0b597db81aa1990e03d5cef6313c103267fc9f8cf12d71389a99756ca2ac" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_217_598_1000_840.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 10: The early-stopping iteration and accuracy at early-stopping of the iterative lottery ticket experiment on the Conv-2, Conv-4, and Conv-6 architectures when iteratively pruned using the resetting and continued training strategies.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//609b08c5-1b30-4116-a454-f704005ecebd/markdown_2/imgs/img_in_chart_box_233_996_986_1239.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2F3a0f4540581b9726c69235509b09cadd3a6b1d03cacf0cbf49738069c57850c1" alt="Image" width="61%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_233_996_986_1239.jpg" alt="Image" width="61%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 11: The validation loss data corresponding to Figure 3, i.e., the validation loss as training progresses for several different levels of pruning in the iterative pruning experiment. Each line is the average of five training runs at the same level of iterative pruning; the labels are the percentage of weights from the original network that remain after pruning. Each network was trained with Adam at a learning rate of 0.0012. The left graph shows winning tickets that learn increasingly faster than the original network and reach lower loss. The middle graph shows winning tickets that learn increasingly slower after the fastest early-stopping time has been reached. The right graph contrasts the loss of winning tickets to the loss of randomly reinitialized networks.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//609b08c5-1b30-4116-a454-f704005ecebd/markdown_3/imgs/img_in_chart_box_219_174_998_579.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A21Z%2F-1%2F%2F0b321f0a2c407f0ee3f81f78918ee6e7be23994bdebaf8a3da08b437f908dac8" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_174_998_579.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 12: Figure 4 augmented with a graph of the training accuracy at the end of 50,000 iterations.</div> </div>
@@ -454,7 +454,7 @@ In this Appendix, we aim to understand the relative performance of randomly rein
 
 3. Random sparse subnetworks with the same number of parameters as those found via iterative pruning (green in Figure 14).
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e927b777-e3eb-4bad-9bc6-1bf5cf41cfd6/markdown_0/imgs/img_in_chart_box_216_486_1002_1106.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F8b68751807803c5653de256dd77081c9c64138bcf0143d15aab5c8067747a9af" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_216_486_1002_1106.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 13: Figure 5 augmented with a graph of the training accuracy at the end of the training process.</div> </div>
@@ -482,19 +482,19 @@ We also consider the winning tickets obtained when training the network with SGD
 
 Considering that the initialization distributions of winning tickets  $\mathcal{D}_m$ are so different from the Gaussian distribution  $\mathcal{D}$ used to initialize the unpruned network, it is natural to ask whether randomly reinitializing winning tickets from  $\mathcal{D}_m$ rather than  $\mathcal{D}$ will improve winning ticket performance. We do not find this to be the case. Figure 17 shows the performance of winning tickets whose initializations are randomly sampled from the distribution of initializations contained in the winning tickets for
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e927b777-e3eb-4bad-9bc6-1bf5cf41cfd6/markdown_2/imgs/img_in_image_box_219_282_1001_1308.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F8b95501c58f0fa6a87fd33bec1157016983fdb565a71f957a3ec02c46b392f6a" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_219_282_1001_1308.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 14: The test accuracy at the final iteration for each of the networks studied in this paper.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e927b777-e3eb-4bad-9bc6-1bf5cf41cfd6/markdown_3/imgs/img_in_chart_box_218_163_1000_371.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F47344e8d67ff7aec35c76d5dd20a52c06a5668509759a0cfff9e00c5fb456559" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_218_163_1000_371.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 15: The distribution of initializations in winning tickets pruned to the levels specified in the titles of each plot. The blue, orange, and green lines show the distributions for the first hidden layer, second hidden layer, and output layer of the Lenet architecture for MNIST when trained with the adam optimizer and the hyperparameters used in 2. The distributions have been normalized so that the area under each curve is 1.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e927b777-e3eb-4bad-9bc6-1bf5cf41cfd6/markdown_3/imgs/img_in_chart_box_218_529_1001_732.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F0bbf69a3eb36363dc7ab33df09c05a70e6f587375aff0a4ff2e60e5c05f69baf" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_218_529_1001_732.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 16: Same as Figure 15 where the network is trained with SGD at rate 0.8.</div> </div>
@@ -506,19 +506,19 @@ adam. More concretely, let  $\mathcal{D}_m = \{\theta_0^{(i)} | m^{(i)} = 1\}$ b
 
 One other way of interpreting the graphs of winning ticket initialization distributions is as follows: weights that begin small stay small, get pruned, and never become part of the winning ticket. (The only exception to this characterization is the first hidden layer for the adam-trained winning tickets.) If this is the case, then perhaps low-magnitude weights were never important to the network and can be pruned from the very beginning. Figure 18 shows the result of attempting this pruning strategy. Winning tickets selected in this fashion perform even worse than when they are found by iterative
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//e927b777-e3eb-4bad-9bc6-1bf5cf41cfd6/markdown_3/imgs/img_in_chart_box_217_1183_1001_1372.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F3e3997ed12e07842d208f5cc3f8683a1a1a2a741cee0a4071d3b9cda758fc068" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_217_1183_1001_1372.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 17: The performance of the winning tickets of the Lenet architecture for MNIST when the layers are randomly reinitialized from the distribution of initializations contained in the winning ticket of the corresponding size.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_0/imgs/img_in_chart_box_218_180_1000_363.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F468cf0331bca06d64e9996f1003c3770c909ffdbd04b4b3bb45122fc7291c58d" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_218_180_1000_363.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 18: The performance of the winning tickets of the Lenet architecture for MNIST when magnitude pruning is performed before the network is ever trained. The network is subsequently trained with adam.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_0/imgs/img_in_chart_box_316_491_902_722.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Fb4209f860bdcd3b04ce31cf5a6a6c2196170cffc7343e1c77f8e71def06e4627" alt="Image" width="47%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_316_491_902_722.jpg" alt="Image" width="47%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 19: Between the first and last training iteration of the unpruned network, the magnitude by which weights in the network change. The blue line shows the distribution of magnitudes for weights that are not in the eventual winning ticket; the orange line shows the distribution of magnitudes for weights that are in the eventual winning ticket.</div> </div>
@@ -536,13 +536,13 @@ It is notable that such a distinction exists between the two distributions. One 
 
 Figure 20 shows the directions of these changes. It plots the difference between the magnitude of the final weight and the magnitude of the initial weight, i.e., whether the weight moved toward or away.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_1/imgs/img_in_chart_box_315_181_904_407.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F2836aede5d63026d7939e6a527f3a66d476b4e7672b3a8c3a3517f77c7f23f24" alt="Image" width="48%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_315_181_904_407.jpg" alt="Image" width="48%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 20: Between the first and last training iteration of the unpruned network, the magnitude by which weights move away from 0. The blue line shows the distribution of magnitudes for weights that are not in the eventual winning ticket; the orange line shows the distribution of magnitudes for weights that are in the eventual winning ticket.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_1/imgs/img_in_chart_box_316_551_903_750.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F8c60f67afa45bcebd637d9e6e54420b3882f293f32aab72830ca4c742f50fbe6" alt="Image" width="47%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_316_551_903_750.jpg" alt="Image" width="47%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 21: The fraction of incoming connections that survive the pruning process for each node in each layer of the Lenet architecture for MNIST as trained with adam.</div> </div>
@@ -554,31 +554,31 @@ from 0. In general, winning ticket weights are more likely to increase in magnit
 
 In this Subsection, we study the connectivity of winning tickets. Do some hidden units retain a large number of incoming connections while others fade away, or does the network retain relatively even sparsity among all units as it is pruned? We find the latter to be the case when examining the incoming connectivity of network units: for both adam and SGD, each unit retains a number of incoming connections approximately in proportion to the amount by which the overall layer has been pruned. Figures 21 and 22 show the fraction of incoming connections that survive the pruning process for each node in each layer. Recall that we prune the output layer at half the rate as the rest of the network, which explains why it has more connectivity than the other layers of the network.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_1/imgs/img_in_chart_box_317_1213_903_1414.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Fb7cc4e8d0445932a0c57b1daedf5c1e8864d58c466fee5801fda3858ada5aa8f" alt="Image" width="47%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_317_1213_903_1414.jpg" alt="Image" width="47%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 22: Same as Figure 21 where the network is trained with SGD at rate 0.8.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_2/imgs/img_in_chart_box_318_166_507_368.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Fdfdaebf5d552356234d257984259229e11fe14c2cca8cd94035bac71375e602f" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_318_166_507_368.jpg" alt="Image" width="15%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_2/imgs/img_in_chart_box_515_170_706_368.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F0254579b332fb6937962fbb451d06f3a6cd12f60b00f0b2e283c923fb46cc5cf" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_515_170_706_368.jpg" alt="Image" width="15%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_2/imgs/img_in_chart_box_714_170_901_368.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F05f967cdc4286c711559d8e6f4f6c2b409ce39c9ae512b05e33ae435155c8614" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_714_170_901_368.jpg" alt="Image" width="15%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 23: The fraction of outgoing connections that survive the pruning process for each node in each layer of the Lenet architecture for MNIST as trained with adam. The blue, orange, and green lines are the outgoing connections from the input layer, first hidden layer, and second hidden layer, respectively.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_2/imgs/img_in_chart_box_318_538_506_739.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Fb957dfd9e4b0708e06ca11ee2a0216830293a7a0af6fbd3b96c5231499d4f03b" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_318_538_506_739.jpg" alt="Image" width="15%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_2/imgs/img_in_chart_box_515_545_705_740.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Ff73887f71f8c32478c480441f7fdbb21dd0a41450ebf659cb12950c9fe89ebc6" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_515_545_705_740.jpg" alt="Image" width="15%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_2/imgs/img_in_chart_box_714_543_902_739.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F5f470e3908221ef87b1e4575dc1f0fc9345a3b067167307d639332caca560e7a" alt="Image" width="15%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_714_543_902_739.jpg" alt="Image" width="15%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 24: Same as Figure 23 where the network is trained with SGD at rate 0.8.</div> </div>
@@ -590,7 +590,7 @@ However, this is not the case for the outgoing connections. To the contrary, for
 
 In this Subsection, we explore the extent to which winning tickets are robust to Gaussian noise added to their initializations. In the main body of the paper, we find that randomly reinitializing a winning ticket substantially slows its learning and reduces its eventual test accuracy. In this Subsection, we study a less extreme way of perturbing a winning ticket. Figure 25 shows the effect of adding Gaussian noise to the winning ticket initializations. The standard deviation of the noise distribution of each layer is a multiple of the standard deviation of the layer's initialization Figure 25 shows noise distributions with standard deviation  $0.5\sigma$,  $\sigma$,  $2\sigma$, and  $3\sigma$. Adding Gaussian noise reduces the test accuracy of a winning ticket and slows its ability to learn, again demonstrating the importance of the original initialization. As more noise is added, accuracy decreases. However, winning tickets are surprisingly robust to noise. Adding noise of  $0.5\sigma$ barely changes winning ticket accuracy. Even after adding noise of  $3\sigma$, the winning tickets continue to outperform the random reinitialization experiment.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//333fd7bc-56e9-4b93-9368-117b95b4ebf1/markdown_3/imgs/img_in_chart_box_221_179_999_361.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Fd34f96f29caf207f666dd58193dfd6c45475db1ad9da16aec9206dc29347b50d" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_221_179_999_361.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 25: The performance of the winning tickets of the Lenet architecture for MNIST when Gaussian noise is added to the initializations. The standard deviations of the noise distributions for each layer are a multiple of the standard deviations of the initialization distributions; in this Figure, we consider multiples 0.5, 1, 2, and 3.</div> </div>
@@ -618,13 +618,13 @@ For the main body of the paper, we opt to use the Adam optimizer (Kingma & Ba, 2
 
 In addition, we consider a wide range of other hyperparameters, including other optimization algorithms (SGD with and without momentum), initialization strategies (Gaussian distributions
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_0/imgs/img_in_chart_box_219_175_1000_417.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F3b6701dcabd6ff426815a0420424e5d917e9939f45973875f2f025987e57ee02" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_175_1000_417.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 26: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Lenet architecture trained with MNIST using the Adam optimizer at various learning rates. Each line represents a different learning rate.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_0/imgs/img_in_chart_box_220_545_1000_789.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F4c50af436288a1bbe558ea4ae0f3f27ae1810fbdb0999c008af475f2242a87cd" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_545_1000_789.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 27: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Lenet architecture trained with MNIST using stochastic gradient descent at various learning rates.</div> </div>
@@ -644,7 +644,7 @@ Here, we select the learning rate that we use for Adam in the main body of the p
 
 3. Of those options that meet (1) and (2), it should be on the conservative (slow) side so that it is more likely to productively optimize heavily pruned networks under a variety of conditions with a variety of hyperparameters.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_1/imgs/img_in_chart_box_219_177_999_426.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A18Z%2F-1%2F%2Fbc10cf913697c46517b2a0350b3f56c851788e24a3cbc7076b8bce97ca470375" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_177_999_426.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 28: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Lenet architecture trained with MNIST using stochastic gradient descent with momentum  $(0.9)$ at various learning rates.</div> </div>
@@ -668,13 +668,13 @@ Here, we explore the behavior of the lottery ticket experiment when the network 
 
 When running the iterative lottery ticket experiment on Lenet, we prune each layer of the network separately at a particular rate. That is, after training the network, we prune  $k\%$ of the weights in
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_2/imgs/img_in_chart_box_221_181_999_433.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2Ffc4926145d297a6712d6b8d00d3c033fb10238653d8c402a132a7c9791ac42ec" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_221_181_999_433.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 29: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment when pruned at different rates. Each line represents a different pruning rate—the percentage of lowest-magnitude weights that are pruned from each layer after each training iteration.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_2/imgs/img_in_chart_box_219_553_1002_795.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A20Z%2F-1%2F%2Ffc91584de7bb0ef9684cc5f26d31c9aaf99e188a6bbbc9d278b00c8d2296177f" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_553_1002_795.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 30: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment initialized with Gaussian distributions with various standard deviations. Each line is a different standard deviation for a Gaussian distribution centered at 0.</div> </div>
@@ -694,10 +694,10 @@ To this point, we have considered only a Gaussian Glorot (Glorot & Bengio, 2010)
 
 ### G.6 NETWORK SIZE
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_3/imgs/img_in_chart_box_221_299_997_583.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A22Z%2F-1%2F%2F3d21a0b53a9522c0575fe286ef92d91327ed9cfaa9b4b4154a32aa8c0204b952" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_221_299_997_583.jpg" alt="Image" width="63%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//f9dcec75-58e0-42b6-a863-afa4b399abbf/markdown_3/imgs/img_in_chart_box_220_606_997_856.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A23Z%2F-1%2F%2F4ee646c9a06d165ab0f7ff13666eb6e8c3f704f92270208f799fe4e5671419ff" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_606_997_856.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 31: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Lenet architecture with various layer sizes. The label for each line is the size of the first and second hidden layers of the network. All networks had Gaussian Glorot initialization and were optimized with Adam (learning rate 0.0012). Note that the x-axis of this plot charts the number of weights remaining, while all other graphs in this section have charted the percent of weights remaining.</div> </div>
@@ -735,22 +735,22 @@ We allow convolutional layers and fully-connected layers to be pruned at differe
 
 In this Subsection, we perform the lottery ticket experiment on the the Conv-2, Conv-4, and Conv-6 architectures as optimized with Adam at various learning rates.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_1/imgs/img_in_chart_box_220_457_605_673.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2F47302e1796d8bc13e382dead9d1399277a25ca303b1f4217781a054483739c35" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_457_605_673.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_1/imgs/img_in_chart_box_616_469_998_673.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F0d0920efa57f256c05e0368baaeb23ac4b66a512607acec0b5a22b373eac5e10" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_616_469_998_673.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_1/imgs/img_in_chart_box_220_689_605_894.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F259f6f906f70172d60cd8ea908b800647eb006ed8e4ae8ba87ff4d276da300fc" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_689_605_894.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_1/imgs/img_in_chart_box_616_692_998_895.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F220227792011b42887a690ad1200526eb8681d3d5038e64dee8e610029417da2" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_616_692_998_895.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_1/imgs/img_in_chart_box_219_910_605_1116.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F083c5b13a09d5b7e9093f630f6e4ec0b724ab4ebd509f135d7f9d4a6a9912ebd" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_910_605_1116.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_1/imgs/img_in_chart_box_615_912_998_1114.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F7199c91814812711b3e5e346df27a8e64a21039077128b1afa40d4de914642d0" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_912_998_1114.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 32: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) architectures trained using the Adam optimizer at various learning rates. Each line represents a different learning rate.</div> </div>
@@ -776,22 +776,22 @@ Here, we explore the behavior of the lottery ticket experiment when the Conv-2, 
 
 At all of the learning rates depicted, we found winning tickets. In all cases, early-stopping times initially decreased with pruning before eventually increasing again, just as in other lottery ticket experiments. The Conv-6 network also exhibited the same accuracy patterns as other experiments, with validation accuracy initially increasing with pruning before eventually decreasing again.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_3/imgs/img_in_chart_box_218_366_607_622.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2Fe6d19ab91d1dd01922c2aa0b649f6b59db9724b1462968bdf67de71d3eb40ecc" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_218_366_607_622.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_3/imgs/img_in_chart_box_615_403_999_617.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2Fb47818eef4029c7a93ea6ca54e4bf62d11ea56d89f47afdb31ddd3ff925f54fb" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_403_999_617.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_3/imgs/img_in_chart_box_219_687_605_892.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2F504cee7920c2c6a07ae211d41ce3ba133f4883b8c44d9ddb964fc00742bb69ca" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_687_605_892.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_3/imgs/img_in_chart_box_615_688_998_891.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A19Z%2F-1%2F%2Ff592f0040c81c695f8ba3eb4a9ab0026e2bf7b16d58cf923e7d63f4168ab813c" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_688_998_891.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_3/imgs/img_in_chart_box_219_960_605_1166.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A20Z%2F-1%2F%2Fc1544bf8f124a0e1555b5f9608bd5d4b204dc0d7f098f955549c625bd6a83b2f" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_960_605_1166.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3c6dedba-85bc-4813-b50a-d32af2e2a8fc/markdown_3/imgs/img_in_chart_box_615_960_998_1165.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A20Z%2F-1%2F%2F83d4fc22483235b707864586e5cd6eb401aec8d90e8b8ee264498ac974a42bd9" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_960_998_1165.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 33: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) architectures trained using SGD at various learning rates. Each line represents a different learning rate. The legend for each pair of graphs is above the graphs.</div> </div>
@@ -821,43 +821,43 @@ According to our criteria, we select an iterative convolutional pruning rate of 
 
 In order to train the Conv-2, Conv-4, and Conv-6 architectures with dropout, we repeated the exercise from Section H.2 to select appropriate learning rates. Figure 32 shows the results of performing the iterative lottery ticket experiment on Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) with dropout and Adam at various learning rates. A network trained with dropout takes longer to learn, so we trained each architecture for three times as many iterations as in the experiments without dropout: 60,000 iterations for Conv-2, 75,000 iterations for Conv-4, and 90,000 iterations for Conv-6. We iteratively pruned these networks at the rates determined in Section H.4.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_1/imgs/img_in_chart_box_219_335_606_585.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A16Z%2F-1%2F%2F016654a632deae29eb35297d7b57f05a47f35365e05f2a2a4b3182171ac93333" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_335_606_585.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_1/imgs/img_in_chart_box_613_342_1000_581.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A17Z%2F-1%2F%2F69866faad53cb7d2f2c00580a200f15c224af10584b7ac208566896826e62359" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_613_342_1000_581.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_1/imgs/img_in_chart_box_219_649_605_856.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A17Z%2F-1%2F%2F3e9d6de1bac22ff23afe71d781d72f4aa0c9eb5275b98776fa6c16929b753169" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_649_605_856.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_1/imgs/img_in_chart_box_615_649_998_855.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A18Z%2F-1%2F%2F9875dcd5fceda6ed0a3b88ca460ac2822b99362938c056df8a0ad12c782c622f" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_649_998_855.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_1/imgs/img_in_chart_box_219_925_604_1128.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A18Z%2F-1%2F%2Ff44c7b8234f6a0d5cd1a16608b1acf8994d58054dbd96c3f93d9f18b18bc9c6d" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_925_604_1128.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_1/imgs/img_in_chart_box_615_923_998_1127.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A18Z%2F-1%2F%2F56cec2b55ba7a78a98e730af89b1bff05706aa36b097410182b0b53958b58689" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_923_998_1127.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 34: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) architectures trained using SGD with momentum (0.9) at various learning rates. Each line represents a different learning rate. The legend for each pair of graphs is above the graphs. Lines that are unstable and contain large error bars (large vertical lines) indicate that some experiments failed to learn effectively, leading to very low accuracy and very high early-stopping times; these experiments reduce the averages that the lines trace and lead to much wider error bars.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_2/imgs/img_in_chart_box_220_456_604_662.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A20Z%2F-1%2F%2F206163f6467f314b9a5c61bc50b2145b6eed20254d625fe01c72c32590a73a77" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_456_604_662.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_2/imgs/img_in_chart_box_615_460_998_661.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A21Z%2F-1%2F%2F490589d5cf4e9891415c1c6d780b7248c8e6175fd957f006c0c571cb5f847b20" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_460_998_661.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_2/imgs/img_in_chart_box_220_680_605_882.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A21Z%2F-1%2F%2Fd59d7c85ed4ba13ba9a146e0c161c780506377a1872a69ce337d03396b7ba9f9" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_680_605_882.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_2/imgs/img_in_chart_box_615_680_998_882.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A22Z%2F-1%2F%2F5002efc9b1d94e2a4b9a12a00a6b91185b6ef5ad1ebd7926222abbcd1c113ff7" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_680_998_882.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_2/imgs/img_in_chart_box_219_900_605_1104.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A22Z%2F-1%2F%2F35ae2af3142aebba0c2468fa8589eec422ff78063896be7de866f80fd7f225e0" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_900_605_1104.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//a0df7659-202f-4860-b802-1e43d09ad304/markdown_2/imgs/img_in_chart_box_615_898_998_1103.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A23Z%2F-1%2F%2F61ce9cd98981c6fca3409051a3cd868895a961f0d22d028c8148b1b560c434e8" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_898_998_1103.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 35: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) architectures with an iterative pruning rate of 20% for fully-connected layers. Each line represents a different iterative pruning rate for convolutional layers.</div> </div>
@@ -879,28 +879,28 @@ At all learning rates we tested, the lottery ticket pattern generally holds for 
 
 Figure 37 shows the effect of pruning convolutions alone (green), fully-connected layers alone (orange) and pruning both (blue). The x-axis measures the number of parameters remaining to emphasize the relative contributions made by pruning convolutions and fully-connected layers to the overall network. In all three cases, pruning convolutions alone leads to higher test accuracy and faster learning; pruning fully-connected layers alone generally causes test accuracy to worsen and learning to slow. However, pruning convolutions alone has limited ability to reduce the overall parameter-count of the network, since fully-connected layers comprise 99%, 89%, and 35% of the parameters in Conv-2, Conv-4, and Conv-6.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_0/imgs/img_in_chart_box_220_460_604_663.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F3de6030239987fde39b5cc15cdbba0153d80ce90dcdbf091e4d1be310d97864e" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_460_604_663.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_0/imgs/img_in_chart_box_615_459_998_662.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F4c760add12c3960a33504046c4ae2b7bc6940eae42eb60e70524cefa880e993e" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_459_998_662.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_0/imgs/img_in_chart_box_219_680_604_883.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F9e5f9c077238bf43fd73bf779e33e224932c5b9286b68a4cb2243c8d5af2b237" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_680_604_883.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_0/imgs/img_in_chart_box_615_678_997_883.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Fc592c97475e403d32ac9730ef6efa59f9377fb005a4ffc12ba44596c31b31d54" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_678_997_883.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_0/imgs/img_in_chart_box_219_900_604_1105.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F053d749cdd0caf3bdb6720ec495753a260de385d4d563f02eda9a5ae1d0b69c5" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_900_604_1105.jpg" alt="Image" width="31%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_0/imgs/img_in_chart_box_615_899_998_1104.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Fa26736edabcd0c80df52bec189e034b6cba809c52580823f98a5e11a595cda0e" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_615_899_998_1104.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 36: The early-stopping iteration and validation accuracy at that iteration of the iterative lottery ticket experiment on the Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) architectures trained using dropout and the Adam optimizer at various learning rates. Each line represents a different learning rate.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//b6f1709d-a62e-4bca-8383-e4d460de0832/markdown_1/imgs/img_in_chart_box_223_362_995_1128.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A15Z%2F-1%2F%2Facff20869463085f1f8c5472ca79127bf53382119ec0fe297ac39b5255b3cc84" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_223_362_995_1128.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 37: Early-stopping iteration and accuracy of the Conv-2 (top), Conv-4 (middle), and Conv-6 (bottom) networks when only convolutions are pruned, only fully-connected layers are pruned, and both are pruned. The x-axis measures the number of parameters remaining, making it possible to see the relative contributions to the overall network made by pruning FC layers and convolutions individually.</div> </div>
@@ -984,49 +984,49 @@ Resnet-18. For values of k below 5000, accuracy improves rapidly as k increases.
 
 VGG-19. For values of k below 5000, accuracy improves rapidly as k increases. This relationship reaches a point of diminishing returns above k = 5000. For the experiments in Section 4, we select k = 10000, as there is little benefit to larger values of k.
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_0/imgs/img_in_chart_box_219_190_998_404.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A13Z%2F-1%2F%2Ff78257cc5ea8264c34509c22804d94c04fcd1ed7bd403854174924bec5d034df" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_219_190_998_404.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 38: Validation accuracy (at 30K, 60K, and 112K iterations) of VGG-19 when iteratively pruned with global (solid) and layer-wise (dashed) pruning.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_0/imgs/img_in_chart_box_220_503_998_726.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A13Z%2F-1%2F%2F810b69237e495e829c30d18f30f1a5cea07bcd9dfbe2e278eac751248f9f2370" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_503_998_726.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 39: Validation accuracy (at 10K, 20K, and 30K iterations) of Resnet-18 when iteratively pruned with global (solid) and layer-wise (dashed) pruning.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_0/imgs/img_in_chart_box_221_822_1002_1036.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Fa255ac1c75f4de9ec1076e86c2d9c758ce76c09b7c96d0f06c0ad42bef689700" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_221_822_1002_1036.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 40: Test accuracy (at 30K, 60K, and 112K iterations) of VGG-19 when iteratively pruned with layer-wise pruning. This is the same as Figure 7, except with layer-wise pruning rather than global pruning.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_0/imgs/img_in_chart_box_222_1154_996_1376.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F7b4353d8ab9874d9f3ff3a3bf121aacbddc2def32c23bb3d6af5ee8ca7c165eb" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_222_1154_996_1376.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 41: Test accuracy (at 10K, 20K, and 30K iterations) of Resnet-18 when iteratively pruned with layer-wise pruning. This is the same as Figure 8 except with layer-wise pruning rather than global pruning.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_1/imgs/img_in_chart_box_220_170_1000_431.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F8df6489db45cd9b2337676d35b776d876a0466773e71604200d68a487135c38a" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_170_1000_431.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 42: Validation accuracy (at 10K, 20K, and 30K iterations) of Resnet-18 when iteratively pruned and trained with various learning rates.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_1/imgs/img_in_chart_box_220_512_1000_767.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F5a11b9e569ad598340840d51cc859e153a7d5a466d99b42cc005e33dae47fc0b" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_512_1000_767.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 43: Validation accuracy (at 30K, 60K, and 112K iterations) of VGG-19 when iteratively pruned and trained with various learning rates.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_1/imgs/img_in_chart_box_221_852_998_1086.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2F86d6c7b20b97c9414e228604cce1971be62da8ef060d746f121325f039ee20fb" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_221_852_998_1086.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 44: Validation accuracy (at 10K, 20K, and 30K iterations) of Resnet-18 when iteratively pruned and trained with varying amounts of warmup at learning rate 0.03.</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//bf25a612-00e1-4708-af18-a6ac435674a7/markdown_1/imgs/img_in_chart_box_220_1171_997_1406.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-08-23T23%3A18%3A14Z%2F-1%2F%2Fb3d5557ad81d2c0c811c02f0a1b3d79a84c64927fc660737f10cdf21d0f275db" alt="Image" width="63%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_220_1171_997_1406.jpg" alt="Image" width="63%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">Figure 45: Validation accuracy (at 30K, 60K, and 112K iterations) of VGG-19 when iteratively pruned and trained with varying amounts of warmup at learning rate 0.1.</div> </div>
