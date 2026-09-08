@@ -101,7 +101,7 @@ def submodules(self, *, cls: Type[T] | None = None) -> Generator[T, None, None]:
 
 3. **`is_leaf` 参数**：`jtu.tree_leaves` 的 `is_leaf=lambda x: isinstance(x, cls)` 让匹配类型的模块被视为叶子节点，不再进一步展开。这样即使一个 Module 内部还嵌套了同类型模块，也只返回直接匹配的那一层。
 
-4. **`*,` 强制关键字参数**：`cls` 必须用关键字传递（`submodules(cls=Vode)`），避免位置混淆。参考：[[python基础/2.asterisk-usage# 3. `*,` —— 强制关键字参数]]
+4. **`*,` 强制关键字参数**：`cls` 必须用关键字传递（`submodules(cls=Vode)`），避免位置混淆。参考：[[../../code/python/2.asterisk-usage# 3. `*,` —— 强制关键字参数]]
 
 **在 Vode 中的使用**：这个能力被 `EnergyModule.energy()` 继承和使用——它通过 `submodules(cls=EnergyModule)` 遍历子 Vode 并递归求和能量。Vode 自身不直接调用 `submodules`。
 

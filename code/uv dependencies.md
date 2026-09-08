@@ -1,7 +1,7 @@
 ---
-sr-due: 2026-08-25
-sr-interval: 35
-sr-ease: 270
+sr-due: 2026-09-19
+sr-interval: 19
+sr-ease: 250
 ---
 #code 
 
@@ -21,13 +21,14 @@ torchvision = [
 ]
 
 [[tool.uv.index]]
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-default = true
-
-[[tool.uv.index]]
 name = "pytorch-cu126"
 url = "https://download.pytorch.org/whl/cu126"
 explicit = true
+
+# 换源（默认使用清华源）
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
 ```
 
 ## 附加

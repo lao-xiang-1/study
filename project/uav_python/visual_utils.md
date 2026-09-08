@@ -66,7 +66,6 @@ def remove_background(image, red_image, cfg_line=None):
     mask = cv2.bitwise_or(mask, red_image)
 
     return mask
-
 ```
 
 ## 二维码色块识别
