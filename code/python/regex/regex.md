@@ -83,160 +83,73 @@ re.search(pattern, text)
 
 > 💡 Python 3.7+ 的 `re.escape` **只转义真正的特殊字符**，字母、数字、下划线保持原样（所以 `re.escape("hello")` 返回 `"hello"`）。
 
-#code/regex
-## 2. pattern的基本语法
-?
-### 2.1 元字符与字符类
+### 1.5 `re.compile()` 与 `Pattern` 类
 
-| 写法          | 含义                   | 示例                 |
-| ----------- | -------------------- | ------------------ |
-| `.`         | 任意一个字符（默认不含换行）       | `a.c` → `abc`      |
-| `\d` / `\D` | 数字 / 非数字             | `\d+` → `123`      |
-| `\w` / `\W` | 单词字符（字母数字下划线）/ 非单词字符 | `\w+` → `hello_1`  |
-| `\s` / `\S` | 空白 / 非空白（有字符就不是空白）   | `\s` 匹配空格、tab      |
-| `[abc]`     | 字符集合，匹配其中任一          | `[au]` → `a` 或 `u` |
-| `[^abc]`    | 取反集合                 | `[^,]` → 非逗号字符     |
-| `[a-z]`     | 范围                   | `[a-zA-Z]`         |
-| `\`         | 转义特殊字符               | `\.` 匹配字面 `.`      |
-
-### 2.2 量词
-
-| 写法 | 含义 |
-|------|------|
-| `*` | 0 次或多次（贪婪） |
-| `+` | 1 次或多次（贪婪） |
-| `?` | 0 次或 1 次 |
-| `{n}` | 恰好 n 次 |
-| `{n,m}` | n 到 m 次 |
-| `*?` `+?` | 非贪婪（惰性）版本 |
-
-> **贪婪 vs 非贪婪**：`*` 和 `+` 默认尽可能多匹配；加 `?` 后尽可能少匹配。
-> ```python
-> re.findall(r"<.*>", "<a><b>")    # ['<a><b>']   贪婪，一口气吞掉
-> re.findall(r"<.*?>", "<a><b>")   # ['<a>', '<b>'] 非贪婪，最短匹配
-> ```
-
-### 2.3 锚点
-
-| 写法 | 含义 |
-|------|------|
-| `^` | 字符串开头（`re.MULTILINE` 下匹配每行开头） |
-| `$` | 字符串结尾 |
-| `\b` | 单词边界 |
-
-### 2.4 分组与捕获
-
-用 `()` 创建**捕获组**，匹配后可用 `group(n)` 取出：
+`re.compile(pattern, flags=0)` 把正则**预先编译**成 `re.Pattern` 对象，之后反复调用它的方法，避免每次重新解析：
 
 ```python
-re.match(r"(\w+)-(\d+)", "vode-1").groups()  # ('vode', '1')
+import re
+
+pat = re.compile(r"\d+")   # pat 是 re.Pattern 实例
+pat.search("a1b22c333")    # <re.Match object; span=(1, 2), match='1'>
 ```
 
-- `(?:...)`：**非捕获组**，只分组不保存（不占 `group` 编号）。
-- `(?P<name>...)`：**命名分组**，可用 `group("name")` 取。
-<!--SR:!2026-09-17,31,270-->
+`Pattern` 对象的常用方法（与模块函数一一对应）：
 
----
-
-## 3. 进阶语法
-
-### 3.1 前瞻与后瞻（lookaround）
-
-**零宽断言**：匹配一个位置，但不消耗字符（不出现在结果里）。
-
-| 写法 | 名称 | 含义 |
+| Pattern 方法 | 等价的模块函数 | 作用 |
 |------|------|------|
-| `(?=...)` | 正向前瞻 | 右边必须紧跟 … |
-| `(?!...)` | 负向前瞻 | 右边不能紧跟 … |
-| `(?<=...)` | 正向后瞻 | 左边必须紧跟 … |
-| `(?<!...)` | 负向后瞻 | 左边不能紧跟 … |
+| `pat.match(s)` | `re.match(pattern, s)` | 从**开头**匹配 |
+| `pat.fullmatch(s)` | `re.fullmatch(pattern, s)` | **整串**完全匹配 |
+| `pat.search(s)` | `re.search(pattern, s)` | 搜索**第一个**匹配 |
+| `pat.findall(s)` | `re.findall(pattern, s)` | 所有匹配 → 列表 |
+| `pat.finditer(s)` | `re.finditer(pattern, s)` | 所有匹配 → 迭代器 |
+| `pat.sub(repl, s)` | `re.sub(pattern, repl, s)` | 替换所有匹配 |
+| `pat.split(s)` | `re.split(pattern, s)` | 按模式切分 |
 
-```python
-# 匹配前面不是空格的字符位置
-re.search(r"(?<!\s)x", " x")   # None，x 前面是空格
-re.search(r"(?<!\s)x", "ax")   # 匹配，x 前面是 a
-```
+常用属性：
 
-> ⚠️ Python `re` 的**后瞻必须是固定宽度**（不能写 `(?<=a*)` 这种变长的）。`\s` 是单字符，合法。
-
-### 3.2 flags 常用标志
-
-| 标志 | 作用 |
+| 属性 | 含义 |
 |------|------|
-| `re.IGNORECASE` / `re.I` | 忽略大小写 |
-| `re.MULTILINE` / `re.M` | `^` `$` 匹配每行首尾 |
-| `re.DOTALL` / `re.S` | `.` 也匹配换行符 |
-| `re.VERBOSE` / `re.X` | 允许在模式中写注释和换行 |
+| `pat.pattern` | 原始模式串 |
+| `pat.flags` | 编译时传入的 flags |
+| `pat.groups` | 捕获组数量 |
+| `pat.groupindex` | 命名组名 → 编号的映射 |
 
-## 4. 结合 PCX 代码讲解
+### 1.6 `Pattern` 方法 vs 模块函数
 
+**功能完全一样**。模块级函数内部就是 `re.compile(pattern).method(s)` 的简写（自带编译缓存）。区别只有三点：
 
-> [!tip] 
-> #### 1. `r` — raw string（原始字符串）
-> **作用**：取消反斜杠 `\` 的转义效果，字符串里写什么就是什么。
-> 
-> #### 2. `f` — f-string（格式化字符串）
-> **作用**：在字符串中**嵌入变量/表达式**，用 `{变量名}` 语法。
-
-
-### 4.1 `set` 中的 `_rule_pattern`（核心例子）
+1. **参数不同**：模块函数第一个参数是 pattern 字符串；`Pattern` 方法已「记住」模式，第一个参数直接是待匹配字符串。
+2. **flags 位置不同**：`re.match(p, s, flags=...)` 每次调用都能传；`Pattern` 的 flags 在 `compile()` 时定死，方法里不能再传。
+3. **性能**：同一正则重复使用很多次时，先 `compile` 一次比每次 `re.match(p, s)` 更高效。
 
 ```python
-# Vode.set
-_rule_pattern = f"(.*(?<!\\s))\\s*<-\\s*({key}.*)"
-rules = tuple(self.ruleset.filter(self.status, _rule_pattern))
+pat = re.compile(r"\d+", re.I)   # flags 在这里固定
+pat.search("ABC123")              # 等价于 re.search(r"\d+", "ABC123", re.I)
 ```
 
-**注意 f-string 转义**：`\\s` 在 f-string 里是「转义的反斜杠 + s」，实际字符串里就是 `\s`。若 `key="u"`，最终的 `_rule_pattern` 是：
-```
-(.*(?<!\s))\s*<-\s*(u.*)
-```
+### 1.7 编译标志（flags）与 `re.X`
 
-逐段拆解：
+flags 在编译时（或模块函数调用时）传入，控制匹配行为：
 
-| 片段            | 含义                                                  |
-| ------------- | --------------------------------------------------- |
-| `(.*(?<!\s))` | 捕获组：`.*` 尽量多匹配字符；`(?<!\s)` 负向后瞻 → 相当于去掉 target 末尾空格 |
-| `\s*<-\s*`    | 匹配 `<-` 和左右两侧任意空白                                   |
-| `(u.*)`       | 第 2 捕获组：以 `u`（即 `key`）开头，后接任意字符（变换链部分，如 `:se:zero`） |
+| flag | 全名 | 作用 |
+|------|------|------|
+| `re.I` | `re.IGNORECASE` | 忽略大小写 |
+| `re.M` | `re.MULTILINE` | `^` `$` 匹配每行首尾 |
+| `re.S` | `re.DOTALL` | `.` 也匹配换行符 |
+| `re.X` | `re.VERBOSE` | 允许注释和空白（详细模式） |
 
-> `(?<!\s)` 表示第一组匹配的末尾不为空格
+> ⚠️ flags 是**常量**不是函数，`re.X()` 会报 `TypeError: 'int' object is not callable`。
 
-**匹配过程示例**（规则 `"h, u <- u:se:zero"`，`key="u"`）：
-
-
-> 💡 写法对照：用原始 f-string `rf"..."` 可以省掉双反斜杠，更清晰：
-> ```python
-> _rule_pattern = rf"(.*(?<!\s))\s*<-\s*({key}.*)"
-> ```
-> 两者等价，`rf` 更推荐。
-
-### 4.2 `get` 中的 `_rule_pattern`
-
-输出规则方向相反，用 `->`：
+`re.X`（`re.VERBOSE`）让正则里可以写**注释**和**换行缩进**，方便写长正则：
 
 ```python
-# Vode.get
-_rule_pattern = f"({key})\\s*->\\s*(.*)"
+pat = re.compile(r"""
+    \d+    # 数字部分
+    \s*    # 可选的空白
+    \w+    # 单词部分
+""", re.X)
+
+pat.search("abc 123 word")   # 匹配 '123 word'
 ```
 
-`key="h"` 时实际 pattern：`(h)\s*->\s*(.*)`。
-
-| 片段 | 含义 |
-|------|------|
-| `(h)` | 第 1 组：键名 `h` 本身 |
-| `\s*->\s*` | 箭头及两侧空白 |
-| `(.*)` | 第 2 组：`target:transformation` 部分（如 `u:se`） |
-
-对比 `set`：`set` 的 target 在**左边**所以用 `.*` 兜住整段并修剪；`get` 的 key 在**左边**所以直接精确匹配 `({key})`。两者结构对称。
-
-## 5. 常见陷阱
-
-### 5.1 后瞻必须定宽
-
-```python
-re.search(r"(?<=a+)b", "aaab")   # 报错：look-behind requires fixed-width pattern
-re.search(r"(?<=a)b", "ab")      # 合法
-```
-
-`\s` 是定宽（单字符），所以 PCX 的 `(?<!\s)` 没问题。
