@@ -1,7 +1,7 @@
 ---
-sr-due: 2026-09-10
-sr-interval: 2
-sr-ease: 230
+sr-due: 2026-09-29
+sr-interval: 16
+sr-ease: 250
 ---
 #code 
 
@@ -9,7 +9,7 @@ sr-ease: 230
 
 世界上有100多万个英文单词，但是只有26个英文字母。而单词的含义确定，单个字母没有含义。我们希望token能准确表示含义，但是又不希望数量太多。
 所以我们折中考虑，从单个字母开始合并，在达到想要的数量时停止。
-如果语料库很短，我们可以把单词直接作为token，而数量却不多。这时没有必要合并两个单词，因为单词已经是一个独立的个体，合并之后反而含义更加模糊。
+如果语料库很短，以至于我们可以直接把单词作为token，而数量却不多。这时没有必要合并两个单词，因为单词已经是一个独立的个体，合并之后反而含义更加模糊。
 
 
 ## 创建分词表，并进行合并
@@ -64,7 +64,7 @@ def merge_vocab(pair, v_in):
     v_out = Counter()
     bigram = re.escape(' '.join(pair)) # 防止pair中有转义字符
     p = re.compile(r'(?<!\S)' + bigram + r'(?!\S)') # 表示左右两侧是空白或者字符串边界
-    for word in v_in: # 对每个词都进行合并
+    for word in v_in: # 对v_in中每个词都进行合并
         w_out = p.sub(''.join(pair), word)
         v_out[w_out] = v_in[word] # 频率不变地写入新词表
     return v_out
@@ -124,7 +124,7 @@ for i in tqdm(range(num_merges)):
 ## 获取tokens 并创建对应id
 
 ### get_tokens_from_vocab
->从合并后的vocab中获取token
+>从合并后的vocab中获取token，并统计频率
 
 ```python
 def get_tokens_from_vocab(vocab):
@@ -144,12 +144,12 @@ def get_tokens_from_vocab(vocab):
 
 ```python
 def measure_token_length(token):
-    return len(token[:-4]) + 1 if token[-4:] == '</w>' else len(token) # '</w>'看成一个字符
+    return len(token[:-4]) + 1 if token[-4:] == '</w>' else len(token) # 把'</w>'看成一个字符
     
 sorted_tokens = [
     token
     for (token, freq) in sorted(
-        tokens_frequencies.items(),
+        tokens_frequencies.items(), # (token, freq)
         key=lambda item: (measure_token_length(item[0]), item[1]),
         reverse=True,
     )
