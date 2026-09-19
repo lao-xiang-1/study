@@ -1,6 +1,6 @@
 ---
-sr-due: 2026-09-18
-sr-interval: 3
+sr-due: 2026-09-28
+sr-interval: 9
 sr-ease: 250
 ---
 #code 
@@ -25,6 +25,8 @@ $$
 
 记 $10000^{2i/d_{\text{model}}}, 10000^{2(i-1)/d_{\text{model}}} = \theta$，其与数学上角频率和频率的联系：
 $$\omega = \dfrac{1}{\theta}, \quad f = \dfrac{1}{2\pi\theta}$$
+波长（一个周期内 pos 移动的长度）：
+$$\lambda = 2\pi\theta$$
 - 低维->高频，高维->低频
 - 相邻维度的 $\theta$ 相同（很好理解：$i$ 取0和1时，$\theta$ 相同。取2和3也相同）
 
@@ -44,8 +46,7 @@ $$\omega = \dfrac{1}{\theta}, \quad f = \dfrac{1}{2\pi\theta}$$
 	& \dfrac{pos}{10000^{2i/d_{\text{model}}}} = \dfrac{\pi}{4} \\
 	& pos = \dfrac{\pi}{4}10000^{2i/d_{\text{model}}}
 	\end{align}
-	$$
-	可以看到pos和 i 呈指数形式。因为相邻维度的频率相同，所以 i 为奇数时也一样。
+	$$可以看到pos和 i 呈指数形式。因为相邻维度的频率相同，所以 i 为奇数时也一样。
 
 
 #### 深入理解：为什么高维频率低
@@ -92,7 +93,7 @@ x = input_embeddings + pe
 
 ### 数学原理
 [Rope数学原理](attachment/Rope数学原理.md)
-频率的计算方法其实和绝对位置编码相同（和[数学公式](#数学公式)一样），只是这里应用了旋转矩阵
+频率的计算方法其实和绝对位置编码相同（和[上面提到的公式](#数学公式)一样），只是这里应用了旋转矩阵
 
 ### 代码实现（MiniMind 版本）
 
@@ -126,7 +127,7 @@ def precompute_freqs_cis(dim, end, rope_base=1e6, rope_scaling=None):
 
 ```python
 def apply_rotary_pos_emb(q, k, cos, sin, unsqueeze_dim=1):
-	# 把 x 后半取负放前面：[x₀,x₁,x₂,x₃] → [-x₂,-x₃,x₀,x₁]
+	# 把 x 最后一维的后半取负放前面：[x₀,x₁,x₂,x₃] → [-x₂,-x₃,x₀,x₁]
     def rotate_half(x):
         return torch.cat((-x[..., x.shape[-1] // 2:], x[..., : x.shape[-1] // 2]), dim=-1)
 
@@ -148,33 +149,23 @@ def apply_rotary_pos_emb(q, k, cos, sin, unsqueeze_dim=1):
 **返回：** `(q_embed, k_embed)`，形状分别与 `q`、`k` 完全一致（RoPE 是保形变换，不改变任何一维）。
 
 ##### 形状与广播
->补充知识：[broadcasting](../../code/python/torch/broadcasting.md)，[杂项](../../code/python/torch/杂项.md)
-
-当两个张量相乘时，python会尝试进行广播，从**最后一维往左对齐**，逐维比较：
-
-1. 两边该维**相等** → 直接用；
-2. 一边该维是 **1**（或**根本没有这一维**，视作 1）→ 这一维被"撑大"到另一边的大小；
-3. 否则（比如 3 对 5，都不为 1）→ 无法广播，直接 `RuntimeError`。
+>补充知识：[Broadcasting](../../code/python/torch/Broadcasting.md)，[pytorch基础](../../code/python/torch/杂项.md)
 
 以 `q * sin` 为例，由于 `sin` 少了一个 `heads` 维度，所以需要进行扩展（`sin.unsqueeze(1`）以填充一个维度，结果如下：
 ```
 q    : [batch, seq, heads, d]      = [  4, 512,  8, 64]
 sin  : [seq, 1, d]                 = [     512,  1, 64]    # unsqueeze(1) 之后
 ```
-当两个向量相乘（`*`）时，sin会自动变形为 `[4, 512, 8, 64]`，然后两者逐元素相乘。这意味着每个注意力头用同一套频率。
+当两个向量相乘（`*`）时，sin会自动变形为 `[4, 512, 8, 64]`，然后两者逐元素相乘。**这意味着每个注意力头用同一套频率**。
 
 ##### 维度配对方法
->前三维 `batch, seq, heads` 操作相同，只考虑最后一维`dim`
+>前三维 `batch, seq, heads` 不影响，只考虑最后一维`dim`
 
-设 $d=4$，两种配对方式：
-
-| 变体                              | 旋转对              | 出处                               |
-| ------------------------------- | ---------------- | -------------------------------- |
-| 交错式（interleaved）                | (x₀,x₁), (x₂,x₃) | RoFormer 原论文                     |
-| **半分式（half / non-interleaved）** | (x₀,x₂), (x₁,x₃) | Llama / GPT-NeoX，**MiniMind 采用** |
-数学上两者等价——只是同一组权重的两种排列，训练出的模型互不兼容，但各自正确。
-
-对于当前代码使用的配对方法，假设原始数据是 `[x₀, x₁, x₂, x₃]`，那么应用旋转后的向量：
+二维情形的旋转矩阵如下：
+$$
+\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos m\theta & -\sin m\theta \\ \sin m\theta & \cos m\theta \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} x\cos m\theta-y\sin m\theta & x\sin m\theta+y\cos m\theta \end{bmatrix}
+$$
+注意这里的 $x$, $y$ 不一定要取相邻维度的。事实上我们的示例代码使用的是半分式，比如说对于 `[x₀, x₁, x₂, x₃]`，我们选取的旋转对是 `(x₀,x₂), (x₁,x₃)`，应用旋转后的向量：
 
 | 索引  | 值                   |
 | --- | ------------------- |
@@ -182,8 +173,7 @@ sin  : [seq, 1, d]                 = [     512,  1, 64]    # unsqueeze(1) 之后
 | 1   | `x₁cosθ₁ − x₃sinθ₁` |
 | 2   | `x₂cosθ₀ + x₀sinθ₀` |
 | 3   | `x₃cosθ₁ + x₁sinθ₁` |
-
-相当于对 (x₀,x₂), (x₁,x₃) 使用旋转矩阵（各分量对用各自的频率）。
+因为 Q 和 K 用的是一样的变换方式，所以最终效果相同
 
 #### 调用方法
 
@@ -192,7 +182,7 @@ sin  : [seq, 1, d]                 = [     512,  1, 64]    # unsqueeze(1) 之后
 freqs_cos, freqs_sin = precompute_freqs_cis(dim=hidden_size // num_attention_heads,
                                              end=max_position_embeddings, ...)
 
-# Attention.forward：旋转 q/k（注意只旋 q、k，不旋 v）
+# Attention.forward：旋转 q/k
 cos, sin = position_embeddings
 xq, xk = apply_rotary_pos_emb(xq, xk, cos, sin)
 ```
@@ -231,9 +221,9 @@ $$r_i = \frac{L_{\text{train}}}{\lambda_i}$$
 $$\gamma_i = \operatorname{clamp}\!\left(\frac{i - \text{low}}{\text{high} - \text{low}},\ 0,\ 1\right)$$
 
 每个维度的新频率：
-$$\theta_i' = \theta_i\Big[(1-\gamma_i) + \frac{\gamma_i}{s}\Big]$$
+$$\omega_i' = \omega_i\Big[(1-\gamma_i) + \frac{\gamma_i}{s}\Big]$$
 
-也就是 $\gamma=0$ 时 $\theta_i'=\theta_i$（外推），$\gamma=1$ 时 $\theta_i'=\theta_i/s$（插值），中间线性混合。
+也就是 $\gamma=0$ 时 $\omega_i'=\omega_i$（外推，波长不变），$\gamma=1$ 时 $\omega_i'=\omega_i/s$（插值），中间线性混合。
 
 ### 代码实现
 
@@ -242,14 +232,15 @@ $$\theta_i' = \theta_i\Big[(1-\gamma_i) + \frac{\gamma_i}{s}\Big]$$
 if end / orig_max > 1.0:
     inv_dim = lambda b: (dim * math.log(orig_max / (b * 2 * math.pi))) / (2 * math.log(rope_base))
     low  = max(math.floor(inv_dim(beta_fast)), 0)
-    high = min(math.ceil(inv_dim(beta_slow)),  dim // 2 - 1)
+    high = min(math.ceil(inv_dim(beta_slow)),  dim // 2 - 1) # 至多在一半维度以上算作高频
     ramp = torch.clamp((torch.arange(dim // 2).float() - low) / max(high - low, 0.001), 0, 1)
     freqs = freqs * (1 - ramp + ramp / factor)
 ```
 
-- `inv_dim(b)`：反解"波长恰好等于 b 个位置"的维度索引（由 $\lambda_i = 2\pi/\theta_i = b$ 解出 $i$）；
-- **索引 ≤ low（高频，波长 < beta_fast=32）**：ramp=0，频率不变 → 保持精细局部分辨能力（外推）；
-- **索引 ≥ high（低频，波长 > beta_slow=1×训练长度量级）**：ramp=1，频率 ÷ 16 → 插值，把没见过的相位压回已见范围；
+- `inv_dim(b)`：反解「在训练长度 $L$ 内恰好转 $b$ 圈」的维度索引，即 $r_i=\dfrac{L}{2\pi\theta_i}=b$ 的解。
+$$\text{inv\_dim}(b)=\frac{d}{2\ln(\text{base})}\ln\!\left(\frac{L}{2\pi b}\right)$$
+- **索引 ≤ low（高频，圈数 $r_i\ge\beta_{\text{fast}}=32$）**：ramp=0，频率不变 → 保持精细局部分辨能力（外推）；
+- **索引 ≥ high（低频，圈数 $r_i\le\beta_{\text{slow}}=1$，波长 $\ge1\times$ 训练长度）**：ramp=1，频率 ÷ 16 → 插值，把没见过的相位压回已见范围；
 - 中间线性过渡。
 
 即每个维度 $f'(i) = f(i)\left[(1-\gamma) + \gamma/s\right]$，γ 是 ramp。
