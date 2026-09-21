@@ -1,9 +1,3 @@
----
-sr-due: 2026-09-07
-sr-interval: 24
-sr-ease: 250
----
-#code
 
 ## 1. 正则表达式与 `re` 模块
 

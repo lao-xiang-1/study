@@ -1,9 +1,3 @@
----
-sr-due: 2026-09-15
-sr-interval: 31
-sr-ease: 250
----
-#code 
 
 # SSH（Secure Shell）
 

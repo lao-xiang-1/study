@@ -1,9 +1,3 @@
----
-sr-due: 2026-09-05
-sr-interval: 3
-sr-ease: 250
----
-#code 
 
 # pandas 十分钟入门
 

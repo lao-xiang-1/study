@@ -1,9 +1,3 @@
----
-sr-due: 2026-08-26
-sr-interval: 17
-sr-ease: 230
----
-#code 
 
 `dmesg` 是 Linux 系统中一个基础且强大的命令行工具，用于**查看和控制内核的环形缓冲区（kernel ring buffer）**。
 
