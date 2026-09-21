@@ -29,7 +29,7 @@ Warning: This will require a one-way sync, and may mark existing notes as modifi
 如果勾选此项，且您或卡片组作者修改了笔记类型的结构，Anki 将合并两个版本，而不是同时保留两者。
 修改笔记类型的结构是指添加、删除或重新排列字段或模板，或者更改排序字段。反例：更改现有模板的正面内容并不构成结构变更。
 警告：这将需要进行单向同步，并可能将现有笔记标记为已修改。
-<!--SR:!2026-09-10,27,230-->
+<!--SR:!2026-11-22,62,230-->
 
 ---
 
@@ -37,7 +37,7 @@ Warning: This will require a one-way sync, and may mark existing notes as modifi
 During inference, all prediction errors and feedback terms are computed first using the current network state, and only then are the latent variables  $\mathbf{x}^{(l)}$ updated. This ensures that each update step is based on a consistent energy landscape and avoids using partially updated states within the same iteration. Conceptually, this corresponds to a synchronous update scheme where all neurons compute their next state based on the same network snapshot.
 ?
 在推断过程中，首先利用当前网络状态计算所有预测误差和反馈项，然后才对隐变量 $\mathbf{x}^{(l)}$ 进行更新。这确保了每次更新步骤都基于一致的能量景观，并避免在同一次迭代中使用部分更新的状态。从概念上讲，这对应于一种同步更新方案，其中所有神经元都基于同一网络快照计算其下一状态。
-<!--SR:!2026-09-04,23,250-->
+<!--SR:!2026-10-03,12,230-->
 
 ---
 
@@ -45,7 +45,7 @@ During inference, all prediction errors and feedback terms are computed first us
 One of the original motivations behind predictive coding is its potential biological plausibility: that the brain could implement something akin to deep hierarchical learning using local computations. Locality typically refers to whether a computation depends only on information from a given layer and its immediate neighbors. This concept is important both for computational efficiency and biological plausibility.
 ?
 预测编码最初的动机之一是其潜在的生物学合理性（biological plausibility）：即大脑可以利用局部计算实现类似于深层层级学习的功能。**局部性**（locality）通常指一个计算是否仅依赖于来自给定层及其直接相邻层的信息。这一概念对于计算效率和生物学合理性都很重要。
-<!--SR:!2026-09-21,40,290-->
+<!--SR:!2027-01-15,116,290-->
 
 ---
 
@@ -63,4 +63,4 @@ The algorithm can be modified in this spirit by choosing a sufficiently large ma
 To catalyze progress in this field, we've introduced the WBE Challenge — a series of standardized data sets and challenges aimed at improving neural circuit reconstruction methods. Drawing inspiration from successful AI challenges like ImageNet, the WBE Challenge provides a structured framework for researchers to develop and test their algorithms against controlled conditions before applying them to real-world data.
 ?
 为了推动该领域的发展，我们推出了WBE挑战赛——一系列标准化的数据集和挑战任务，旨在改进神经回路重建方法。借鉴ImageNet等成功的人工智能挑战赛的经验，WBE挑战赛为研究人员提供了一个结构化框架，使其能够在受控条件下开发和测试算法，然后再将其应用于真实数据。
-<!--SR:!2026-09-03,7,250-->
+<!--SR:!2026-10-16,25,270-->

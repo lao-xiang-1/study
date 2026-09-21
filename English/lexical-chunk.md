@@ -62,7 +62,7 @@
 - **例句**：
   - Babies need sensory **stimulation** for healthy development.（婴儿需要感官刺激来健康成长。）
   - The drug causes **stimulation** of the central nervous system.（该药物引起中枢神经系统的兴奋。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-23,63,310-->
 
 ---
 
@@ -110,7 +110,7 @@
 - **例句**：
   - The **derivative** of x² is 2x.（x² 的导数是 2x。）
   - Critics called the film **derivative** and uninspired.（评论家称这部电影缺乏原创性，毫无新意。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-24,64,310-->
 
 ---
 
@@ -242,7 +242,7 @@
 - **例句**：
   - Model **interpretability** is crucial in medical AI applications.（模型的可解释性在医疗AI应用中至关重要。）
   - Researchers are working to improve the **interpretability** of deep learning systems.（研究人员正致力于提高深度学习系统的可解释性。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-21,61,310-->
 
 ---
 
@@ -620,7 +620,7 @@
 - **例句**：
   - You should **defragment** your mechanical hard drive periodically to improve performance.（你应该定期整理机械硬盘的碎片以提高性能。）
   - Modern operating systems **defragment** drives automatically in the background.（现代操作系统会在后台自动整理磁盘碎片。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-25,65,310-->
 
 ---
 
@@ -674,25 +674,7 @@
 - **例句**：
   - In the sentence "She reads books," the verb "reads" is **transitive** because it takes a direct object.（在句子"She reads books"中，动词"reads"是及物的，因为它带有直接宾语。）
   - Equality is a **transitive** relation: if A equals B and B equals C, then A equals C.（等价是一种传递关系：如果 A 等于 B 且 B 等于 C，那么 A 等于 C。）
-<!--SR:!2026-08-28,16,290-->
-
----
-
-#en
-## 三十六、slot / time slot
-?
-### 1. slot
-- **释义**：n. 狭槽；位置；时段 v. 把……放入狭槽；安排
-- **例句**：
-  - Insert the coin into the **slot** to start the vending machine.（把硬币投入投币口来启动自动售货机。）
-  - The new TV show has been given a prime-time **slot** on Friday evenings.（这档新电视节目被安排在周五晚间的黄金时段。）
-
-### 2. time slot
-- **释义**：n. 时间段；时段
-- **例句**：
-  - Please select an available **time slot** for your appointment next week.（请选择下周预约的可用时间段。）
-  - The conference schedule has a 15-minute **time slot** for each presenter.（会议日程为每位演讲者安排了 15 分钟的时间段。）
-<!--SR:!2026-10-26,60,310-->
+<!--SR:!2026-11-26,66,310-->
 
 ---
 
@@ -727,24 +709,6 @@
 ---
 
 #en
-## 三十八、compose / compound
-?
-### 1. compose
-- **释义**：v. 组成，构成；作曲；撰写；使镇静
-- **例句**：
-  - The committee is **composed** of experts from various fields.（委员会由来自各领域的专家组成。）
-  - She sat down to **compose** a letter of resignation.（她坐下来撰写一封辞职信。）
-
-### 2. compound
-- **释义**：n. 混合物，化合物；adj. 复合的；v. 使加重，使恶化
-- **例句**：
-  - Water is a chemical **compound** of hydrogen and oxygen.（水是氢和氧化合而成的化合物。）
-  - His mistakes were **compounded** by his refusal to ask for help.（他拒绝求助使错误更加严重。）
-<!--SR:!2026-08-29,12,270-->
-
----
-
-#en
 ## 三十九、trim / crop / prune
 ?
 ### 1. trim
@@ -764,7 +728,7 @@
 - **例句**：
   - You should **prune** the rose bushes in early spring to encourage new growth.（你应该在早春修剪玫瑰丛以促进新枝生长。）
   - The editor **pruned** the article to fit the word limit.（编辑删减了文章以符合字数限制。）
-<!--SR:!2026-09-10,14,290-->
+<!--SR:!2026-11-01,41,290-->
 
 ---
 

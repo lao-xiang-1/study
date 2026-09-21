@@ -13,5 +13,6 @@
 #en/Phrase  drop-in replacement::直接替换；即插即用替代品
 <!--SR:!2026-09-23,42,290-->
 
+#en/Phrase  assume a role::承担责任
 
 

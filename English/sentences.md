@@ -26,7 +26,7 @@ we often leverage model failures to assess per-sample hardness
 This practice drives RL with verifiable rewards
 ?
 这种做法推动了基于可验证奖励的强化学习
-<!--SR:!2026-08-22,10,230-->
+<!--SR:!2026-09-26,5,210-->
 
 ---
 
@@ -146,7 +146,7 @@ in this file only stateless layers are implemented as they don't need any partic
 This information is typically reportable, in the sense that it can be put into words on request.
 ?
 这类信息通常是可报告的，即可应要求用语言表达出来
-<!--SR:!2026-08-18,6,250-->
+<!--SR:!2026-10-12,21,270-->
 
 ---
 
@@ -164,7 +164,7 @@ Several functional properties are commonly held to distinguish consciously acces
 Indeed, verbal report has often served as a primary empirical signature of conscious access
 ?
 事实上，言语报告常常被用作意识通达的主要经验指标
-<!--SR:!2026-08-18,4,190-->
+<!--SR:!2026-10-01,10,210-->
 
 ---
 
@@ -193,7 +193,7 @@ utility function that create a fast cache set, which keeps track of the orders i
 ---
 
 #en/Sentence
-this is used to reduce the overhead of injecting the new values back into the original kwargs outside of the 'jit barrier'
+This is used to reduce the overhead of injecting the new values back into the original kwargs outside of the 'jit barrier'
 ?
 这样做是为了减少在"JIT 屏障"之外，将新值重新注入原始 kwargs 所带来的开销。
 <!--SR:!2026-09-02,16,250-->
@@ -201,7 +201,7 @@ this is used to reduce the overhead of injecting the new values back into the or
 ---
 
 #en/Sentence
-set the value of the parameter corresponding to the given key, after being processed of the Vode ruleset
+Set the value of the parameter corresponding to the given key, after being processed of the Vode ruleset
 ?
 设置与给定 key 对应的参数的值，该值会先经过 Vode 的 ruleset（规则集）处理。
 <!--SR:!2026-10-06,40,290-->
@@ -209,15 +209,15 @@ set the value of the parameter corresponding to the given key, after being proce
 ---
 
 #en/Sentence
-a set of rules can be specified as a tuple of either input or output rules.
+A set of rules can be specified as a tuple of either input or output rules.
 ?
 一组规则可以指定为一个元组，其中包含输入规则或输出规则
-<!--SR:!2026-08-24,12,270-->
+<!--SR:!2026-10-24,33,270-->
 
 ---
 
 #en/Sentence
-the output can be customised by setting the 'output' parameter to the desired value.
+The output can be customized by setting the 'output' parameter to the desired value.
 ?
 可以将 “output” 参数设置为所需值，从而自定义输出。
 <!--SR:!2026-08-27,15,290-->
@@ -238,7 +238,7 @@ A typical ICLR paper involves significantly more work than goes into a course pr
 This, however, implies that if a duplicate reference is present in the pytree, the function will be applied to each occurrence of the reference (so multiple times on the same node), which must be taken into account when designing the function.
 ?
 然而，这意味着如果 pytree 中存在重复引用，该函数会被应用到该引用的每一次出现（因此可能在同一节点上被多次调用），在设计该函数时必须考虑到这一点。
-<!--SR:!2026-08-21,9,250-->
+<!--SR:!2026-09-26,5,230-->
 
 ---
 
@@ -246,7 +246,7 @@ This, however, implies that if a duplicate reference is present in the pytree, t
 ICLR 2027 decided to have the full paper deadline on Sep 16
 ?
 ICLR 2027 决定把全文截止日期定在 9 月 16 日
-<!--SR:!2026-08-26,14,290-->
+<!--SR:!2026-11-16,56,310-->
 
 ---
 
@@ -270,7 +270,7 @@ Immune to creep and floor spikes
 Instead of moving quickly to **assume useful roles** in the overall problem solution, the hidden units **engage in** a complex dance with much wasted motion.
 ?
 隐藏单元不会迅速地在求解整体问题中承担有用的角色，而是陷入一场复杂的舞蹈，做出大量徒劳的动作。
-<!--SR:!2026-08-25,10,270-->
+<!--SR:!2026-09-26,5,250-->
 
 ---
 
@@ -340,10 +340,11 @@ fetch content from one or more web pages, following links recursively.
 
 ---
 
-#en/Sentence 
+#en/Sentence
 It bore witness to her efforts
 ?
 它见证了她的努力。
+<!--SR:!2026-09-22,1,230-->
 
 ---
 
@@ -376,8 +377,19 @@ Fill the bracketed placeholders; keep the headings and table columns as shown.
 ---
 
 #en/Sentence 
-a better mental model is to think of the column index as  
+A better mental model is to think of the column index as  
 coming last and the row index as second to last.
 ?
 一个更好的心智模型是：把**列索引看作最后一位**，把**行索引看作倒数第二位**。
 
+---
+
+#en/Sentence
+Bury sibling cards until the next day
+Siblings are cards generated from the same card text i.e. cloze deletions
+?
+**搁置兄弟卡片直到第二天**
+兄弟卡片是由同一卡片文本生成的卡片，即填空删除（完形填空）
+<!--SR:!2026-09-22,1,230-->
+
+---
