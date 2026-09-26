@@ -2,7 +2,6 @@
 
 #en
 ## 一、intent / intense / intensely / intensive / intensity
-?
 ### 1. intent
 - **释义**：n. 意图，目的；adj. 专心的，专注的
 - **例句**：
@@ -32,13 +31,11 @@
 - **例句**：
   - The storm is expected to increase in **intensity** overnight.（预计暴风雨夜间强度将增大。）
   - She spoke with great **intensity** about her passion for music.（她满怀激情地谈论对音乐的热爱。）
-<!--SR:!2026-10-21,55,310-->
 
 ---
 
 #en
 ## 二、stimulus / stimuli / stimulate / stimulation
-?
 ### 1. stimulus
 - **释义**：n. 刺激（物）；激励因素
 - **例句**：
@@ -62,13 +59,11 @@
 - **例句**：
   - Babies need sensory **stimulation** for healthy development.（婴儿需要感官刺激来健康成长。）
   - The drug causes **stimulation** of the central nervous system.（该药物引起中枢神经系统的兴奋。）
-<!--SR:!2026-11-23,63,310-->
 
 ---
 
 #en
 ## 三、slight / slightly / slighted
-?
 ### 1. slight
 - **释义**：adj. 轻微的，微小的；纤细的
 - **例句**：
@@ -86,13 +81,11 @@
 - **例句**：
   - She felt **slighted** when she wasn't invited to the meeting.（没被邀请参加会议，她感到受了冷落。）
   - He **slighted** her contributions to the project.（他轻视了她对项目的贡献。）
-<!--SR:!2026-10-20,54,310-->
 
 ---
 
 #en
 ## 四、derive / derived / derivative
-?
 ### 1. derive
 - **释义**：v. 取得，获得；源自，起源于
 - **例句**：
@@ -110,13 +103,11 @@
 - **例句**：
   - The **derivative** of x² is 2x.（x² 的导数是 2x。）
   - Critics called the film **derivative** and uninspired.（评论家称这部电影缺乏原创性，毫无新意。）
-<!--SR:!2026-11-24,64,310-->
 
 ---
 
 #en
 ## 五、precedent / precedence / unprecedented
-?
 ### 1. precedent
 - **释义**：n. 先例，前例；adj. 在先的
 - **例句**：
@@ -134,13 +125,11 @@
 - **例句**：
   - The pandemic caused **unprecedented** disruption to the global economy.（疫情对全球经济造成了前所未有的冲击。）
   - The team achieved an **unprecedented** level of success this season.（该团队本赛季取得了史无前例的成就。）
-<!--SR:!2026-10-23,57,310-->
 
 ---
 
 #en
 ## 六、specification / specified / specify
-?
 ### 1. specification
 - **释义**：n. 规格，规范；详细说明
 - **例句**：
@@ -158,13 +147,11 @@
 - **例句**：
   - The contract **specifies** that payment is due within 30 days.（合同明确规定付款须在30天内完成。）
   - Please **specify** your preferred delivery address when ordering.（订购时请明确您的收货地址。）
-<!--SR:!2026-11-29,65,310-->
 
 ---
 
 #en
 ## 七、deceive / deception / deceptive
-?
 ### 1. deceive
 - **释义**：v. 欺骗，蒙蔽
 - **例句**：
@@ -182,13 +169,11 @@
 - **例句**：
   - The advertisement was found to be **deceptive** and was pulled from television.（该广告被认定具有欺骗性，已从电视上撤下。）
   - The calm surface of the lake is **deceptive** — the currents below are dangerous.（湖面看似平静，实则暗流涌动。）
-<!--SR:!2026-10-24,58,310-->
 
 ---
 
 #en
 ## 八、reception / receptionist / receptive
-?
 ### 1. reception
 - **释义**：n. 接待，招待会；接收（信号等）；反响
 - **例句**：
@@ -206,13 +191,11 @@
 - **例句**：
   - The audience was very **receptive** to the speaker's ideas.（听众非常乐于接受演讲者的观点。）
   - Children are generally more **receptive** to learning new languages.（儿童通常更善于学习新语言。）
-<!--SR:!2026-10-27,61,310-->
 
 ---
 
 #en
 ## 九、emerge / emerging
-?
 ### 1. emerge
 - **释义**：v. 出现，浮现；脱颖而出；（事实）暴露
 - **例句**：
@@ -224,13 +207,11 @@
 - **例句**：
   - **Emerging** technologies like AI are transforming every industry.（人工智能等新兴技术正在改变各行各业。）
   - The fund focuses on investing in **emerging** markets.（该基金专注于投资新兴市场。）
-<!--SR:!2026-11-30,66,310-->
 
 ---
 
 #en
 ## 十、interpret / interpretability
-?
 ### 1. interpret
 - **释义**：v. 解释，理解；口译
 - **例句**：
@@ -242,13 +223,11 @@
 - **例句**：
   - Model **interpretability** is crucial in medical AI applications.（模型的可解释性在医疗AI应用中至关重要。）
   - Researchers are working to improve the **interpretability** of deep learning systems.（研究人员正致力于提高深度学习系统的可解释性。）
-<!--SR:!2026-11-21,61,310-->
 
 ---
 
 #en
 ## 十一、equivalent / equivalence
-?
 ### 1. equivalent
 - **释义**：adj. 等价的，相当的；n. 等价物，对等物
 - **例句**：
@@ -260,7 +239,6 @@
 - **例句**：
   - The **equivalence** of mass and energy is expressed by E=mc².（质能等价关系由 E=mc² 表达。）
   - The two qualifications are recognized as having **equivalence**.（这两种资格被认定为具有同等效力。）
-<!--SR:!2026-10-23,57,310-->
 
 ---
 
@@ -284,7 +262,6 @@
 
 #en
 ## 十三、recursive / recursion
-?
 ### 1. recursive
 - **释义**：adj. 递归的，循环的
 - **例句**：
@@ -296,13 +273,11 @@
 - **例句**：
   - **Recursion** is a fundamental concept in computer science and mathematics.（递归是计算机科学和数学中的一个基本概念。）
   - The algorithm uses **recursion** to traverse the tree data structure.（该算法使用递归来遍历树形数据结构。）
-<!--SR:!2026-10-21,55,310-->
 
 ---
 
 #en
 ## 十四、variable / variance / covariance
-?
 ### 1. variable
 - **释义**：n. 变量；adj. 可变的，易变的
 - **例句**：
@@ -320,13 +295,11 @@
 - **例句**：
   - **Covariance** measures how two variables change together in a dataset.（协方差衡量数据集中两个变量如何共同变化。）
   - A positive **covariance** indicates that the two stocks tend to move in the same direction.（正协方差表明两只股票倾向于同向变动。）
-<!--SR:!2026-10-22,56,310-->
 
 ---
 
 #en
 ## 十五、obsess / obsessive
-?
 ### 1. obsess
 - **释义**：v. 使着迷，使念念不忘
 - **例句**：
@@ -338,13 +311,11 @@
 - **例句**：
   - Her **obsessive** attention to detail made her an excellent editor.（她对细节的执着追求使她成为一名出色的编辑。）
   - He has an **obsessive** interest in collecting vintage watches.（他对收集古董手表有着近乎痴迷的兴趣。）
-<!--SR:!2026-10-30,64,310-->
 
 ---
 
 #en
 ## 十六、complain / complaint
-?
 ### 1. complain
 - **释义**：v. 抱怨，发牢骚；投诉
 - **例句**：
@@ -356,13 +327,11 @@
 - **例句**：
   - The company received over 200 **complaints** about the defective product.（公司收到了200多起关于该缺陷产品的投诉。）
   - She filed a formal **complaint** with the human resources department.（她向人力资源部门提交了正式投诉。）
-<!--SR:!2026-10-26,60,310-->
 
 ---
 
 #en
 ## 十七、synchronize / sync / synchronous
-?
 ### 1. synchronize
 - **释义**：v. 使同步，使协调；校准（时间）
 - **例句**：
@@ -380,13 +349,11 @@
 - **例句**：
   - The two clocks are **synchronous** and always show the same time.（这两座钟是同步的，总是显示相同的时间。）
   - **Synchronous** communication requires all participants to be present at the same time.（同步通信要求所有参与者同时在场。）
-<!--SR:!2026-10-29,63,310-->
 
 ---
 
 #en
 ## 十八、iterative / iterable
-?
 ### 1. iterative
 - **释义**：adj. 迭代的，重复的
 - **例句**：
@@ -398,13 +365,11 @@
 - **例句**：
   - In Python, lists and tuples are **iterable** objects that can be used in for loops.（在 Python 中，列表和元组是可用于 for 循环的可迭代对象。）
   - Any object that implements the `__iter__` method is considered **iterable**.（任何实现了 `__iter__` 方法的对象都被视为可迭代的。）
-<!--SR:!2026-10-28,62,310-->
 
 ---
 
 #en
 ## 十九、invoke / invocation
-?
 ### 1. invoke
 - **释义**：v. 调用；援引；祈求
 - **例句**：
@@ -416,13 +381,11 @@
 - **例句**：
   - The **invocation** of the remote API takes less than 50 milliseconds.（远程 API 的调用耗时不到 50 毫秒。）
   - The priest's **invocation** blessed the congregation before the ceremony.（牧师的祈祷在仪式前祝福了会众。）
-<!--SR:!2026-10-22,56,310-->
 
 ---
 
 #en
 ## 二十、alternate / alternative
-?
 ### 1. alternate
 - **释义**：v. 交替；轮流 adj. 交替的；间隔的
 - **例句**：
@@ -434,13 +397,11 @@
 - **例句**：
   - Public transport is a viable **alternative** to driving in the city.（公共交通是在城市中驾车出行的可行替代方案。）
   - The committee proposed an **alternative** plan to reduce costs.（委员会提出了一项降低成本的替代方案。）
-<!--SR:!2026-11-28,64,310-->
 
 ---
 
 #en
 ## 二十一、surgery / surgically / surgeon
-?
 ### 1. surgery
 - **释义**：n. 外科手术；手术室；诊所
 - **例句**：
@@ -458,13 +419,11 @@
 - **例句**：
   - The **surgeon** explained the risks of the operation before asking for consent.（外科医生在征求同意前解释了手术风险。）
   - She dreams of becoming a cardiac **surgeon** after medical school.（她梦想在医学院毕业后成为一名心脏外科医生。）
-<!--SR:!2026-10-25,59,310-->
 
 ---
 
 #en
 ## 二十二、declare / declarative
-?
 ### 1. declare
 - **释义**：v. 声明；宣布；申报
 - **例句**：
@@ -476,13 +435,11 @@
 - **例句**：
   - SQL is a **declarative** language — you specify what result you want, not how to compute it.（SQL 是一种声明式语言——你指定想要的结果，而非如何计算它。）
   - A **declarative** sentence simply states a fact and ends with a period.（陈述句只是陈述一个事实，以句号结尾。）
-<!--SR:!2026-10-27,61,310-->
 
 ---
 
 #en
 ## 二十三、convention / conventional
-?
 ### 1. convention
 - **释义**：n. 惯例；公约；大会
 - **例句**：
@@ -494,13 +451,11 @@
 - **例句**：
   - **Conventional** farming methods rely heavily on chemical fertilizers.（传统农业方法严重依赖化学肥料。）
   - She chose a **conventional** approach to solving the problem rather than experimenting.（她选择了常规的方法来解决问题，而非进行实验。）
-<!--SR:!2026-10-20,54,310-->
 
 ---
 
 #en
 ## 二十四、racial / race
-?
 ### 1. racial
 - **释义**：adj. 种族的；种族间的
 - **例句**：
@@ -512,13 +467,11 @@
 - **例句**：
   - The Olympic 100-metre **race** is one of the most watched events in the world.（奥运会百米赛跑是世界上最受关注的项目之一。）
   - People of every **race** deserve equal rights and opportunities.（每个种族的人都应享有平等的权利和机会。）
-<!--SR:!2026-10-23,57,310-->
 
 ---
 
 #en
 ## 二十五、extrovert / introvert
-?
 ### 1. extrovert
 - **释义**：n. 外向的人 adj. 外向的
 - **例句**：
@@ -530,13 +483,11 @@
 - **例句**：
   - An **introvert** may find prolonged social interaction draining and need time alone to recover.（内向的人可能觉得长时间的社交令人疲惫，需要独处的时间来恢复。）
   - Being an **introvert** does not mean you are shy; it simply means you prefer quieter environments.（内向并不意味着害羞，只是你更喜欢安静的环境。）
-<!--SR:!2026-11-28,64,310-->
 
 ---
 
 #en
 ## 二十六、assign / assignment
-?
 ### 1. assign
 - **释义**：v. 分配；指派；赋值
 - **例句**：
@@ -548,13 +499,11 @@
 - **例句**：
   - The final **assignment** is due at the end of the semester.（期末作业在学期末截止。）
   - Her first **assignment** as a journalist was to cover the city council election.（她作为记者的第一个任务是报道市议会选举。）
-<!--SR:!2026-10-12,46,290-->
 
 ---
 
 #en
 ## 二十八、paradox / paradoxical
-?
 ### 1. paradox
 - **释义**：n. 悖论；矛盾的事物
 - **例句**：
@@ -566,13 +515,11 @@
 - **例句**：
   - It seems **paradoxical** that drinking too much water can actually dehydrate you.（喝太多水实际上会让你脱水，这似乎很矛盾。）
   - The study revealed a **paradoxical** result: stricter regulations led to faster innovation.（该研究揭示了一个矛盾的结果：更严格的法规反而促进了更快的创新。）
-<!--SR:!2026-10-25,59,310-->
 
 ---
 
 #en
 ## 二十九、statistic / stats
-?
 ### 1. statistic
 - **释义**：n. 统计量；统计数据
 - **例句**：
@@ -584,13 +531,11 @@
 - **例句**：
   - The player's **stats** this season include 25 goals and 12 assists.（该球员本赛季的数据包括 25 个进球和 12 次助攻。）
   - I need to study for my **stats** exam next Monday.（我需要为下周一的统计学考试复习。）
-<!--SR:!2026-10-21,55,310-->
 
 ---
 
 #en
 ## 三十、cortex / cortical
-?
 ### 1. cortex
 - **释义**：n. 皮层；大脑皮层
 - **例句**：
@@ -602,13 +547,11 @@
 - **例句**：
   - **Cortical** thickness can be measured using high-resolution MRI scans.（皮层厚度可以通过高分辨率 MRI 扫描来测量。）
   - The study found that **cortical** neurons fire in distinct patterns during sleep.（研究发现皮层神经元在睡眠期间以不同的模式放电。）
-<!--SR:!2026-10-24,58,310-->
 
 ---
 
 #en
 ## 三十一、fragment / defragment
-?
 ### 1. fragment
 - **释义**：n. 碎片；片段 v. 使破碎；使分裂
 - **例句**：
@@ -620,13 +563,11 @@
 - **例句**：
   - You should **defragment** your mechanical hard drive periodically to improve performance.（你应该定期整理机械硬盘的碎片以提高性能。）
   - Modern operating systems **defragment** drives automatically in the background.（现代操作系统会在后台自动整理磁盘碎片。）
-<!--SR:!2026-11-25,65,310-->
 
 ---
 
 #en
 ## 三十二、sensory / sensible
-?
 ### 1. sensory
 - **释义**：adj. 感觉的；感官的
 - **例句**：
@@ -638,13 +579,11 @@
 - **例句**：
   - It is **sensible** to wear a helmet when riding a bicycle.（骑自行车时戴头盔是明智的。）
   - She made a **sensible** decision to save money instead of spending it on luxuries.（她做了一个明智的决定，把钱存起来而不是花在奢侈品上。）
-<!--SR:!2026-10-29,63,310-->
 
 ---
 
 #en
 ## 三十三、grant / granted
-?
 ### 1. grant
 - **释义**：v. 授予；批准；承认 n. 拨款；补助金
 - **例句**：
@@ -656,13 +595,11 @@
 - **例句**：
   - We often take clean drinking water for **granted**, but billions of people lack access to it.（我们常常把清洁饮用水视为理所当然，但数十亿人无法获得它。）
   - **Granted**, the new system is more expensive, but it is also far more reliable.（诚然，新系统更昂贵，但它也可靠得多。）
-<!--SR:!2026-12-01,67,310-->
 
 ---
 
 #en
 ## 三十四、transition / transitive
-?
 ### 1. transition
 - **释义**：n. 过渡；转变 v. 过渡；转变
 - **例句**：
@@ -674,13 +611,11 @@
 - **例句**：
   - In the sentence "She reads books," the verb "reads" is **transitive** because it takes a direct object.（在句子"She reads books"中，动词"reads"是及物的，因为它带有直接宾语。）
   - Equality is a **transitive** relation: if A equals B and B equals C, then A equals C.（等价是一种传递关系：如果 A 等于 B 且 B 等于 C，那么 A 等于 C。）
-<!--SR:!2026-11-26,66,310-->
 
 ---
 
 #en
 ## 三十七、increment / increase / decrease / decrement
-?
 ### 1. increment
 - **释义**：n. 增量，增长量；v.（计算机）使递增
 - **例句**：
@@ -704,7 +639,6 @@
 - **例句**：
   - In a countdown timer, the value **decrements** by one each second.（在倒计时器中，数值每秒递减一。）
   - The **decrement** in temperature overnight caused frost to form on the windows.（夜间气温骤降，窗户上结了霜。）
-<!--SR:!2026-11-24,60,310-->
 
 ---
 
@@ -734,7 +668,6 @@
 
 #en
 ## 四十、descent / descend / ascent / ascend
-?
 ### 1. descent
 - **释义**：n. 下降，下沉；血统，世系；突袭
 - **例句**：
@@ -758,7 +691,6 @@
 - **例句**：
   - The hikers **ascended** the mountain before dawn to catch the sunrise.（登山者在黎明前攀登山顶以赶上日出。）
   - She **ascended** to the position of CEO after twenty years at the company.（在公司工作二十年后，她晋升为首席执行官。）
-<!--SR:!2026-11-27,63,310-->
 
 ---
 

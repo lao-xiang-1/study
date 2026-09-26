@@ -2,7 +2,6 @@
 
 #code/git
 ## 1. 基础配置
-?
 ### 1.1 用户名与邮箱
 
 每次提交都会记录用户名和邮箱，即使不推送远程也需要设置。
@@ -29,7 +28,6 @@ ssh-keygen -t ed25519 -C "your@email.com"
 ```
 
 > 默认保存在 `~/.ssh/id_ed25519`，`id_ed25519.pub` 为公钥。
-<!--SR:!2026-10-26,60,310-->
 
 ---
 
@@ -47,7 +45,6 @@ git clone <url> <目录名>
 
 #code/git
 ### 2.2 关联远程仓库
-?
 ```bash
 # 查看已关联的远程仓库
 git remote -v
@@ -61,7 +58,6 @@ git remote set-url origin git@github.com:username/repo.git
 # 删除远程仓库关联
 git remote remove origin
 ```
-<!--SR:!2026-10-22,56,310-->
 
 ---
 
@@ -181,7 +177,6 @@ git commit -am "提交信息"
 
 #code/git
 ### 4.2 查看已追踪文件
-?
 ```bash
 # 列出所有已追踪的文件
 git ls-files
@@ -203,7 +198,6 @@ git ls-files --deleted
 1. **`.gitignore`** — 工作目录中的忽略文件
 2. **`.git/info/exclude`** — 仓库级别的本地忽略（不提交到版本库）
 3. **全局 `core.excludesFile`** — 用户级别的全局忽略配置
-<!--SR:!2026-11-29,65,310-->
 
 ---
 
@@ -259,7 +253,6 @@ git pull origin <分支名>
 
 #code/git
 ## 6. 查看历史
-?
 ### 6.1 git log
 
 ```bash
@@ -287,13 +280,11 @@ git diff --staged
 # 两个提交之间的差异
 git diff <commit1> <commit2>
 ```
-<!--SR:!2026-10-25,59,310-->
 
 ---
 
 #code/git
 ## 7. 其他实用命令
-?
 
 ```bash
 git reflog # 查看git所有的操作历史
@@ -365,13 +356,11 @@ git reset --hard <commit>
 - `mixed`重置暂存区（staged）
 - `soft`保留暂存区
 > 在这讲不清楚，建议自己试试
-<!--SR:!2026-12-27,93,290-->
 
 ---
 
 #code/git
 ## 8. .gitignore 与 .gitattributes
-?
 
 ### 8.1 .gitignore 作用
 
@@ -451,5 +440,4 @@ GitHub 提供了大量官方模板，可直接搜索 `github/gitignore` 获取�
 ```
 
 > `.gitattributes` 对已经提交的文件不会立即生效，通常需要配合 `git add --renormalize .` 重新规范化。
-<!--SR:!2026-12-14,80,270-->
 

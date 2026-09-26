@@ -2,9 +2,7 @@
 
 #en/Sentence
 The fact of comparing two or more things in order to show the differences between them
-?
 为了比较一个或多个东西而做的事情
-<!--SR:!2027-03-26,181,310-->
 
 ---
 
@@ -16,9 +14,7 @@ This wasn't Koch Industories' first brush with **complaints of improper competit
 
 #en/Sentence
 We often leverage model failures to assess per-sample hardness
-?
 我们经常利用模型的失败来评估每个样本的难度。
-<!--SR:!2027-03-02,157,310-->
 
 ---
 
@@ -40,9 +36,7 @@ we found that a non-trivial fraction of failed questions are, in fact, solvable 
 
 #en/Sentence
 your model failed them because it's stuck in stochastic sampling
-?
 你的模型之所以失败，是因为它被困在随机采样中。
-<!--SR:!2026-09-28,47,290-->
 
 ---
 
@@ -50,17 +44,13 @@ your model failed them because it's stuck in stochastic sampling
 A Chinese researcher told me the trick to getting big research funding in China: say the U.S. is way ahead and China will never catch up without more investment.
 I said the trick in the U.S. is to say China is already ahead and we're falling behind.
 **Apparently** this keeps money flowing on both sides. Whether it keeps the science flowing is another question
-?
 一位中国研究人员告诉我，在中国获得大额研究资金的诀窍是：声称美国遥遥领先，没有更多投资中国永远追不上。我说，美国的诀窍则是宣称中国已经领先、我们正在落后。**显然**，这让两边的资金都源源不断。至于科学是否也因此源源不断，那就是另一个问题了。
-<!--SR:!2026-10-07,56,310-->
 
 ---
 
 #en/Sentence
 Nick Land speaks of this in his writings
-?
 Nick Land 在他的著作中谈到了这一点
-<!--SR:!2027-03-05,161,310-->
 
 ---
 
@@ -72,9 +62,7 @@ light mode is cool though, it helps me not triggering my migraine compared to da
 
 #en/Sentence
 dependency sources add support for common patterns that are not supported by the `project.dependency`standard
-?
 依赖源（Dependency sources）支持`project.dependencies`标准所不支持的常见模式
-<!--SR:!2026-10-15,64,310-->
 
 ---
 
@@ -88,33 +76,25 @@ The project.dependencies table represents the dependencies that are used when up
 
 #en/Sentence
 One of the original motivations behind predivtive coding is its potential biological plausibility
-?
 预测编码最初的动机之一在于其潜在的生物学合理性。
-<!--SR:!2026-10-11,60,310-->
 
 ---
 
 #en/Sentence
 There's no need for desktop environment if you'd rather setup N.O.M.A.D as a "server" and access it through other clients.
-?
 如果你更倾向于将 N.O.M.A.D. 部署为“服务器”，并通过其他客户端来访问它，那么就完全不需要桌面环境了。
-<!--SR:!2027-03-14,169,310-->
 
 ---
 
 #en/Sentence
 It seems almost inevitable that North African economies will still be primarily oriented torwards Europe.
-?
 北非经济体似乎几乎不可避免地将仍以欧洲为主要导向。
-<!--SR:!2026-09-27,46,290-->
 
 ---
 
 #en/Sentence
 The reforms owe a great deal to the revolution of one man.
-?
 这些改革主要归功于一个人的坚定决心。
-<!--SR:!2027-01-05,102,290-->
 
 ---
 
@@ -170,17 +150,13 @@ Indeed, verbal report has often served as a primary empirical signature of consc
 
 #en/Sentence
 It is subject to top-down control.
-?
 它受自上而下的控制
-<!--SR:!2026-12-15,81,270-->
 
 ---
 
 #en/Sentence
 During inference, all prediction errors and feedback terms are computed first using the current network state, and only then are the latent variables $x^{(l)}$ updated.
-?
 在推断过程中，首先利用当前网络状态计算所有预测误差和反馈项，然后才对隐变量 $\mathbf{x}^{(l)}$ 进行更新。
-<!--SR:!2026-12-05,70,270-->
 
 ---
 
@@ -244,25 +220,19 @@ This, however, implies that if a duplicate reference is present in the pytree, t
 
 #en/Sentence
 ICLR 2027 decided to have the full paper deadline on Sep 16
-?
 ICLR 2027 决定把全文截止日期定在 9 月 16 日
-<!--SR:!2026-11-16,56,310-->
 
 ---
 
 #en/Sentence
 The stage transition nightmare reveals the next floor's boss fight and Treasure Room item
-?
 层间过渡噩梦会揭示下一层的Boss战和宝物房道具
-<!--SR:!2026-11-26,62,310-->
 
 ---
 
 #en/Sentence
 Immune to creep and floor spikes
-?
 免疫水迹和地板尖刺
-<!--SR:!2026-11-25,60,310-->
 
 ---
 
@@ -319,9 +289,7 @@ The function returns the same results as the original, up to standard floating-p
 
 #en/Sentence
 The anime Guilty Crown may have a 50/50 ratio of like and dislike in the fandom BUT 100% loves the OST
-?
 动画《罪恶王冠》在粉丝群体中或许褒贬参半，但100%的人都爱它的原声带。
-<!--SR:!2026-11-20,55,310-->
 
 ---
 
