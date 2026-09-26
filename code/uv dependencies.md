@@ -1,13 +1,12 @@
 ---
-sr-due: 2026-09-19
-sr-interval: 19
+sr-due: 2026-11-06
+sr-interval: 48
 sr-ease: 250
 ---
 #code 
 
 ## document
-*官方网址*：[uv-dependency-sources](https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-sources)
-*我的本地copy版本*：[docu-uv-dependencies](docu-uv-dependencies.md#Dependency%20sources)
+*官方网址*：[uv-dependency](https://uv.doczh.com/concepts/projects/dependencies/#_9).
 
 ## example
 ```toml

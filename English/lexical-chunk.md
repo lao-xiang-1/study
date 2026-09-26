@@ -158,7 +158,7 @@
 - **例句**：
   - The contract **specifies** that payment is due within 30 days.（合同明确规定付款须在30天内完成。）
   - Please **specify** your preferred delivery address when ordering.（订购时请明确您的收货地址。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-29,65,310-->
 
 ---
 
@@ -224,7 +224,7 @@
 - **例句**：
   - **Emerging** technologies like AI are transforming every industry.（人工智能等新兴技术正在改变各行各业。）
   - The fund focuses on investing in **emerging** markets.（该基金专注于投资新兴市场。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-30,66,310-->
 
 ---
 
@@ -434,7 +434,7 @@
 - **例句**：
   - Public transport is a viable **alternative** to driving in the city.（公共交通是在城市中驾车出行的可行替代方案。）
   - The committee proposed an **alternative** plan to reduce costs.（委员会提出了一项降低成本的替代方案。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-28,64,310-->
 
 ---
 
@@ -530,7 +530,7 @@
 - **例句**：
   - An **introvert** may find prolonged social interaction draining and need time alone to recover.（内向的人可能觉得长时间的社交令人疲惫，需要独处的时间来恢复。）
   - Being an **introvert** does not mean you are shy; it simply means you prefer quieter environments.（内向并不意味着害羞，只是你更喜欢安静的环境。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-11-28,64,310-->
 
 ---
 
@@ -656,7 +656,7 @@
 - **例句**：
   - We often take clean drinking water for **granted**, but billions of people lack access to it.（我们常常把清洁饮用水视为理所当然，但数十亿人无法获得它。）
   - **Granted**, the new system is more expensive, but it is also far more reliable.（诚然，新系统更昂贵，但它也可靠得多。）
-<!--SR:!2026-08-28,16,290-->
+<!--SR:!2026-12-01,67,310-->
 
 ---
 
@@ -704,7 +704,7 @@
 - **例句**：
   - In a countdown timer, the value **decrements** by one each second.（在倒计时器中，数值每秒递减一。）
   - The **decrement** in temperature overnight caused frost to form on the windows.（夜间气温骤降，窗户上结了霜。）
-<!--SR:!2026-09-11,15,290-->
+<!--SR:!2026-11-24,60,310-->
 
 ---
 
@@ -758,7 +758,7 @@
 - **例句**：
   - The hikers **ascended** the mountain before dawn to catch the sunrise.（登山者在黎明前攀登山顶以赶上日出。）
   - She **ascended** to the position of CEO after twenty years at the company.（在公司工作二十年后，她晋升为首席执行官。）
-<!--SR:!2026-09-12,16,290-->
+<!--SR:!2026-11-27,63,310-->
 
 ---
 

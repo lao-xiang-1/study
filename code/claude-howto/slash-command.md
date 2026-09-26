@@ -84,47 +84,113 @@ Claude Code 目前提供 55+ 个内置命令和 5 个内置 Skills。你可以�
 #code/claude
 ### 常用命令
 ?
+>从所有内置命令中选出一些常用的命令，并做分类
 
-| 命令                                                                                       | 作用                                                                                                                              |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `/init`                                                                                  | 初始化 `CLAUDE.md`，可设置 `CLAUDE_CODE_NEW_INIT=1` 启用交互式流程                                                                            |
-| `/resume [session]`                                                                      | 恢复对话（别名：`/continue`）                                                                                                            |
-| `/rewind`                                                                                | 回退对话和/或代码（别名：`/checkpoint`）                                                                                                     |
-| `/add-dir <path>`                                                                        | 添加工作目录                                                                                                                          |
-| `/agents`                                                                                | 管理 agent 配置                                                                                                                     |
-| `/branch [name]`                                                                         | 切换到当前对话的一个副本，原对话保持不变                                                                                                            |
-| `/fork [prompt]`                                                                         | 把当前对话复制到一个新的**后台会话**，你可以继续在这里工作；从这一刻起两者互相独立，副本会在 `claude agents` 里占一行（v2.1.212+）                                                |
-| `/subtask <task>`                                                                        | 派生一个**forked subagent**，它继承完整对话并去执行该任务，你可以继续工作；任务完成后结果会返回到本对话（v2.1.212+）                                                        |
-| `/btw <question>`                                                                        | 额外问题，不写入历史                                                                                                                      |
-| `/clear`                                                                                 | 清空对话（别名：`/reset`、`/new`）                                                                                                        |
-| `/compact [instructions]`                                                                | 压缩对话，可附带聚焦指令                                                                                                                    |
-| `/config`                                                                                | 打开设置（别名：`/settings`）                                                                                                            |
-| `/context`                                                                               | 用彩色网格可视化上下文占用                                                                                                                   |
-| `/copy [N]`                                                                              | 将 assistant 回复复制到剪贴板；`w` 会写入文件                                                                                                  |
-| `/cost`                                                                                  | 查看 token 使用统计                                                                                                                   |
-| `/exit`                                                                                  | 退出 REPL（别名：`/quit`）                                                                                                             |
-| `/export [filename]`                                                                     | 将当前对话导出为文件或剪贴板内容                                                                                                                |
-| `/help`                                                                                  | 显示帮助                                                                                                                            |
-| `/hooks`                                                                                 | 查看 hook 配置                                                                                                                      |
-| `/ide`                                                                                   | 管理 IDE 集成                                                                                                                       |
-| `/mcp`                                                                                   | 管理 MCP servers 和 OAuth                                                                                                          |
-| `/memory`                                                                                | 编辑 `CLAUDE.md`，切换自动记忆                                                                                                           |
-| `/model [model]`                                                                         | 选择模型，并可用左右箭头调整 effort                                                                                                           |
-| `/plugin`                                                                                | 管理插件                                                                                                                            |
+#### 会话管理
+
+| 命令                        | 作用                                                   |
+| ------------------------- | ---------------------------------------------------- |
+| `/clear`                  | 清空对话（别名：`/reset`、`/new`）                             |
+| `/compact [instructions]` | 压缩对话，可附带聚焦指令                                         |
+| `/context`                | 用彩色网格可视化上下文占用                                        |
+| `/copy [N]`               | 将 assistant 回复复制到剪贴板；`w` 会写入文件                       |
+| `/export [filename]`      | 将当前对话导出为文件或剪贴板内容                                     |
+| `/resume [session]`       | 恢复对话（别名：`/continue`）                                 |
+| `/rewind`                 | 回退对话和/或代码（别名：`/checkpoint`）                          |
+| `/exit`                   | 退出 REPL（别名：`/quit`）                                  |
+| `/init`                   | 初始化 `CLAUDE.md`，可设置 `CLAUDE_CODE_NEW_INIT=1` 启用交互式流程 |
+| `/memory`                 | 编辑 `CLAUDE.md`，切换自动记忆                                |
+| `/add-dir <path>`         | 添加工作目录                                               |
+| `/agents`                 | 管理 agent 配置                                          |
+
+#### 分支与并行会话
+
+| 命令 | 作用 |
+| --- | --- |
+| `/branch [name]` | 切换到当前对话的一个副本，原对话保持不变 |
+| `/fork [prompt]` | 把当前对话复制到一个新的**后台会话**，你可以继续在这里工作；从这一刻起两者互相独立，副本会在 `claude agents` 里占一行（v2.1.212+） |
+| `/subtask <task>` | 派生一个**forked subagent**，它继承完整对话并去执行该任务，你可以继续工作；任务完成后结果会返回到本对话（v2.1.212+） |
+| `/btw <question>` | 额外问题，不写入历史 |
+
+#### 模型与运行配置
+
+| 命令 | 作用 |
+| --- | --- |
+| `/model [model]` | 选择模型，并可用左右箭头调整 effort |
+| `/config` | 打开设置（别名：`/settings`） |
+| `/hooks` | 查看 hook 配置 |
+| `/mcp` | 管理 MCP servers 和 OAuth |
+| `/plugin` | 管理插件 |
+| `/skills` | 列出可用 Skills |
+| `/ide` | 管理 IDE 集成 |
+| `/sandbox` | 切换沙盒模式 |
+
+#### 任务与自动化
+
+| 命令                        | 作用        |
+| ------------------------- | --------- |
+| `/tasks`                  | 列出/管理后台任务 |
+
+
+#### 代码审查
+
+| 命令 | 作用 |
+| --- | --- |
 | `/review [low\|medium\|high\|xhigh\|max\|ultra] [--fix] [--comment] [pr#\|branch\|path]` | `/code-review` 的别名（v2.1.223）：审查当前 diff，或你传入的 PR 编号、分支、路径 —— 例如 `/review 1234`。接受相同的 effort 级别和标志。未指定级别时，复用你上次输入的 `low`–`max` 级别 |
-| `/schedule [description]`                                                                | 创建/管理定时任务                                                                                                                       |
-| `/skills`                                                                                | 列出可用 Skills                                                                                                                     |
-| `/stats`                                                                                 | 可视化每日使用量、会话和连续天数                                                                                                                |
-| `/status`                                                                                | 显示版本、模型、账号                                                                                                                      |
-| `/tasks`                                                                                 | 列出/管理后台任务                                                                                                                       |
-| `/sandbox`                                                                               | 切换沙盒模式                                                                                                                          |
-<!--SR:!2026-08-27,1,230-->
+
+#### 信息与统计
+
+| 命令 | 作用 |
+| --- | --- |
+| `/help` | 显示帮助 |
+| `/cost` | 查看 token 使用统计 |
+| `/stats` | 可视化每日使用量、会话和连续天数 |
+| `/status` | 显示版本、模型、账号 |
+<!--SR:!2026-09-27,2,230-->
 
 ---
 
-#code/claude
+### 其他内置命令
+
+以下是未选入「常用命令」的其余内置命令。
+
+| 命令 | 作用 |
+| --- | --- |
+| `/rename [name]` | 重命名会话 |
+| `/plan [description]` | 进入规划模式 |
+| `/diff` | 查看未提交更改的交互式 diff |
+| `/chrome` | 配置 Chrome 浏览器集成 |
+| `/desktop` | 继续在桌面应用中处理（别名：`/app`） |
+| `/mobile` | 生成移动端扫码二维码（别名：`/ios`、`/android`） |
+| `/remote-control` | 从 claude.ai 进行远程控制（别名：`/rc`） |
+| `/remote-env` | 配置默认远程环境 |
+| `/login` | 切换 Anthropic 账号 |
+| `/logout` | 退出当前 Anthropic 账号 |
+| `/permissions` | 查看或更新权限（别名：`/allowed-tools`） |
+| `/extra-usage` | 配置额外用量以应对速率限制 |
+| `/passes` | 分享一周免费 Claude Code 使用权 |
+| `/privacy-settings` | 隐私设置（仅 Pro/Max） |
+| `/effort [low\|medium\|high\|max\|auto]` | 设置推理强度；`max` 需要 Opus 4.6 |
+| `/fast [on\|off]` | 切换快速模式 |
+| `/color [color\|default]` | 设置提示栏颜色 |
+| `/theme` | 更改颜色主题 |
+| `/statusline` | 配置状态栏 |
+| `/keybindings` | 打开快捷键配置 |
+| `/terminal-setup` | 配置终端快捷键 |
+| `/voice` | 切换按住说话语音输入 |
+| `/reload-plugins` | 重新加载当前插件。自 v2.1.221 起，大多数安装会立即生效，只有当安装摘要提示 `Run /reload-plugins to activate.` 时才需要执行 |
+| `/install-github-app` | 配置 GitHub Actions app |
+| `/install-slack-app` | 安装 Slack app |
+| `/pr-comments [PR]` | 获取 GitHub PR 评论 |
+| `/security-review` | 分析分支中的安全漏洞 |
+| `/doctor` | 检查安装健康状态 |
+| `/insights` | 生成会话分析报告 |
+| `/release-notes` | 查看更新日志 |
+| `/feedback` | 提交反馈（别名：`/bug`） |
+
+---
+
 ### 内置 Skills
-?
 以下 Skills 随 Claude Code 一起提供，调用方式和 slash command 一样：
 
 | Skill | 作用 |
@@ -134,7 +200,6 @@ Claude Code 目前提供 55+ 个内置命令和 5 个内置 Skills。你可以�
 | `/debug [description]` | 启用调试日志 |
 | `/loop [interval] <prompt>` | 按固定间隔重复运行提示词 |
 | `/simplify [focus]` | 审查改动文件的代码质量 |
-<!--SR:!2026-08-27,1,230-->
 
 ---
 
@@ -209,7 +274,7 @@ description: 这个命令的作用，以及何时使用它
 | `context` | 设为 `fork` 时，在隔离 subagent 中运行 | 无 |
 | `agent` | `context: fork` 时使用的 agent 类型 | `general-purpose` |
 | `hooks` | Skill 范围内的 hooks（PreToolUse、PostToolUse、Stop） | 无 |
-<!--SR:!2026-08-29,3,250-->
+<!--SR:!2026-09-30,9,250-->
 
 ---
 
@@ -243,7 +308,7 @@ description: 按优先级审查 PR
 ```
 
 调用 `/review-pr 456 high` 时，`$0="456"`，`$1="high"`。
-<!--SR:!2026-08-30,4,270-->
+<!--SR:!2026-10-02,11,270-->
 
 ---
 
@@ -270,16 +335,13 @@ allowed-tools: Bash(git *)
 根据以上变更，创建一个 git commit。
 ```
 
-#code/claude
 ### 文件引用
-?
 使用 `@` 引用文件内容：
 
 ```markdown
 审查 @src/utils/helpers.js 中的实现
 比较 @src/old-version.js 和 @src/new-version.js
 ```
-<!--SR:!2026-08-29,3,250-->
 
 ---
 

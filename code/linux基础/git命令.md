@@ -145,7 +145,7 @@ git for-each-ref --format='%(refname:short)' refs/remotes/
 > - `%(committerdate:short)` / `%(authordate:short)` — 日期
 > - `%(subject)` — 提交标题
 > - `%(authorname)` / `%(committername)` — 作者/提交者名
-<!--SR:!2026-08-28,1,230-->
+
 
 #### 创建引用
 ```toml
@@ -154,6 +154,7 @@ git for-each-ref --format='%(refname:short)' refs/remotes/
         bv = for-each-ref --sort=-committerdate refs/remotes/ --format=\"%(committerdate:short) %(align:width=20)%(refname:short)%(end) %(subject)\"
 ```
 使用 `git bv` 查看远程提交中的最新提交
+<!--SR:!2026-09-28,3,250-->
 
 ---
 
@@ -202,7 +203,7 @@ git ls-files --deleted
 1. **`.gitignore`** — 工作目录中的忽略文件
 2. **`.git/info/exclude`** — 仓库级别的本地忽略（不提交到版本库）
 3. **全局 `core.excludesFile`** — 用户级别的全局忽略配置
-<!--SR:!2026-09-12,16,290-->
+<!--SR:!2026-11-29,65,310-->
 
 ---
 
@@ -364,7 +365,7 @@ git reset --hard <commit>
 - `mixed`重置暂存区（staged）
 - `soft`保留暂存区
 > 在这讲不清楚，建议自己试试
-<!--SR:!2026-09-06,25,270-->
+<!--SR:!2026-12-27,93,290-->
 
 ---
 
@@ -450,5 +451,5 @@ GitHub 提供了大量官方模板，可直接搜索 `github/gitignore` 获取�
 ```
 
 > `.gitattributes` 对已经提交的文件不会立即生效，通常需要配合 `git add --renormalize .` 重新规范化。
-<!--SR:!2026-09-19,23,250-->
+<!--SR:!2026-12-14,80,270-->
 
