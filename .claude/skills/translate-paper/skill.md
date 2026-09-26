@@ -26,27 +26,7 @@ disable-model-invocation: true
    - 图表编号标记（如 `a`、`b`、`C` 等独立标签）
    - 已翻译过的段落（已包含【译文】标记的）
 
-### 第二步：清理无断空格（NBSP），确保 Edit 工具可用
-
-OCR 或网页复制的内容常混入无断空格字符（NBSP，Unicode ` `），在文件中显示为普通空格但字节不同。**这会直接导致 Edit 工具的 `old_string` 匹配失败。** 翻译开始前必须先全局替换。
-
-1. 用 Python 检查目标文件中是否包含 `\xa0` 字符：
-
-   ```python
-   with open(file, encoding='utf-8') as f:
-       content = f.read()
-   if '\xa0' in content:
-       # 全局替换为普通空格
-       content = content.replace('\xa0', ' ')
-       with open(file, 'w', encoding='utf-8') as f:
-           f.write(content)
-   ```
-
-2. 替换后重新读取文件，确认内容干净再开始翻译
-
-> **注意**：每次 Edit 调用失败时，也应优先怀疑 NBSP 问题。可使用 `python3 -c "print(repr(line))"` 查看行内的隐藏字符。
-
-### 第三步：逐段翻译
+### 第二步：逐段翻译
 
 **核心规则：每次只翻译一个段落，使用 Edit 工具替换原文，完成一段后继续下一段，不要停。**
 
@@ -67,7 +47,7 @@ OCR 或网页复制的内容常混入无断空格字符（NBSP，Unicode ` `）
 
 > **注意**：【译文】后需要空一行再写翻译内容，确保 Markdown 渲染正常。
 
-### 第四步：完成标记
+### 第三步：完成标记
 
 所有正文段落翻译完成后，告知用户翻译进度。
 
