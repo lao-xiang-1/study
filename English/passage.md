@@ -29,11 +29,8 @@ Warning: This will require a one-way sync, and may mark existing notes as modifi
 
 ---
 
-#en/Passage
 During inference, all prediction errors and feedback terms are computed first using the current network state, and only then are the latent variables  $\mathbf{x}^{(l)}$ updated. This ensures that each update step is based on a consistent energy landscape and avoids using partially updated states within the same iteration. Conceptually, this corresponds to a synchronous update scheme where all neurons compute their next state based on the same network snapshot.
-?
 在推断过程中，首先利用当前网络状态计算所有预测误差和反馈项，然后才对隐变量 $\mathbf{x}^{(l)}$ 进行更新。这确保了每次更新步骤都基于一致的能量景观，并避免在同一次迭代中使用部分更新的状态。从概念上讲，这对应于一种同步更新方案，其中所有神经元都基于同一网络快照计算其下一状态。
-<!--SR:!2026-10-03,12,230-->
 
 ---
 

@@ -22,7 +22,7 @@ We often leverage model failures to assess per-sample hardness
 This practice drives RL with verifiable rewards
 ?
 这种做法推动了基于可验证奖励的强化学习
-<!--SR:!2026-10-07,11,210-->
+<!--SR:!2026-11-10,33,230-->
 
 ---
 
@@ -126,7 +126,7 @@ In this file only stateless layers are implemented as they don't need any partic
 This information is typically reportable, in the sense that it can be put into words on request.
 ?
 这类信息通常是可报告的，即可应要求用语言表达出来
-<!--SR:!2026-10-12,21,270-->
+<!--SR:!2026-12-08,57,270-->
 
 ---
 
@@ -144,7 +144,7 @@ Several functional properties are commonly held to distinguish consciously acces
 Indeed, verbal report has often served as a primary empirical signature of conscious access
 ?
 事实上，言语报告常常被用作意识通达的主要经验指标
-<!--SR:!2026-10-01,10,210-->
+<!--SR:!2026-10-30,29,230-->
 
 ---
 
@@ -161,10 +161,10 @@ During inference, all prediction errors and feedback terms are computed first us
 ---
 
 #en/Sentence
-Utility function that create a fast cache set, which keeps track of the orders in which the elements are seen.
+Utility function that creates a fast cache set, which keeps track of the orders in which the elements are seen.
 ?
 工具函数，用于创建一个快速缓存集合，可以跟踪元素被看到的顺序。
-<!--SR:!2026-10-05,10,230-->
+<!--SR:!2026-10-28,23,230-->
 
 ---
 
@@ -172,7 +172,7 @@ Utility function that create a fast cache set, which keeps track of the orders i
 This is used to reduce the overhead of injecting the new values back into the original kwargs outside of the 'jit barrier'
 ?
 这样做是为了减少在"JIT 屏障"之外，将新值重新注入原始 kwargs 所带来的开销。
-<!--SR:!2026-10-03,8,230-->
+<!--SR:!2026-10-29,26,250-->
 
 ---
 
@@ -180,7 +180,7 @@ This is used to reduce the overhead of injecting the new values back into the or
 Set the value of the parameter corresponding to the given key, after being processed of the Vode ruleset
 ?
 设置与给定 key 对应的参数的值，该值会先经过 Vode 的 ruleset（规则集）处理。
-<!--SR:!2026-10-06,40,290-->
+<!--SR:!2027-01-30,116,290-->
 
 ---
 
@@ -204,7 +204,7 @@ The output can be customized by setting the 'output' parameter to the desired va
 A typical ICLR paper involves significantly more work than goes into a course project, or than can be produced autonomously by any current AI agent.
 ?
 一篇典型的 ICLR 论文所涉及的工作量，远超课程项目所需的工作量，也远超当前任何 AI agent 能自主完成的工作量。
-<!--SR:!2026-09-30,4,230-->
+<!--SR:!2026-11-11,32,250-->
 
 ---
 
@@ -214,7 +214,7 @@ A typical ICLR paper involves significantly more work than goes into a course pr
 This, however, implies that if a duplicate reference is present in the pytree, the function will be applied to each occurrence of the reference (so multiple times on the same node), which must be taken into account when designing the function.
 ?
 然而，这意味着如果 pytree 中存在重复引用，该函数会被应用到该引用的每一次出现（因此可能在同一节点上被多次调用），在设计该函数时必须考虑到这一点。
-<!--SR:!2026-09-29,3,210-->
+<!--SR:!2026-10-23,17,230-->
 
 ---
 
@@ -240,7 +240,7 @@ Immune to creep and floor spikes
 Instead of moving quickly to **assume useful roles** in the overall problem solution, the hidden units **engage in** a complex dance with much wasted motion.
 ?
 隐藏单元不会迅速地在求解整体问题中承担有用的角色，而是陷入一场复杂的舞蹈，做出大量徒劳的动作。
-<!--SR:!2026-10-09,13,250-->
+<!--SR:!2026-11-24,46,270-->
 
 ---
 
@@ -248,7 +248,7 @@ Instead of moving quickly to **assume useful roles** in the overall problem solu
 For each new hidden unit, we attempt to maximize the magnitude of the correlation between the new unit's output and the residual error signal we are trying to eliminate.
 ?
 对于每一个新的隐层单元，我们尝试最大化该单元输出与待消除的残余误差信号（residual error signal）之间相关性的幅值。
-<!--SR:!2026-09-28,2,190-->
+<!--SR:!2026-10-18,15,230-->
 
 ---
 
@@ -257,7 +257,7 @@ Class used to replace multiple references to the same BaseParam with a static in
 to the unique BaseParam.
 ?
 一个类，用于将同一个 BaseParam 的多个引用替换为对唯一 BaseParam 的静态索引。
-<!--SR:!2026-09-29,4,230-->
+<!--SR:!2026-10-13,13,250-->
 
 ---
 
@@ -281,7 +281,7 @@ For example, consider this function that normalizes the rows of a 2D matrix, exp
 The function returns the same results as the original, up to standard floating-point accuracy.
 ?
 该函数返回的结果与原始函数一致，误差在标准浮点精度范围内
-<!--SR:!2026-09-29,4,230-->
+<!--SR:!2026-11-07,29,250-->
 
 ---
 
@@ -297,7 +297,7 @@ The anime Guilty Crown may have a 50/50 ratio of like and dislike in the fandom 
 A local stdio server is a program Claude Code starts as a subprocess on your machine, rather than a service it reaches over a URL. Use one for tools that need access to local resources like a browser, your filesystem, or a database socket.
 ?
 本地 stdio 服务器是 Claude Code 在您的机器上作为子进程启动的程序，而非通过 URL 访问的服务。对于需要访问本地资源（如浏览器、文件系统或数据库套接字）的工具，应使用此类服务器。
-<!--SR:!2026-09-30,5,250-->
+<!--SR:!2026-10-19,19,270-->
 
 ---
 
@@ -305,7 +305,7 @@ A local stdio server is a program Claude Code starts as a subprocess on your mac
 Fetch content from one or more web pages, following links recursively.
 ?
 从一个或多个网页获取内容，并递归地跟随链接。
-<!--SR:!2026-09-29,4,270-->
+<!--SR:!2026-10-14,14,290-->
 
 ---
 
@@ -313,7 +313,7 @@ Fetch content from one or more web pages, following links recursively.
 It bore witness to her efforts
 ?
 它见证了她的努力。
-<!--SR:!2026-09-28,3,250-->
+<!--SR:!2026-11-25,46,290-->
 
 ---
 
@@ -321,7 +321,7 @@ It bore witness to her efforts
 I still made it through the next three years of college, even without the book. And it wasn’t, ultimately, the dictionary that got me there — not really.
 ?
 即便没有那本书，我仍然顺利读完了大学接下来的三年。而且，说到底，带我走到那一步的并不是那本字典——真的不是。
-<!--SR:!2026-09-30,4,270-->
+<!--SR:!2026-10-14,14,290-->
 
 ---
 
@@ -329,7 +329,7 @@ I still made it through the next three years of college, even without the book. 
 In line with longstanding initiatives to expand its green spaces, New York City is planting tens of thousands of trees each year.
 ?
 为了配合长期以来的扩大绿地计划，纽约市每年种植数万棵树。
-<!--SR:!2026-09-29,3,250-->
+<!--SR:!2026-11-21,41,290-->
 
 ---
 
@@ -337,7 +337,7 @@ In line with longstanding initiatives to expand its green spaces, New York City 
 We gratefully acknowledge IBM, which—through the MIT-IBM Watson AI Lab—contributed the computational resources necessary to conduct the experiments in this paper.
 ?
 我们衷心感谢 IBM——通过 MIT-IBM Watson AI Lab——为本论文中的实验提供了必要的计算资源。
-<!--SR:!2026-09-29,4,270-->
+<!--SR:!2026-10-15,15,290-->
 
 ---
 
@@ -345,7 +345,7 @@ We gratefully acknowledge IBM, which—through the MIT-IBM Watson AI Lab—contr
 Fill the bracketed placeholders; keep the headings and table columns as shown.
 ?
 填充方括号里的占位符；保持标题和表格列的格式与示例完全一致。
-<!--SR:!2026-09-28,2,230-->
+<!--SR:!2026-10-30,25,270-->
 
 ---
 
@@ -354,7 +354,7 @@ A better mental model is to think of the column index as
 coming last and the row index as second to last.
 ?
 一个更好的心智模型是：把**列索引看作最后一位**，把**行索引看作倒数第二位**。
-<!--SR:!2026-09-30,4,270-->
+<!--SR:!2026-10-15,15,290-->
 
 ---
 
@@ -364,6 +364,76 @@ Siblings are cards generated from the same card text i.e. cloze deletions
 ?
 **搁置兄弟卡片直到第二天**
 兄弟卡片是由同一卡片文本生成的卡片，即填空删除（完形填空）
-<!--SR:!2026-09-28,3,250-->
+<!--SR:!2026-11-19,41,290-->
 
 ---
+
+## 句子 51-60
+
+#en/Sentence
+This update introduces support for opening individual Markdown files.
+?
+本次更新引入了对打开单个 Markdown 文件的支持。
+<!--SR:!2026-10-27,15,290-->
+
+---
+
+#en/Sentence
+All efforts have been made to avoid errors, but users are strongly urged to independently verify the accuracy and suitability of individual toolbox functions.
+?
+我们已尽一切努力避免错误，但仍强烈建议用户独立核实各个工具箱（toolbox）功能的准确性与适用性。
+<!--SR:!2026-10-26,14,290-->
+
+---
+
+#en/Sentence
+You can perform standard matrix multiplication, which computes the inner products between rows and columns, using the * operator. For example, confirm that a matrix times its inverse returns the identity matrix:
+?
+你可以使用 `*` 运算符执行标准矩阵乘法，它会计算行与列之间的内积。例如，验证一个矩阵乘以其逆矩阵会返回单位矩阵：
+<!--SR:!2026-10-13,4,270-->
+
+---
+
+#en/Sentence
+The matrix operators for multiplication, division, and power each have a corresponding array operator that operates element-wise. For example, raise each element of a to the third power:
+?
+乘法、除法和幂的矩阵运算符各自都有一个对应的、逐元素（element-wise）运算的数组运算符。例如，把 a 的每个元素都取三次方：
+<!--SR:!2026-10-13,4,270-->
+
+---
+
+#en/Sentence
+While other programming languages mostly work with numbers one at a time, matlab is designed to operate primarily on whole matrices and arrays
+?
+其他编程语言大多一次只处理一个数字，而 MATLAB 的设计初衷主要是针对整个矩阵和数组进行运算。
+<!--SR:!2026-10-13,4,270-->
+
+---
+
+#en/Sentence
+Now those years are far behind me, and the details have grown soft at the edges.
+?
+如今那些岁月早已远在我身后，其中的细节也已在边缘处渐渐变得模糊。
+<!--SR:!2026-10-13,4,270-->
+
+---
+
+#en/Sentence
+"It's so over."
+As they proceed to pull 6 months worth of data out of thin air within 2 minutes.
+?
+“彻底完了。”
+而他们接着竟在两分钟内凭空掏出了六个月的数据。
+<!--SR:!2026-10-13,3,250-->
+
+---
+
+#en/Sentence
+Thank god I was starting to think that I was the only one that killed people with my heat vision.
+?
+谢天谢地，我还以为只有我会用热视线杀人呢。
+<!--SR:!2026-10-13,3,250-->
+
+---
+
+

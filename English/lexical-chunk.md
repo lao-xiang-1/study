@@ -256,7 +256,7 @@
 - **例句**：
   - As a chronic **procrastinator**, she always leaves assignments until the last minute.（作为一个习惯性拖延者，她总是把作业拖到最后一刻才做。）
   - The app is designed to help **procrastinators** stay on track.（这款应用旨在帮助拖延者保持进度。）
-<!--SR:!2026-10-07,41,290-->
+<!--SR:!2027-03-22,165,310-->
 
 ---
 
