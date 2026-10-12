@@ -100,7 +100,7 @@ git branch -d <分支名>
 # 强制删除分支（未合并也可删）
 git branch -D <分支名>
 ```
-<!--SR:!2026-10-05,39,290-->
+<!--SR:!2027-03-11,157,310-->
 
 ---
 
@@ -150,7 +150,7 @@ git for-each-ref --format='%(refname:short)' refs/remotes/
         bv = for-each-ref --sort=-committerdate refs/remotes/ --format=\"%(committerdate:short) %(align:width=20)%(refname:short)%(end) %(subject)\"
 ```
 使用 `git bv` 查看远程提交中的最新提交
-<!--SR:!2026-09-28,3,250-->
+<!--SR:!2026-11-15,38,290-->
 
 ---
 
@@ -214,7 +214,7 @@ git restore --staged <文件>
 # 撤销工作区修改（相当于dicard）
 git restore <文件>
 ```
-<!--SR:!2026-10-04,38,290-->
+<!--SR:!2027-03-07,153,310-->
 
 ---
 
@@ -233,7 +233,7 @@ git push --set-upstream origin <分支名>
 # 推送并建立上游追踪（简写）
 git push -u origin <分支名>
 ```
-<!--SR:!2026-10-09,43,290-->
+<!--SR:!2027-03-31,173,310-->
 
 ---
 

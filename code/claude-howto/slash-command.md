@@ -81,9 +81,7 @@ Claude Code 目前提供 55+ 个内置命令和 5 个内置 Skills。你可以�
 | `/theme`                                                                                 | 更改颜色主题                                                                                                                          |
 | `/voice`                                                                                 | 切换按住说话语音输入                                                                                                                      |
 
-#code/claude
 ### 常用命令
-?
 >从所有内置命令中选出一些常用的命令，并做分类
 
 #### 会话管理
@@ -146,7 +144,6 @@ Claude Code 目前提供 55+ 个内置命令和 5 个内置 Skills。你可以�
 | `/cost` | 查看 token 使用统计 |
 | `/stats` | 可视化每日使用量、会话和连续天数 |
 | `/status` | 显示版本、模型、账号 |
-<!--SR:!2026-09-27,2,230-->
 
 ---
 
@@ -262,19 +259,19 @@ description: 这个命令的作用，以及何时使用它
 ### Frontmatter 参考
 ?
 
-| 字段 | 作用 | 默认值 |
-|-------|---------|---------|
-| `name` | 命令名（会变成 `/name`） | 目录名 |
-| `description` | 简短说明，帮助 Claude 判断何时使用 | 第一段 |
-| `argument-hint` | 自动补全时显示的参数提示 | 无 |
-| `allowed-tools` | 命令可无权限使用的工具 | 继承 |
-| `model` | 指定要使用的模型 | 继承 |
-| `disable-model-invocation` | 若为 `true`，只有用户能调用，Claude 不能自动调用 | `false` |
-| `user-invocable` | 若为 `false`，不会出现在 `/` 菜单中 | `true` |
-| `context` | 设为 `fork` 时，在隔离 subagent 中运行 | 无 |
-| `agent` | `context: fork` 时使用的 agent 类型 | `general-purpose` |
-| `hooks` | Skill 范围内的 hooks（PreToolUse、PostToolUse、Stop） | 无 |
-<!--SR:!2026-09-30,9,250-->
+| 字段                         | 作用                                            | 默认值               |
+| -------------------------- | --------------------------------------------- | ----------------- |
+| `name`                     | 命令名（使用 `/name` 运行）                            | 目录名               |
+| `description`              | 简短说明，帮助 Claude 判断何时使用                         | 第一段               |
+| `argument-hint`            | 自动补全时显示的参数提示                                  | 无                 |
+| `allowed-tools`            | 命令可无权限使用的工具                                   | 继承                |
+| `model`                    | 指定要使用的模型                                      | 继承                |
+| `disable-model-invocation` | 若为 `true`，只有用户能调用，Claude 不能自动调用               | `false`           |
+| `user-invocable`           | 若为 `false`，不会出现在 `/` 菜单中                      | `true`            |
+| `context`                  | 设为 `fork` 时，在隔离 subagent 中运行                  | 无                 |
+| `agent`                    | `context: fork` 时使用的 agent 类型                 | `general-purpose` |
+| `hooks`                    | Skill 范围内的 hooks（PreToolUse、PostToolUse、Stop） | 无                 |
+<!--SR:!2026-10-31,31,270-->
 
 ---
 
@@ -308,7 +305,7 @@ description: 按优先级审查 PR
 ```
 
 调用 `/review-pr 456 high` 时，`$0="456"`，`$1="high"`。
-<!--SR:!2026-10-02,11,270-->
+<!--SR:!2026-11-12,41,290-->
 
 ---
 
