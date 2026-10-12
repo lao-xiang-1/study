@@ -1,0 +1,72 @@
+
+## PPO 优化算法
+### 优化目标
+
+## `policy_loss` —— 策略的损失
+
+```python
+ratio = torch.exp(new_log_probs - batch_old_log_probs)
+surr1 = ratio * batch_advantages
+surr2 = torch.clamp(ratio, 1 - clip_eps, 1 + clip_eps) * batch_advantages
+policy_loss = -torch.min(surr1, surr2).mean()
+```
+
+它衡量的是**当前策略对这批已执行动作的评价，和优势信号是否一致**。
+
+- `ratio` 是同一个动作在新旧策略下的概率比，形状 `(64,)`
+- 两个 surrogate 逐样本相乘后取 min，再平均
+- 前面的负号来自最大化到最小化的翻转
+
+几个值得注意的性质：
+
+**量级接近 0，而且方向不可读。** 优势在 [2-pytorch_ppo.py:193](code/chapter01_cartpole/2-pytorch_ppo.py#L193) 被归一化成均值 0、标准差 1，所以 $\mathbb{E}[\hat{A}] \approx 0$；第一次更新时 `ratio ≈ 1`，于是 `mean(min(...)) ≈ 0`。之后它上下浮动，但**它变大不代表策略变差，变小也不代表变好**。PPO 的策略损失不是单调下降的，把它当收敛指标会误判。真正该看的是 `approx_kl` 和奖励曲线。
+
+**它是唯一被裁剪的项。** 另外两个损失都不受影响。
+
+## `value_loss` —— 价值函数的损失
+
+```python
+value_loss = ((values - batch_returns) ** 2).mean()
+```
+
+就是 Critic 预测值 $V(s_t)$ 和回报目标 $R_t$ 之间的均方误差。这是一个**标准的有监督回归**，和策略目标的性质完全不同——它有明确的最优解，可以单调下降。
+
+它的量级是**真实回报的平方单位**，因为 `returns` 没有归一化。CartPole 里 `gamma=0.99`、每步奖励 1，回合开始处的折扣回报能到 100 上下，所以训练初期 `value_loss` 可能在几百到上万的量级；收敛后 $V$ 逼近真实回报，它降到个位数。
+
+这也解释了 `0.5` 这个系数的来源：两个损失的自然尺度差了几个数量级，直接相加的话，梯度会被 `value_loss` 完全主导。0.5 是把两者的梯度拉到同一水平的平衡因子（SB3 的 `vf_coef` 默认值）。
+
+还要注意 `batch_returns` 是**更新开始前就固定好的**。10 轮 epoch 里 Critic 一直在向同一个目标逼近，目标不会跟着预测值漂移。
+
+## `entropy` —— 策略的熵
+
+```python
+entropy = dist.entropy().mean()
+```
+
+它衡量**当前策略输出的动作分布有多随机**。对 CartPole 的 2 个动作，取值范围是：
+
+| 值 | 含义 |
+| --- | --- |
+| $\ln 2 \approx 0.693$ | 两个动作各 50%，完全随机 |
+| $0.1$ 以下 | 几乎总是选同一个动作，接近确定性 |
+
+因为 [2-pytorch_ppo.py:78](code/chapter01_cartpole/2-pytorch_ppo.py#L78) 用 `gain=0.01` 初始化 Actor 输出层，初始 logits 接近 0，所以**训练开始时 entropy 应该非常接近 0.693**。这是个有用的自检点：如果一开始就远低于这个值，说明初始化有问题。
+
+它来自当前的前向传播，是**新策略**的熵，不是采样时的旧策略。
+
+## 三项合起来
+
+```python
+loss = policy_loss + 0.5 * value_loss - 0.0 * entropy
+```
+
+| 变量 | 量级 | 符号 | 是否参与梯度 |
+| --- | --- | --- | --- |
+| `policy_loss` | ~O(1) | 已翻转 | 是，主目标 |
+| `value_loss` | 10⁰–10⁴ | 正（MSE） | 是，辅助目标，系数 0.5 |
+| `entropy` | 0–0.693 | 已翻转 | **否**，系数 0.0 |
+
+熵项前的负号是标准的奖励约定：熵越大越鼓励探索，所以它是加到目标上的奖励；换算成要最小化的损失，就成了减号。
+
+但系数是 `0.0`，所以这一项对梯度没有任何贡献——`entropy` 只被计算、被记录、被返回给调用方，然后写进 SwanLab 的 `train/entropy_loss`（[2-pytorch_ppo.py:435](code/chapter01_cartpole/2-pytorch_ppo.py#L435) 又取了一次负号，为了对齐 SB3 的日志约定）。想让它真正起作用，把系数改成 0.01 这类正值即可。
+
