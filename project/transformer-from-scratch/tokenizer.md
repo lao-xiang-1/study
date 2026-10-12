@@ -1,9 +1,3 @@
----
-sr-due: 2026-09-29
-sr-interval: 16
-sr-ease: 250
----
-#code 
 
 # BPE分词算法
 
@@ -34,7 +28,7 @@ build_vocab(corpus)
 
 
 ### get_stats
->获取pair及其频率
+>在单词范围内，每两个字母组成pair，并计算频率
 
 ```python
 def get_stats(vocab):
@@ -62,7 +56,7 @@ get_stats(vocab)
 ```python
 def merge_vocab(pair, v_in):
     v_out = Counter()
-    bigram = re.escape(' '.join(pair)) # 防止pair中有转义字符
+    bigram = re.escape(' '.join(pair)) # 以空格分开pair以创建匹配模板, 使用re.escape防止pair中有转义字符
     p = re.compile(r'(?<!\S)' + bigram + r'(?!\S)') # 表示左右两侧是空白或者字符串边界
     for word in v_in: # 对v_in中每个词都进行合并
         w_out = p.sub(''.join(pair), word)
@@ -92,7 +86,7 @@ with open('temp/HarryPotter.txt', 'r') as f:
     corpus = f.read()
 
 vocab = build_vocab(corpus)
-num_merges = 4000 # 合并次数
+num_merges = 4000 # 最大合并次数
 for i in tqdm(range(num_merges)):
     pairs = get_stats(vocab)
     if not pairs:
@@ -130,8 +124,9 @@ for i in tqdm(range(num_merges)):
 def get_tokens_from_vocab(vocab):
     tokens_frequencies = Counter()
     vocab_tokenization = {}
+    # 遍历每个词
     for word, freq in vocab.items():
-        word_tokens = word.split()
+        word_tokens = word.split() # 每个词按空格分割出来的 就是token
         for token in word_tokens:
             tokens_frequencies[token] += freq
         vocab_tokenization[''.join(word_tokens)] = word_tokens
@@ -140,7 +135,7 @@ def get_tokens_from_vocab(vocab):
 
 
 ### get sorted_tokens
->对tokens按长度排序，同长度按频率排序
+>对tokens从长到短排序，同长度按频率排序
 
 ```python
 def measure_token_length(token):
@@ -192,10 +187,12 @@ def tokenize(string, sorted_tokens, input_id_map, return_strings=False, max_leng
             return [unknown_token]
 
         string_tokens = []
+        # 遍历 sorted_tokens（已经事先按长度从长到短排序）
         for i in range(len(sorted_tokens)):
             token = sorted_tokens[i]
             token_reg = re.escape(token)
-
+			
+			# 匹配 token 的位置
             matched_positions = [(m.start(0), m.end(0)) for m in re.finditer(token_reg, string)]
             if len(matched_positions) == 0:
                 continue
@@ -208,6 +205,7 @@ def tokenize(string, sorted_tokens, input_id_map, return_strings=False, max_leng
                 string_tokens += [token]
                 substring_start_position = substring_end_position + len(token)
             remaining_substring = string[substring_start_position:]
+            # 递归：
             string_tokens += tokenize_words(string=remaining_substring, sorted_tokens=sorted_tokens[i+1:], unknown_token=unknown_token)
             break
         return string_tokens
@@ -237,6 +235,20 @@ def tokenize(string, sorted_tokens, input_id_map, return_strings=False, max_leng
 
 **示例：**
 
+1. 分词过程
+	以该句子为例：`Mr. Dursley was proud and Mrs. Dursley was proud`
+	先按空格分开每个单词，在词尾加上 `</w>`。然后按 `sorted_token` 的顺序分词，其中第一个 token 是 `Dursley</w>`（长度最长），以下为具体过程：
+```
+Mr.</w> Dursley</w> was</w> proud</w> and</w> Mrs.</w> Dursley</w> was</w> proud</w>
+|       |          |                                   |          |                 |
+0       8          19                                  55         66                84
+└──────┘└─────────┘└──────────────────────────────────┘└─────────┘└────────────────┘
+substring0  token        substring1                      token   remaining_substring
+```
+剩下的 `substring` 和 `remaining_substring` 继续使用 `tokenize_words`函数分词（递归）
+直到所有单词都分给了一个token（不认识的词用 `</u>` 代替），函数结束。
+
+2. 具体调用示例
 ```python
 max_len = 64
 
