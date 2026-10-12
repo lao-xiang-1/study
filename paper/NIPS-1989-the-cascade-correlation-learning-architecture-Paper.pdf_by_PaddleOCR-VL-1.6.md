@@ -1,19 +1,5 @@
----
-sr-due: 2026-08-16
-sr-interval: 11
-sr-ease: 270
----
-#paper 
 
 # 级联相关学习架构（The Cascade-Correlation Learning Architecture）
-
-Scott E. Fahlman 与 Christian Lebiere
-
-计算机科学学院
-
-卡内基梅隆大学（Carnegie-Mellon University）
-
-宾夕法尼亚州匹兹堡，邮编 15213
 
 ## 摘要（ABSTRACT）
 
