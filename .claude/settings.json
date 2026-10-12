@@ -5,23 +5,18 @@
       "WebFetch(domain:help.obsidian.md)",
       "Bash(cd /tmp)",
       "Bash(D:/code/python3.12/scripts/python.exe -c \"print\\('hash\\(-1\\) =', hash\\(-1\\)\\); print\\('hash\\(\\\\\"abc\\\\\"\\) =', hash\\('abc'\\)\\)\")",
-      "Bash(D:/code/python3.12/scripts/python.exe -c \"print\\('hash\\(\\\\\"abc\\\\\"\\) =', hash\\('abc'\\), '\\(另一次运行\\)'\\)\")"
+      "Bash(D:/code/python3.12/scripts/python.exe -c \"print\\('hash\\(\\\\\"abc\\\\\"\\) =', hash\\('abc'\\), '\\(另一次运行\\)'\\)\")",
+      "WebFetch(domain:mdpi.com)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:stephenmwangi.com)",
+      "Bash(ls -la \"C:/Users/26971/.claude/projects/D--docs-study/memory/\" 2>/dev/null || echo \"NO_MEMORY_DIR\"; echo \"===HOME CLAUDE===\"; ls -la \"C:/Users/26971/.claude/\" 2>/dev/null | head -40)",
+      "Read(//c/Users/26971/.claude/**)",
+      "Bash(curl -sL -o /tmp/test_img.jpg -w \"HTTP %{http_code} size=%{size_download}\\\\n\" \"https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9fd26900-8a1e-4ac1-afdb-4b3539680d96/markdown_0/imgs/img_in_chart_box_213_145_498_407.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-16T12%3A59%3A57Z%2F-1%2F%2F4e83b93dced0f5fcd37131e22e9e27b7eedbb0f63e84c51bd86c9ecc813e771b\")",
+      "Read(//tmp/**)",
+      "Bash(cd /d/docs/study/paper\nF=\"1-9Augmented Lagrangian Predictive Coding.pdf_by_PaddleOCR-VL-1.6.md\"\ngrep -oP '\\(?<=<img src=\"\\)[^\"]+' \"$F\" | while read -r url; do\n  name=\"${url%%\\\\?*}\"\n  name=\"${name##*/}\"\n  code=$\\(curl -sL -o \"assets/$name\" -w \"%{http_code}\" \"$url\"\\)\n  printf \"%s  ->  assets/%s\\\\n\" \"$code\" \"$name\"\ndone)"
     ]
   },
   "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Read",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$inputJson = [Console]::In.ReadToEnd(); $data = $inputJson | ConvertFrom-Json; $filePath = [string]$data.tool_input.file_path; $pages = if ($null -ne $data.tool_input.pages) { [string]$data.tool_input.pages } else { $null }; if ($pages -eq '') { @{hookSpecificOutput=@{hookEventName='PreToolUse'; permissionDecision='deny'; permissionDecisionReason='读取文件前必须先查看/回忆：C:\\Users\\26971\\.claude\\projects\\D--docs-study\\memory\\file_read_protocol.md。Markdown/文本/代码文件不要传空 pages 参数；只有 PDF 且需要页码范围时才传 pages。'}} | ConvertTo-Json -Compress } else { @{hookSpecificOutput=@{hookEventName='PreToolUse'; additionalContext='读取文件前提醒：必须先查看/回忆 C:\\Users\\26971\\.claude\\projects\\D--docs-study\\memory\\file_read_protocol.md。普通 Markdown、文本、代码文件不要传 pages 参数；只有 PDF 且需要页码范围时才传 pages。'}} | ConvertTo-Json -Compress }",
-            "shell": "powershell",
-            "timeout": 10,
-            "statusMessage": "检查文件读取规则"
-          }
-        ]
-      }
-    ]
+    "PreToolUse": []
   }
 }
