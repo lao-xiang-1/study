@@ -1,10 +1,12 @@
 ---
-sr-due: 2026-08-19
-sr-interval: 3
-sr-ease: 250
+sr-due: 2026-10-03
+sr-interval: 6
+sr-ease: 230
 ---
 #review 
+>无人机的代码，去除一些繁琐的参数配置部分
 
+[本地目录](D:\code_project\uav_python)
 ## remove_background
 
 ```python
@@ -26,18 +28,7 @@ def remove_background(image, red_image, cfg_line=None):
         二值化掩码图 (H, W)，0=背景, 255=黑线/红色
     """
     # ---- 从配置提取参数，None 时回退到默认值 ----
-    gaussian_blur_kernel = 15
-    otsu_valid_max = 150
-    fixed_threshold = 90
-    morph_open_kernel = 7
-    morph_close_kernel = 11
-
-    if cfg_line is not None:
-        gaussian_blur_kernel = cfg_line.gaussian_blur_kernel
-        otsu_valid_max = cfg_line.otsu_valid_max
-        fixed_threshold = cfg_line.fixed_threshold
-        morph_open_kernel = cfg_line.morph_open_kernel
-        morph_close_kernel = cfg_line.morph_close_kernel
+    ...
 
     # 确保高斯核为奇数
     if gaussian_blur_kernel % 2 == 0:
@@ -71,7 +62,6 @@ def remove_background(image, red_image, cfg_line=None):
 ## 二维码色块识别
 
 ```python
-
 def _detect_qr_block_center(gray_img, last_qr_center=None, cfg_qr=None):
     """对整张灰度图做二维码黑块检测，返回符合条件的轮廓与二值 mask。
 
@@ -84,29 +74,15 @@ def _detect_qr_block_center(gray_img, last_qr_center=None, cfg_qr=None):
         (blocks, mask): blocks 为通过筛选的轮廓列表，mask 为全图二值 mask
     """
     # 对整图做背景去除 / 阈值化
-    # 背景去除的方式与remove_background参数不同
-    if cfg_qr is None:
-        mask = remove_background(gray_img, np.zeros_like(gray_img))
-        work = mask
-        min_area, max_ratio, rmin, rmax = 80, 0.45, 0.45, 2.2
-    else:
-        # 确保高斯核为奇数
-        k = cfg_qr.block_blur_kernel + (cfg_qr.block_blur_kernel % 2 == 0)
-        blur = cv2.GaussianBlur(gray_img, (k, k), 0)
-        _, work = cv2.threshold(blur, cfg_qr.block_threshold, 255, cv2.THRESH_BINARY_INV)
-        work = cv2.morphologyEx(work, cv2.MORPH_OPEN,
-                                np.ones((cfg_qr.block_open_kernel, cfg_qr.block_open_kernel), np.uint8))
-        work = cv2.morphologyEx(work, cv2.MORPH_CLOSE,
-                                np.ones((cfg_qr.block_close_kernel, cfg_qr.block_close_kernel), np.uint8))
-        mask = work
-        min_area, max_ratio = cfg_qr.block_min_area, cfg_qr.block_max_area_ratio
-        rmin, rmax = cfg_qr.block_aspect_ratio_min, cfg_qr.block_aspect_ratio_max
+    # 直接调用 remove_background 或者另外实现
+    ...
 
     # 通过 findContours 查找轮廓，再根据 面积和长宽比 筛选色块
     contours, _ = cv2.findContours(work, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     blocks = []
     img_area = work.shape[0] * work.shape[1]
     for contour in contours:
+	    # 根据面积和长宽比筛选轮廓
         area = cv2.contourArea(contour)
         if area < min_area or area > img_area * max_ratio:
             continue
@@ -141,6 +117,7 @@ def get_qr_block_center(gray_img, cfg_qr=None):
     total_m00 = 0.0
     sum_m10 = 0.0
     sum_m01 = 0.0
+    # 按面积加权求中心坐标
     for c in blocks:
         m = cv2.moments(c)
         if m["m00"] == 0:
@@ -166,14 +143,14 @@ def get_qr_block_center(gray_img, cfg_qr=None):
 ## 红点识别
 
 ```python
-
 def detect_red_by_rgb_diff(image, threshold=40, min_red=80, morph_open_kernel=3):
-    """基于 RGB 通道差检测红色区域，返回二值 mask（纯算法，无绘制）。
+    """基于 RGB 通道差检测红色区域，返回二值 mask。
 
     保留标量签名以向后兼容；新调用方应优先用 detect_red_candidate 传 cfg_red。
     """
     img_float = image.astype(np.float32)
     b, g, r = cv2.split(img_float)
+    # 计算R和G、B的差值
     diff_rg = r - g
     diff_rb = r - b
     mask = (
@@ -182,6 +159,7 @@ def detect_red_by_rgb_diff(image, threshold=40, min_red=80, morph_open_kernel=3)
         ).astype(np.uint8)
         * 255
     )
+    # 按椭圆做开运算，更符合圆形，减少锯齿
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (morph_open_kernel, morph_open_kernel))
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
     return mask
@@ -220,6 +198,7 @@ def detect_red_candidate(frame, cfg_red):
 ```
 
 ## decode
+>解码部分使用 `pyzbar.decode`
 
 ```python
     # 二维码识别
@@ -229,28 +208,13 @@ def detect_red_candidate(frame, cfg_red):
         # 找到图像中的条形码并进行解码 (注意：用纯灰度图解码比彩色图快非常多)
         barcodes = pyzbar.decode(gray_img)
         self.current_barcodes = barcodes
-        if barcodes:
-            self.get_qr = True
-            self.qr_count += 1
-        elif self.get_qr:
-            self.lost5 += 1
-
-        if self.get_qr:
-            time.sleep(0.03)
 
         # 循环检测到的条形码
         for barcode in barcodes:
             x, y, w, h = barcode.rect
-            # 在灰度图上画白框 (255)
-            cv2.rectangle(gray_img, (x, y), (x + w, y + h), 255, 5)
-            barcodeData = barcode.data.decode("utf-8")
-            barcodeType = barcode.type
-            text = "{} ({})".format(barcodeData, barcodeType)
-            self.scan_content = barcodeData
-            logger.info(f"二维码识别内容: {self.scan_content}")
-            cv2.putText(
-                gray_img, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, 255, 2
-            )
+            # 在图像上标注二维码位置 + 文字说明
+            ...
+            
             points = barcode.polygon
 
             offset_x = sum(point.x for point in points) / len(points)
@@ -270,12 +234,8 @@ def detect_red_candidate(frame, cfg_red):
                 abs(x_err) < qr.center_tolerance_x
                 and abs(y_err) < qr.center_tolerance_y
             ):
-                self.qr_stable_count += 1
-                self.airplaneApi.move(0, 0, 0, 0)
-                self.is_code_center = self.qr_stable_count >= qr.center_stable_frames
-                logger.info(
-                    f"qr stable {self.qr_stable_count}/{qr.center_stable_frames}"
-                )
+                # 已对准，降落
+                ...
             elif x_percent >= y_percent:
                 self.qr_stable_count = 0
                 if x_err < -qr.center_tolerance_x:
@@ -310,6 +270,14 @@ def detect_red_candidate(frame, cfg_red):
 ## 巡线的切片处理
 
 ```python
+class SliceResult:
+    """切片轮廓质心结果。"""
+    __slots__ = ("centroids", "contours")
+
+    def __init__(self, centroids, contours):
+        self.centroids = centroids  # list[[x,y]]，无效片为 [0,0]
+        self.contours = contours     # 每片主轮廓（可能为 None），供画图层用
+
 def get_contour_center(contour):
     """获取轮廓的中心点（纯算法）。"""
     m = cv2.moments(contour)
@@ -321,15 +289,18 @@ def get_contour_center(contour):
 
 
 def slice_out(binary, num_slices, min_area=20):
-    """水平切片，每片取最大轮廓质心，返回 SliceResult（纯算法，无绘制）。
+    """水平切片，每片取最大轮廓质心，返回 SliceResult。
 
     每片为全宽条带，故质心 x 为全图坐标、y 为片内局部坐标（调用方按
     sl*i 还原全图 y）。无效片质心为 [0,0]、轮廓为 None。
 
     修复: 最后一片延伸到图像底部，不再截断余数行。
+    
+    binary: 二值化图片
+    num_slices: 切片数量
     """
     h, w = binary.shape[:2]
-    sl = h // num_slices
+    sl = h // num_slices # 每段的高度
     centroids = []
     contours = []
     for i in range(num_slices):
@@ -348,31 +319,4 @@ def slice_out(binary, num_slices, min_area=20):
         centroids.append(center)
         contours.append(main_c)
     return SliceResult(centroids, contours)
-
-
-def draw_slices(binary, sl):
-    """在二值图上按切片绘制轮廓与质心，返回 BGR 标注图（画图层，无算法）。
-
-    输入 slice_out 的 SliceResult；逐片画绿轮廓 + 红质心圆，再垂直拼接，
-    与旧 process+repack 的视觉效果一致。
-    """
-    h, w = binary.shape[:2]
-    num_slices = len(sl.centroids)
-    sl_h = h // num_slices
-    bands = []
-    for i in range(num_slices):
-        y1 = sl_h * i
-        y2 = h if i == num_slices - 1 else y1 + sl_h
-        crop = binary[y1:y2, 0:w]
-        color_crop = cv2.cvtColor(crop, cv2.COLOR_GRAY2BGR)
-        c = sl.contours[i]
-        if c is not None:
-            cv2.drawContours(color_crop, [c], -1, (0, 255, 0), 2)
-            cx, cy = sl.centroids[i]
-            cv2.circle(color_crop, (cx, cy), 5, (0, 0, 255), -1)
-        bands.append(color_crop)
-    out = bands[0]
-    for b in bands[1:]:
-        out = np.concatenate((out, b), axis=0)
-    return out
 ```
