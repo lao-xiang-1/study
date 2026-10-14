@@ -257,7 +257,7 @@ Class used to replace multiple references to the same BaseParam with a static in
 to the unique BaseParam.
 ?
 一个类，用于将同一个 BaseParam 的多个引用替换为对唯一 BaseParam 的静态索引。
-<!--SR:!2026-10-13,13,250-->
+<!--SR:!2026-11-29,46,270-->
 
 ---
 
@@ -305,7 +305,7 @@ A local stdio server is a program Claude Code starts as a subprocess on your mac
 Fetch content from one or more web pages, following links recursively.
 ?
 从一个或多个网页获取内容，并递归地跟随链接。
-<!--SR:!2026-10-14,14,290-->
+<!--SR:!2026-12-07,54,310-->
 
 ---
 
@@ -321,7 +321,7 @@ It bore witness to her efforts
 I still made it through the next three years of college, even without the book. And it wasn’t, ultimately, the dictionary that got me there — not really.
 ?
 即便没有那本书，我仍然顺利读完了大学接下来的三年。而且，说到底，带我走到那一步的并不是那本字典——真的不是。
-<!--SR:!2026-10-14,14,290-->
+<!--SR:!2026-12-10,57,310-->
 
 ---
 
@@ -406,7 +406,7 @@ The matrix operators for multiplication, division, and power each have a corresp
 While other programming languages mostly work with numbers one at a time, matlab is designed to operate primarily on whole matrices and arrays
 ?
 其他编程语言大多一次只处理一个数字，而 MATLAB 的设计初衷主要是针对整个矩阵和数组进行运算。
-<!--SR:!2026-10-13,4,270-->
+<!--SR:!2026-10-28,14,290-->
 
 ---
 
@@ -414,7 +414,7 @@ While other programming languages mostly work with numbers one at a time, matlab
 Now those years are far behind me, and the details have grown soft at the edges.
 ?
 如今那些岁月早已远在我身后，其中的细节也已在边缘处渐渐变得模糊。
-<!--SR:!2026-10-13,4,270-->
+<!--SR:!2026-10-29,15,290-->
 
 ---
 
@@ -432,7 +432,7 @@ As they proceed to pull 6 months worth of data out of thin air within 2 minutes.
 Thank god I was starting to think that I was the only one that killed people with my heat vision.
 ?
 谢天谢地，我还以为只有我会用热视线杀人呢。
-<!--SR:!2026-10-13,3,250-->
+<!--SR:!2026-10-25,11,270-->
 
 ---
 

@@ -1,9 +1,3 @@
----
-sr-due: 2026-08-03
-sr-interval: 15
-sr-ease: 230
----
-#ml 
 
 主成分分析（Principal Component Analysis, PCA）是一种常用的降维算法。其核心思想是将高维数据投影到低维空间中，同时尽可能多地保留原始数据的特征。
 

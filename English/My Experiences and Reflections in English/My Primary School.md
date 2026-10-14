@@ -1,9 +1,3 @@
----
-sr-due: 2026-10-09
-sr-interval: 1
-sr-ease: 230
----
-#review 
 
 Throughout my primary school years, I didn't have much trouble most of the time. After all, I was just a kid, I didn't think too much about life or anything. And most of the things that made me unhappy back then don't seem like a big deal in my perspective now.
 

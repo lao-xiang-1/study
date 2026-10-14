@@ -1,9 +1,4 @@
----
-sr-due: 2026-10-03
-sr-interval: 6
-sr-ease: 230
----
-#review 
+
 >无人机的代码，去除一些繁琐的参数配置部分
 
 [本地目录](D:\code_project\uav_python)

@@ -1,10 +1,3 @@
----
-sr-due: 2026-09-25
-sr-interval: 29
-sr-ease: 208
----
-
-#math 
 
 ## 1. 问题背景
 
