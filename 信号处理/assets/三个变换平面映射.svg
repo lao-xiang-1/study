@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" style="background-color:#fff" font-family="Times New Roman, Microsoft YaHei, sans-serif">
+  <!-- ===== 左：s 平面 ===== -->
+  <rect x="50" y="55" width="130" height="323" fill="#e8f0ff"/>
+  <line x1="50" y1="215" x2="332" y2="215" stroke="#111" stroke-width="2" fill="none"/>
+  <line x1="180" y1="378" x2="180" y2="52" stroke="#111" stroke-width="2" fill="none"/>
+  <polyline points="326,209 332,215 326,221" stroke="#111" stroke-width="2" fill="none"/>
+  <polyline points="174,58 180,52 186,58" stroke="#111" stroke-width="2" fill="none"/>
+  <line x1="180" y1="55" x2="180" y2="375" stroke="#1f6feb" stroke-width="3.2" fill="none"/>
+  <line x1="110" y1="55" x2="110" y2="375" stroke="#c0392b" stroke-width="2.4" stroke-dasharray="7,6" fill="none"/>
+  <circle cx="180" cy="215" r="3.5" fill="#111"/>
+  <text x="180" y="34" font-size="18" fill="#111" text-anchor="middle">s 平面（拉普拉斯变换）</text>
+  <text x="338" y="211" font-size="18" fill="#111">σ</text>
+  <text x="156" y="50" font-size="18" fill="#111">jω</text>
+  <text x="188" y="72" font-size="14" fill="#1f6feb">虚轴 σ=0（傅里叶变换）</text>
+  <text x="62" y="68" font-size="14" fill="#c0392b">σ=c</text>
+  <text x="60" y="356" font-size="14" fill="#5b6b8c">左半平面（稳定）</text>
+  <text x="196" y="234" font-size="14" fill="#111">O</text>
+
+  <!-- ===== 中：映射 z = e^(sT) ===== -->
+  <line x1="345" y1="140" x2="487" y2="140" stroke="#111" stroke-width="2.2" fill="none"/>
+  <polyline points="481,134 489,140 481,146" stroke="#111" stroke-width="2.2" fill="none"/>
+  <text x="416" y="126" font-size="17" fill="#111" text-anchor="middle">z = e<tspan dy="-6" font-size="12">sT</tspan></text>
+  <text x="416" y="164" font-size="13" fill="#5b6b8c" text-anchor="middle">采样周期 T</text>
+
+  <!-- ===== 右：z 平面 ===== -->
+  <circle cx="650" cy="215" r="120" fill="#e8f0ff"/>
+  <line x1="500" y1="215" x2="882" y2="215" stroke="#111" stroke-width="2" fill="none"/>
+  <line x1="650" y1="378" x2="650" y2="52" stroke="#111" stroke-width="2" fill="none"/>
+  <polyline points="876,209 882,215 876,221" stroke="#111" stroke-width="2" fill="none"/>
+  <polyline points="644,58 650,52 656,58" stroke="#111" stroke-width="2" fill="none"/>
+  <circle cx="650" cy="215" r="120" stroke="#1f6feb" stroke-width="3.2" fill="none"/>
+  <circle cx="650" cy="215" r="78" stroke="#c0392b" stroke-width="2.4" stroke-dasharray="7,6" fill="none"/>
+  <circle cx="650" cy="215" r="3.5" fill="#111"/>
+  <text x="650" y="34" font-size="18" fill="#111" text-anchor="middle">z 平面（Z 变换）</text>
+  <text x="888" y="211" font-size="18" fill="#111">Re</text>
+  <text x="628" y="50" font-size="18" fill="#111">Im</text>
+  <text x="650" y="78" font-size="14" fill="#1f6feb" text-anchor="middle">单位圆 |z|=1（DTFT）</text>
+  <text x="770" y="150" font-size="14" fill="#c0392b">|z|=e<tspan dy="-5" font-size="11">cT</tspan></text>
+  <text x="770" y="170" font-size="13" fill="#c0392b">Z 逆变换围线</text>
+  <text x="650" y="316" font-size="14" fill="#5b6b8c" text-anchor="middle">圆内 |z|&lt;1（稳定）</text>
+  <text x="666" y="234" font-size="14" fill="#111">O</text>
+</svg>
