@@ -1,4 +1,6 @@
-
+---
+viewed: 2026-10-14
+---
 Throughout my primary school years, I didn't have much trouble most of the time. After all, I was just a kid, I didn't think too much about life or anything. And most of the things that made me unhappy back then don't seem like a big deal in my perspective now.
 
 Since a general expression doesn't show my feelings correctly, I choose to write some independent stories
