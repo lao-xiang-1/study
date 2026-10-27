@@ -1,34 +1,33 @@
 ---
-sr-due: 2026-10-20
-sr-interval: 3
-sr-ease: 250
+viewed: 2026-10-21
 ---
-#math 
 
 ### §2 幂级数
 
-### 1. 幂级数概念
+### 1. 基本概念
+
+#### 复变函数项级数
 
 设 $\left\{f_{n}(z)\right\}(n=1,2,\cdots)$为一复变函数序列，其中各项在区域D内有定义.表达式
-$$ \sum_{n=1}^{\infty}f_{n}(z)=f_{1}(z)+f_{2}(z)+\cdots+f_{n}(z)+\cdots $$ 
+$$ \sum_{n=1}^{\infty}f_{n}(z)=f_{1}(z)+f_{2}(z)+\cdots+f_{n}(z)+\cdots ,\tag{4.2.1}$$
 称为 **复变函数项级数**，记作 $\sum_{n=1}^{\infty}f_{n}(z)$.这级数的最前面n项的和
-$$ s_{n}(z)=f_{1}(z)+f_{2}(z)+\cdots+f_{n}(z) $$ 
+$$ s_{n}(z)=f_{1}(z)+f_{2}(z)+\cdots+f_{n}(z) $$
 称为这级数的 **部分和**.
 
 如果对于 D 内的某一点  $z_{0}$，极限
-$$ \lim_{n\to\infty}s_{n}(z_{0})=s(z_{0}) $$ 
-存在，那么我们称复变函数项级数(4.2.1)在 $z_{0}$  **收敛**，而 $s(z_{0})$称为它的 **和**。如果级数在D内处处收敛，那么它的和一定是z的一个函数 $s(z)$：
+$$ \lim_{n\to\infty}s_{n}(z_{0})=s(z_{0}) $$
+存在，那么我们称复变函数项级数(4.2.1)在 $z_{0}$  **收敛**，而 $s(z_{0})$称为它的 **和**。
+如果级数在D内处处收敛，那么它的和一定是z的一个函数 $s(z)$：
 $$ s\left(z\right)=f_{1}\left(z\right)+f_{2}\left(z\right)+\cdots+f_{n}\left(z\right)+\cdots. $$ 
- $s(z)$称为级数  $\sum_{n=1}^{\infty}f_{n}(z)$ 的和函数.
+ $s(z)$称为级数  $\sum_{n=1}^{\infty}f_{n}(z)$ 的**和函数**.
 
-当  $f_{n}(z)=c_{n-1}(z-a)^{n-1}$ 或  $f_{n}(z)=c_{n-1}z^{n-1}$ 时，就得到函数项级数的特殊情形.
+#### 幂级数
 
+当  $f_{n}(z)=c_{n-1}(z-a)^{n-1}$ 或  $f_{n}(z)=c_{n-1}z^{n-1}$ 时，就得到函数项级数的特殊情形：
 $$  \sum_{n=0}^{\infty}c_{n}(z-a)^{n}=c_{0}+c_{1}(z-a)+c_{2}(z-a)^{2}+\cdots+c_{n}(z-a)^{n}+\cdots   \tag*{（4.2.2）}$$
-
 或
 $$  \sum_{n=0}^{\infty}c_{n}z^{n}=c_{0}+c_{1}z+c_{2}z^{2}+\cdots+c_{n}z^{n}+\cdots.   \tag*{（4.2.3）}$$
-
-这种级数称为幂级数.
+这种级数称为**幂级数**.
 
 如果令  $z-a=\zeta$，那么 (4.2.2) 成为  $\sum_{n=0}^{\infty}c_{n}\zeta^{n}$，这是 (4.2.3) 的形式。为了方便，今后常就 (4.2.3) 来讨论。
 
@@ -49,25 +48,22 @@ i）对所有的正实数 $z$ 都是收敛的.这时，根据阿贝尔定理可�
 ii) 对所有的正实数除 z=0 外都是发散的.这时,级数在复平面内除原点外处处发散.
 
 iii) 既存在使级数收敛的正实数，也存在使级数发散的正实数。级数在 $|z|=\alpha$ 收敛，在 $|z|=\beta$ 发散→ 收敛半径就夹在 $\alpha$ 与 $\beta$ 之间，$\alpha$ 往外扩、$\beta$ 往内缩，最终逼近那个分界圆 $C_R$。
+那么就称这个 $R$ 为**收敛半径**
 
 <div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//81c57dab-3df9-4c57-911f-8bebdc657387/markdown_1/imgs/img_in_image_box_771_1194_1109_1520.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-17T11%3A20%3A18Z%2F-1%2F%2Fd497d653525f3c6f5af4226690b66647a135472fa786b03ac315fce6ced6d8a2" alt="Image" width="28%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图4.1</div> </div>
-对幂级数(4.2.2)来说，它的收敛范围是以 z=a 为中心的圆域。在收敛圆的圆周上是收敛还是发散，不能作出一般的结论，要对具体级数进行具体分析。
+- 对 形如(4.2.2)的幂级数 来说，它的收敛范围是以 z=a 为中心的圆域。此时收敛半径是相对于 $(z-a)$ 而言的。
+- 在收敛圆的圆周上是收敛还是发散，不能作出一般的结论，要对具体级数进行具体分析。
 
 ### 例 1 求幂级数
-
- $$ \sum_{n=0}^{\infty}z^{n}=1+z+z^{2}+\cdots+z^{n}+\cdots $$ 
-
+$$ \sum_{n=0}^{\infty}z^{n}=1+z+z^{2}+\cdots+z^{n}+\cdots $$
 的收敛范围与和函数.
 
 [解] 级数的部分和为
 $$ s_{n}=1+z+z^{2}+\cdots+z^{n-1}=\frac{1-z^{n}}{1-z}\quad(z\neq1). $$ 
-当  $|z|<1$ 时，由于  $\lim_{n\to\infty}z^n=0$ ，从而有  $\lim_{n\to\infty}s_n=\frac{1}{1-z}$，即  $|z|<1$ 时，级数  $\sum_{n=0}^{\infty}z^n$ 收敛，和函数为  $\frac{1}{1-z}$；
-当  $|z|\geqslant1$ 时，由于  $n\to\infty$ 时，级数的一般项  $z^n$ 不趋于零 $^{①}$，故级数发散。
-由阿贝尔定理知级数的收敛范围为一单位圆域  $|z|<1$，在此圆域内，级数不仅收敛，而且绝对收敛。收敛半径为 1，并有
-$$ \frac{1}{1-z}=1+z+z^{2}+\cdots+z^{n}+\cdots. $$ 
+收敛域 $|z|<1$ ，和函数为  $\frac{1}{1-z}$
 
 ## 3. 收敛半径的求法
 
