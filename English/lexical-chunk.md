@@ -107,7 +107,7 @@
 ---
 
 #en
-## 五、precedent / precedence / unprecedented
+## 五、precedent / precedence / unprecedented / precede
 ### 1. precedent
 - **释义**：n. 先例，前例；adj. 在先的
 - **例句**：
@@ -125,6 +125,12 @@
 - **例句**：
   - The pandemic caused **unprecedented** disruption to the global economy.（疫情对全球经济造成了前所未有的冲击。）
   - The team achieved an **unprecedented** level of success this season.（该团队本赛季取得了史无前例的成就。）
+
+### 4. precede
+- **释义**：v. 处在……之前，先于，在……之前做
+- **例句**：
+  - The storm was **preceded** by a sudden drop in temperature.（暴风雨来临前气温骤降。）
+  - A brief introduction **precedes** each chapter in this book.（本书每章之前都有一段简短的引言。）
 
 ---
 
@@ -195,23 +201,7 @@
 ---
 
 #en
-## 九、emerge / emerging
-### 1. emerge
-- **释义**：v. 出现，浮现；脱颖而出；（事实）暴露
-- **例句**：
-  - New evidence **emerged** during the trial that changed the outcome.（审判期间出现了改变结果的新证据。）
-  - China has **emerged** as a leading force in renewable energy.（中国已崛起为可再生能源领域的领军力量。）
-
-### 2. emerging
-- **释义**：adj. 新兴的，初露头角的
-- **例句**：
-  - **Emerging** technologies like AI are transforming every industry.（人工智能等新兴技术正在改变各行各业。）
-  - The fund focuses on investing in **emerging** markets.（该基金专注于投资新兴市场。）
-
----
-
-#en
-## 十、interpret / interpretability
+## 九、interpret / interpretability / interpretation
 ### 1. interpret
 - **释义**：v. 解释，理解；口译
 - **例句**：
@@ -224,60 +214,16 @@
   - Model **interpretability** is crucial in medical AI applications.（模型的可解释性在医疗AI应用中至关重要。）
   - Researchers are working to improve the **interpretability** of deep learning systems.（研究人员正致力于提高深度学习系统的可解释性。）
 
----
-
-#en
-## 十一、equivalent / equivalence
-### 1. equivalent
-- **释义**：adj. 等价的，相当的；n. 等价物，对等物
+### 3. interpretation
+- **释义**：n. 解释，理解；演绎，诠释
 - **例句**：
-  - One mile is roughly **equivalent** to 1.6 kilometers.（一英里大约等于1.6公里。）
-  - The Japanese word has no direct **equivalent** in English.（这个日语词在英语中没有直接对应的词。）
-
-### 2. equivalence
-- **释义**：n. 等价，相等；对等关系
-- **例句**：
-  - The **equivalence** of mass and energy is expressed by E=mc².（质能等价关系由 E=mc² 表达。）
-  - The two qualifications are recognized as having **equivalence**.（这两种资格被认定为具有同等效力。）
+  - Her **interpretation** of the poem was quite different from mine.（她对这首诗的解读与我大不相同。）
+  - The data allows for several possible **interpretations**.（这些数据可以有几种不同的解读。）
 
 ---
 
 #en
-## 十二、procrastinate / procrastinator
-?
-### 1. procrastinate
-- **释义**：v. 拖延，耽搁
-- **例句**：
-  - Stop **procrastinating** and start studying for the exam.（别再拖了，赶紧复习考试吧。）
-  - He tends to **procrastinate** when faced with difficult tasks.（面对困难任务时他往往会拖延。）
-
-### 2. procrastinator
-- **释义**：n. 拖延者，拖延症患者
-- **例句**：
-  - As a chronic **procrastinator**, she always leaves assignments until the last minute.（作为一个习惯性拖延者，她总是把作业拖到最后一刻才做。）
-  - The app is designed to help **procrastinators** stay on track.（这款应用旨在帮助拖延者保持进度。）
-<!--SR:!2027-03-22,165,310-->
-
----
-
-#en
-## 十三、recursive / recursion
-### 1. recursive
-- **释义**：adj. 递归的，循环的
-- **例句**：
-  - A **recursive** function calls itself to solve smaller subproblems.（递归函数通过调用自身来求解更小的子问题。）
-  - The directory structure is **recursive**, with folders nested inside folders.（目录结构是递归的，文件夹嵌套在文件夹中。）
-
-### 2. recursion
-- **释义**：n. 递归，递归法
-- **例句**：
-  - **Recursion** is a fundamental concept in computer science and mathematics.（递归是计算机科学和数学中的一个基本概念。）
-  - The algorithm uses **recursion** to traverse the tree data structure.（该算法使用递归来遍历树形数据结构。）
-
----
-
-#en
-## 十四、variable / variance / covariance
+## 十、variable / variance / covariance
 ### 1. variable
 - **释义**：n. 变量；adj. 可变的，易变的
 - **例句**：
@@ -299,39 +245,7 @@
 ---
 
 #en
-## 十五、obsess / obsessive
-### 1. obsess
-- **释义**：v. 使着迷，使念念不忘
-- **例句**：
-  - He **obsesses** over every detail of his presentation.（他对演讲的每一个细节都 obsess 不已。）
-  - Don't let one failure **obsess** you — move on and learn from it.（不要让一次失败占据你的全部心思——向前看，从中学习。）
-
-### 2. obsessive
-- **释义**：adj. 强迫性的，过分执着的；n. 强迫症患者
-- **例句**：
-  - Her **obsessive** attention to detail made her an excellent editor.（她对细节的执着追求使她成为一名出色的编辑。）
-  - He has an **obsessive** interest in collecting vintage watches.（他对收集古董手表有着近乎痴迷的兴趣。）
-
----
-
-#en
-## 十六、complain / complaint
-### 1. complain
-- **释义**：v. 抱怨，发牢骚；投诉
-- **例句**：
-  - Customers frequently **complain** about the slow service at this restaurant.（顾客经常抱怨这家餐厅服务太慢。）
-  - He **complained** to the manager that the room was too noisy.（他向经理投诉房间太吵了。）
-
-### 2. complaint
-- **释义**：n. 抱怨，投诉；疾病
-- **例句**：
-  - The company received over 200 **complaints** about the defective product.（公司收到了200多起关于该缺陷产品的投诉。）
-  - She filed a formal **complaint** with the human resources department.（她向人力资源部门提交了正式投诉。）
-
----
-
-#en
-## 十七、synchronize / sync / synchronous
+## 十一、synchronize / sync / synchronous
 ### 1. synchronize
 - **释义**：v. 使同步，使协调；校准（时间）
 - **例句**：
@@ -353,7 +267,7 @@
 ---
 
 #en
-## 十八、iterative / iterable
+## 十二、iterative / iterable / iteration
 ### 1. iterative
 - **释义**：adj. 迭代的，重复的
 - **例句**：
@@ -366,26 +280,16 @@
   - In Python, lists and tuples are **iterable** objects that can be used in for loops.（在 Python 中，列表和元组是可用于 for 循环的可迭代对象。）
   - Any object that implements the `__iter__` method is considered **iterable**.（任何实现了 `__iter__` 方法的对象都被视为可迭代的。）
 
----
-
-#en
-## 十九、invoke / invocation
-### 1. invoke
-- **释义**：v. 调用；援引；祈求
+### 3. iteration
+- **释义**：n. 迭代；重复；反复
 - **例句**：
-  - The program **invokes** a system call to allocate memory.（程序调用系统调用来分配内存。）
-  - He **invoked** his right to remain silent.（他援引了自己保持沉默的权利。）
-
-### 2. invocation
-- **释义**：n. 调用；祈求；咒语
-- **例句**：
-  - The **invocation** of the remote API takes less than 50 milliseconds.（远程 API 的调用耗时不到 50 毫秒。）
-  - The priest's **invocation** blessed the congregation before the ceremony.（牧师的祈祷在仪式前祝福了会众。）
+  - Each **iteration** of the algorithm brings us closer to the solution.（算法的每次迭代都让我们更接近解决方案。）
+  - The design went through several **iterations** before approval.（该设计在获批前经历了几次迭代。）
 
 ---
 
 #en
-## 二十、alternate / alternative
+## 十三、alternate / alternative
 ### 1. alternate
 - **释义**：v. 交替；轮流 adj. 交替的；间隔的
 - **例句**：
@@ -401,7 +305,7 @@
 ---
 
 #en
-## 二十一、surgery / surgically / surgeon
+## 十四、surgery / surgically / surgeon
 ### 1. surgery
 - **释义**：n. 外科手术；手术室；诊所
 - **例句**：
@@ -423,199 +327,7 @@
 ---
 
 #en
-## 二十二、declare / declarative
-### 1. declare
-- **释义**：v. 声明；宣布；申报
-- **例句**：
-  - The government **declared** a state of emergency after the earthquake.（政府在地震后宣布了紧急状态。）
-  - You must **declare** all income on your tax return.（你必须在纳税申报表中申报所有收入。）
-
-### 2. declarative
-- **释义**：adj. 声明式的；陈述的
-- **例句**：
-  - SQL is a **declarative** language — you specify what result you want, not how to compute it.（SQL 是一种声明式语言——你指定想要的结果，而非如何计算它。）
-  - A **declarative** sentence simply states a fact and ends with a period.（陈述句只是陈述一个事实，以句号结尾。）
-
----
-
-#en
-## 二十三、convention / conventional
-### 1. convention
-- **释义**：n. 惯例；公约；大会
-- **例句**：
-  - By **convention**, variable names in Python use snake_case.（按照惯例，Python 中的变量名使用蛇形命名法。）
-  - Delegates from forty countries attended the climate **convention**.（来自四十个国家的代表参加了气候大会。）
-
-### 2. conventional
-- **释义**：adj. 传统的；常规的；惯例的
-- **例句**：
-  - **Conventional** farming methods rely heavily on chemical fertilizers.（传统农业方法严重依赖化学肥料。）
-  - She chose a **conventional** approach to solving the problem rather than experimenting.（她选择了常规的方法来解决问题，而非进行实验。）
-
----
-
-#en
-## 二十四、racial / race
-### 1. racial
-- **释义**：adj. 种族的；种族间的
-- **例句**：
-  - The organization campaigns against **racial** discrimination in the workplace.（该组织开展反对职场种族歧视的运动。）
-  - **Racial** diversity enriches a community with different perspectives and traditions.（种族多样性以不同的视角和传统丰富了社区。）
-
-### 2. race
-- **释义**：n. 种族；赛跑 v. 赛跑；急速移动
-- **例句**：
-  - The Olympic 100-metre **race** is one of the most watched events in the world.（奥运会百米赛跑是世界上最受关注的项目之一。）
-  - People of every **race** deserve equal rights and opportunities.（每个种族的人都应享有平等的权利和机会。）
-
----
-
-#en
-## 二十五、extrovert / introvert
-### 1. extrovert
-- **释义**：n. 外向的人 adj. 外向的
-- **例句**：
-  - As an **extrovert**, she thrives in social gatherings and large parties.（作为一个外向的人，她在社交聚会和大型派对中如鱼得水。）
-  - **Extroverts** tend to recharge their energy by interacting with others.（外向的人往往通过与他人的互动来恢复精力。）
-
-### 2. introvert
-- **释义**：n. 内向的人 adj. 内向的
-- **例句**：
-  - An **introvert** may find prolonged social interaction draining and need time alone to recover.（内向的人可能觉得长时间的社交令人疲惫，需要独处的时间来恢复。）
-  - Being an **introvert** does not mean you are shy; it simply means you prefer quieter environments.（内向并不意味着害羞，只是你更喜欢安静的环境。）
-
----
-
-#en
-## 二十六、assign / assignment
-### 1. assign
-- **释义**：v. 分配；指派；赋值
-- **例句**：
-  - The teacher **assigned** three chapters of reading for homework.（老师布置了三章阅读作为家庭作业。）
-  - Each process is **assigned** a unique identifier by the operating system.（操作系统为每个进程分配一个唯一的标识符。）
-
-### 2. assignment
-- **释义**：n. 作业；任务；分配；赋值
-- **例句**：
-  - The final **assignment** is due at the end of the semester.（期末作业在学期末截止。）
-  - Her first **assignment** as a journalist was to cover the city council election.（她作为记者的第一个任务是报道市议会选举。）
-
----
-
-#en
-## 二十八、paradox / paradoxical
-### 1. paradox
-- **释义**：n. 悖论；矛盾的事物
-- **例句**：
-  - It is a **paradox** that the richest country in the world still has millions living in poverty.（世界上最富有的国家仍有数百万人生活在贫困中，这是一个悖论。）
-  - The liar **paradox** — "This statement is false" — has puzzled logicians for centuries.（说谎者悖论——"这句话是假的"——困扰了逻辑学家几个世纪。）
-
-### 2. paradoxical
-- **释义**：adj. 矛盾的；悖论的
-- **例句**：
-  - It seems **paradoxical** that drinking too much water can actually dehydrate you.（喝太多水实际上会让你脱水，这似乎很矛盾。）
-  - The study revealed a **paradoxical** result: stricter regulations led to faster innovation.（该研究揭示了一个矛盾的结果：更严格的法规反而促进了更快的创新。）
-
----
-
-#en
-## 二十九、statistic / stats
-### 1. statistic
-- **释义**：n. 统计量；统计数据
-- **例句**：
-  - The unemployment **statistic** released today surprised many economists.（今天公布的失业统计数据令许多经济学家感到意外。）
-  - Each **statistic** in the dataset represents the average score of a different age group.（数据集中的每个统计量代表不同年龄组的平均分数。）
-
-### 2. stats
-- **释义**：n.（statistics 的缩写）统计数据；统计学
-- **例句**：
-  - The player's **stats** this season include 25 goals and 12 assists.（该球员本赛季的数据包括 25 个进球和 12 次助攻。）
-  - I need to study for my **stats** exam next Monday.（我需要为下周一的统计学考试复习。）
-
----
-
-#en
-## 三十、cortex / cortical
-### 1. cortex
-- **释义**：n. 皮层；大脑皮层
-- **例句**：
-  - The prefrontal **cortex** plays a key role in decision-making and planning.（前额叶皮层在决策和规划中起着关键作用。）
-  - The visual **cortex** at the back of the brain processes information from the eyes.（大脑后部的视觉皮层处理来自眼睛的信息。）
-
-### 2. cortical
-- **释义**：adj. 皮层的；皮质的
-- **例句**：
-  - **Cortical** thickness can be measured using high-resolution MRI scans.（皮层厚度可以通过高分辨率 MRI 扫描来测量。）
-  - The study found that **cortical** neurons fire in distinct patterns during sleep.（研究发现皮层神经元在睡眠期间以不同的模式放电。）
-
----
-
-#en
-## 三十一、fragment / defragment
-### 1. fragment
-- **释义**：n. 碎片；片段 v. 使破碎；使分裂
-- **例句**：
-  - Archaeologists discovered a **fragment** of ancient pottery at the excavation site.（考古学家在发掘现场发现了一片古代陶器碎片。）
-  - Over time, the hard drive became **fragmented**, slowing down file access.（随着时间的推移，硬盘变得碎片化，文件访问速度变慢。）
-
-### 2. defragment
-- **释义**：v. 整理碎片；磁盘碎片整理
-- **例句**：
-  - You should **defragment** your mechanical hard drive periodically to improve performance.（你应该定期整理机械硬盘的碎片以提高性能。）
-  - Modern operating systems **defragment** drives automatically in the background.（现代操作系统会在后台自动整理磁盘碎片。）
-
----
-
-#en
-## 三十二、sensory / sensible
-### 1. sensory
-- **释义**：adj. 感觉的；感官的
-- **例句**：
-  - **Sensory** neurons transmit signals from the skin to the brain.（感觉神经元将信号从皮肤传递到大脑。）
-  - The **sensory** overload of bright lights and loud music made it hard to concentrate.（强光和嘈杂音乐的感官过载使人难以集中注意力。）
-
-### 2. sensible
-- **释义**：adj. 明智的；合理的；实用的
-- **例句**：
-  - It is **sensible** to wear a helmet when riding a bicycle.（骑自行车时戴头盔是明智的。）
-  - She made a **sensible** decision to save money instead of spending it on luxuries.（她做了一个明智的决定，把钱存起来而不是花在奢侈品上。）
-
----
-
-#en
-## 三十三、grant / granted
-### 1. grant
-- **释义**：v. 授予；批准；承认 n. 拨款；补助金
-- **例句**：
-  - The university **granted** her a full scholarship for her doctoral studies.（大学授予她全额奖学金攻读博士学位。）
-  - The research team received a **grant** of two million dollars from the National Science Foundation.（研究团队从国家科学基金会获得了两百万美元的拨款。）
-
-### 2. granted
-- **释义**：adj. 理所当然的（常用于 take for granted）conj. 诚然；姑且承认
-- **例句**：
-  - We often take clean drinking water for **granted**, but billions of people lack access to it.（我们常常把清洁饮用水视为理所当然，但数十亿人无法获得它。）
-  - **Granted**, the new system is more expensive, but it is also far more reliable.（诚然，新系统更昂贵，但它也可靠得多。）
-
----
-
-#en
-## 三十四、transition / transitive
-### 1. transition
-- **释义**：n. 过渡；转变 v. 过渡；转变
-- **例句**：
-  - The **transition** from fossil fuels to renewable energy will take decades.（从化石燃料到可再生能源的过渡将需要数十年。）
-  - The company is **transitioning** to a fully remote work model.（公司正在过渡到完全远程办公的模式。）
-
-### 2. transitive
-- **释义**：adj. 传递的；及物的
-- **例句**：
-  - In the sentence "She reads books," the verb "reads" is **transitive** because it takes a direct object.（在句子"She reads books"中，动词"reads"是及物的，因为它带有直接宾语。）
-  - Equality is a **transitive** relation: if A equals B and B equals C, then A equals C.（等价是一种传递关系：如果 A 等于 B 且 B 等于 C，那么 A 等于 C。）
-
----
-
-#en
-## 三十七、increment / increase / decrease / decrement
+## 十五、increment / increase / decrease / decrement
 ### 1. increment
 - **释义**：n. 增量，增长量；v.（计算机）使递增
 - **例句**：
@@ -643,8 +355,8 @@
 ---
 
 #en
-## 三十九、trim / crop / prune
-?
+## 十六、trim / crop / prune
+
 ### 1. trim
 - **释义**：v. 修剪，修整；削减；n. 修剪；adj. 整齐的，苗条的
 - **例句**：
@@ -662,12 +374,11 @@
 - **例句**：
   - You should **prune** the rose bushes in early spring to encourage new growth.（你应该在早春修剪玫瑰丛以促进新枝生长。）
   - The editor **pruned** the article to fit the word limit.（编辑删减了文章以符合字数限制。）
-<!--SR:!2026-11-01,41,290-->
 
 ---
 
 #en
-## 四十、descent / descend / ascent / ascend
+## 十七、descent / descend / ascent / ascend
 ### 1. descent
 - **释义**：n. 下降，下沉；血统，世系；突袭
 - **例句**：
@@ -694,6 +405,239 @@
 
 ---
 
-digest / ingest
+#en
+## 十八、semicolon / comma / asterisk
+?
+### 1. semicolon
+- **释义**：n. 分号
 
-obviously / apparently
+### 2. comma
+- **释义**：n. 逗号
+
+### 3. asterisk
+- **释义**：n. 星号；vt. 用星号标出
+<!--SR:!2026-11-06,4,270-->
+
+---
+
+#en
+## 十九、strike / protest / campaign / petition
+?
+### 1. strike
+- **释义**：n. 罢工，罢市；v. 击，撞，打
+- **例句**：
+  - The union called a **strike** over pay and working hours.（工会就薪酬和工时问题号召罢工。）
+  - The workers have been on **strike** for three weeks.（工人们已经罢工三周了。）
+
+### 2. protest
+- **释义**：n. 抗议，抗议活动；v. 反对，抗议
+- **例句**：
+  - Thousands joined the **protest** against the new tax.（数千人参加了反对新税的抗议活动。）
+  - She **protested** loudly when the decision was announced.（决定宣布时她大声抗议。）
+
+### 3. campaign
+- **释义**：n. 活动，运动，竞选活动；v. 领导运动，从事竞选活动
+- **例句**：
+  - The charity launched a **campaign** to raise awareness of the disease.（该慈善机构发起了一场提高疾病认知的运动。）
+  - She **campaigned** for cleaner air in the city for over a decade.（她为让城市空气更清洁奔走了十多年。）
+
+### 4. petition
+- **释义**：n. 请愿书，申请书；v. 请愿，请求
+- **例句**：
+  - Over ten thousand people signed the **petition** against the closure.（一万多人签署了反对关闭的请愿书。）
+  - Residents **petitioned** the council to repair the road.（居民向议会请愿，要求修路。）
+<!--SR:!2026-11-06,4,270-->
+
+---
+
+#en
+## 二十、confess / concede / acknowledge
+?
+### 1. confess
+- **释义**：v. 供认，招供，承认，坦白
+- **例句**：
+  - He finally **confessed** that he had taken the money.（他最终供认拿了那笔钱。）
+  - She **confessed** to feeling nervous before every performance.（她坦言每次演出前都会紧张。）
+
+### 2. concede
+- **释义**：v. 承认，认输，让步
+- **例句**：
+  - He **conceded** that his opponent had argued better.（他承认对手论证得更好。）
+  - The company **conceded** to the workers' demands.（公司对工人的要求作出了让步。）
+
+### 3. acknowledge
+- **释义**：v. 承认，认可
+- **例句**：
+  - She **acknowledged** that the mistake was hers.（她承认这个错误是她造成的。）
+  - The report **acknowledges** the limits of the available data.（该报告承认现有数据的局限。）
+<!--SR:!2026-11-06,4,270-->
+
+---
+
+#en
+## 二十一、proof / warrant / premise
+?
+### 1. proof
+- **释义**：n. 证明，证据；adj. 防……的，耐……的
+- **例句**：
+  - The prosecution produced no **proof** that he was at the scene.（控方没有拿出他在现场的证据。）
+  - This jacket is **proof** against wind and rain.（这件夹克防风防雨。）
+
+### 2. warrant
+- **释义**：n. 令状，授权令；正当理由，依据；v. 使有必要，值得
+- **例句**：
+  - Police obtained a **warrant** to search the building.（警方取得了搜查该建筑的令状。）
+  - The evidence hardly **warrants** such a severe punishment.（这些证据不足以证明如此严厉的惩罚是必要的。）
+
+### 3. premise
+- **释义**：n. 前提，假设；v. 以……为前提
+- **例句**：
+  - The argument rests on the **premise** that people act rationally.（这个论证建立在「人会理性行事」这一前提上。）
+  - His conclusion does not follow from his **premises**.（他的结论并不能从他的前提推出。）
+<!--SR:!2026-11-05,3,250-->
+
+---
+
+#en
+## 二十二、phase / session / spell
+?
+### 1. phase
+- **释义**：n. 阶段，时期；v. 分阶段进行
+- **例句**：
+  - The project is still in its early **phase**.（该项目仍处于早期阶段。）
+  - The new system will be **phased** in over six months.（新系统将在六个月内分阶段启用。）
+
+### 2. session
+- **释义**：n. 一段时间，一场；会议，开庭
+- **例句**：
+  - The training **session** lasts about ninety minutes.（这场训练大约持续九十分钟。）
+  - The court **session** was adjourned until Monday.（庭审休庭至周一。）
+
+### 3. spell
+- **释义**：n. 一段时间，一次发作；v. 拼写
+- **例句**：
+  - After a brief **spell** of sunshine, the rain returned.（晴了一小阵之后，雨又下起来了。）
+  - How do you **spell** your surname?（你的姓怎么拼？）
+<!--SR:!2026-11-05,3,250-->
+
+---
+
+#en
+## 二十三、stumble / stagger / limp
+?
+### 1. stumble
+- **释义**：v. 绊脚，绊跌，跌跌撞撞地走；n. 绊倒
+- **例句**：
+  - He **stumbled** over a loose stone in the dark.（黑暗中他被一块松动的石头绊了一下。）
+  - She **stumbled** through the speech, barely looking at her notes.（她磕磕绊绊地讲完，几乎没看讲稿。）
+
+### 2. stagger
+- **释义**：v. 摇摇晃晃地走，蹒跚；使震惊
+- **例句**：
+  - The injured man **staggered** out of the burning house.（受伤的男子踉跄着从燃烧的房子里走出来。）
+  - We were **staggered** by the scale of the damage.（损失之大令我们震惊。）
+
+### 3. limp
+- **释义**：v. 瘸着脚走，跛行；adj. 柔软的，无力的
+- **例句**：
+  - He **limped** off the field with a twisted ankle.（他扭伤了脚踝，一瘸一拐地走下场。）
+  - The flowers looked **limp** after days without water.（几天没浇水，花看上去蔫蔫的。）
+<!--SR:!2026-11-05,3,250-->
+
+---
+
+#en
+## 二十四、haul / tow / cart
+?
+### 1. haul
+- **释义**：v. 拖，拉；n. 拖，拉
+- **例句**：
+  - They **hauled** the fallen tree off the road.（他们把倒下的树从路上拖走。）
+  - Fishermen **haul** their nets aboard at dawn.（渔民在黎明时把渔网拖上船。）
+
+### 2. tow
+- **释义**：v. 拖，牵引；n. 牵引，牵引绳
+- **例句**：
+  - The truck **towed** the broken-down car to the garage.（卡车把抛锚的汽车拖到了修车厂。）
+  - The ship was taken in **tow** after losing power.（那艘船失去动力后被拖带航行。）
+
+### 3. cart
+- **释义**：n. 大车，马车，小型机动车；v. 用车装运，搬运
+- **例句**：
+  - Farmers loaded the hay onto a **cart**.（农民把干草装上大车。）
+  - We **carted** all the boxes up to the third floor.（我们把所有箱子搬上了三楼。）
+<!--SR:!2026-11-05,3,250-->
+
+---
+
+#en
+## 二十五、spine / liver / lap
+?
+### 1. spine
+- **释义**：n. 脊柱，脊髓；书脊
+- **例句**：
+  - A fall like that could injure your **spine**.（那样摔一跤可能伤到脊柱。）
+  - The title is printed along the **spine** of the book.（书名印在书脊上。）
+
+### 2. liver
+- **释义**：n. 肝脏
+- **例句**：
+  - The **liver** filters toxins from the blood.（肝脏过滤血液中的毒素。）
+  - Heavy drinking can seriously damage the **liver**.（酗酒会严重损害肝脏。）
+
+### 3. lap
+- **释义**：n. 大腿面，膝上；一圈；v. 轻拍，舔
+- **例句**：
+  - The child fell asleep on her mother's **lap**.（孩子在母亲膝上睡着了。）
+  - He ran the last **lap** in under a minute.（他最后一圈跑进了不到一分钟。）
+<!--SR:!2026-11-05,3,250-->
+
+---
+
+#en
+## 二十六、singular / plural / dual
+?
+### 1. singular
+- **释义**：adj. 单数的，非凡的；n. 单数
+- **例句**：
+  - In English, "child" is **singular** and "children" is plural.（英语中 child 是单数，children 是复数。）
+  - She showed **singular** courage in speaking out.（她敢于直言，表现出非凡的勇气。）
+
+### 2. plural
+- **释义**：n. 复数；adj. 复数的，多样的
+- **例句**：
+  - The **plural** of "mouse" is "mice".（mouse 的复数是 mice。）
+  - The report uses "they" as a **plural** pronoun.（该报告把 they 用作复数代词。）
+
+### 3. dual
+- **释义**：adj. 双的，双重的，双数的；n. 双数
+- **例句**：
+  - The role has a **dual** purpose: teaching and research.（这个岗位有双重目的：教学与研究。）
+  - Some languages have a **dual** form distinct from the plural.（有些语言有区别于复数的双数形式。）
+<!--SR:!2026-11-05,3,250-->
+
+---
+
+#en
+## 二十七、succession / successor / successive
+?
+### 1. succession
+- **释义**：n. 连续不断的人（或事物）；继任，继承
+- **例句**：
+  - She won three championships in **succession**.（她连续赢得了三次冠军。）
+  - The **succession** to the throne was disputed.（王位继承存在争议。）
+
+### 2. successor
+- **释义**：n. 继承者，接替者，接替的事物
+- **例句**：
+  - His **successor** will face the same difficult choices.（他的继任者将面临同样的艰难抉择。）
+  - This model is the **successor** to last year's version.（这款产品是去年版本的后续型号。）
+
+### 3. successive
+- **释义**：adj. 连续的，相继的
+- **例句**：
+  - The team has won on three **successive** weekends.（该队已连续三个周末获胜。）
+  - **Successive** governments have failed to solve the problem.（历届政府都未能解决这个问题。）
+<!--SR:!2026-11-05,3,250-->
+
+---

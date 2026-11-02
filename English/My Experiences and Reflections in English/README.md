@@ -1,0 +1,1 @@
+As the folder name suggests, this is a record of my past experiences and reflections on life, all written in English. But since some of them touch on my privacy, I won't be uploading them.
