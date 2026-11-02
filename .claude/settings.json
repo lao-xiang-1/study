@@ -13,7 +13,8 @@
       "Read(//c/Users/26971/.claude/**)",
       "Bash(curl -sL -o /tmp/test_img.jpg -w \"HTTP %{http_code} size=%{size_download}\\\\n\" \"https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9fd26900-8a1e-4ac1-afdb-4b3539680d96/markdown_0/imgs/img_in_chart_box_213_145_498_407.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-16T12%3A59%3A57Z%2F-1%2F%2F4e83b93dced0f5fcd37131e22e9e27b7eedbb0f63e84c51bd86c9ecc813e771b\")",
       "Read(//tmp/**)",
-      "Bash(cd /d/docs/study/paper\nF=\"1-9Augmented Lagrangian Predictive Coding.pdf_by_PaddleOCR-VL-1.6.md\"\ngrep -oP '\\(?<=<img src=\"\\)[^\"]+' \"$F\" | while read -r url; do\n  name=\"${url%%\\\\?*}\"\n  name=\"${name##*/}\"\n  code=$\\(curl -sL -o \"assets/$name\" -w \"%{http_code}\" \"$url\"\\)\n  printf \"%s  ->  assets/%s\\\\n\" \"$code\" \"$name\"\ndone)"
+      "Bash(cd /d/docs/study/paper\nF=\"1-9Augmented Lagrangian Predictive Coding.pdf_by_PaddleOCR-VL-1.6.md\"\ngrep -oP '\\(?<=<img src=\"\\)[^\"]+' \"$F\" | while read -r url; do\n  name=\"${url%%\\\\?*}\"\n  name=\"${name##*/}\"\n  code=$\\(curl -sL -o \"assets/$name\" -w \"%{http_code}\" \"$url\"\\)\n  printf \"%s  ->  assets/%s\\\\n\" \"$code\" \"$name\"\ndone)",
+      "WebFetch(domain:docs.astral.sh)"
     ]
   },
   "hooks": {

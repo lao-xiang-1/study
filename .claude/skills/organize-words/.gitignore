@@ -1,0 +1,8 @@
+# skill 自带的运行产物。规则跟着 skill 目录走，迁到别的项目时无需改对方的根 .gitignore。
+#
+# 注意：.gitignore 只对自己所在的子树生效。词块笔记按 config.json 的 notes_path
+# 放在 skill 目录之外，它的忽略规则（如果需要）必须写在项目根的 .gitignore 里。
+browser_data/
+page_dump.html
+__pycache__/
+lexical-chunk-draft.md
