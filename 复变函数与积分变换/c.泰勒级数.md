@@ -1,28 +1,26 @@
+---
+sr-due: 2026-11-10
+sr-interval: 11
+sr-ease: 270
+---
+#math 
 
-## §3 泰勒级数
+>将任何一个解析函数用 幂级数来表达
 
-在上一节中，我们已经知道一个幂级数的和函数在它的收敛圆的内部是一个解析函数。现在我们来研究与此相反的问题，就是：任何一个解析函数是否能用幂级数来表达？这个问题不但具有理论意义，而且很有实用价值。
+## 定理
+设  $f(z)$ 在区域 D 内解析， $z_{0}$ 为 D 内的一点，d 为  $z_{0}$ 到 D 的边界上各点的最短距离，那么当  $|z-z_{0}|<d$ 时（人话：**收敛域的一个圆内**），
+$$ f(z)=\sum_{n=0}^{\infty}c_{n}(z-z_{0})^{n} $$
+成立，其中  $c_{n}=\frac{1}{n!}f^{(n)}(z_{0}),n=0,1,2,\cdots$
 
-设函数  $f(z)$ 在区域 D 内解析，而  $\left|\zeta - z_{0}\right| = r$
+> 证明详见 [泰勒级数定理的证明](attachment/泰勒级数定理的证明.md)。
 
-为D内以 $z_{0}$为中心的任何一个圆周，它与它的内部
+应当指出，如果  $f(z)$ 在  $z_{0}$ 解析，那么使  $\underbrace{f(z)\text{在}z_{0}\text{的泰勒展开式成立的圆域}}_{}$ 的半径 R 就等于从  $z_{0}$ 到  $f(z)$ 的距  $z_{0}$ 最近一个奇点  $\alpha$ 之间的距离，即  $R=|\alpha-z_{0}|$。这是因为  $f(z)$ 在收敛圆内解析，故奇点  $\alpha$ 不可能在收敛圆内。又因为奇点  $\alpha$ 不可能在收敛圆外，不然收敛半径还可以扩大，因此奇点  $\alpha$ 只能在收敛圆上。
 
-全含于 D，把它记作 K，又设 z 为 K 内任一点（图 4.
+## 常见的展开式
 
-2).于是按照柯西积分公式，有
+$$ \mathrm{e}^{z}=1+z+\frac{z^{2}}{2!}+\frac{z^{3}}{3!}+\cdots+\frac{z^{n}}{n!}+\cdots\quad(|z|<\infty) $$
 
+$$ \cos z=1-\frac{z^{2}}{2!}+\frac{z^{4}}{4!}-\cdots+(-1)^{n}\frac{z^{2n}}{(2n)!}+\cdots\quad(|z|<\infty) $$
 
-
-$$  f(z)=\frac{1}{2\pi\mathrm{i}}\oint_{k}\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta,   \tag*{（4.3.1）}$$
-
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//538fab39-5e96-4ca7-852c-075ad1bca35c/markdown_1/imgs/img_in_image_box_816_672_1112_931.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-17T11%3A20%3A19Z%2F-1%2F%2F00f873a0b929bbce5ccdabbf4c93f915cd45bf6c0c49f41179ce62d32951c503" alt="Image" width="24%" /></div>
-
-
-其中 K 取正方向. 由于积分变量  $\zeta$ 取在圆周 K 上，点 z 在 K 的内部，所以  $\left|\frac{z-z_{0}}{\zeta-z_{0}}\right|<1$. 根据 S2 中的例 4，就有
-
- $$ \begin{align*}\frac{1}{\zeta-z}=&\frac{1}{(\zeta-z_{0})-(z-z_{0})}=\frac{1}{\zeta-z_{0}}\frac{1}{1-\frac{z-z_{0}}{\zeta-z_{0}}}\\=&\frac{1}{\zeta-z_{0}}\bigg[1+\left(\frac{z-z_{0}}{\zeta-z_{0}}\right)+\left(\frac{z-z_{0}}{\zeta-z_{0}}\right)^{2}+\cdots+\left(\frac{z-z_{0}}{\zeta-z_{0}}\right)^{n}+\cdots\bigg]\\=&\sum_{n=0}^{\infty}\frac{1}{(\zeta-z_{0})^{n+1}}(z-z_{0})^{n}.\end{align*} $$ 
-
-以此代入（4.3.1），并把它写成
-
- $$ f(z)=\sum_{n=0}^{N-1}\left[\frac{1}{2\pi i}\oint_{K}\frac{f(\zeta)\mathrm{d}\zeta}{(\zeta-z_{0})^{n+1}}\right](z-z_{0})^{n}+ $$ 
+$$ \sin z=z-\frac{z^{3}}{3!}+\frac{z^{5}}{5!}-\cdots+(-1)^{n}\frac{z^{2n+1}}{(2n+1)!}+\cdots\quad(|z|<\infty) $$
 

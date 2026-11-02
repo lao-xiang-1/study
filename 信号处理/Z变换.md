@@ -1,3 +1,8 @@
+---
+viewed: 2026-10-18
+---
+
+
 **Z 变换（Z-Transform）** 是分析**离散时间信号与系统**的核心数学工具，地位相当于连续时间系统中的**拉普拉斯变换**。它把离散序列 $x[n]$ 映射为复变量 $z$ 的函数 $X(z)$，从而把**差分方程**化为**代数方程**，把**时域卷积**化为 **z 域乘积**。
 
 ## 一、定义
@@ -102,19 +107,31 @@ $$\text{ROC} = \left\{ z : \sum_{n=-\infty}^{\infty} \big| x[n]\, z^{-n} \big| <
 
 设 $u[n]$ 为单位阶跃序列，$\lvert a \rvert$ 为常数，$T$ 为采样周期。
 
-| 时域 $x[n]$ | z 域 $X(z)$ | 收敛域 |
-|:---|:---|:---|
-| $\delta[n]$ | $1$ | 全平面 |
-| $u[n]$ | $\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1}$ | $\lvert z \rvert > 1$ |
-| $a^n u[n]$ | $\dfrac{1}{1-az^{-1}} = \dfrac{z}{z-a}$ | $\lvert z \rvert > \lvert a \rvert$ |
-| $-a^n u[-n-1]$ | $\dfrac{z}{z-a}$ | $\lvert z \rvert < \lvert a \rvert$ |
-| $n\,u[n]$ | $\dfrac{z}{(z-1)^2}$ | $\lvert z \rvert > 1$ |
-| $n\,a^n u[n]$ | $\dfrac{az}{(z-a)^2}$ | $\lvert z \rvert > \lvert a \rvert$ |
-| $e^{-an} u[n]$ | $\dfrac{z}{z-e^{-a}}$ | $\lvert z \rvert > e^{-a}$ |
-| $\cos(\omega_0 n)\,u[n]$ | $\dfrac{z(z-\cos\omega_0)}{z^2 - 2z\cos\omega_0 + 1}$ | $\lvert z \rvert > 1$ |
-| $\sin(\omega_0 n)\,u[n]$ | $\dfrac{z\sin\omega_0}{z^2 - 2z\cos\omega_0 + 1}$ | $\lvert z \rvert > 1$ |
+| 时域 $x[n]$                | z 域 $X(z)$                                            | 收敛域                                 |
+| :----------------------- | :---------------------------------------------------- | :---------------------------------- |
+| $\delta[n]$              | $1$                                                   | 全平面                                 |
+| $u[n]$                   | $\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1}$                | $\lvert z \rvert > 1$               |
+| $a^n u[n]$               | $\dfrac{1}{1-az^{-1}} = \dfrac{z}{z-a}$               | $\lvert z \rvert > \lvert a \rvert$ |
+| $-a^n u[-n-1]$           | $\dfrac{z}{z-a}$                                      | $\lvert z \rvert < \lvert a \rvert$ |
+| $n\,u[n]$                | $\dfrac{z}{(z-1)^2}$                                  | $\lvert z \rvert > 1$               |
+| $n\,a^n u[n]$            | $\dfrac{az}{(z-a)^2}$                                 | $\lvert z \rvert > \lvert a \rvert$ |
+| $e^{-an} u[n]$           | $\dfrac{z}{z-e^{-a}}$                                 | $\lvert z \rvert > e^{-a}$          |
+| $\cos(\omega_0 n)\,u[n]$ | $\dfrac{z(z-\cos\omega_0)}{z^2 - 2z\cos\omega_0 + 1}$ | $\lvert z \rvert > 1$               |
+| $\sin(\omega_0 n)\,u[n]$ | $\dfrac{z\sin\omega_0}{z^2 - 2z\cos\omega_0 + 1}$     | $\lvert z \rvert > 1$               |
 
 > 注意第 3、4 行的 $X(z)$ 表达式相同，但 **ROC 不同** → 一个对应**因果**序列 $a^n u[n]$，一个对应**反因果**序列 $-a^n u[-n-1]$。这正是“必须给出 ROC”的典型例子。
+
+#mathf
+### 题目常用
+?
+
+| 时域 $x[n]$                | z 域 $X(z)$                                            | 收敛域                                 |
+| :----------------------- | :---------------------------------------------------- | :---------------------------------- |
+| $\delta[n]$              | $1$                                                   | 全平面                                 |
+| $u[n]$                   | $\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1}$                | $\lvert z \rvert > 1$               |
+| $a^n u[n]$               | $\dfrac{1}{1-az^{-1}} = \dfrac{z}{z-a}$               | $\lvert z \rvert > \lvert a \rvert$ |
+| $-a^n u[-n-1]$           | $\dfrac{z}{z-a}$                                      | $\lvert z \rvert < \lvert a \rvert$ |
+<!--SR:!2026-11-10,11,270-->
 
 ---
 
