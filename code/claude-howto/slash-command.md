@@ -271,7 +271,7 @@ description: 这个命令的作用，以及何时使用它
 | `context`                  | 设为 `fork` 时，在隔离 subagent 中运行                  | 无                 |
 | `agent`                    | `context: fork` 时使用的 agent 类型                 | `general-purpose` |
 | `hooks`                    | Skill 范围内的 hooks（PreToolUse、PostToolUse、Stop） | 无                 |
-<!--SR:!2026-10-31,31,270-->
+<!--SR:!2027-02-25,117,290-->
 
 ---
 
