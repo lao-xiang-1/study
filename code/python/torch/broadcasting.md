@@ -1,15 +1,9 @@
----
-sr-due: 2026-11-03
-sr-interval: 3
-sr-ease: 252
----
-#code 
-
+#flashcards
 # PyTorch 广播机制（Broadcasting）
-
+?
 广播（Broadcasting）是 PyTorch / NumPy 在**逐元素运算**（`+ - * /`、比较等）中的自动形状对齐规则：当两个张量形状不同时，不是直接报错，而是先把小的那个"**虚拟地撑大**"到和大的形状一致，再做逐元素运算。
 
-## 1. 一句话理解
+## 示例
 
 ```python
 a = torch.tensor([[1, 2, 3],       # [2, 3]
@@ -23,9 +17,7 @@ a * b
 
 `b` 只有 1 行，被自动"复制"成 2 行后再逐元素相乘——这就是广播。
 
----
-
-## 2. 三条规则
+## 三条规则
 
 从**最后一维往左**逐维对齐比较：
 
@@ -44,6 +36,7 @@ q * sin
 # RuntimeError: The size of tensor a (8) must match the size of tensor b (3)
 # at non-singleton dimension 2
 ```
+<!--SR:!2026-11-06,3,252-->
 
 ---
 

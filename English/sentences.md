@@ -440,7 +440,7 @@ Thank god I was starting to think that I was the only one that killed people wit
 The idea itself was good, but the way it played out was not.
 ?
 这个想法本身是好的，但真正实施起来却并非如此。
-<!--SR:!2026-11-03,4,270-->
+<!--SR:!2026-11-19,16,290-->
 
 ---
 
@@ -448,7 +448,7 @@ The idea itself was good, but the way it played out was not.
 Looking back now, that was a hard thing to do to a kid that age.
 ?
 如今回头看，对那么小的孩子做这种事，实在太过分了。
-<!--SR:!2026-11-03,4,270-->
+<!--SR:!2026-11-17,14,290-->
 
 ---
 
@@ -456,7 +456,7 @@ Looking back now, that was a hard thing to do to a kid that age.
 It wasn't aimed at me alone -- plenty of us were kept late -- but I was one of the regulars.
 ?
 这并不只是针对我一个人——我们很多人都被留堂——但我算是常客之一。
-<!--SR:!2026-11-03,4,270-->
+<!--SR:!2026-11-17,14,290-->
 
 ---
 
@@ -464,7 +464,7 @@ It wasn't aimed at me alone -- plenty of us were kept late -- but I was one of t
 I suddenly stuttered -- the first time that had ever happened.
 ?
 我突然结巴了——那是第一次发生这种事。
-<!--SR:!2026-11-03,4,270-->
+<!--SR:!2026-11-18,15,290-->
 
 ---
 

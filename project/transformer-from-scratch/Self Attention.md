@@ -1,13 +1,12 @@
 ---
-sr-due: 2026-10-07
-sr-interval: 1
-sr-ease: 230
+viewed: 2026-11-02
 ---
-#code 
+
 >只介绍基本的方法，不考虑工程实现。
 
+#flashcards
 ## 数学基础
-
+?
 ### Q / K / V 的语义
 
 | 向量        | 含义                       |
@@ -50,6 +49,9 @@ def self_attention(x):
 - `/ sqrt(d_k)`：缩放，防止点积随维度增大而过大，导致 softmax 梯度消失
 - `softmax(axis=-1)`：沿"被注意的所有 token"这一维归一化，使权重非负且和为 1
 - `weights @ V`：按注意力权重对所有 token 的 Value 做加权求和
+<!--SR:!2026-11-06,3,250-->
+
+---
 
 ## 多头注意力
 假设每个 token 有 512维的数据。我们取
