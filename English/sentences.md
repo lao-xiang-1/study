@@ -472,7 +472,7 @@ I suddenly stuttered -- the first time that had ever happened.
 Even if the world **were** turned upside down,
 ?
 纵使天翻地覆，
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-20,14,290-->
 
 ---
 
@@ -482,7 +482,7 @@ Even if the world **were** turned upside down,
 This may be because of my stutter, or it may just be a personality problem.
 ?
 这可能是因为我的口吃，也可能只是一个性格问题。
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-22,16,290-->
 
 ---
 
@@ -490,7 +490,7 @@ This may be because of my stutter, or it may just be a personality problem.
 When you have to repeat a word over and over, you stop wanting to speak at all -- all you get is negative feedback.
 ?
 当你不得不一遍又一遍地重复同一个词时，你就再也不想去说话了——你得到的全是负反馈。
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-16,10,270-->
 
 ---
 
@@ -498,7 +498,7 @@ When you have to repeat a word over and over, you stop wanting to speak at all -
 I tend to hide my feelings, and somehow I've come to believe it's bad to show them openly.
 ?
 我倾向于隐藏自己的感受，而且不知怎么的，我已经渐渐相信把感受公开表露出来是不好的。
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-22,16,290-->
 
 ---
 
@@ -506,7 +506,7 @@ I tend to hide my feelings, and somehow I've come to believe it's bad to show th
 It's hard for a person to change **their** personality.
 ?
 一个人很难改变自己的性格。
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-21,15,290-->
 
 ---
 
@@ -514,7 +514,47 @@ It's hard for a person to change **their** personality.
 I lack confidence, and I've learned to find it by beating others at something -- a course test, for example.
 ?
 我缺乏自信，而我学会了通过在某件事上胜过别人来获得自信——比如一场课程考试。
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-20,14,290-->
+
+---
+
+#en/Sentence
+Most financial crises **have plenty in common**: they tend to start in the banking sector and involve excessive borrowing, together with an asset bubble.
+?
+大多数金融危机都有许多共同点：它们往往始于银行业，并伴随过度借贷以及资产泡沫。
+<!--SR:!2026-11-09,3,250-->
+
+---
+
+#en/Sentence
+Then there are the behavioural biases that permeate decision-making at all levels of the banking industry.
+?
+其次是行为偏差（biases），它渗透在银行业各级的决策之中。
+<!--SR:!2026-11-09,3,250-->
+
+---
+
+#en/Sentence
+Such people tend to like complexity **for its own sake**, but they often do not fully understand the **implications** of that complexity for the stability of the financial system as a whole.
+?
+这类人往往为复杂而喜欢复杂，却常常并不完全理解这种复杂性对整个金融体系稳定性的影响。
+<!--SR:!2026-11-09,3,250-->
+
+---
+
+#en/Sentence
+There are parts of the **banking sector** that will always be prone to risk, but many bankers have come to feel immune to its potential impact, because they presume that, however recklessly banks behave, governments will always be there to bail them out.
+?
+银行业中有些部分永远都易于遭遇风险，但许多银行家已经变得对风险的潜在冲击无动于衷，因为他们想当然地认为：无论银行行为多么鲁莽，政府总会在那里出手相救。
+<!--SR:!2026-11-09,3,250-->
+
+---
+
+#en/Sentence
+Gaming in the banking sector seems **virtually** impossible to eliminate. The only effective measure to end it would be to make bankers personally **liable** for losses.
+?
+银行业的这种博弈似乎几乎无法消除。唯一有效的终结措施是让银行家对损失承担个人责任。
+<!--SR:!2026-11-10,4,270-->
 
 ---
 

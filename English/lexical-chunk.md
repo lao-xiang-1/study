@@ -416,7 +416,7 @@
 
 ### 3. asterisk
 - **释义**：n. 星号；vt. 用星号标出
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-21,15,290-->
 
 ---
 
@@ -436,7 +436,7 @@
   - She **protested** loudly when the decision was announced.（决定宣布时她大声抗议。）
 
 ### 3. campaign
-- **释义**：n. 活动，运动，竞选活动；v. 领导运动，从事竞选活动
+- **释义**：n. 活动，运动，竞选活动；v. 领导运动，从事竞选活动；n. 战役
 - **例句**：
   - The charity launched a **campaign** to raise awareness of the disease.（该慈善机构发起了一场提高疾病认知的运动。）
   - She **campaigned** for cleaner air in the city for over a decade.（她为让城市空气更清洁奔走了十多年。）
@@ -446,7 +446,7 @@
 - **例句**：
   - Over ten thousand people signed the **petition** against the closure.（一万多人签署了反对关闭的请愿书。）
   - Residents **petitioned** the council to repair the road.（居民向议会请愿，要求修路。）
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-22,16,290-->
 
 ---
 
@@ -470,7 +470,7 @@
 - **例句**：
   - She **acknowledged** that the mistake was hers.（她承认这个错误是她造成的。）
   - The report **acknowledges** the limits of the available data.（该报告承认现有数据的局限。）
-<!--SR:!2026-11-06,4,270-->
+<!--SR:!2026-11-20,14,290-->
 
 ---
 
@@ -494,7 +494,7 @@
 - **例句**：
   - The argument rests on the **premise** that people act rationally.（这个论证建立在「人会理性行事」这一前提上。）
   - His conclusion does not follow from his **premises**.（他的结论并不能从他的前提推出。）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-14,8,250-->
 
 ---
 
@@ -518,7 +518,7 @@
 - **例句**：
   - After a brief **spell** of sunshine, the rain returned.（晴了一小阵之后，雨又下起来了。）
   - How do you **spell** your surname?（你的姓怎么拼？）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-16,10,270-->
 
 ---
 
@@ -542,7 +542,7 @@
 - **例句**：
   - He **limped** off the field with a twisted ankle.（他扭伤了脚踝，一瘸一拐地走下场。）
   - The flowers looked **limp** after days without water.（几天没浇水，花看上去蔫蔫的。）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-13,7,250-->
 
 ---
 
@@ -566,7 +566,7 @@
 - **例句**：
   - Farmers loaded the hay onto a **cart**.（农民把干草装上大车。）
   - We **carted** all the boxes up to the third floor.（我们把所有箱子搬上了三楼。）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-17,11,270-->
 
 ---
 
@@ -590,7 +590,7 @@
 - **例句**：
   - The child fell asleep on her mother's **lap**.（孩子在母亲膝上睡着了。）
   - He ran the last **lap** in under a minute.（他最后一圈跑进了不到一分钟。）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-16,10,270-->
 
 ---
 
@@ -614,7 +614,7 @@
 - **例句**：
   - The role has a **dual** purpose: teaching and research.（这个岗位有双重目的：教学与研究。）
   - Some languages have a **dual** form distinct from the plural.（有些语言有区别于复数的双数形式。）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-14,8,250-->
 
 ---
 
@@ -638,6 +638,48 @@
 - **例句**：
   - The team has won on three **successive** weekends.（该队已连续三个周末获胜。）
   - **Successive** governments have failed to solve the problem.（历届政府都未能解决这个问题。）
-<!--SR:!2026-11-05,3,250-->
+<!--SR:!2026-11-16,10,270-->
 
 ---
+
+#en
+## 二十八、imply / implication / implement
+单纯容易弄混
+?
+### 1. imply
+- **释义**：v. 暗示，暗指；意味着，含有……的意思（不直接说出）
+- **例句**：
+  - His silence seemed to **imply** that he disagreed.（他的沉默似乎暗示他不同意。）
+  - Are you **implying** that I am lying?（你是在暗示我在撒谎吗？）
+
+### 2. implication
+- **释义**：n. 含意，言外之意；影响，可能的后果
+- **例句**：
+  - The **implication** of her remark was that the plan would fail.（她这句话的言外之意是这个计划会失败。）
+  - The ruling has serious **implications** for privacy law.（这项裁决对隐私法有重大影响。）
+
+### 3. implement
+- **释义**：v. 执行，实施（计划、政策等）；n. 工具，器具
+- **例句**：
+  - The government plans to **implement** the new policy next year.（政府计划明年实施新政策。）
+  - Farm **implements** such as plows and hoes are kept in the barn.（犁、锄头等农具存放在谷仓里。）
+<!--SR:!2026-11-10,4,270-->
+
+---
+
+#en
+## 二十九、vocation / vacation
+单纯是长得像
+?
+### 1. vocation
+- **释义**：n. 职业，行业；（对某种工作或事业的）使命感，天职，志业
+- **例句**：
+  - She found her **vocation** in teaching.（她在教书育人中找到了自己的志业。）
+  - He felt a **vocation** to help the poor.（他感到帮助穷人是自己的天职。）
+
+### 2. vacation
+- **释义**：n. 假期，休假；（法院的）休庭期；v. 度假
+- **例句**：
+  - We're going on **vacation** to Hawaii next month.（我们下个月要去夏威夷度假。）
+  - They **vacationed** in Italy for two weeks.（他们在意大利度了两周假。）
+<!--SR:!2026-11-10,4,270-->
