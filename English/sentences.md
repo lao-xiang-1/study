@@ -196,7 +196,7 @@ A set of rules can be specified as a tuple of either input or output rules.
 The output can be customized by setting the 'output' parameter to the desired value.
 ?
 可以将 “output” 参数设置为所需值，从而自定义输出。
-<!--SR:!2026-11-08,44,290-->
+<!--SR:!2027-05-04,177,310-->
 
 ---
 
@@ -281,7 +281,7 @@ For example, consider this function that normalizes the rows of a 2D matrix, exp
 The function returns the same results as the original, up to standard floating-point accuracy.
 ?
 该函数返回的结果与原始函数一致，误差在标准浮点精度范围内
-<!--SR:!2026-11-07,29,250-->
+<!--SR:!2027-02-17,102,270-->
 
 ---
 
