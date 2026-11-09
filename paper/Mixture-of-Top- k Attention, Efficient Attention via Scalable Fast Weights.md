@@ -26,7 +26,7 @@ Transformers 中朴素的自注意力机制可以看作一个两层快权重（f
 
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//759bbcff-5a2a-4d42-b6a4-a66dc4f746e4/markdown_1/imgs/img_in_image_box_623_995_1009_1240.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A22Z%2F-1%2F%2Fef788e1cb342d2fdf0412a27526c7503040067f7f69a379edd04f5bd474bebac" alt="Image" width="100%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_623_995_1009_1240.jpg" alt="Image" width="100%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 1：随着上下文扩展，由全注意力诱导的两层快权重 MLP 的宽度相应增加。我们将高效快权重扩展方法分为两种策略：a) 通过路由扩展，b) 通过压缩扩展，并分别以一种代表性方法说明：MoBA [9] 和 TTT [17]。</div> </div>
@@ -44,7 +44,7 @@ Transformers 中朴素的自注意力机制可以看作一个两层快权重（f
 
 3. 在实验上，我们在视觉任务上验证了 MiTA 的有效性和效率，表明我们的 MiTA 以更少的墙钟时间大幅超越强基线，并高效地在相当程度上逼近全注意力的表达能力。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//759bbcff-5a2a-4d42-b6a4-a66dc4f746e4/markdown_2/imgs/img_in_image_box_430_760_789_983.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A24Z%2F-1%2F%2F20b7cfe07d649a3e41667f4df486dc7807ee1cebae73be66aeb26a5845c689d9" alt="Image" width="29%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_430_760_789_983.jpg" alt="Image" width="29%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 2：我们的 MiTA 图示。在全注意力中，每个查询注意所有键值对。在我们的 MiTA 中，它注意少量（如上所示 3 个）压缩键值对与原始键值对的一个路由子集（如上所示 2 个）的拼接。</div> </div>
@@ -118,13 +118,13 @@ $$  \hat{\boldsymbol{K}}=\boldsymbol{K}/\sqrt{d},\hat{\boldsymbol{V}}=\boldsymbo
 <div style="text-align: center;"><div style="text-align: center;">专家内的键值条目</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8b6aab29-7eef-45eb-b922-68963efccbc1/markdown_0/imgs/img_in_image_box_631_1058_994_1148.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A03Z%2F-1%2F%2Feb74463a23459fbad8225da0f9111ad876e58bb5b9c56065b27f8d9e8997ec38" alt="Image" width="29%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_631_1058_994_1148.jpg" alt="Image" width="29%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">路由到该专家的查询</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8b6aab29-7eef-45eb-b922-68963efccbc1/markdown_0/imgs/img_in_image_box_631_1172_995_1258.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A03Z%2F-1%2F%2Fef69cbde10b2781d77c520fc6add50b21847b69eecf070df05dcf312c3428273" alt="Image" width="29%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_631_1172_995_1258.jpg" alt="Image" width="29%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 3：专家收集的键值对以及被路由的查询的可视化。红框标记了通过平均池化获得路标查询的局部窗口。注意力热力图（在注意力头上平均）指示每个专家内的键值对（上排）以及路由到它的查询（下排）。值得注意的是，专家的键值对和路由的查询都不局限于局部窗口。</div> </div>
@@ -164,7 +164,7 @@ $$  V^{\star}=[\tilde{V},V^{(e_{1}(q))},\ldots,V^{(e_{s}(q))}],   \tag*{（12）
 
 复杂度分析。仅式 (10) 的计算复杂度为 $\mathcal{O}(N(m+ks))$，而全注意力产生 $\mathcal{O}(N^2)$；在实践中，$N \gg m + ks$。此外，式 (8) 和式 (10) 中的交叉注意力操作可以通过 FlashAttention 系列 [38, 51, 52] 加速。主要瓶颈来自式 (6) 中的 gather（收集）操作：它涉及不规则（随机）内存访问，因此很可能使整个流水线成为内存受限的。尽管如此，Deepseek Sparse Attention 表明这一局限可以通过其优化实现 [22, Fig. 3] 来缓解。此外，与先前的 top- $k$ 注意力 [21, 22]（它为每个查询实例化一个私有快权重专家，共 $N$ 个专家）且没有路由不同，我们的 MiTA 使用固定（但可调）数量（即 $m$）的快权重专家，这更硬件友好，代价是一个 $N$-到-$m$ 的路由步骤，这一点在 MoBA [9] 中已有探索。总之，MiTA 所需的硬件操作已由先前的工程导向工作验证，这使我们能够聚焦于快权重扩展视角、其分类法、可调数量的查询感知、可变形快权重专家的构造，以及压缩与路由的结合。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//8b6aab29-7eef-45eb-b922-68963efccbc1/markdown_2/imgs/img_in_image_box_232_140_988_327.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A08Z%2F-1%2F%2Fa4d2bdf834b1dd168c58361e50e9449681c54f9fbc2488e6c5cc4d200447dc60" alt="Image" width="61%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_232_140_988_327.jpg" alt="Image" width="61%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 4：MiTA 的 token 剪枝效应。每一行可视化每一层中被选为专家的键值对（在头上聚合）的位置；最左边的图像显示原始输入。在后面的层中，大多数 token 被有效"剪枝"（即未被选为专家），注意力集中在与类别相关的区域。这些示例从 ImageNet-1K 训练集中采样。</div> </div>
@@ -231,7 +231,7 @@ ADE20K [54] 是一个以场景为中心的语义分割数据集，它需要更�
 
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//c7b1a775-6210-4213-9aeb-831f32541831/markdown_0/imgs/img_in_chart_box_690_1008_963_1182.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A04Z%2F-1%2F%2F54aeb80e6cd61f3ddbb98c016f772096b0d60486195a9b4c5ff8f8036beb6c87" alt="Image" width="22%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_690_1008_963_1182.jpg" alt="Image" width="22%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 5：推理吞吐量。</div> </div>
@@ -394,7 +394,7 @@ ADE20K [54] 是一个以场景为中心的语义分割数据集，它需要更�
 
 <table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>设置</td><td style='text-align: center; word-wrap: break-word;'>准确率</td><td style='text-align: center; word-wrap: break-word;'>$\Delta$</td></tr><tr><td colspan="3">路标提取</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>随机选择</td><td style='text-align: center; word-wrap: break-word;'>70.6</td><td style='text-align: center; word-wrap: break-word;'>-0.5</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>可学习参数</td><td style='text-align: center; word-wrap: break-word;'>66.3</td><td style='text-align: center; word-wrap: break-word;'>-4.8</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1D 平均池化</td><td style='text-align: center; word-wrap: break-word;'>70.4</td><td style='text-align: center; word-wrap: break-word;'>-0.7</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2D 平均池化</td><td style='text-align: center; word-wrap: break-word;'>71.1</td><td style='text-align: center; word-wrap: break-word;'>默认</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>卷积</td><td style='text-align: center; word-wrap: break-word;'>67.0</td><td style='text-align: center; word-wrap: break-word;'>-4.1</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>深度可分离卷积</td><td style='text-align: center; word-wrap: break-word;'>68.8</td><td style='text-align: center; word-wrap: break-word;'>-2.3</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>Token Merging [68]</td><td style='text-align: center; word-wrap: break-word;'>71.3</td><td style='text-align: center; word-wrap: break-word;'>+0.2</td></tr><tr><td colspan="3">$m \times k$</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$16 \times 16$</td><td style='text-align: center; word-wrap: break-word;'>70.0</td><td style='text-align: center; word-wrap: break-word;'>-1.1</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$16 \times 25$</td><td style='text-align: center; word-wrap: break-word;'>71.0</td><td style='text-align: center; word-wrap: break-word;'>-0.1</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$25 \times 16$</td><td style='text-align: center; word-wrap: break-word;'>70.5</td><td style='text-align: center; word-wrap: break-word;'>-0.6</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$25 \times 25$</td><td style='text-align: center; word-wrap: break-word;'>71.1</td><td style='text-align: center; word-wrap: break-word;'>默认</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$25 \times 36$</td><td style='text-align: center; word-wrap: break-word;'>71.7</td><td style='text-align: center; word-wrap: break-word;'>+0.6</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$36 \times 25$</td><td style='text-align: center; word-wrap: break-word;'>71.2</td><td style='text-align: center; word-wrap: break-word;'>+0.1</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>$36 \times 36$</td><td style='text-align: center; word-wrap: break-word;'>71.7</td><td style='text-align: center; word-wrap: break-word;'>+0.6</td></tr><tr><td colspan="3">压缩 &amp; 路由</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>压缩并路由</td><td style='text-align: center; word-wrap: break-word;'>71.1</td><td style='text-align: center; word-wrap: break-word;'>默认</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>仅压缩</td><td style='text-align: center; word-wrap: break-word;'>70.3</td><td style='text-align: center; word-wrap: break-word;'>-0.8</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>仅路由</td><td style='text-align: center; word-wrap: break-word;'>70.8</td><td style='text-align: center; word-wrap: break-word;'>-0.3</td></tr><tr><td colspan="3">每个专家的键值条目数 - $k$</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>25</td><td style='text-align: center; word-wrap: break-word;'>69.5</td><td style='text-align: center; word-wrap: break-word;'>71.0</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>15</td><td style='text-align: center; word-wrap: break-word;'>68.8</td><td style='text-align: center; word-wrap: break-word;'>70.3</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>9</td><td style='text-align: center; word-wrap: break-word;'>68.3</td><td style='text-align: center; word-wrap: break-word;'>69.8</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>67.1</td><td style='text-align: center; word-wrap: break-word;'>68.2</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>66.3</td><td style='text-align: center; word-wrap: break-word;'>66.6</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>8</td><td style='text-align: center; word-wrap: break-word;'>67.0</td><td style='text-align: center; word-wrap: break-word;'>68.3</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>16</td><td style='text-align: center; word-wrap: break-word;'>74.0</td><td style='text-align: center; word-wrap: break-word;'>73.2</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>25</td><td style='text-align: center; word-wrap: break-word;'>75.0</td><td style='text-align: center; word-wrap: break-word;'>74.8</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>36</td><td style='text-align: center; word-wrap: break-word;'>74.8</td><td style='text-align: center; word-wrap: break-word;'>75.4</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>49</td><td style='text-align: center; word-wrap: break-word;'>74.9</td><td style='text-align: center; word-wrap: break-word;'>74.8</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>73.5</td><td style='text-align: center; word-wrap: break-word;'>72.9</td><td style='text-align: center; word-wrap: break-word;'>73.8</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>68.1</td><td style='text-align: center; word-wrap: break-word;'>68.9</td><td style='text-align: center; word-wrap: break-word;'>69.2</td></tr></table>
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_1/imgs/img_in_chart_box_432_887_784_1119.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A17Z%2F-1%2F%2F1ed6c92270bde5e80403432a47392a8e2f4256d190f43fe9e0ab40753844d74a" alt="Image" width="28%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_432_887_784_1119.jpg" alt="Image" width="28%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 6：在 CIFAR-100 上对 m 和 k 的消融研究。由于显存不足 (OOM)，未进行其他 $(m, k)$ 的实验。</div> </div>
@@ -406,7 +406,7 @@ ADE20K [54] 是一个以场景为中心的语义分割数据集，它需要更�
 
 压缩与路由。路由比压缩更关键。尽管如此，引入压缩进一步提高了性能，同时提供了显著的加速，如表 5 所示。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_2/imgs/img_in_image_box_212_325_1007_468.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A19Z%2F-1%2F%2Ff1ae07c2554f9bdcacc4587ce4d96819465d29a2782bb419e8df40e6fd320487" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_212_325_1007_468.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 7：相关注意力方法的可视化比较。</div> </div>
@@ -422,7 +422,7 @@ ADE20K [54] 是一个以场景为中心的语义分割数据集，它需要更�
 
 路由拓扑。在 MiTA 中，有一个固定数量的基础稀疏模式（即快权重专家），这是相对于只有单个专家的高效注意力的实质性改进，但仍远少于具有 N 个专家的先前 top-k 注意力 [21, 22]。关键在于，为了弥补这一局限，MiTA 可以求助于路由机制来组合这 m 个基础专家：当将每个查询路由到 s 个专家时，有效稀疏模式的数量（即专家的组合数）为 $(s)$。特别地，当 s = 1 时，路由可能退化为聚类，将信息流限制在每个聚类内。因此，我们量化了一个专家收集的键值对与路由到它的查询之间的位置重叠。如图 8 所示，重叠在各层间始终保持适度，这表明 s = 1 的 MiTA 执行的是路由而非硬聚类。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_2/imgs/img_in_chart_box_409_1226_794_1377.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A19Z%2F-1%2F%2F0c20c340020ed92015db5fb832838dadb171d9a9a2f8058efa4352309c35a5a9" alt="Image" width="31%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_409_1226_794_1377.jpg" alt="Image" width="31%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 8：逐层位置重叠（专家收集的键值对与路由到它的查询之间）用 mIoU 量化，在专家和注意力头上平均。</div> </div>
@@ -449,10 +449,10 @@ Require: 查询、键、值矩阵 $Q, K, V \in \mathbb{R}^{d \times N}$；路标
 16: $O = \text{Combine}(O^{\text{share}}, O^{\text{expt}})$ // [d, N]
 17: return $O$
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_3/imgs/img_in_chart_box_357_709_604_957.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A20Z%2F-1%2F%2Ff205409504b76b322daaacec9e438c790ff8774c6be5a0b8790626e3c8ee43b5" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_357_709_604_957.jpg" alt="Image" width="20%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_3/imgs/img_in_chart_box_621_709_869_930.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A21Z%2F-1%2F%2F70fc655611eac103e7c69b4590561142677caeba03fd884778aace5467d05c33" alt="Image" width="20%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_621_709_869_930.jpg" alt="Image" width="20%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(b) DeiT-S 模型</div> </div>
@@ -461,13 +461,13 @@ Require: 查询、键、值矩阵 $Q, K, V \in \mathbb{R}^{d \times N}$；路标
 <div style="text-align: center;"><div style="text-align: center;">图 9：使用不同推理注意力的评估。x 轴索引训练注意力，y 轴索引推理注意力。我们从热力图中省略对角线项，因为它们不是我们关注的。目前仅包含标准注意力、Agent Attention 和 MiTA。</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_3/imgs/img_in_chart_box_313_1054_599_1307.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A21Z%2F-1%2F%2F4635995d71bd892d60c96dab779e4f52b375ac8fbf210db8b001964838fef84c" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_313_1054_599_1307.jpg" alt="Image" width="23%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(a) MiTA-ViT-T @512</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9d9fc980-e8fc-4c36-b824-e3200f46b023/markdown_3/imgs/img_in_chart_box_623_1053_911_1305.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-29T13%3A38%3A21Z%2F-1%2F%2Fecb53070c3f2eacc63980a7952b65bfaadbab6526ebc3114872d24af2cd1f13d" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_623_1053_911_1305.jpg" alt="Image" width="23%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">(b) MiTA-ViT-L @224</div> </div>

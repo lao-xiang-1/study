@@ -18,7 +18,7 @@ Jiaxuan You $^{1}$ Jure Leskovec $^{1}$ Kaiming He $^{2}$ Saining Xie $^{2}$
 
 然而，建立网络架构与其准确率之间的关系并非易事，因为如何将一个神经网络映射为图（以及反过来）尚不明确。自然的选择是使用计算图表示，但它有许多局限：(1) 缺乏通用性：计算图受限于其所允许的图性质，例如这些图必须是有向无环的（DAG）、在层级别上是二分的（bipartite）、在网络级别上是单入单出（single-in-single-out）的（Xie et al., 2019）。这限制了为一般图所开发的丰富工具的使用。(2) 与生物学/神经科学脱节：生物神经网络具有远为丰富、更少模板化的结构（Fornito et al., 2013）。在大脑网络中，存在的是信息交换，而不仅仅是单向流动（Stringer et al., 2018）。这类生物学或神经科学模型无法简单地用有向无环图来表示。
 
-在此，我们系统地研究了神经网络的图结构与其预测性能之间的关系。我们提出了一种将神经网络表示为图的新方法，我们称之为关系图（relational graph）。<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//2fda93d7-0c3c-4581-9c88-8b31a3dfb5fb/markdown_1/imgs/img_in_image_box_107_131_1085_417.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A43Z%2F-1%2F%2Fad7d3914da0a1641d49836323902a9da7070d768a013ea5779711b79410a4a84" alt="Image" width="79%" /></div>
+在此，我们系统地研究了神经网络的图结构与其预测性能之间的关系。我们提出了一种将神经网络表示为图的新方法，我们称之为关系图（relational graph）。<div style="text-align: center;"><img src="assets/img_in_image_box_107_131_1085_417.jpg" alt="Image" width="79%" /></div>
 
 <div style="text-align: center;"><div style="text-align: center;">图 1：我们方法的概览。(a) 神经网络的一层可以视为一个关系图，我们将相互交换消息的节点连接起来。(b) 神经网络层与关系图的更多示例。(c) 我们依据图的度量（包括平均路径长度和聚类系数）来探索关系图的设计空间，其中完全图对应于全连接层。(d) 我们将这些关系图转化为神经网络，并研究其预测性能如何依赖于相应关系图的图度量。</div> </div>
 
@@ -57,7 +57,7 @@ Jiaxuan You $^{1}$ Jure Leskovec $^{1}$ Kaiming He $^{2}$ Saining Xie $^{2}$
 <div style="text-align: center;"><div style="text-align: center;">表 1：用关系图语言表述的多种神经网络架构。这些架构通常被实现为完全关系图，而我们为这些架构系统地探索了更多的图结构。</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//2fda93d7-0c3c-4581-9c88-8b31a3dfb5fb/markdown_2/imgs/img_in_image_box_107_419_576_559.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A46Z%2F-1%2F%2F480f1ffc3e369fdfcd93f8ca878f82eb828aa07b000d59863511f73e275a3a68" alt="Image" width="38%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_107_419_576_559.jpg" alt="Image" width="38%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 2：将一个 4 节点关系图转化为 4 层 65 维 MLP 的示例。我们高亮展示了节点 $x_{1}$ 的消息交换。使用 $x_{i}, f_{i}(\cdot)$、AGG($\cdot$) 与 $R$ 的不同定义（表 1 中所定义的），关系图可以被转化为多种神经网络架构。</div> </div>
@@ -136,10 +136,10 @@ $$  \mathbf{X}_{i}^{(r+1)}=\sigma(\sum_{j\in N(i)}\mathbf{W}_{ij}^{(r)}*\mathbf{
 
 为了比较这些多样图所转化得到的神经网络，重要的是确保所有网络具有大致相同的复杂度，从而使其性能差异源于各自的关系图结构。我们使用 FLOPS（乘加运算次数）作为度量。我们首先计算基线网络实例（即完全关系图）的 FLOPS，并在每个实验中将其作为参考
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_1/imgs/img_in_chart_box_614_129_848_297.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A44Z%2F-1%2F%2F269e09f2c28164d1bf789e568d05bd16649a5eea4e957124d3680458c0073e87" alt="Image" width="19%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_614_129_848_297.jpg" alt="Image" width="19%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_1/imgs/img_in_chart_box_848_129_1082_295.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A44Z%2F-1%2F%2Ff1d81bb43781a0ba888ddbd1306bfd693c38443c4fe0618155510ca67b93acc7" alt="Image" width="19%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_848_129_1082_295.jpg" alt="Image" width="19%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 3：不同图生成器所生成的图。所提出的图生成器 WS-flex 能够覆盖远为广阔的图设计空间区域。WS（Watts-Strogatz）、BA（Barabási-Albert）、ER（Erdős-Rényi）。</div> </div>
@@ -155,57 +155,57 @@ $$  \mathbf{X}_{i}^{(r+1)}=\sigma(\sum_{j\in N(i)}\mathbf{W}_{ij}^{(r)}*\mathbf{
 
 对于 CIFAR-10 实验，我们使用一个具有 512 个隐藏单元的 5 层 MLP 作为基础架构。MLP 的输入是 $(32 \times 32 \times 3)$ 图像拉平后的 3072 维向量，输出是 10 维预测。每个 MLP 层都有一个 ReLU 非线性和一个 BatchNorm 层（Ioffe & Szegedy, 2015）。我们使用批大小 128 训练模型 200 个 epoch，采用余弦学习率调度（Loshchilov & Hutter, 2016），初始学习率为 0.1（退火至 0，不重启）。我们用 5 个不同的随机种子训练所有 MLP 模型，并报告平均结果。
 
-对于 ImageNet 实验，我们使用三个 ResNet 系列架构，包括：(1) ResNet-34，它仅由 $3 \times 3$ 卷积的基本块（basic block）组成（He et al., 2016）；(2) ResNet-34-sep，这是我们将 ResNet-34 中所有 $3 \times 3$ 稠密卷积替换为 $3 \times 3$ 可分离卷积的变体（Chollet, 2017）；(3) ResNet-50，它由 $1 \times 1$、$3 \times 3$、$1 \times 1$ 卷积的瓶颈块（bottleneck block）组成（He et al., 2016）。此外，我们使用在<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_106_123_324_379.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A46Z%2F-1%2F%2Fa9c718f3f0c21382a884e58603b8382169dcca061aeb568bfc3b17b0c9252a23" alt="Image" width="17%" /></div>
+对于 ImageNet 实验，我们使用三个 ResNet 系列架构，包括：(1) ResNet-34，它仅由 $3 \times 3$ 卷积的基本块（basic block）组成（He et al., 2016）；(2) ResNet-34-sep，这是我们将 ResNet-34 中所有 $3 \times 3$ 稠密卷积替换为 $3 \times 3$ 可分离卷积的变体（Chollet, 2017）；(3) ResNet-50，它由 $1 \times 1$、$3 \times 3$、$1 \times 1$ 卷积的瓶颈块（bottleneck block）组成（He et al., 2016）。此外，我们使用在<div style="text-align: center;"><img src="assets/img_in_chart_box_106_123_324_379.jpg" alt="Image" width="17%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_316_121_447_327.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A46Z%2F-1%2F%2Fcc3688a9448a4bd181bd67f400961dd85bdca939d544a6e3c95ed3ae632b51da" alt="Image" width="10%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_316_121_447_327.jpg" alt="Image" width="10%" /></div>
 
 
 完全图 Top-1 错误率：$33.34 \pm 0.36$
 
 最佳图 Top-1 错误率：$32.05 \pm 0.14$
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_454_127_671_378.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A46Z%2F-1%2F%2F0bd6db6473ade17b2384a3c0156a7e6f989bcb0c459101b1e990487ce8516fd1" alt="Image" width="17%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_454_127_671_378.jpg" alt="Image" width="17%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_668_121_796_326.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A46Z%2F-1%2F%2Fe531a24c97e67c9208277c652c2bdb70640fb243995fd52f6ed2a4a5b3823c90" alt="Image" width="10%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_668_121_796_326.jpg" alt="Image" width="10%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">e 跨神经网络架构的相关性</div> </div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_808_128_945_255.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A47Z%2F-1%2F%2F8bded7df0b3716b6cd1f46c0ce1af8959a6d9d672208b44a22a078e084140f7d" alt="Image" width="11%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_808_128_945_255.jpg" alt="Image" width="11%" /></div>
 
 
 完全图 Top-1 错误率：$25.73 \pm 0.07$
 
 最佳图 Top-1 错误率：$24.57 \pm 0.10$
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_950_135_1085_255.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A47Z%2F-1%2F%2F3d30759ebbdcff1639933e6ce4328f6137a553fb911d51fd059b1fbd2fcd64dc" alt="Image" width="11%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_950_135_1085_255.jpg" alt="Image" width="11%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_807_258_946_378.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A47Z%2F-1%2F%2F9e0a697620fc98f9aa03fbd06d1e87f7572bbcd4cc4dd2f7d6c398e7936f1e5b" alt="Image" width="11%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_807_258_946_378.jpg" alt="Image" width="11%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_949_259_1085_379.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A47Z%2F-1%2F%2Fe87b9d55e74741b84ca833c8a1fa1b4b84f053434b4fea544be3e9078a98f360" alt="Image" width="11%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_949_259_1085_379.jpg" alt="Image" width="11%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_110_391_277_601.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A48Z%2F-1%2F%2F6ddb5050a978b230c4230aecef75604c9e7f4c77c4233fe500077e9f40dcb82e" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_110_391_277_601.jpg" alt="Image" width="13%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_276_400_441_600.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A48Z%2F-1%2F%2F73d1666e245a70dc31015438970f3042b978497af31f222a45d3697059f80ae9" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_276_400_441_600.jpg" alt="Image" width="13%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_438_401_601_600.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A48Z%2F-1%2F%2Fac5fad397681fec36a373b77f4d7b83235131a3731248a58bb18ab4b25766d7d" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_438_401_601_600.jpg" alt="Image" width="13%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_600_402_764_601.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A48Z%2F-1%2F%2Faa253109edd1f1794691ce4cd4bea5f46f5a4414d3ae5a543cf190e191a5dfca" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_600_402_764_601.jpg" alt="Image" width="13%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_761_402_922_600.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A49Z%2F-1%2F%2Fe350b449a89b47fd9ae7479373a12107688a3b19f5774b458a29d516af2519c7" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_761_402_922_600.jpg" alt="Image" width="13%" /></div>
 
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//eb664520-0023-4863-993f-6ff797cea504/markdown_2/imgs/img_in_chart_box_922_414_1083_599.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A49Z%2F-1%2F%2F2633df0ce8523e80036bca1c49bd41e960c21e54a3faa8c38248e3de09fa92cb" alt="Image" width="13%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_922_414_1083_599.jpg" alt="Image" width="13%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 4：关键结果。所有实验的计算预算都经过严格控制。每个可视化结果都在至少 3 个随机种子上取平均。具有 $C=1$ 与 $L=1$ 的完全图（右下角）被视为基线。(a)(c) 图度量与神经网络性能的关系。最佳图显著优于基线完全图。(b)(d) 单一图度量与神经网络性能的关系。落入给定范围内的关系图以灰点显示。整体平滑函数由蓝色回归线表示。(e) 跨架构的一致性。图中显示了同一组 52 个关系图在转化为不同神经网络架构时性能的相关性。(f) 所有实验的总结。在不同设置下，最佳关系图（红色叉号）始终优于基线完全图。此外，我们高亮了“甜点区”（红色矩形区域），在其中关系图在统计上不劣于最佳关系图（带有红色叉号的分箱）。CIFAR-10 上 5 层 MLP 的分箱值为所有 $C$ 与 $L$ 落入给定分箱的关系图的平均值。</div> </div>
@@ -235,7 +235,7 @@ $$  \mathbf{X}_{i}^{(r+1)}=\sigma(\sum_{j\in N(i)}\mathbf{W}_{ij}^{(r)}*\mathbf{
 
 鉴于关系图定义了跨多种神经网络架构的共享设计空间，我们观察到具有某些图度量的关系图无论以何种方式实例化，都可能始终表现良好。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4ac8762c-10c6-4197-a69b-f7e561a80d48/markdown_0/imgs/img_in_chart_box_616_134_1080_420.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A43Z%2F-1%2F%2F0396d0dcff61dbfb98985de854493208b6355b7dd02e1e7eb95da1dd8d29f39e" alt="Image" width="37%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_616_134_1080_420.jpg" alt="Image" width="37%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 5：快速识别甜点区。左：使用较少关系图样本识别出的甜点区与使用全部 3942 张图识别出的甜点区之间的相关性。右：在中间训练轮次识别出的甜点区与最终轮次（100 个 epoch）识别出的甜点区之间的相关性。</div> </div>
@@ -265,7 +265,7 @@ $$  \mathbf{X}_{i}^{(r+1)}=\sigma(\sum_{j\in N(i)}\mathbf{W}_{ij}^{(r)}*\mathbf{
 
 生物神经网络：猕猴全皮层
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4ac8762c-10c6-4197-a69b-f7e561a80d48/markdown_1/imgs/img_in_image_box_111_400_578_546.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A44Z%2F-1%2F%2Fcf52e3c7286d4d093ff3536c3b5f2c3da59ead7fa227b47e80ddda2b8d3dba99" alt="Image" width="38%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_111_400_578_546.jpg" alt="Image" width="38%" /></div>
 
 
 人工神经网络：最佳 5 层 MLP
@@ -299,7 +299,7 @@ $$  \mathbf{X}_{i}^{(r+1)}=\sigma(\sum_{j\in N(i)}\mathbf{W}_{ij}^{(r)}*\mathbf{
 
 **先验 vs. 学习。** 我们目前将关系图表示用作一种结构先验，即在训练全程将图结构硬连线（hard-wire）在神经网络上。已有研究表明，深度 ReLU 神经网络能够自动学习稀疏表示（Glorot et al., 2011）。一个更进一步的问题随之而来：在不施加图先验的情况下，训练一个（全连接）神经网络是否会涌现出某种图结构？
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//4ac8762c-10c6-4197-a69b-f7e561a80d48/markdown_2/imgs/img_in_chart_box_194_804_495_1033.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-06T16%3A51%3A46Z%2F-1%2F%2Ff973308b178b465ea7b6ace968cd9944427bc12d24ac69355a3703ba792e0d17" alt="Image" width="24%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_chart_box_194_804_495_1033.jpg" alt="Image" width="24%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 7：先验 vs. 学习。CIFAR-10 上 5 层 MLP 的结果。我们高亮了作为结构先验时性能最佳的图。此外，我们训练了一个全连接 MLP，并将其学习到的权重可视化为关系图（不同的点是在不同阈值下的图）。学习到的图结构在训练后向“甜点区”移动，但并未弥合差距。</div> </div>

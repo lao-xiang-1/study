@@ -18,10 +18,8 @@ ii) 对所有的正实数除 z=0 外都是发散的.这时,级数在复平面内
 iii) 既存在使级数收敛的正实数，也存在使级数发散的正实数。级数在 $|z|=\alpha$ 收敛，在 $|z|=\beta$ 发散→ 收敛半径就夹在 $\alpha$ 与 $\beta$ 之间，$\alpha$ 往外扩、$\beta$ 往内缩，最终逼近那个分界圆 $C_R$。
 那么就称这个 $R$ 为**收敛半径**
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//81c57dab-3df9-4c57-911f-8bebdc657387/markdown_1/imgs/img_in_image_box_771_1194_1109_1520.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-10-17T11%3A20%3A18Z%2F-1%2F%2Fd497d653525f3c6f5af4226690b66647a135472fa786b03ac315fce6ced6d8a2" alt="Image" width="28%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_771_1194_1109_1520.jpg" alt="Image" width="28%" /></div>
 
-
-<div style="text-align: center;"><div style="text-align: center;">图4.1</div> </div>
 - 对 形如(4.2.2)的幂级数 来说，它的收敛范围是以 z=a 为中心的圆域。此时收敛半径是相对于 $(z-a)$ 而言的。
 - 在收敛圆的圆周上是收敛还是发散，不能作出一般的结论，要对具体级数进行具体分析。
 <!--SR:!2026-11-09,3,250-->

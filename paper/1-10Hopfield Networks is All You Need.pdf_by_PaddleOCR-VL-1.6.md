@@ -21,7 +21,7 @@ arXiv:2008.02217v3 [cs.NE] 28 Apr 2021
 
 因此，我们将 Demircigil et al. (2017) 基于指数交互函数的能量函数推广到连续模式和状态，得到了一个新的现代霍普菲尔德网络。我们还提出了一个新的更新规则，它保证全局收敛到能量的驻点（局部极小值或鞍点）。我们证明，新的现代霍普菲尔德网络通常在一次更新步骤内检索出模式（ $\epsilon$-接近不动点），且误差呈指数级小，其存储容量与  $c^{\frac{d-1}{4}}$ 成正比（定理 3 给出了  $c = 1.37$ 和  $c = 3.15$ 的合理设置）。一次更新即可检索模式，对于将霍普菲尔德网络集成到层只激活一次的深度学习架构中至关重要。令人惊讶的是，我们的新更新规则正是 Transformer 和 BERT 模型中使用的键值注意力（见图 1）。我们的现代霍普菲尔德网络可以作为新的一层集成到深度学习架构中，用于池化、记忆、原型学习和注意力。我们在不同的基准数据集和任务（如免疫组库分类）上测试了这些新层。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//23c5d1cc-85ec-47b8-8da6-11dc5c52f794/markdown_1/imgs/img_in_image_box_215_1228_1008_1342.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-22T02%3A19%3A36Z%2F-1%2F%2F4392ded76e819787c6a6fae63e9a72dd87285ecd016da4023df5d7fc6ecd1673" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_215_1228_1008_1342.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 1：我们将二值现代霍普菲尔德网络的能量推广到连续状态，同时保持快速收敛和存储容量特性。我们还提出了一个使能量最小化的新更新规则。该新更新规则就是 Transformer 的注意力机制。公式经过修改以将 softmax 表示为行向量。"=" 号表示"保持这些性质"。</div> </div>
@@ -131,7 +131,7 @@ $\mathbf{1}$neorem $\mathcal{L}$. 对于迭代 $\mathcal{L}q$。 $(\mathcal{S})$
 
 新型霍普菲尔德层的类型。我们引入三种类型的霍普菲尔德层：Hopfield、HopfieldPooling 和 HopfieldLayer。连续现代霍普菲尔德网络催生了大量新的深度学习架构，因为我们可以 (a) 传播集合或单个向量，(b) 传播查询、
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3766c420-a123-4bc9-a073-3a9f5e81f6bc/markdown_2/imgs/img_in_image_box_727_167_1011_427.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-22T02%3A19%3A42Z%2F-1%2F%2F7969f740ea68d3ebdfbcf5d4516f25ed76e8c8e9513ea83d712bdcafa92754f3" alt="Image" width="23%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_727_167_1011_427.jpg" alt="Image" width="23%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 2：左：带有层（☐）的标准深度网络将向量或向量集合从输入传播到输出。右：一个深度网络，其中各层（☐）通过霍普菲尔德层（☐）配备联想记忆。</div> </div>
@@ -141,7 +141,7 @@ $\mathbf{1}$neorem $\mathcal{L}$. 对于迭代 $\mathcal{L}q$。 $(\mathcal{S})$
 
 (1) 层 Hopfield，适用于通过状态（查询）模式 R 和存储的（键）模式 Y 传播向量集合的网络。层 Hopfield 是公式 (10) 的实现。Hopfield 层的记忆可以由输入或前几层的集合填充，见图 3。记忆也可以由参考集填充，这通过将参考集作为额外输入来提供。因此，层 Hopfield 允许两个集合之间的联想。执行这种联想的一个典型层是 Transformer 注意力机制，它关联键和查询，例如需要比较的两个点集。该层支持不同类型的序列到序列学习、点集操作和基于检索的方法。ResNet 架构中带有跳跃连接的层 Hopfield 与流行的 Transformer 和 BERT 模型完全相同。在实验中，我们在 Transformer 架构中分析了这些霍普菲尔德层。在比较 UCI 基准集小数据集上机器学习方法的实验中，也使用了层 Hopfield。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//3766c420-a123-4bc9-a073-3a9f5e81f6bc/markdown_2/imgs/img_in_image_box_214_977_1009_1117.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-22T02%3A19%3A42Z%2F-1%2F%2Fcee84cb6572623e2e529029416fc3ae38dff39aa064a66119700ee0617f31ebd" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_214_977_1009_1117.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 3：层 Hopfield 允许两个集合 $\mathbf{R}$（☐）和 $\mathbf{Y}$（☐）之间的联想。它可以集成到传播向量集合的深度网络中。霍普菲尔德记忆由来自输入或前几层的集合填充。输出是一个向量集合 $\mathbf{Z}$（☐）。</div> </div>
@@ -153,7 +153,7 @@ $\mathbf{1}$neorem $\mathcal{L}$. 对于迭代 $\mathcal{L}q$。 $(\mathcal{S})$
 
 模式与键中的位置编码相结合，可以执行池化操作。位置编码可以是二维的，此时可以像卷积神经网络（CNN）中那样构造标准卷积滤波器。HopfieldPooling 层可以替代池化、平均、LSTM 和置换等变层。见图 4。层 HopfieldPooling 被用于多示例学习任务的实验，例如实验中的免疫组库分类。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9eafe72e-d819-48bf-aa9c-b037a0d7822e/markdown_0/imgs/img_in_image_box_213_317_1008_460.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-22T02%3A19%3A32Z%2F-1%2F%2F371fc48aa9c9806fe04dfab312f1da55685e5cd3b122598795f5a98386bec96a" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_213_317_1008_460.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 4：层 HopfieldPooling 支持对集合的池化或汇总，这些集合来自输入或前几层。输入 $\mathbf{Y}$（ $\blacksquare$）可以是集合或序列。每一层的查询模式是静态的且可以学习。输出是一个向量集合 $\mathbf{Z}$（ $\blacksquare$），其中向量数目等于查询模式的数目。层 HopfieldPooling 可以实现多示例学习。</div> </div>
@@ -161,7 +161,7 @@ $\mathbf{1}$neorem $\mathcal{L}$. 对于迭代 $\mathcal{L}q$。 $(\mathcal{S})$
 
 (3) 层 HopfieldLayer，适用于通过状态（查询）模式 R 传播一个向量或一组向量的网络。查询 R 可以是输入向量，或由前几层输出计算得到的查询。HopfieldLayer 层的记忆由一个固定集合填充，该集合可以是训练集、参考集、原型集或学习到的集合（学习到的矩阵）。存储的（键）模式是静态的且可以学习。如果训练集被存储在记忆中，那么每一层基于前几层的查询结果构造一组新的查询。存储的模式可以由训练集或参考集初始化，然后进行学习，此时它们会偏离训练集。存储的模式可以解释为从状态（查询）到具有 softmax 激活函数的隐神经元的权重（Krotov & Hopfield, 2020）。层 HopfieldLayer 可以替代全连接层，见图 5。单个 HopfieldLayer 层还支持类似支持向量机（SVM）的方法、类似 k 近邻的方法、类似学习向量量化的方法以及模式搜索。对于分类，原始数据  $y_i = (z_i, t_i)$ 可以是输入  $z_i$ 与目标  $t_i$ 的拼接。此时，矩阵  $W_K$ 和  $W_V$ 可以设计为：在 softmax 内部使用输入  $z_i$，在 softmax 外部使用目标  $t_i$。因此，softmax 基于查询与输入之间的相似度为目标向量提供加权平均。SVM 模型、k 近邻和学习向量量化也可以视为目标的加权平均。Transformer 的编码器-解码器注意力层就是一个 HopfieldLayer 层，其记忆由编码器输出集合填充。在药物设计基准数据集的实验中，层 HopfieldLayer 被应用并与其他机器学习方法进行了比较。
 
-<div style="text-align: center;"><img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-16-online//9eafe72e-d819-48bf-aa9c-b037a0d7822e/markdown_0/imgs/img_in_image_box_213_1086_1008_1236.jpg?authorization=bce-auth-v1%2FALTAKDN8mY5KlNI7zaRpLmOqrw%2F2026-09-22T02%3A19%3A33Z%2F-1%2F%2F07869f4d9f6212f0d61a2622e311fdcdf14f6ee76c82bfefc8343430a17185dc" alt="Image" width="64%" /></div>
+<div style="text-align: center;"><img src="assets/img_in_image_box_213_1086_1008_1236.jpg" alt="Image" width="64%" /></div>
 
 
 <div style="text-align: center;"><div style="text-align: center;">图 5：层 HopfieldLayer 支持对训练集、参考集、原型集或学习到的集合（学习到的矩阵）进行多次查询。每一层的查询由前几层的结果计算得到。输入是一个向量集合  $\pmb{R}$（■）。输出也是一个向量集合  $\pmb{Z}$（■），其中输出向量的数目等于输入向量的数目。层 HopfieldLayer 可以实现 SVM 模型、k 近邻和 LVQ。</div> </div>
