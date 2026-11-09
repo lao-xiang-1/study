@@ -78,4 +78,36 @@
 #en/Phrase  come to feel::逐渐感到；开始觉得
 <!--SR:!2026-11-10,4,270-->
 
+#en/Phrase  feel out of place::感到格格不入；觉得自己不属于这里
+
+#en/Phrase  with older eyes::以更成熟的眼光；以年长者的视角
+
+#en/Phrase  strike sb as sth::给某人以……的印象；让某人觉得……
+
+#en/Phrase  flatly inconsistent::前后完全不一致；自相矛盾
+
+#en/Phrase  step back::退一步（以更宏观的角度看待）
+
+#en/Phrase  project sth onto sb/sth::把……投射到……身上
+
+#en/Phrase  stay unspoiled::保持不受损；保持完美无瑕
+
+#en/Phrase  be bound by::受……束缚；受……限制
+
+#en/Phrase  be filtered through::经过……的过滤/筛选
+
+#en/Phrase  fill in the gaps::填补空白；（凭想象）补全缺失的部分
+
+#en/Phrase  carry sb through::支撑某人渡过（难关）
+
+#en/Phrase  be caught up in::沉浸在……之中；卷入……
+
+#en/Phrase  mistake A for B::把 A 误认为 B
+
+#en/Phrase  come to appreciate::逐渐体会到；开始欣赏
+
+#en/Phrase  appeal to sb::对……有吸引力
+
+#en/Phrase  it would be a shame to do sth::做某事会很可惜
+
 

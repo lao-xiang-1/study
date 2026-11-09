@@ -558,4 +558,101 @@ Gaming in the banking sector seems **virtually** impossible to eliminate. The on
 
 ---
 
+## 句子 71–80
+
+#en/Sentence
+To my surprise, the shows that moved me so deeply barely stirred anything in me at all.
+?
+令我惊讶的是，那些曾深深打动我的剧集，如今却几乎在我心里激不起任何波澜。
+
+---
+
+#en/Sentence
+Looking back with older eyes, much of it strikes me as silly.
+?
+以更成熟的眼光回望，其中许多内容在我看来都很幼稚。
+
+---
+
+#en/Sentence
+The plots are often strange, sometimes flatly inconsistent, because they were built to make the audience feel good first and to make sense second.
+?
+这些剧情往往离奇，有时甚至前后完全矛盾，因为它们被设计成"先让观众看得爽，讲不讲得通还在其次"。
+<!--SR:!2026-11-13,4,270-->
+
+---
+
+#en/Sentence
+Nothing about them is fixed by reality, and people can project them onto whatever they wish, and the picture in their heads can stay unspoiled.
+?
+它们身上没有任何一点被现实固定下来，于是人们可以随心所欲地把想象投射到它们身上，脑海中的形象也能一直保持完美无瑕。
+
+---
+
+#en/Sentence
+That belief no longer holds for me.
+?
+那种想法对我来说已经不成立了。
+
+---
+
+#en/Sentence
+We're still bound by what the source actually gives us -- and the source can be flawed.
+?
+我们依然受限于原作实际提供的内容——而原作本身可能就有缺陷。
+
+---
+
+#en/Sentence
+What we make of a character is filtered through a plot that, as I said, is often foolish.
+?
+我们对一个角色的理解，是被情节过滤过的——而正如我所说，这些情节往往很愚蠢。
+<!--SR:!2026-11-13,4,270-->
+
+---
+
+#en/Sentence
+So the "perfection" was never really there; I was filling in the gaps myself.
+?
+所以那份"完美"从来就不存在；不过是**我自己**把那些空白填满、脑补出来的罢了。
+
+---
+
+#en/Sentence
+The years have carried me through a great deal, and I see the world differently than I did then.
+?
+这些年让我经历了许多，我看待世界的方式也和那时不一样了。
+
+---
+
+#en/Sentence
+There is so much more to see, and it would be a shame to spend your life staring through a single small window.
+?
+还有那么多东西值得去看，把一辈子都耗在盯着一扇小小的窗户上，实在是太可惜了。
+
+---
+
+## 句子 81–90
+
+#en/Sentence
+I've come to appreciate how vast and complicated the world really is.
+?
+我逐渐体会到，这个世界是多么广阔而复杂。
+
+---
+
+#en/Sentence
+It was made by people and designed by people, and it reflects their limited view, not the whole truth.
+?
+它是由人创作、由人设计的，反映的只是他们有限的视角，而非全部的真相。
+
+---
+
+#en/Sentence
+In fact, I've realized I never truly understood them before. I wasn't watching the story -- I was caught up in the atmosphere. I mistook the mood for meaning.
+?
+事实上，我意识到我以前从未真正理解过它们。我看的不是故事——我只是沉浸在氛围里，把情绪错当成了意义。
+
+---
+
 
