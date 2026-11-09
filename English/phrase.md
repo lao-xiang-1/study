@@ -55,13 +55,13 @@
 <!--SR:!2026-11-10,4,270-->
 
 #en/Phrase  excessive borrowing::过度借贷
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-20,11,270-->
 
 #en/Phrase  for its own sake::为其本身；为……而……（不因其他目的）
 <!--SR:!2026-11-10,4,270-->
 
 #en/Phrase  as a whole::作为一个整体；总体上
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-19,10,270-->
 
 #en/Phrase  be prone to::易于……；倾向于……
 <!--SR:!2026-11-10,4,270-->
@@ -70,44 +70,60 @@
 <!--SR:!2026-11-10,4,270-->
 
 #en/Phrase  bail sb out::救助某人；帮其摆脱困境（纾困）
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-17,8,250-->
 
 #en/Phrase  be liable for::对……负责
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-16,7,250-->
 
 #en/Phrase  come to feel::逐渐感到；开始觉得
 <!--SR:!2026-11-10,4,270-->
 
 #en/Phrase  feel out of place::感到格格不入；觉得自己不属于这里
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  with older eyes::以更成熟的眼光；以年长者的视角
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  strike sb as sth::给某人以……的印象；让某人觉得……
+<!--SR:!2026-11-12,3,250-->
 
 #en/Phrase  flatly inconsistent::前后完全不一致；自相矛盾
+<!--SR:!2026-11-12,3,250-->
 
 #en/Phrase  step back::退一步（以更宏观的角度看待）
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  project sth onto sb/sth::把……投射到……身上
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  stay unspoiled::保持不受损；保持完美无瑕
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  be bound by::受……束缚；受……限制
+<!--SR:!2026-11-12,3,250-->
 
 #en/Phrase  be filtered through::经过……的过滤/筛选
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  fill in the gaps::填补空白；（凭想象）补全缺失的部分
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  carry sb through::支撑某人渡过（难关）
+<!--SR:!2026-11-12,3,250-->
 
 #en/Phrase  be caught up in::沉浸在……之中；卷入……
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  mistake A for B::把 A 误认为 B
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  come to appreciate::逐渐体会到；开始欣赏
+<!--SR:!2026-11-13,4,270-->
 
 #en/Phrase  appeal to sb::对……有吸引力
+<!--SR:!2026-11-10,1,230-->
 
 #en/Phrase  it would be a shame to do sth::做某事会很可惜
+<!--SR:!2026-11-13,4,270-->
 
 

@@ -188,7 +188,7 @@ Set the value of the parameter corresponding to the given key, after being proce
 A set of rules can be specified as a tuple of either input or output rules.
 ?
 一组规则可以指定为一个元组，其中包含输入规则或输出规则
-<!--SR:!2026-11-09,16,250-->
+<!--SR:!2026-12-18,39,250-->
 
 ---
 
@@ -522,7 +522,7 @@ I lack confidence, and I've learned to find it by beating others at something --
 Most financial crises **have plenty in common**: they tend to start in the banking sector and involve excessive borrowing, together with an asset bubble.
 ?
 大多数金融危机都有许多共同点：它们往往始于银行业，并伴随过度借贷以及资产泡沫。
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-21,12,270-->
 
 ---
 
@@ -530,7 +530,7 @@ Most financial crises **have plenty in common**: they tend to start in the banki
 Then there are the behavioural biases that permeate decision-making at all levels of the banking industry.
 ?
 其次是行为偏差（biases），它渗透在银行业各级的决策之中。
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-11,2,230-->
 
 ---
 
@@ -538,7 +538,7 @@ Then there are the behavioural biases that permeate decision-making at all level
 Such people tend to like complexity **for its own sake**, but they often do not fully understand the **implications** of that complexity for the stability of the financial system as a whole.
 ?
 这类人往往为复杂而喜欢复杂，却常常并不完全理解这种复杂性对整个金融体系稳定性的影响。
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-21,12,270-->
 
 ---
 
@@ -546,7 +546,7 @@ Such people tend to like complexity **for its own sake**, but they often do not 
 There are parts of the **banking sector** that will always be prone to risk, but many bankers have come to feel immune to its potential impact, because they presume that, however recklessly banks behave, governments will always be there to bail them out.
 ?
 银行业中有些部分永远都易于遭遇风险，但许多银行家已经变得对风险的潜在冲击无动于衷，因为他们想当然地认为：无论银行行为多么鲁莽，政府总会在那里出手相救。
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-20,11,270-->
 
 ---
 
@@ -564,6 +564,7 @@ Gaming in the banking sector seems **virtually** impossible to eliminate. The on
 To my surprise, the shows that moved me so deeply barely stirred anything in me at all.
 ?
 令我惊讶的是，那些曾深深打动我的剧集，如今却几乎在我心里激不起任何波澜。
+<!--SR:!2026-11-12,3,250-->
 
 ---
 
@@ -571,6 +572,7 @@ To my surprise, the shows that moved me so deeply barely stirred anything in me 
 Looking back with older eyes, much of it strikes me as silly.
 ?
 以更成熟的眼光回望，其中许多内容在我看来都很幼稚。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -586,6 +588,7 @@ The plots are often strange, sometimes flatly inconsistent, because they were bu
 Nothing about them is fixed by reality, and people can project them onto whatever they wish, and the picture in their heads can stay unspoiled.
 ?
 它们身上没有任何一点被现实固定下来，于是人们可以随心所欲地把想象投射到它们身上，脑海中的形象也能一直保持完美无瑕。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -593,6 +596,7 @@ Nothing about them is fixed by reality, and people can project them onto whateve
 That belief no longer holds for me.
 ?
 那种想法对我来说已经不成立了。
+<!--SR:!2026-11-12,3,250-->
 
 ---
 
@@ -600,6 +604,7 @@ That belief no longer holds for me.
 We're still bound by what the source actually gives us -- and the source can be flawed.
 ?
 我们依然受限于原作实际提供的内容——而原作本身可能就有缺陷。
+<!--SR:!2026-11-12,3,250-->
 
 ---
 
@@ -615,6 +620,7 @@ What we make of a character is filtered through a plot that, as I said, is often
 So the "perfection" was never really there; I was filling in the gaps myself.
 ?
 所以那份"完美"从来就不存在；不过是**我自己**把那些空白填满、脑补出来的罢了。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -622,6 +628,7 @@ So the "perfection" was never really there; I was filling in the gaps myself.
 The years have carried me through a great deal, and I see the world differently than I did then.
 ?
 这些年让我经历了许多，我看待世界的方式也和那时不一样了。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -629,6 +636,7 @@ The years have carried me through a great deal, and I see the world differently 
 There is so much more to see, and it would be a shame to spend your life staring through a single small window.
 ?
 还有那么多东西值得去看，把一辈子都耗在盯着一扇小小的窗户上，实在是太可惜了。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -638,6 +646,7 @@ There is so much more to see, and it would be a shame to spend your life staring
 I've come to appreciate how vast and complicated the world really is.
 ?
 我逐渐体会到，这个世界是多么广阔而复杂。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -645,6 +654,7 @@ I've come to appreciate how vast and complicated the world really is.
 It was made by people and designed by people, and it reflects their limited view, not the whole truth.
 ?
 它是由人创作、由人设计的，反映的只是他们有限的视角，而非全部的真相。
+<!--SR:!2026-11-13,4,270-->
 
 ---
 
@@ -652,7 +662,14 @@ It was made by people and designed by people, and it reflects their limited view
 In fact, I've realized I never truly understood them before. I wasn't watching the story -- I was caught up in the atmosphere. I mistook the mood for meaning.
 ?
 事实上，我意识到我以前从未真正理解过它们。我看的不是故事——我只是沉浸在氛围里，把情绪错当成了意义。
+<!--SR:!2026-11-12,3,250-->
 
 ---
 
+#en/Sentence
+I should have gone to university.
+?
+我早该去读大学的。
+<!--SR:!2026-11-13,4,270-->
 
+---

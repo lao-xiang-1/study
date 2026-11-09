@@ -77,7 +77,7 @@ url = "https://download.pytorch.org/whl/cpu"
 - `explicit = true` 表示该索引**仅**应用于在 `tool.uv.sources` 中显式指定它的包；若未设置，其他包在别处找不到时可能从该索引解析。
 
 > 上例仅适用于 x86-64 Linux（PyTorch 索引的特殊性）。本文档开头 `[tool.uv.sources]` 中的 torch/torchvision 配置即属于「索引源 + 特定平台」的组合用法。
-<!--SR:!2026-11-09,3,250-->
+<!--SR:!2026-11-19,10,270-->
 
 ---
 
