@@ -22,7 +22,7 @@ We often leverage model failures to assess per-sample hardness
 This practice drives RL with verifiable rewards
 ?
 这种做法推动了基于可验证奖励的强化学习
-<!--SR:!2026-11-10,33,230-->
+<!--SR:!2027-02-24,106,250-->
 
 ---
 
@@ -204,7 +204,7 @@ The output can be customized by setting the 'output' parameter to the desired va
 A typical ICLR paper involves significantly more work than goes into a course project, or than can be produced autonomously by any current AI agent.
 ?
 一篇典型的 ICLR 论文所涉及的工作量，远超课程项目所需的工作量，也远超当前任何 AI agent 能自主完成的工作量。
-<!--SR:!2026-11-11,32,250-->
+<!--SR:!2027-03-03,112,270-->
 
 ---
 
@@ -530,7 +530,7 @@ Most financial crises **have plenty in common**: they tend to start in the banki
 Then there are the behavioural biases that permeate decision-making at all levels of the banking industry.
 ?
 其次是行为偏差（biases），它渗透在银行业各级的决策之中。
-<!--SR:!2026-11-11,2,230-->
+<!--SR:!2026-11-18,7,250-->
 
 ---
 
@@ -554,7 +554,7 @@ There are parts of the **banking sector** that will always be prone to risk, but
 Gaming in the banking sector seems **virtually** impossible to eliminate. The only effective measure to end it would be to make bankers personally **liable** for losses.
 ?
 银行业的这种博弈似乎几乎无法消除。唯一有效的终结措施是让银行家对损失承担个人责任。
-<!--SR:!2026-11-10,4,270-->
+<!--SR:!2026-11-22,12,270-->
 
 ---
 
@@ -564,7 +564,7 @@ Gaming in the banking sector seems **virtually** impossible to eliminate. The on
 To my surprise, the shows that moved me so deeply barely stirred anything in me at all.
 ?
 令我惊讶的是，那些曾深深打动我的剧集，如今却几乎在我心里激不起任何波澜。
-<!--SR:!2026-11-12,3,250-->
+<!--SR:!2026-11-23,11,270-->
 
 ---
 
@@ -596,7 +596,7 @@ Nothing about them is fixed by reality, and people can project them onto whateve
 That belief no longer holds for me.
 ?
 那种想法对我来说已经不成立了。
-<!--SR:!2026-11-12,3,250-->
+<!--SR:!2026-11-24,12,270-->
 
 ---
 
@@ -604,7 +604,7 @@ That belief no longer holds for me.
 We're still bound by what the source actually gives us -- and the source can be flawed.
 ?
 我们依然受限于原作实际提供的内容——而原作本身可能就有缺陷。
-<!--SR:!2026-11-12,3,250-->
+<!--SR:!2026-11-23,11,270-->
 
 ---
 
@@ -662,7 +662,7 @@ It was made by people and designed by people, and it reflects their limited view
 In fact, I've realized I never truly understood them before. I wasn't watching the story -- I was caught up in the atmosphere. I mistook the mood for meaning.
 ?
 事实上，我意识到我以前从未真正理解过它们。我看的不是故事——我只是沉浸在氛围里，把情绪错当成了意义。
-<!--SR:!2026-11-12,3,250-->
+<!--SR:!2026-11-23,11,270-->
 
 ---
 

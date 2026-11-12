@@ -663,7 +663,7 @@
 - **例句**：
   - The government plans to **implement** the new policy next year.（政府计划明年实施新政策。）
   - Farm **implements** such as plows and hoes are kept in the barn.（犁、锄头等农具存放在谷仓里。）
-<!--SR:!2026-11-10,4,270-->
+<!--SR:!2026-11-24,14,290-->
 
 ---
 
@@ -682,4 +682,4 @@
 - **例句**：
   - We're going on **vacation** to Hawaii next month.（我们下个月要去夏威夷度假。）
   - They **vacationed** in Italy for two weeks.（他们在意大利度了两周假。）
-<!--SR:!2026-11-10,4,270-->
+<!--SR:!2026-11-26,16,290-->

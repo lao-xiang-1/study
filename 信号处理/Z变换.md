@@ -131,7 +131,7 @@ $$\text{ROC} = \left\{ z : \sum_{n=-\infty}^{\infty} \big| x[n]\, z^{-n} \big| <
 | $u[n]$                   | $\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1}$                | $\lvert z \rvert > 1$               |
 | $a^n u[n]$               | $\dfrac{1}{1-az^{-1}} = \dfrac{z}{z-a}$               | $\lvert z \rvert > \lvert a \rvert$ |
 | $-a^n u[-n-1]$           | $\dfrac{z}{z-a}$                                      | $\lvert z \rvert < \lvert a \rvert$ |
-<!--SR:!2026-11-10,11,270-->
+<!--SR:!2026-11-16,6,250-->
 
 ---
 
