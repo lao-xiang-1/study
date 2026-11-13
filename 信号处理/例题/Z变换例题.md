@@ -1,9 +1,3 @@
----
-sr-due: 2026-11-13
-sr-interval: 18
-sr-ease: 230
----
-#review 
 
 ## 题1
 

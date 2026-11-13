@@ -542,7 +542,7 @@
 - **例句**：
   - He **limped** off the field with a twisted ankle.（他扭伤了脚踝，一瘸一拐地走下场。）
   - The flowers looked **limp** after days without water.（几天没浇水，花看上去蔫蔫的。）
-<!--SR:!2026-11-13,7,250-->
+<!--SR:!2026-12-07,24,270-->
 
 ---
 
