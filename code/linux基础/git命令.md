@@ -150,7 +150,7 @@ git for-each-ref --format='%(refname:short)' refs/remotes/
         bv = for-each-ref --sort=-committerdate refs/remotes/ --format=\"%(committerdate:short) %(align:width=20)%(refname:short)%(end) %(subject)\"
 ```
 使用 `git bv` 查看远程提交中的最新提交
-<!--SR:!2026-11-15,38,290-->
+<!--SR:!2027-04-17,153,310-->
 
 ---
 

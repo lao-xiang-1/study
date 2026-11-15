@@ -494,7 +494,7 @@
 - **例句**：
   - The argument rests on the **premise** that people act rationally.（这个论证建立在「人会理性行事」这一前提上。）
   - His conclusion does not follow from his **premises**.（他的结论并不能从他的前提推出。）
-<!--SR:!2026-11-14,8,250-->
+<!--SR:!2026-12-04,20,250-->
 
 ---
 
@@ -614,7 +614,7 @@
 - **例句**：
   - The role has a **dual** purpose: teaching and research.（这个岗位有双重目的：教学与研究。）
   - Some languages have a **dual** form distinct from the plural.（有些语言有区别于复数的双数形式。）
-<!--SR:!2026-11-14,8,250-->
+<!--SR:!2026-12-12,28,270-->
 
 ---
 

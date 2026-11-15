@@ -36,7 +36,7 @@ q * sin
 # RuntimeError: The size of tensor a (8) must match the size of tensor b (3)
 # at non-singleton dimension 2
 ```
-<!--SR:!2026-11-15,9,252-->
+<!--SR:!2026-12-17,32,272-->
 
 ---
 
