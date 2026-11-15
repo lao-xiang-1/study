@@ -670,6 +670,104 @@ In fact, I've realized I never truly understood them before. I wasn't watching t
 I should have gone to university.
 ?
 我早该去读大学的。
-<!--SR:!2026-11-15,2,250-->
+<!--SR:!2026-11-22,7,270-->
+
+---
+
+#en/Sentence
+The larger that number is, the more overall **agreement** there is between connection weights and **pairwise states** of neurons.
+?
+这个数值越大，连接权重与神经元成对状态之间的整体一致性就越高。
+<!--SR:!2026-11-19,4,270-->
+
+---
+
+#en/Sentence
+While we could generalize a Hopfield network to account for **asymmetric** connections, it would introduce complications and potentially unstable behavior.
+?
+虽然我们可以对 Hopfield 网络加以推广、以容纳非对称的连接，但这样做会引入复杂性，并可能导致不稳定的行为。
+<!--SR:!2026-11-19,4,270-->
+
+---
+
+#en/Sentence
+However, we can **draw insights from** a seemingly unrelated field of molecular biology and in particular, a concept known as Levinthal's paradox of protein folding.
+?
+不过，我们可以从一个看似毫不相关的领域——分子生物学，尤其是被称为“Levinthal 悖论”的蛋白质折叠概念中汲取洞见。
+<!--SR:!2026-11-19,4,270-->
+
+---
+
+#en/Sentence
+This is a simplified analogy of how nerve cells in the brain encode information through **patterns of firing**.
+?
+这是对大脑神经细胞如何通过放电模式来编码信息所做的一个简化类比。
+<!--SR:!2026-11-19,4,270-->
+
+---
+
+#en/Sentence
+Once the weights are fixed, **tweaking** the states of neurons to bring them into greater agreement with the weights corresponds to descending along the energy surface.
+?
+一旦权重固定下来，微调神经元的状态、使它们与权重更加一致，就相当于沿着能量曲面往下滑动。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+#en/Sentence
+In other words, retrieving a memory that is most similar to the input pattern is done by configuring the system to encode the input pattern initially and then letting it run to equilibrium, descending into the energy well from which we can read out the source memory.
+?
+换句话说，要检索出与输入模式最相似的那段记忆，做法是先让系统编码该输入模式，然后任其演化至平衡态、落入某个能量谷底，再从那里读出源记忆。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+## 句子 91–100
+
+#en/Sentence
+Still, AI also has the potential hazard of dominating our experiences in ways we might find difficult to control.
+?
+尽管如此，AI 也可能潜藏着一种危害：以一种我们可能难以控制的方式支配我们的体验。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+#en/Sentence
+AI can be a collaborative tool in a wide range of creative endeavors.
+?
+AI 可以成为各种创作活动中的协作工具。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+#en/Sentence
+For instance, as convenient and provocative, AI enables virtual try-on experiences where you can virtually test makeup, hairstyles, clothing, and even cosmetic procedures before making any physical changes.
+?
+例如，AI 既便捷又新奇大胆，它让人们能够进行虚拟试穿体验——在做出任何实际的身体改变之前，你就能虚拟地试用妆容、发型、服装，甚至医美项目。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+#en/Sentence
+This customized approach aims to cater to individual preferences and enhance the concept of beauty tailored to each person's unique characteristics.
+?
+这种量身定制的方法旨在迎合个人偏好，并强化"为每个人独有的特征量身打造之美"这一概念。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+#en/Sentence
+There is a risk of deepening societal beauty pressures and perpetuating unattainable beauty standards.
+?
+存在着加深社会审美压力、并使难以企及的审美标准长期延续下去的风险。
+<!--SR:!2026-11-18,3,250-->
+
+---
+
+#en/Sentence
+Additionally, AI-powered beauty filters and editing tools can lead to distorted self-perception and contribute to body dissatisfaction.
+?
+此外，AI 驱动的美颜滤镜和修图工具可能导致自我认知的扭曲，并助长对身体的不满。
+<!--SR:!2026-11-19,4,270-->
 
 ---

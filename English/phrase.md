@@ -22,7 +22,7 @@
 <!--SR:!2026-11-17,14,290-->
 
 #en/Phrase  play out::发展；演变；（事情）如何发展
-<!--SR:!2026-11-14,12,270-->
+<!--SR:!2026-12-28,44,290-->
 
 #en/Phrase  put sb in charge of sth::让某人负责某事
 <!--SR:!2026-11-19,16,290-->
@@ -85,7 +85,7 @@
 <!--SR:!2026-11-27,14,290-->
 
 #en/Phrase  strike sb as sth::给某人以……的印象；让某人觉得……
-<!--SR:!2026-11-14,2,230-->
+<!--SR:!2026-11-21,7,250-->
 
 #en/Phrase  flatly inconsistent::前后完全不一致；自相矛盾
 <!--SR:!2026-11-20,8,250-->
@@ -109,7 +109,7 @@
 <!--SR:!2026-11-29,16,290-->
 
 #en/Phrase  carry sb through::支撑某人渡过（难关）
-<!--SR:!2026-11-14,2,230-->
+<!--SR:!2026-11-21,7,250-->
 
 #en/Phrase  be caught up in::沉浸在……之中；卷入……
 <!--SR:!2026-11-27,14,290-->
@@ -125,5 +125,65 @@
 
 #en/Phrase  it would be a shame to do sth::做某事会很可惜
 <!--SR:!2026-11-28,15,290-->
+
+#en/Phrase  put oneself in sb's shoes::设身处地；站在某人的立场（换位思考）
+<!--SR:!2026-11-18,3,250-->
+
+#en/Phrase  lay the foundation for::为……奠定基础
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  stay tuned::敬请期待；请持续关注
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  draw insights from::从……中汲取洞见；借鉴
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  along the lines of::类似于；与……大致相同
+<!--SR:!2026-11-18,3,250-->
+
+#en/Phrase  in a variety of different forms::以多种多样的形式
+<!--SR:!2026-11-18,3,250-->
+
+#en/Phrase  account for::解释；说明；考虑到
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  be said to be::据说是；被认为是
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  think of A as B::把 A 看作／视为 B
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  map to::对应于；映射到
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  correspond to::对应于；相当于
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  bring sth into agreement with::使……与……相一致
+<!--SR:!2026-11-16,1,230-->
+
+#en/Phrase  the capacity to do sth::做某事的能力；本领
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  buzz with sth::充满……；洋溢着……
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  experiment with sth::尝试；试用（进行……的试验）
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  facial features::面部特征
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  ethical concerns::伦理层面的担忧
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  appreciation of beauty::对美的鉴赏（赏识）
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  expand the range of::拓宽……的范围
+<!--SR:!2026-11-19,4,270-->
+
+#en/Phrase  derive sth from sth::从……中获得……
+<!--SR:!2026-11-19,4,270-->
 
 
