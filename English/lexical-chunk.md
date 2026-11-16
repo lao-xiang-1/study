@@ -518,7 +518,7 @@
 - **例句**：
   - After a brief **spell** of sunshine, the rain returned.（晴了一小阵之后，雨又下起来了。）
   - How do you **spell** your surname?（你的姓怎么拼？）
-<!--SR:!2026-11-16,10,270-->
+<!--SR:!2026-12-23,37,290-->
 
 ---
 
@@ -590,7 +590,7 @@
 - **例句**：
   - The child fell asleep on her mother's **lap**.（孩子在母亲膝上睡着了。）
   - He ran the last **lap** in under a minute.（他最后一圈跑进了不到一分钟。）
-<!--SR:!2026-11-16,10,270-->
+<!--SR:!2026-12-25,39,290-->
 
 ---
 
@@ -638,7 +638,7 @@
 - **例句**：
   - The team has won on three **successive** weekends.（该队已连续三个周末获胜。）
   - **Successive** governments have failed to solve the problem.（历届政府都未能解决这个问题。）
-<!--SR:!2026-11-16,10,270-->
+<!--SR:!2026-12-23,37,290-->
 
 ---
 

@@ -490,7 +490,7 @@ This may be because of my stutter, or it may just be a personality problem.
 When you have to repeat a word over and over, you stop wanting to speak at all -- all you get is negative feedback.
 ?
 当你不得不一遍又一遍地重复同一个词时，你就再也不想去说话了——你得到的全是负反馈。
-<!--SR:!2026-11-16,10,270-->
+<!--SR:!2026-12-25,39,290-->
 
 ---
 
