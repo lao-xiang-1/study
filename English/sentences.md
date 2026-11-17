@@ -448,7 +448,7 @@ The idea itself was good, but the way it played out was not.
 Looking back now, that was a hard thing to do to a kid that age.
 ?
 如今回头看，对那么小的孩子做这种事，实在太过分了。
-<!--SR:!2026-11-17,14,290-->
+<!--SR:!2027-01-12,56,310-->
 
 ---
 
@@ -456,7 +456,7 @@ Looking back now, that was a hard thing to do to a kid that age.
 It wasn't aimed at me alone -- plenty of us were kept late -- but I was one of the regulars.
 ?
 这并不只是针对我一个人——我们很多人都被留堂——但我算是常客之一。
-<!--SR:!2026-11-17,14,290-->
+<!--SR:!2027-01-12,56,310-->
 
 ---
 
@@ -482,7 +482,7 @@ Even if the world **were** turned upside down,
 This may be because of my stutter, or it may just be a personality problem.
 ?
 这可能是因为我的口吃，也可能只是一个性格问题。
-<!--SR:!2026-11-17,16,290-->
+<!--SR:!2027-01-20,64,310-->
 
 ---
 

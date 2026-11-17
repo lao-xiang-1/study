@@ -7,6 +7,8 @@ viewed: 2026-11-02
 #flashcards
 ## 数学基础
 ?
+>实际情况不同，特别是 V 矩阵没这么大。
+
 ### Q / K / V 的语义
 
 | 向量        | 含义                       |
@@ -49,12 +51,11 @@ def self_attention(x):
 - `/ sqrt(d_k)`：缩放，防止点积随维度增大而过大，导致 softmax 梯度消失
 - `softmax(axis=-1)`：沿"被注意的所有 token"这一维归一化，使权重非负且和为 1
 - `weights @ V`：按注意力权重对所有 token 的 Value 做加权求和
-<!--SR:!2026-11-17,11,270-->
+<!--SR:!2026-12-29,42,290-->
 
 ---
 
 ## 多头注意力
-假设每个 token 有 512维的数据。我们取
 
 公式对比：
 $$\text{单头}: \text{out} = \underbrace{\text{softmax}\!\left(\frac{XW_QW_K^\top X^\top}{\sqrt{d}}\right)}_{\text{1 个 } n\times n} XW_V W_O$$
@@ -64,18 +65,6 @@ $$\text{多头}: \text{out} = \sum_{i=1}^{h} \underbrace{\text{softmax}\!\left(\
 
 
 ## 整体架构
-
-### 三种主流变体
-
-| 变体 | 代表 | 注意力 | 典型任务 |
-| :--- | :--- | :--- | :--- |
-| Encoder-only | BERT | 双向（无 mask） | 理解：分类、抽取 |
-| Encoder-Decoder | 原版 Transformer、T5 | 编码器双向 + 解码器因果 | 序列到序列：翻译、摘要 |
-| **Decoder-only** | GPT、LLaMA、Qwen | **因果（causal mask）** | **生成：自回归预测下一个 token** |
-
-> 当前 LLM 几乎全是 decoder-only：结构最统一、易扩展，天然贴合「预测下一个 token」这一目标。
-
-### 数据流总览
 
 ### Transformer Block
 

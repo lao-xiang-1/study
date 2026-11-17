@@ -566,7 +566,7 @@
 - **例句**：
   - Farmers loaded the hay onto a **cart**.（农民把干草装上大车。）
   - We **carted** all the boxes up to the third floor.（我们把所有箱子搬上了三楼。）
-<!--SR:!2026-11-17,11,270-->
+<!--SR:!2026-12-16,29,270-->
 
 ---
 
