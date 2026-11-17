@@ -482,7 +482,7 @@ Even if the world **were** turned upside down,
 This may be because of my stutter, or it may just be a personality problem.
 ?
 这可能是因为我的口吃，也可能只是一个性格问题。
-<!--SR:!2026-11-22,16,290-->
+<!--SR:!2026-11-17,16,290-->
 
 ---
 
@@ -769,5 +769,55 @@ Additionally, AI-powered beauty filters and editing tools can lead to distorted 
 ?
 此外，AI 驱动的美颜滤镜和修图工具可能导致自我认知的扭曲，并助长对身体的不满。
 <!--SR:!2026-11-19,4,270-->
+
+---
+
+## 句子 101–110
+
+#en/Sentence
+I say "probably" because I never went to see a doctor -- the judgement is based on my own sense of things.
+?
+我说“大概”是因为我从未去看过医生——这个判断只是凭我自己的感觉下的。
+<!--SR:!2026-11-20,4,270-->
+
+---
+
+#en/Sentence
+Looking back with older eyes, none of them were right -- most were imaginary and had nothing to do with reality.
+?
+以更成熟的眼光回望，这些理由没有一个是正确的——大多只是凭空想象，与现实毫无关系。
+<!--SR:!2026-11-20,4,270-->
+
+---
+
+#en/Sentence
+It added more pressure and forced me to spend more time at school.
+?
+这给我增添了更多压力，也逼得我不得不花更多时间待在学校。
+<!--SR:!2026-11-20,4,270-->
+
+---
+
+#en/Sentence
+In my third year, I had trouble finishing homework that had once been easy for me, and I found it hard to stay focused in class.
+?
+到了第三年，我连以前觉得轻松的作业都难以完成，也发现自己很难在课堂上集中注意力。
+<!--SR:!2026-11-20,4,270-->
+
+---
+
+#en/Sentence
+In fact, if I remembered correctly, I was only ranked tenth.
+?
+事实上，如果我没记错的话，我当时只排在第十名。
+<!--SR:!2026-11-20,4,270-->
+
+---
+
+#en/Sentence
+It was lower than I had expected.
+?
+这比我预期的要低。
+<!--SR:!2026-11-20,4,270-->
 
 ---

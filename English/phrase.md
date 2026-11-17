@@ -186,4 +186,31 @@
 #en/Phrase  derive sth from sth::从……中获得……
 <!--SR:!2026-11-19,4,270-->
 
+#en/Phrase  at one's worst::在某人最糟糕／最低谷的时候
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  work sth out on one's own::靠自己把某事解决（想通）
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  be told from a young age::从小就被人告知
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  the immediate cause::直接原因
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  a demanding exam::一场要求很高的考试
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  set up a course::开设一门课程
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  stay focused::保持专注
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  the passing line::及格线
+<!--SR:!2026-11-20,4,270-->
+
+#en/Phrase  lower than expected::低于预期
+<!--SR:!2026-11-20,4,270-->
+
 
