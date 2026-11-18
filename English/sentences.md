@@ -248,7 +248,7 @@ Instead of moving quickly to **assume useful roles** in the overall problem solu
 For each new hidden unit, we attempt to maximize the magnitude of the correlation between the new unit's output and the residual error signal we are trying to eliminate.
 ?
 对于每一个新的隐层单元，我们尝试最大化该单元输出与待消除的残余误差信号（residual error signal）之间相关性的幅值。
-<!--SR:!2026-11-18,23,230-->
+<!--SR:!2026-12-01,13,210-->
 
 ---
 
@@ -464,7 +464,7 @@ It wasn't aimed at me alone -- plenty of us were kept late -- but I was one of t
 I suddenly stuttered -- the first time that had ever happened.
 ?
 我突然结巴了——那是第一次发生这种事。
-<!--SR:!2026-11-18,15,290-->
+<!--SR:!2027-01-18,61,310-->
 
 ---
 
@@ -530,7 +530,7 @@ Most financial crises **have plenty in common**: they tend to start in the banki
 Then there are the behavioural biases that permeate decision-making at all levels of the banking industry.
 ?
 其次是行为偏差（biases），它渗透在银行业各级的决策之中。
-<!--SR:!2026-11-18,7,250-->
+<!--SR:!2026-11-22,4,230-->
 
 ---
 
@@ -710,7 +710,7 @@ This is a simplified analogy of how nerve cells in the brain encode information 
 Once the weights are fixed, **tweaking** the states of neurons to bring them into greater agreement with the weights corresponds to descending along the energy surface.
 ?
 一旦权重固定下来，微调神经元的状态、使它们与权重更加一致，就相当于沿着能量曲面往下滑动。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-20,2,230-->
 
 ---
 
@@ -718,7 +718,7 @@ Once the weights are fixed, **tweaking** the states of neurons to bring them int
 In other words, retrieving a memory that is most similar to the input pattern is done by configuring the system to encode the input pattern initially and then letting it run to equilibrium, descending into the energy well from which we can read out the source memory.
 ?
 换句话说，要检索出与输入模式最相似的那段记忆，做法是先让系统编码该输入模式，然后任其演化至平衡态、落入某个能量谷底，再从那里读出源记忆。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-30,12,270-->
 
 ---
 
@@ -728,7 +728,7 @@ In other words, retrieving a memory that is most similar to the input pattern is
 Still, AI also has the potential hazard of dominating our experiences in ways we might find difficult to control.
 ?
 尽管如此，AI 也可能潜藏着一种危害：以一种我们可能难以控制的方式支配我们的体验。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-30,12,270-->
 
 ---
 
@@ -736,7 +736,7 @@ Still, AI also has the potential hazard of dominating our experiences in ways we
 AI can be a collaborative tool in a wide range of creative endeavors.
 ?
 AI 可以成为各种创作活动中的协作工具。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-30,12,270-->
 
 ---
 
@@ -744,7 +744,7 @@ AI 可以成为各种创作活动中的协作工具。
 For instance, as convenient and provocative, AI enables virtual try-on experiences where you can virtually test makeup, hairstyles, clothing, and even cosmetic procedures before making any physical changes.
 ?
 例如，AI 既便捷又新奇大胆，它让人们能够进行虚拟试穿体验——在做出任何实际的身体改变之前，你就能虚拟地试用妆容、发型、服装，甚至医美项目。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-30,12,270-->
 
 ---
 
@@ -752,7 +752,7 @@ For instance, as convenient and provocative, AI enables virtual try-on experienc
 This customized approach aims to cater to individual preferences and enhance the concept of beauty tailored to each person's unique characteristics.
 ?
 这种量身定制的方法旨在迎合个人偏好，并强化"为每个人独有的特征量身打造之美"这一概念。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-30,12,270-->
 
 ---
 
@@ -760,7 +760,7 @@ This customized approach aims to cater to individual preferences and enhance the
 There is a risk of deepening societal beauty pressures and perpetuating unattainable beauty standards.
 ?
 存在着加深社会审美压力、并使难以企及的审美标准长期延续下去的风险。
-<!--SR:!2026-11-18,3,250-->
+<!--SR:!2026-11-20,2,230-->
 
 ---
 
