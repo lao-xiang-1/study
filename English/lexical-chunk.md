@@ -470,7 +470,7 @@
 - **例句**：
   - She **acknowledged** that the mistake was hers.（她承认这个错误是她造成的。）
   - The report **acknowledges** the limits of the available data.（该报告承认现有数据的局限。）
-<!--SR:!2026-11-20,14,290-->
+<!--SR:!2027-01-15,56,310-->
 
 ---
 

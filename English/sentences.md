@@ -364,7 +364,7 @@ Siblings are cards generated from the same card text i.e. cloze deletions
 ?
 **搁置兄弟卡片直到第二天**
 兄弟卡片是由同一卡片文本生成的卡片，即填空删除（完形填空）
-<!--SR:!2026-11-19,41,290-->
+<!--SR:!2027-05-03,164,310-->
 
 ---
 
@@ -440,7 +440,7 @@ Thank god I was starting to think that I was the only one that killed people wit
 The idea itself was good, but the way it played out was not.
 ?
 这个想法本身是好的，但真正实施起来却并非如此。
-<!--SR:!2026-11-19,16,290-->
+<!--SR:!2027-01-22,64,310-->
 
 ---
 
@@ -472,7 +472,7 @@ I suddenly stuttered -- the first time that had ever happened.
 Even if the world **were** turned upside down,
 ?
 纵使天翻地覆，
-<!--SR:!2026-11-20,14,290-->
+<!--SR:!2027-01-16,57,310-->
 
 ---
 
@@ -514,7 +514,7 @@ It's hard for a person to change **their** personality.
 I lack confidence, and I've learned to find it by beating others at something -- a course test, for example.
 ?
 我缺乏自信，而我学会了通过在某件事上胜过别人来获得自信——比如一场课程考试。
-<!--SR:!2026-11-20,14,290-->
+<!--SR:!2027-01-14,55,310-->
 
 ---
 
@@ -546,7 +546,7 @@ Such people tend to like complexity **for its own sake**, but they often do not 
 There are parts of the **banking sector** that will always be prone to risk, but many bankers have come to feel immune to its potential impact, because they presume that, however recklessly banks behave, governments will always be there to bail them out.
 ?
 银行业中有些部分永远都易于遭遇风险，但许多银行家已经变得对风险的潜在冲击无动于衷，因为他们想当然地认为：无论银行行为多么鲁莽，政府总会在那里出手相救。
-<!--SR:!2026-11-20,11,270-->
+<!--SR:!2026-12-31,41,290-->
 
 ---
 
@@ -678,7 +678,7 @@ I should have gone to university.
 The larger that number is, the more overall **agreement** there is between connection weights and **pairwise states** of neurons.
 ?
 这个数值越大，连接权重与神经元成对状态之间的整体一致性就越高。
-<!--SR:!2026-11-19,4,270-->
+<!--SR:!2026-12-01,11,270-->
 
 ---
 
@@ -686,7 +686,7 @@ The larger that number is, the more overall **agreement** there is between conne
 While we could generalize a Hopfield network to account for **asymmetric** connections, it would introduce complications and potentially unstable behavior.
 ?
 虽然我们可以对 Hopfield 网络加以推广、以容纳非对称的连接，但这样做会引入复杂性，并可能导致不稳定的行为。
-<!--SR:!2026-11-19,4,270-->
+<!--SR:!2026-12-05,15,290-->
 
 ---
 
@@ -694,7 +694,7 @@ While we could generalize a Hopfield network to account for **asymmetric** conne
 However, we can **draw insights from** a seemingly unrelated field of molecular biology and in particular, a concept known as Levinthal's paradox of protein folding.
 ?
 不过，我们可以从一个看似毫不相关的领域——分子生物学，尤其是被称为“Levinthal 悖论”的蛋白质折叠概念中汲取洞见。
-<!--SR:!2026-11-19,4,270-->
+<!--SR:!2026-12-04,14,290-->
 
 ---
 
@@ -702,7 +702,7 @@ However, we can **draw insights from** a seemingly unrelated field of molecular 
 This is a simplified analogy of how nerve cells in the brain encode information through **patterns of firing**.
 ?
 这是对大脑神经细胞如何通过放电模式来编码信息所做的一个简化类比。
-<!--SR:!2026-11-19,4,270-->
+<!--SR:!2026-12-06,16,290-->
 
 ---
 
@@ -710,7 +710,7 @@ This is a simplified analogy of how nerve cells in the brain encode information 
 Once the weights are fixed, **tweaking** the states of neurons to bring them into greater agreement with the weights corresponds to descending along the energy surface.
 ?
 一旦权重固定下来，微调神经元的状态、使它们与权重更加一致，就相当于沿着能量曲面往下滑动。
-<!--SR:!2026-11-20,2,230-->
+<!--SR:!2026-11-25,5,230-->
 
 ---
 
@@ -760,7 +760,7 @@ This customized approach aims to cater to individual preferences and enhance the
 There is a risk of deepening societal beauty pressures and perpetuating unattainable beauty standards.
 ?
 存在着加深社会审美压力、并使难以企及的审美标准长期延续下去的风险。
-<!--SR:!2026-11-20,2,230-->
+<!--SR:!2026-11-27,7,250-->
 
 ---
 
@@ -768,7 +768,7 @@ There is a risk of deepening societal beauty pressures and perpetuating unattain
 Additionally, AI-powered beauty filters and editing tools can lead to distorted self-perception and contribute to body dissatisfaction.
 ?
 此外，AI 驱动的美颜滤镜和修图工具可能导致自我认知的扭曲，并助长对身体的不满。
-<!--SR:!2026-11-19,4,270-->
+<!--SR:!2026-12-05,15,290-->
 
 ---
 
@@ -778,7 +778,7 @@ Additionally, AI-powered beauty filters and editing tools can lead to distorted 
 I say "probably" because I never went to see a doctor -- the judgement is based on my own sense of things.
 ?
 我说“大概”是因为我从未去看过医生——这个判断只是凭我自己的感觉下的。
-<!--SR:!2026-11-20,4,270-->
+<!--SR:!2026-12-06,16,290-->
 
 ---
 
@@ -786,7 +786,7 @@ I say "probably" because I never went to see a doctor -- the judgement is based 
 Looking back with older eyes, none of them were right -- most were imaginary and had nothing to do with reality.
 ?
 以更成熟的眼光回望，这些理由没有一个是正确的——大多只是凭空想象，与现实毫无关系。
-<!--SR:!2026-11-20,4,270-->
+<!--SR:!2026-12-04,14,290-->
 
 ---
 
@@ -794,7 +794,7 @@ Looking back with older eyes, none of them were right -- most were imaginary and
 It added more pressure and forced me to spend more time at school.
 ?
 这给我增添了更多压力，也逼得我不得不花更多时间待在学校。
-<!--SR:!2026-11-20,4,270-->
+<!--SR:!2026-12-06,16,290-->
 
 ---
 
@@ -802,7 +802,7 @@ It added more pressure and forced me to spend more time at school.
 In my third year, I had trouble finishing homework that had once been easy for me, and I found it hard to stay focused in class.
 ?
 到了第三年，我连以前觉得轻松的作业都难以完成，也发现自己很难在课堂上集中注意力。
-<!--SR:!2026-11-20,4,270-->
+<!--SR:!2026-12-05,15,290-->
 
 ---
 
@@ -810,7 +810,7 @@ In my third year, I had trouble finishing homework that had once been easy for m
 In fact, if I remembered correctly, I was only ranked tenth.
 ?
 事实上，如果我没记错的话，我当时只排在第十名。
-<!--SR:!2026-11-20,4,270-->
+<!--SR:!2026-12-04,14,290-->
 
 ---
 
@@ -818,6 +818,6 @@ In fact, if I remembered correctly, I was only ranked tenth.
 It was lower than I had expected.
 ?
 这比我预期的要低。
-<!--SR:!2026-11-20,4,270-->
+<!--SR:!2026-12-05,15,290-->
 
 ---
