@@ -329,7 +329,7 @@ I still made it through the next three years of college, even without the book. 
 In line with longstanding initiatives to expand its green spaces, New York City is planting tens of thousands of trees each year.
 ?
 为了配合长期以来的扩大绿地计划，纽约市每年种植数万棵树。
-<!--SR:!2026-11-21,41,290-->
+<!--SR:!2027-05-05,165,310-->
 
 ---
 
@@ -506,7 +506,7 @@ I tend to hide my feelings, and somehow I've come to believe it's bad to show th
 It's hard for a person to change **their** personality.
 ?
 一个人很难改变自己的性格。
-<!--SR:!2026-11-21,15,290-->
+<!--SR:!2027-01-21,61,310-->
 
 ---
 
@@ -522,7 +522,7 @@ I lack confidence, and I've learned to find it by beating others at something --
 Most financial crises **have plenty in common**: they tend to start in the banking sector and involve excessive borrowing, together with an asset bubble.
 ?
 大多数金融危机都有许多共同点：它们往往始于银行业，并伴随过度借贷以及资产泡沫。
-<!--SR:!2026-11-21,12,270-->
+<!--SR:!2027-01-07,47,290-->
 
 ---
 
@@ -538,7 +538,7 @@ Then there are the behavioural biases that permeate decision-making at all level
 Such people tend to like complexity **for its own sake**, but they often do not fully understand the **implications** of that complexity for the stability of the financial system as a whole.
 ?
 这类人往往为复杂而喜欢复杂，却常常并不完全理解这种复杂性对整个金融体系稳定性的影响。
-<!--SR:!2026-11-21,12,270-->
+<!--SR:!2026-12-23,32,270-->
 
 ---
 
