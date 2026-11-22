@@ -446,7 +446,7 @@
 - **例句**：
   - Over ten thousand people signed the **petition** against the closure.（一万多人签署了反对关闭的请愿书。）
   - Residents **petitioned** the council to repair the road.（居民向议会请愿，要求修路。）
-<!--SR:!2026-11-22,16,290-->
+<!--SR:!2027-01-24,63,310-->
 
 ---
 

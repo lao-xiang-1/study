@@ -390,7 +390,7 @@ All efforts have been made to avoid errors, but users are strongly urged to inde
 You can perform standard matrix multiplication, which computes the inner products between rows and columns, using the * operator. For example, confirm that a matrix times its inverse returns the identity matrix:
 ?
 你可以使用 `*` 运算符执行标准矩阵乘法，它会计算行与列之间的内积。例如，验证一个矩阵乘以其逆矩阵会返回单位矩阵：
-<!--SR:!2026-11-22,27,270-->
+<!--SR:!2027-03-04,102,290-->
 
 ---
 
@@ -498,7 +498,7 @@ When you have to repeat a word over and over, you stop wanting to speak at all -
 I tend to hide my feelings, and somehow I've come to believe it's bad to show them openly.
 ?
 我倾向于隐藏自己的感受，而且不知怎么的，我已经渐渐相信把感受公开表露出来是不好的。
-<!--SR:!2026-11-22,16,290-->
+<!--SR:!2027-01-26,65,310-->
 
 ---
 
@@ -530,7 +530,7 @@ Most financial crises **have plenty in common**: they tend to start in the banki
 Then there are the behavioural biases that permeate decision-making at all levels of the banking industry.
 ?
 其次是行为偏差（biases），它渗透在银行业各级的决策之中。
-<!--SR:!2026-11-22,4,230-->
+<!--SR:!2026-12-02,10,230-->
 
 ---
 
@@ -554,7 +554,7 @@ There are parts of the **banking sector** that will always be prone to risk, but
 Gaming in the banking sector seems **virtually** impossible to eliminate. The only effective measure to end it would be to make bankers personally **liable** for losses.
 ?
 银行业的这种博弈似乎几乎无法消除。唯一有效的终结措施是让银行家对损失承担个人责任。
-<!--SR:!2026-11-22,12,270-->
+<!--SR:!2027-01-06,45,290-->
 
 ---
 
@@ -670,7 +670,7 @@ In fact, I've realized I never truly understood them before. I wasn't watching t
 I should have gone to university.
 ?
 我早该去读大学的。
-<!--SR:!2026-11-22,7,270-->
+<!--SR:!2026-12-19,27,290-->
 
 ---
 
