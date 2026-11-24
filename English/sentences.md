@@ -240,7 +240,7 @@ Immune to creep and floor spikes
 Instead of moving quickly to **assume useful roles** in the overall problem solution, the hidden units **engage in** a complex dance with much wasted motion.
 ?
 隐藏单元不会迅速地在求解整体问题中承担有用的角色，而是陷入一场复杂的舞蹈，做出大量徒劳的动作。
-<!--SR:!2026-11-24,46,270-->
+<!--SR:!2027-05-16,173,290-->
 
 ---
 
@@ -564,7 +564,7 @@ Gaming in the banking sector seems **virtually** impossible to eliminate. The on
 To my surprise, the shows that moved me so deeply barely stirred anything in me at all.
 ?
 令我惊讶的是，那些曾深深打动我的剧集，如今却几乎在我心里激不起任何波澜。
-<!--SR:!2026-11-23,11,270-->
+<!--SR:!2027-01-05,43,290-->
 
 ---
 
@@ -596,7 +596,7 @@ Nothing about them is fixed by reality, and people can project them onto whateve
 That belief no longer holds for me.
 ?
 那种想法对我来说已经不成立了。
-<!--SR:!2026-11-24,12,270-->
+<!--SR:!2027-01-07,44,290-->
 
 ---
 
@@ -604,7 +604,7 @@ That belief no longer holds for me.
 We're still bound by what the source actually gives us -- and the source can be flawed.
 ?
 我们依然受限于原作实际提供的内容——而原作本身可能就有缺陷。
-<!--SR:!2026-11-23,11,270-->
+<!--SR:!2027-01-03,41,290-->
 
 ---
 
@@ -662,7 +662,7 @@ It was made by people and designed by people, and it reflects their limited view
 In fact, I've realized I never truly understood them before. I wasn't watching the story -- I was caught up in the atmosphere. I mistook the mood for meaning.
 ?
 事实上，我意识到我以前从未真正理解过它们。我看的不是故事——我只是沉浸在氛围里，把情绪错当成了意义。
-<!--SR:!2026-11-23,11,270-->
+<!--SR:!2026-12-23,30,270-->
 
 ---
 
@@ -819,5 +819,23 @@ It was lower than I had expected.
 ?
 这比我预期的要低。
 <!--SR:!2026-12-05,15,290-->
+
+---
+
+## 句子 111–120
+
+#en/Sentence
+These are the people society approves of: energetic and outgoing at every moment.
+?
+他们正是社会所认可的那类人：时时刻刻都精力充沛、开朗外向。
+<!--SR:!2026-11-28,4,270-->
+
+---
+
+#en/Sentence
+Only by first figuring out what we really want can we pour our time and energy into it.
+?
+只有先弄清楚自己真正想要什么，我们才能把时间和精力倾注其中。
+<!--SR:!2026-11-28,4,270-->
 
 ---
