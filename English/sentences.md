@@ -313,7 +313,7 @@ Fetch content from one or more web pages, following links recursively.
 It bore witness to her efforts
 ?
 它见证了她的努力。
-<!--SR:!2026-11-25,46,290-->
+<!--SR:!2027-05-29,185,310-->
 
 ---
 
@@ -710,7 +710,7 @@ This is a simplified analogy of how nerve cells in the brain encode information 
 Once the weights are fixed, **tweaking** the states of neurons to bring them into greater agreement with the weights corresponds to descending along the energy surface.
 ?
 一旦权重固定下来，微调神经元的状态、使它们与权重更加一致，就相当于沿着能量曲面往下滑动。
-<!--SR:!2026-11-25,5,230-->
+<!--SR:!2026-12-08,13,230-->
 
 ---
 
